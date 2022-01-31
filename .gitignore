@@ -3,3 +3,6 @@ node_modules
 dist
 dist-ssr
 *.local
+/src/ficheclim
+/src/data_source
+fauna_secret.txt
