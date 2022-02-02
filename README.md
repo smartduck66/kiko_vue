@@ -1,8 +1,7 @@
 # Cette nouvelle version de kiko s'appuie sur Vue 3 + Typescript + Vite
+# Derniers travaux : 31/1/2022 - Initialisation du projet avec Vue3
 
-Derniers travaux : 31/1/2022 - Initialisation du projet avec Vue3
-
--------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Nouvelles extensions IDE VSCODE installées : Vetur et Volar
 
 Pour développer et tester en local :
@@ -17,4 +16,6 @@ Pour construire le site statique (->dist) qui sera publié sur netlify :
 . git commit -m "new fonctions"
 . git push
 . Netlify le publie automatiquement en production sur https://musing-ptolemy-db8901.netlify.app/
--------------------------------------------------------------------------------------------------------
+
+Pour formater un document rapidement via l'extension prettier, la commande de touches ALT + F est configurée
+------------------------------------------------------------------------------------------------------------
