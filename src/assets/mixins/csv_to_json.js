@@ -45,7 +45,7 @@ var seveso = /** @class */ (function () {
   }
   return seveso;
 })();
-// Balayage du fichier csv, enrichissement de l'Array fiches, création du JSON sur disque
+// Balayage du fichier csv, enrichissement de l'Array fiches1, création du JSON sur disque
 var allTextLines1 = fs1
   .readFileSync("../../data_source/sites-seveso.csv", "utf8")
   .split(/\r\n|\n/);

@@ -16,7 +16,12 @@ function rad2deg(rad: number): number {
   return (rad * 180) / M_PI;
 }
 
-function distanceEarth(lat1d: number, lon1d: number, lat2d: number, lon2d: number): number {
+function distanceEarth(
+  lat1d: number,
+  lon1d: number,
+  lat2d: number,
+  lon2d: number
+): number {
   /**
    * Returns the distance between two points on the Earth.
    * Direct translation from http://en.wikipedia.org/wiki/Haversine_formula
@@ -33,10 +38,14 @@ function distanceEarth(lat1d: number, lon1d: number, lat2d: number, lon2d: numbe
   const lon2r: number = deg2rad(lon2d);
   const u: number = Math.sin((lat2r - lat1r) / 2);
   const v: number = Math.sin((lon2r - lon1r) / 2);
-  return 2.0 * EARTH_RADIUS_KM * Math.asin(Math.sqrt(u * u + Math.cos(lat1r) * Math.cos(lat2r) * v * v));
+  return (
+    2.0 *
+    EARTH_RADIUS_KM *
+    Math.asin(Math.sqrt(u * u + Math.cos(lat1r) * Math.cos(lat2r) * v * v))
+  );
 }
 
-exports.convert_DMS_DD = function (coord: string): number {
+function convert_DMS_DD(coord: string): number {
   // Fonction qui convertit des coordonnées GPS d'une station météo en Degrés, Minutes, Secondes en Degrés Décimaux
   // Ex : latitude: 45°38'24"N longitude : 05°52'36"E donnera latitude : 45.64   longitude : 5.8766
   // Pas de guard supplémentaire dans cette fonction : le format de la coordonnées DMS a déjà été vérifié lors de la création des fiches climatiques
@@ -57,7 +66,7 @@ exports.convert_DMS_DD = function (coord: string): number {
   }
 
   return c;
-};
+}
 
 interface sites_dangereux {
   distance: number;
@@ -70,7 +79,7 @@ interface coords_sites_dangereux {
   longitude: number;
 }
 
-exports.site_dangereux_le_plus_proche = function <Type extends coords_sites_dangereux[]>(
+function site_dangereux_le_plus_proche<Type extends coords_sites_dangereux[]>(
   coords_sites_dangereux: Type,
   latitude_to_test: number,
   longitude_to_test: number
@@ -92,13 +101,20 @@ exports.site_dangereux_le_plus_proche = function <Type extends coords_sites_dang
     }
   }
 
-  const fiches: distance_sites_dangereux[] = coords_sites_dangereux.map((item) => {
-    const d = new distance_sites_dangereux(); // note the "new" keyword here
+  const fiches: distance_sites_dangereux[] = coords_sites_dangereux.map(
+    (item) => {
+      const d = new distance_sites_dangereux(); // note the "new" keyword here
 
-    d.distance = distanceEarth(latitude_to_test, longitude_to_test, item.latitude, item.longitude);
-    d.site = item.site;
-    return d;
-  });
+      d.distance = distanceEarth(
+        latitude_to_test,
+        longitude_to_test,
+        item.latitude,
+        item.longitude
+      );
+      d.site = item.site;
+      return d;
+    }
+  );
 
   fiches.sort(function (a, b): number {
     return a.distance - b.distance;
@@ -106,4 +122,6 @@ exports.site_dangereux_le_plus_proche = function <Type extends coords_sites_dang
 
   // ... et on renvoit la distance minimale
   return fiches[0];
-};
+}
+
+export { site_dangereux_le_plus_proche, convert_DMS_DD };

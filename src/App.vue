@@ -31,9 +31,7 @@ val_ref_78.push(station.temp_moy + "°");
 val_ref_78.push(station.temp_min + "°");
 val_ref_78.push(station.temp_max + "°");
 val_ref_78.push(station.distance_cnpe + " kms");
-val_ref_78.push(
-  milliers.format(Number(station.ensoleillement)) + " h/an"
-);
+val_ref_78.push(milliers.format(Number(station.ensoleillement)) + " h/an");
 val_ref_78.push(milliers.format(Number(station.pluie)) + " mm/an");
 val_ref_78.push(milliers.format(Number(station.vent)) + " j/an");
 val_ref_78.push(euros.format(Number(station.prix_maisons)) + "/m2");

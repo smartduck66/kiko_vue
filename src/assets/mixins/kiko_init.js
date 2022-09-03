@@ -1,7 +1,10 @@
 "use strict";
 /* eslint-disable @typescript-eslint/no-var-requires */
 //
-// Bibliothéque JavaScript utilisée en mode "batch" - Dernière version majeure : 18/12/2021 (Typescript)
+// Bibliothéque JavaScript utilisée en mode "batch" :
+// 18/12/2021 : passage en Typescript
+// 03/09/2022 : passage en FP, remplacement des require par des import
+//
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans cet ordre :
 //      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
@@ -11,7 +14,7 @@
 // **********************************************************************************************************************
 exports.__esModule = true;
 // On 'importe' des fonctions de distances.js
-var distances1 = require("../mixins/distances.js");
+var distances_js_1 = require("../mixins/distances.js");
 // Chargement des prix au m2 et des coordonnées des CNPE
 var prix_m2 = require("../../data/prix_maisons_m2.json");
 var lat_long_CNPE = require("../../data/centrales.json");
@@ -19,7 +22,6 @@ var lat_long_CNPE = require("../../data/centrales.json");
 var https = require("https");
 var fs = require("fs");
 var ref = require("../../data/ListeFichesClimatiques.json");
-var nb_fiches = Object.keys(ref.refcli).length;
 function extract_alone_value(ref, pattern, data, value_name) {
   // Fonction qui extrait une valeur seule
   var match = data.match(pattern);
@@ -63,14 +65,15 @@ function extract_value_in_a_list(ref, pattern, data, value_name) {
 var myArgs = process.argv.slice(2);
 console.log("myArgs: ", myArgs);
 switch (myArgs[0]) {
-  case "mf":
+  case "mf": {
     console.log(
       "Chargement des données climatiques brutes en provenance du site de Météo France"
     );
-    var _loop_1 = function (i) {
-      var filename = ref.refcli[i].ref + ".data";
+    // Balayage de l'ensemble des fiches MF et création des fichiers .data sur disque (assets/ficheclim)
+    ref.map(function (refcli) {
+      var filename = refcli.ref + ".data";
       console.log(
-        "Chargement de la fiche climatique de la ville : " + ref.refcli[i].town
+        "Chargement de la fiche climatique de la ville : " + refcli.town
       );
       var url =
         "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_" +
@@ -94,17 +97,14 @@ switch (myArgs[0]) {
           console.log(error);
         });
       });
-    };
-    // Balayage de l'ensemble des fiches MF et création des fichiers .data sur disque (assets/ficheclim)
-    for (var i = 0; i < nb_fiches; i++) {
-      _loop_1(i);
-    }
+    });
     break;
+  }
   case "clim": {
     console.log(
       "Création du fichier fc.json regroupant les fiches climatiques"
     );
-    var data_MF = /** @class */ (function () {
+    var data_MF_1 = /** @class */ (function () {
       function data_MF() {
         this.indicatif = "";
         this.ville = "";
@@ -123,15 +123,15 @@ switch (myArgs[0]) {
       }
       return data_MF;
     })();
-    var fiches = [];
-    var _loop_2 = function (i1) {
+    // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
+    var fiches = ref.map(function (refcli) {
       var text = fs.readFileSync(
-        "../../ficheclim/" + ref.refcli[i1].ref + ".data",
+        "../../ficheclim/" + refcli.ref + ".data",
         "utf8"
       );
-      var item = new data_MF(); // note the "new" keyword here
-      item.indicatif = ref.refcli[i1].ref;
-      item.ville = ref.refcli[i1].town;
+      var item = new data_MF_1(); // note the "new" keyword here
+      item.indicatif = refcli.ref;
+      item.ville = refcli.town;
       var s = extract_alone_value(
         item.indicatif,
         /\(\d{1,3}\)/,
@@ -187,10 +187,10 @@ switch (myArgs[0]) {
         text,
         "Nombre moyen de jours avec rafales"
       );
-      var d = distances1.site_dangereux_le_plus_proche(
+      var d = (0, distances_js_1.site_dangereux_le_plus_proche)(
         lat_long_CNPE,
-        distances1.convert_DMS_DD(item.latitude),
-        distances1.convert_DMS_DD(item.longitude)
+        (0, distances_js_1.convert_DMS_DD)(item.latitude),
+        (0, distances_js_1.convert_DMS_DD)(item.longitude)
       );
       item.distance_cnpe = Math.trunc(d.distance);
       try {
@@ -203,12 +203,8 @@ switch (myArgs[0]) {
       } catch (ex) {
         item.prix_maisons = "-";
       }
-      fiches.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches climatiques
-    };
-    // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
-    for (var i1 = 0; i1 < nb_fiches; i1++) {
-      _loop_2(i1);
-    }
+      return item;
+    });
     fs.writeFileSync("../../data/fc.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
     break;
   }

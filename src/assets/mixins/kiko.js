@@ -308,6 +308,7 @@ function showModal_risques(cp) {
   var risques = "";
   // Connexion à la base distante pour le fichier des communes, trop volumineux pour être traité en local (> 4 Mo)
   // Ligne supprimée post-génération JS car require n'est pas compris par le browser
+  var faunadb = require("faunadb");
   var q = faunadb.query;
   var client = new faunadb.Client({
     secret: "fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMo",

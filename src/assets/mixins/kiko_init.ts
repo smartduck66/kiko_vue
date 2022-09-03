@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 //
-// Bibliothéque JavaScript utilisée en mode "batch" - Dernière version majeure : 18/12/2021 (Typescript)
+// Bibliothéque JavaScript utilisée en mode "batch" :
+// 18/12/2021 : passage en Typescript
+// 03/09/2022 : passage en FP, remplacement des require par des import
+//
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans cet ordre :
 //      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
@@ -10,17 +13,19 @@
 // **********************************************************************************************************************
 
 // On 'importe' des fonctions de distances.js
-const distances1 = require("../mixins/distances.js");
+import {
+  convert_DMS_DD,
+  site_dangereux_le_plus_proche,
+} from "../mixins/distances.js";
 
 // Chargement des prix au m2 et des coordonnées des CNPE
-const prix_m2 = require("../../data/prix_maisons_m2.json");
-const lat_long_CNPE = require("../../data/centrales.json");
+import * as prix_m2 from "../../data/prix_maisons_m2.json";
+import * as lat_long_CNPE from "../../data/centrales.json";
 
 // Constantes communes à l'ensemble des traitements
 import * as https from "https";
 import * as fs from "fs";
-const ref = require("../../data/ListeFichesClimatiques.json");
-const nb_fiches: number = Object.keys(ref.refcli).length;
+import * as ref from "../../data/ListeFichesClimatiques.json";
 
 function extract_alone_value(
   ref: string,
@@ -83,16 +88,16 @@ const myArgs = process.argv.slice(2);
 console.log("myArgs: ", myArgs);
 
 switch (myArgs[0]) {
-  case "mf":
+  case "mf": {
     console.log(
       "Chargement des données climatiques brutes en provenance du site de Météo France"
     );
 
     // Balayage de l'ensemble des fiches MF et création des fichiers .data sur disque (assets/ficheclim)
-    for (let i = 0; i < nb_fiches; i++) {
-      const filename = ref.refcli[i].ref + ".data";
+    ref.map((refcli) => {
+      const filename = refcli.ref + ".data";
       console.log(
-        "Chargement de la fiche climatique de la ville : " + ref.refcli[i].town
+        "Chargement de la fiche climatique de la ville : " + refcli.town
       );
       const url =
         "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_" +
@@ -121,8 +126,9 @@ switch (myArgs[0]) {
           console.log(error);
         });
       });
-    }
+    });
     break;
+  }
 
   case "clim": {
     console.log(
@@ -163,18 +169,16 @@ switch (myArgs[0]) {
       }
     }
 
-    const fiches: data_MF[] = [];
-
     // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
-    for (let i1 = 0; i1 < nb_fiches; i1++) {
+    const fiches: data_MF[] = ref.map((refcli) => {
       const text = fs.readFileSync(
-        "../../ficheclim/" + ref.refcli[i1].ref + ".data",
+        "../../ficheclim/" + refcli.ref + ".data",
         "utf8"
       );
       const item = new data_MF(); // note the "new" keyword here
 
-      item.indicatif = ref.refcli[i1].ref;
-      item.ville = ref.refcli[i1].town;
+      item.indicatif = refcli.ref;
+      item.ville = refcli.town;
 
       let s: string = extract_alone_value(
         item.indicatif,
@@ -241,10 +245,10 @@ switch (myArgs[0]) {
         "Nombre moyen de jours avec rafales"
       );
 
-      const d = distances1.site_dangereux_le_plus_proche(
+      const d = site_dangereux_le_plus_proche(
         lat_long_CNPE,
-        distances1.convert_DMS_DD(item.latitude),
-        distances1.convert_DMS_DD(item.longitude)
+        convert_DMS_DD(item.latitude),
+        convert_DMS_DD(item.longitude)
       );
       item.distance_cnpe = Math.trunc(d.distance);
 
@@ -256,9 +260,8 @@ switch (myArgs[0]) {
       } catch (ex) {
         item.prix_maisons = "-";
       }
-
-      fiches.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches climatiques
-    }
+      return item;
+    });
 
     fs.writeFileSync("../../data/fc.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
     break;
