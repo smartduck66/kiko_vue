@@ -12,6 +12,9 @@
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
 // **********************************************************************************************************************
 
+// FP
+// import R from "ramda";
+
 // On 'importe' des fonctions de distances.js
 import {
   convert_DMS_DD,
@@ -274,10 +277,10 @@ switch (myArgs[0]) {
       "Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons"
     );
 
-    // Dernières valeurs disponibles complètes : 2020 - Chargées le 6 décembre 2021
+    // Dernières valeurs disponibles complètes : 2021 - Chargées le 10 septembre 2022
     const url =
-      "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20211020-111113/valeursfoncieres-2020.txt";
-    const filename = "../../data_source/valeursfoncieres-2020.txt";
+      "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20220408-143516/valeursfoncieres-2021.txt";
+    const filename = "../../data_source/valeursfoncieres-2021.txt";
 
     const request = https.get(url);
 
@@ -292,7 +295,7 @@ switch (myArgs[0]) {
 
       response.on("end", () => {
         if (httpStatus === 200) {
-          // On crée le fichier sur disque si tout est OK (400 Mo pour 2020, 3 millions de lignes) *************************************************
+          // On crée le fichier sur disque si tout est OK (442 Mo pour 2021, 3,379 millions de lignes) *************************************************
           // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
           // Code service CH
           // Reference document
@@ -429,7 +432,6 @@ switch (myArgs[0]) {
         JSON.stringify(fiches1, null, 2)
       ); // Création du json final sur disque
     });
-
     break;
   }
 

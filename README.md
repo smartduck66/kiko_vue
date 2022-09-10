@@ -3,8 +3,8 @@
 # Derniers travaux :
 
 01/08/2022 - Ré-Initialisation après 6 mois de pose
-30/08/2022 - MAJ modules NPM à part TS qui doit rester en 4.7.4 à cause d'une incomptabilité avec la nouvelle version de Vue 3.2.38
-02/09/2022 - corriger absolument l'erreur de "distances" qui empêche le Build <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+30/08/2022 - MAJ modules NPM à part TS qui doit rester en 4.7.4 à cause d'une incompatibilité avec la nouvelle version de Vue 3.2.38
+03/09/2022 - Début de programmation fonctionnelle sur les modules batch
 
 ---
 
@@ -39,6 +39,7 @@ Pour construire le site statique (->dist) qui sera publié sur Netlify :
 Installations de modules NPM complémentaires :
 
 - Types Babel : npm i -D @babel/types
+- Ramda.js
 - VueUse : npm i @vueuse/core (utilitaires)
 - Librairie de composants graphiques reste à choisir
 

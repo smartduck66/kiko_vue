@@ -13,6 +13,8 @@
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
 // **********************************************************************************************************************
 exports.__esModule = true;
+// FP
+// import R from "ramda";
 // On 'importe' des fonctions de distances.js
 var distances_js_1 = require("../mixins/distances.js");
 // Chargement des prix au m2 et des coordonnées des CNPE
@@ -214,10 +216,10 @@ switch (myArgs[0]) {
     console.log(
       "Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons"
     );
-    // Dernières valeurs disponibles complètes : 2020 - Chargées le 6 décembre 2021
+    // Dernières valeurs disponibles complètes : 2021 - Chargées le 10 septembre 2022
     var url =
-      "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20211020-111113/valeursfoncieres-2020.txt";
-    var filename_1 = "../../data_source/valeursfoncieres-2020.txt";
+      "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20220408-143516/valeursfoncieres-2021.txt";
+    var filename_1 = "../../data_source/valeursfoncieres-2021.txt";
     var request_1 = https.get(url);
     request_1.on("response", function (response) {
       var httpStatus = response.statusCode;
@@ -228,7 +230,7 @@ switch (myArgs[0]) {
       });
       response.on("end", function () {
         if (httpStatus === 200) {
-          // On crée le fichier sur disque si tout est OK (400 Mo pour 2020, 3 millions de lignes) *************************************************
+          // On crée le fichier sur disque si tout est OK (442 Mo pour 2021, 3,379 millions de lignes) *************************************************
           // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
           // Code service CH
           // Reference document
