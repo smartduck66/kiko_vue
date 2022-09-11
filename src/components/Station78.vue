@@ -104,6 +104,12 @@ code {
   color: #304455;
 }
 
+
+.p-panel p {
+    line-height: 2;
+    margin: 0;
+}
+
 .my_grid {
   display: grid;
   grid-template-columns: auto auto;
