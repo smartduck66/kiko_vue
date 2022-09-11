@@ -1,4 +1,5 @@
 import { createApp } from "vue";
+import { createPinia } from "pinia";
 import App from "./App.vue";
 import PrimeVue from "primevue/config";
 
@@ -9,4 +10,4 @@ import "primeicons/primeicons.css";
 const app = createApp(App);
 app.use(PrimeVue);
 
-app.mount("#app");
+app.use(createPinia()).mount("#app");

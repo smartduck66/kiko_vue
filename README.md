@@ -43,6 +43,7 @@ Installations de modules NPM complémentaires :
 - Ramda.js (programmation fonctionnelle)
 - VueUse : npm i @vueuse/core (utilitaires)
 - PrimeVue : npm i primevue (composants graphiques)
+- Pinia : npm install pinia (gestion des états)
 
 ---
 
