@@ -1,10 +1,11 @@
-# Cette nouvelle version de kiko s'appuie sur Vue 3 + Typescript + Vite
+# Cette nouvelle version de kiko (v2) s'appuie sur Vue 3 + Typescript + Vite
 
 # Derniers travaux :
 
-01/08/2022 - Ré-Initialisation après 6 mois de pose
+01/08/2022 - Ré-Initialisation du projet après 6 mois de pose
 30/08/2022 - MAJ modules NPM à part TS qui doit rester en 4.7.4 à cause d'une incompatibilité avec la nouvelle version de Vue 3.2.38
 03/09/2022 - Début de programmation fonctionnelle sur les modules batch
+11/09/2022 - Réécriture de l'interface de saisie avec les composants PrimeVue
 
 ---
 
@@ -39,9 +40,9 @@ Pour construire le site statique (->dist) qui sera publié sur Netlify :
 Installations de modules NPM complémentaires :
 
 - Types Babel : npm i -D @babel/types
-- Ramda.js
+- Ramda.js (programmation fonctionnelle)
 - VueUse : npm i @vueuse/core (utilitaires)
-- Librairie de composants graphiques reste à choisir
+- PrimeVue : npm i primevue (composants graphiques)
 
 ---
 
