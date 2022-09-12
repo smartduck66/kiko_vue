@@ -43,6 +43,9 @@ Installations de modules NPM complémentaires :
 - Ramda.js (programmation fonctionnelle)
 - VueUse : npm i @vueuse/core (utilitaires)
 - PrimeVue : npm i primevue (composants graphiques)
+- PrimeFlex : npm install primeflex --save (CSS utility library featuring various helpers)
+- Vee-validate : npm i vee-validate --save (VeeValidate is the most popular Vue.js form library. It takes care of value tracking, validation, errors, submissions and more.)
+- Yup : npm install -S yup   (Yup is a schema builder for runtime value parsing and validation)
 - Pinia : npm install pinia (gestion des états)
 
 ---
