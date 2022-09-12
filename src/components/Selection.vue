@@ -20,9 +20,9 @@ function onSubmit(values: any) {
 
 function onInvalidSubmit() {
   const submitBtn = document.querySelector(".submit-btn");
-  submitBtn.classList.add("invalid");
+  submitBtn!.classList.add("invalid");
   setTimeout(() => {
-    submitBtn.classList.remove("invalid");
+    submitBtn!.classList.remove("invalid");
   }, 1000);
 }
 
