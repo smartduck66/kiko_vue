@@ -12,7 +12,7 @@
 Nouvelle extension IDE VSCODE installée : Volar
 Pour formater un document rapidement via l'extension prettier, la commande de touches ALT + F est configurée
 
-Pour mettre à jour les modules NPM :
+Pour mettre à jour les modules NPM (npm uninstall 'module' pour la désinstallation) :
 . npm install npm@latest -g (dernière version NPM)
 . npm -g upgrade typescript (update typescript)
 . npx npm-check-updates -u (vérification des modules à migrer)
@@ -29,7 +29,7 @@ Pour développer et tester en local :
 Pour construire le site statique (->dist) qui sera publié sur Netlify :
 . npm run build
 . npm run preview
-. http://localhost:5000 pour tester en local
+. http://localhost:4173 pour tester en local
 . git add -A
 . git commit -m "new fonctions"
 . git push
@@ -40,10 +40,8 @@ Pour construire le site statique (->dist) qui sera publié sur Netlify :
 Installations de modules NPM complémentaires :
 
 - Types Babel : npm i -D @babel/types
-- Ramda.js (programmation fonctionnelle)
 - VueUse : npm i @vueuse/core (utilitaires)
 - PrimeVue : npm i primevue (composants graphiques)
-- PrimeFlex : npm install primeflex --save (CSS utility library featuring various helpers)
 - Vee-validate : npm i vee-validate --save (VeeValidate is the most popular Vue.js form library. It takes care of value tracking, validation, errors, submissions and more.)
 - Yup : npm install -S yup   (Yup is a schema builder for runtime value parsing and validation)
 - Pinia : npm install pinia (gestion des états)

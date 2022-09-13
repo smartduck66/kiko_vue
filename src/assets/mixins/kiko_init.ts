@@ -12,9 +12,6 @@
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
 // **********************************************************************************************************************
 
-// FP
-// import R from "ramda";
-
 // On 'importe' des fonctions de distances.js
 import {
   convert_DMS_DD,

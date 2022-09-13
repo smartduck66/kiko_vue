@@ -45,34 +45,33 @@ const schema = Yup.object().shape({
     <Form @submit="onSubmit" :validation-schema="schema" @invalid-submit="onInvalidSubmit">
       <div class="my_grid">
         <div class="c-item-1">
-          <p>---------------------</p>
-          <p>Température moyenne :</p>
-          <p>Durée d'insolation :</p>
-          <p>Précipitations :</p>
-          <p>Nb jours avec rafales :</p>
+          <span>--------------------------</span>
+          <span>Température moyenne :</span>
+          <span>Durée d'insolation :</span>
+          <span>Précipitations :</span>
+          <span>Nb jours avec rafales :</span>
         </div>
         <div class="c-item-2">
-          <p>min</p>
+          <span><b>min</b></span>
           <Field name="min_temp" class="saisie-valeur" type="text" v-model="min_temp" maxlength="2" />
           <Field name="min_soleil" class="saisie-valeur" type="text" v-model="min_soleil" maxlength="4" />
           <Field name="min_pluie" class="saisie-valeur" type="text" v-model="min_pluie" maxlength="4" />
           <Field name="min_vent" class="saisie-valeur" type="text" v-model="min_vent" maxlength="3" />
         </div>
         <div class="c-item-3">
-          <p>max</p>
+          <span><b>max</b></span>
           <Field name="max_temp" class="saisie-valeur" type="text" v-model="max_temp" maxlength="2" />
           <Field name="max_soleil" class="saisie-valeur" type="text" v-model="max_soleil" maxlength="4" />
           <Field name="max_pluie" class="saisie-valeur" type="text" v-model="max_pluie" maxlength="4" />
           <Field name="max_vent" class="saisie-valeur" type="text" v-model="max_vent" maxlength="3" />
         </div>
       </div>
-      <button class="submit-btn" type="submit">Submit</button>
+      <button class="submit-btn" type="submit">Rechercher</button>
     </Form>
   </Panel>
 </template>
 
 <style scoped>
-
 a {
   color: #42b983;
 }
@@ -89,10 +88,34 @@ code {
   color: #304455;
 }
 
+.my_grid {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  grid-template-rows: 250px;
+}
+
+[class^="c-item"] {
+  display: inline-grid;
+}
+
+.c-item-1 {
+  grid-column: 1;
+  justify-content: left;
+}
+.c-item-2 {
+  grid-column: 2;
+  justify-content: right;
+  text-align: right;
+}
+.c-item-3 {
+  grid-column: 3;
+  justify-content: right;
+  text-align: right;
+}
+
 .saisie-valeur {
   width: 60px;
   height: 25px;
-  margin-top: 10px;
   border: solid 1px #f7f8fa;
   background-color: #ffffff;
   font-size: 16px;
@@ -113,9 +136,9 @@ code {
   font-size: 18px;
   padding: 10px 15px;
   display: block;
-  width: 100px;
+  width: 120px;
   border-radius: 7px;
-  margin-top: 40px;
+  margin-top: 10px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -164,28 +187,5 @@ code {
 
 .submit-btn:hover {
   transform: scale(1.1);
-}
-
-
-.my_grid {
-  display: grid;
-  grid-template-columns: 60% 20% 20%;
-}
-
-[class^="c-item"] {
-  display: inline-grid;
-}
-
-.c-item-1 {
-  grid-column: 1;
-  justify-content: left;
-}
-.c-item-2 {
-  grid-column: 2;
-  justify-content: right;
-}
-.c-item-3 {
-  grid-column: 3;
-  justify-content: right;
 }
 </style>
