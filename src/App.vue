@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
 import Station78 from "./components/Station78.vue";
 import Selection from "./components/Selection.vue";
 import data from "./data/fc.json";
@@ -22,9 +21,10 @@ val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format
 </script>
 
 <template>
-  <Station78 v-bind="{ valeur_ref: val_ref_78 }" />
-  <p></p>
-  <Selection />
+  <div v-bind:class="{ FlexWrapperMobile: store.sm, FlexWrapper: !store.sm }">
+    <Station78 v-bind="{ valeur_ref: val_ref_78 }" />
+    <Selection />
+  </div>
 </template>
 
 <style>
@@ -35,5 +35,26 @@ val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format
   text-align: left;
   color: #2c3e50;
   margin: 1%;
+}
+
+.FlexWrapper {
+  width: auto;
+  height: auto;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: left;
+  gap: 40px;
+}
+.FlexWrapperMobile {
+  width: auto;
+  height: auto;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  gap: 10px;
 }
 </style>

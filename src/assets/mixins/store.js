@@ -1,11 +1,14 @@
 // State Management avec Pinia (futur vuex5)
 import { defineStore } from "pinia";
 
+// Responsive
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+const breakpoints = useBreakpoints(breakpointsTailwind)
+
 export const useStore = defineStore("storeId", {
   // arrow function recommended for full type inference
   state: () => {
     return {
-
       // Formatage valeurs
       euros_0: Intl.NumberFormat("fr", {
         style: "currency",
@@ -29,6 +32,14 @@ export const useStore = defineStore("storeId", {
         style: "percent",
         maximumFractionDigits: 2,
       }),
+
+      // Définition des breakpoints responsive
+      sm: breakpoints.smaller("sm"),
+      md: breakpoints.between("sm", "md"),
+      lg: breakpoints.between("md", "lg"),
+      xl: breakpoints.between("lg", "xl"),
+      xxl: breakpoints.between("xl", "2xl"),
+      xxxl: breakpoints["2xl"],
     };
   },
 });

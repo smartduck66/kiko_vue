@@ -133,10 +133,11 @@ code {
   outline: none;
   border: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px 15px;
+  text-align: center;
   display: block;
-  width: 120px;
+  width: 130px;
   border-radius: 7px;
   margin-top: 10px;
   transition: transform 0.3s ease-in-out;
