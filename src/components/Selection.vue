@@ -45,7 +45,7 @@ const schema = Yup.object().shape({
     <Form @submit="onSearch" :validation-schema="schema" @invalid-submit="onInvalidSearch">
       <div class="my_grid">
         <div class="c-item-1">
-          <span>--------------------------</span>
+          <span>-----------------------</span>
           <span>Température moyenne :</span>
           <span>Durée d'insolation :</span>
           <span>Précipitations :</span>
@@ -93,7 +93,7 @@ code {
 
 .my_grid {
   display: grid;
-  grid-template-columns: 170px 75px 75px;
+  grid-template-columns: 175px 75px 75px;
   grid-template-rows: 250px;
 }
 

@@ -35,7 +35,7 @@ const store = useStore();
   </div>
 
   <div v-else>
-    <Panel header="Résultats" style="width: 738px">
+    <Panel header="Résultats" style="width: 743px">
       <div class="my_grid">
         <div class="c-item-1">
           <span class="icon-text">
