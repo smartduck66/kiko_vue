@@ -93,7 +93,7 @@ code {
 
 .my_grid {
   display: grid;
-  grid-template-columns: 60% 20% 20%;
+  grid-template-columns: 170px 75px 75px;
   grid-template-rows: 250px;
 }
 

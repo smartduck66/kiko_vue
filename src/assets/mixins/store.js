@@ -34,6 +34,7 @@ export const useStore = defineStore("storeId", {
       }),
 
       // Définition des breakpoints responsive
+      // 'sm': 640, 'md': 768, 'lg': 1024,'xl': 1280, '2xl': 1536,
       sm: breakpoints.smaller("sm"),
       md: breakpoints.between("sm", "md"),
       lg: breakpoints.between("md", "lg"),

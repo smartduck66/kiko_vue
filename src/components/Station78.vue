@@ -10,37 +10,25 @@ defineProps<{ valeur_ref: string[] }>();
       <div class="c-item-1">
         <p>
           <span class="icon-text">
-            <span class="icon">
-              <i class="fa-solid fa-thermometer-half"></i>
-            </span>
-            <span id="tmoy"></span>
+            <span class="icon"><i class="fas fa-thermometer-half"></i></span>
             {{ valeur_ref[1] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-temperature-low"></i>
-            </span>
-            <span id="tmin"></span>
+            <span class="icon"><i class="fas fa-temperature-low"></i></span>
             {{ valeur_ref[2] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-temperature-high"></i>
-            </span>
-            <span id="tmax"></span>
+            <span class="icon"><i class="fas fa-temperature-high"></i></span>
             {{ valeur_ref[3] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-atom"></i>
-            </span>
-            <span id="cnpe"></span>
+            <span class="icon"><i class="fas fa-atom"></i></span>
             {{ valeur_ref[4] }}
           </span>
         </p>
@@ -48,37 +36,25 @@ defineProps<{ valeur_ref: string[] }>();
       <div class="c-item-2">
         <p>
           <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-sun"></i>
-            </span>
-            <span id="soleil"></span>
+            <span class="icon"><i class="fas fa-sun"></i></span>
             {{ valeur_ref[5] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-cloud-rain"></i>
-            </span>
-            <span id="pluie"></span>
+            <span class="icon"><i class="fas fa-cloud-rain"></i></span>
             {{ valeur_ref[6] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-wind"></i>
-            </span>
-            <span id="vent"></span>
+            <span class="icon"><i class="fas fa-wind"></i></span>
             {{ valeur_ref[7] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-home"></i>
-            </span>
-            <span id="prix"></span>
+            <span class="icon"><i class="fas fa-home"></i></span>
             {{ valeur_ref[8] }}
           </span>
         </p>
@@ -111,7 +87,7 @@ code {
 
 .my_grid {
   display: grid;
-  grid-template-columns: 185px 185px;
+  grid-template-columns: 160px 160px;
 }
 
 [class^="c-item"] {
