@@ -1,0 +1,75 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --MainFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  position: relative;
+  min-height: 100%;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  color: #2c3e50;
+  margin-top: 10px;
+}
+
+body {
+  padding: 0rem 0.6rem;
+  font-size: 1.2em;
+  max-width: 1330px;
+  margin: 0 auto;
+}
+
+input,
+textarea,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+img.erreur-global {
+  width: 302px;
+  height: 226px;
+  flex-grow: 0;
+  margin: 0 152px 22px 124px;
+  object-fit: contain;
+}
+
+.CenterMe-global {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.menu-global {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+  height: 26px;
+  flex-grow: 0;
+}
+
+.scrollWrapper-global {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /*Give us inertia style scrolling on WebKit based touch devices*/
+  -webkit-overflow-scrolling: touch;
+  /*Remove the scrollbars in supporting versions of IE*/
+  -ms-overflow-style: none;
+}
+

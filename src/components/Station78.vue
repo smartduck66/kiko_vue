@@ -11,7 +11,7 @@ defineProps<{ valeur_ref: string[] }>();
         <p>
           <span class="icon-text">
             <span class="icon">
-              <i class="fas fa-thermometer-half"></i>
+              <i class="fa-solid fa-thermometer-half"></i>
             </span>
             <span id="tmoy"></span>
             {{ valeur_ref[1] }}
