@@ -28,15 +28,6 @@ val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: left;
-  color: #2c3e50;
-  margin: 1%;
-}
-
 .FlexWrapper {
   width: auto;
   height: auto;

@@ -14,12 +14,12 @@ const max_pluie = ref(900);
 const min_vent = ref(0);
 const max_vent = ref(50);
 
-function onSubmit(values: any) {
+function onSearch(values: any) {
   alert(JSON.stringify(values, null, 2));
 }
 
-function onInvalidSubmit() {
-  const submitBtn = document.querySelector(".submit-btn");
+function onInvalidSearch() {
+  const submitBtn = document.querySelector(".search-btn");
   submitBtn!.classList.add("invalid");
   setTimeout(() => {
     submitBtn!.classList.remove("invalid");
@@ -42,7 +42,7 @@ const schema = Yup.object().shape({
 
 <template>
   <Panel header="Critères de sélection des sites">
-    <Form @submit="onSubmit" :validation-schema="schema" @invalid-submit="onInvalidSubmit">
+    <Form @submit="onSearch" :validation-schema="schema" @invalid-submit="onInvalidSearch">
       <div class="my_grid">
         <div class="c-item-1">
           <span>--------------------------</span>
@@ -66,7 +66,10 @@ const schema = Yup.object().shape({
           <Field name="max_vent" class="saisie-valeur" type="text" v-model="max_vent" maxlength="3" />
         </div>
       </div>
-      <button class="submit-btn" type="submit">Rechercher</button>
+      <div class="FlexWrapper">
+        <button class="search-btn" type="submit">Rechercher</button>
+        <button class="reset-btn" type="reset">Réinitialiser</button>
+      </div>
     </Form>
   </Panel>
 </template>
@@ -128,7 +131,17 @@ code {
   padding: 8px 5px;
 }
 
-.submit-btn {
+.FlexWrapper {
+  width: auto;
+  height: auto;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: left;
+  gap: 60px;
+}
+.search-btn {
   background: var(--primary-color);
   outline: none;
   border: none;
@@ -143,11 +156,32 @@ code {
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
 }
-
-.submit-btn.invalid {
+.search-btn:hover {
+  transform: scale(1.1);
+}
+.search-btn.invalid {
   animation: shake 0.5s;
   /* When the animation is finished, start again */
   animation-iteration-count: infinite;
+}
+
+.reset-btn {
+  background: #da1639;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+  width: 130px;
+  border-radius: 7px;
+  margin-top: 10px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.reset-btn:hover {
+  transform: scale(1.1);
 }
 
 @keyframes shake {
@@ -184,9 +218,5 @@ code {
   100% {
     transform: translate(1px, -2px);
   }
-}
-
-.submit-btn:hover {
-  transform: scale(1.1);
 }
 </style>
