@@ -25,7 +25,6 @@ val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format
   <div v-bind:class="{ FlexWrapperMobile: store.sm, FlexWrapper: !store.sm }">
     <Station78 v-bind="{ valeur_ref: val_ref_78 }" />
     <Sélection />
-    <Résultats />
   </div>
 
 </template>

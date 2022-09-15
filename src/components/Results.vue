@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import Panel from "primevue/panel";
+import { results } from "../assets/mixins/types";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
+defineProps<{
+  occurences: string;
+  results_rows: results[];
+}>();
+
+
 </script>
 
 <template>
@@ -35,37 +42,64 @@ const store = useStore();
   </div>
 
   <div v-else>
-    <Panel header="Résultats" style="width: 743px">
+    <Panel v-bind="{ header: occurences }" style="width: 743px">
       <div class="my_grid">
         <div class="c-item-1">
           <span class="icon-text">
             <span class="icon"><i class="fas fa-city"></i></span>
             <span class="label">Site</span>
+            <div v-for="item in results_rows">
+              <div class="site">{{ Object(item).site }}</div>
+            </div>
           </span>
         </div>
         <div class="c-item-2">
-          <span class="icon"><i class="fas fa-thermometer-half"></i></span>
+          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-thermometer-half"></i></span>
+          <div v-for="item in results_rows">
+            <div class="value">{{ Object(item).tmoy }}</div>
+          </div>
         </div>
         <div class="c-item-3">
-          <span class="icon"><i class="fas fa-temperature-low"></i></span>
+          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-low"></i></span>
+          <div v-for="item in results_rows">
+            <div class="value">{{ Object(item).tmin }}</div>
+          </div>
         </div>
         <div class="c-item-4">
-          <span class="icon"><i class="fas fa-temperature-high"></i></span>
+          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-high"></i></span>
+          <div v-for="item in results_rows">
+            <div class="value">{{ Object(item).tmax }}</div>
+          </div>
         </div>
         <div class="c-item-5">
-          <span class="icon"><i class="fas fa-sun"></i></span>
+          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-sun"></i></span>
+          <div v-for="item in results_rows">
+            <div class="value">{{ Object(item).soleil }}</div>
+          </div>
         </div>
         <div class="c-item-6">
-          <span class="icon"><i class="fas fa-cloud-rain"></i></span>
+          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-cloud-rain"></i></span>
+          <div v-for="item in results_rows">
+            <div class="value">{{ Object(item).pluie }}</div>
+          </div>
         </div>
         <div class="c-item-7">
-          <span class="icon"><i class="fas fa-wind"></i></span>
+          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-wind"></i></span>
+          <div v-for="item in results_rows">
+            <div class="value">{{ Object(item).vent }}</div>
+          </div>
         </div>
         <div class="c-item-8">
-          <span class="icon"><i class="fas fa-atom"></i></span>
+          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-atom"></i></span>
+          <div v-for="item in results_rows">
+            <div class="value">{{ Object(item).cnpe }}</div>
+          </div>
         </div>
         <div class="c-item-9">
-          <span class="icon"><i class="fas fa-home"></i></span>
+          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-home"></i></span>
+          <div v-for="item in results_rows">
+            <div class="value">{{ Object(item).prix }}</div>
+          </div>
         </div>
       </div>
     </Panel>
@@ -75,7 +109,7 @@ const store = useStore();
 <style scoped>
 .my_grid_mobile {
   display: grid;
-  grid-template-columns: 183px 155px;
+  grid-template-columns: 170px 155px;
   grid-template-rows: 40px;
 }
 [class^="c-item-mobile"] {
@@ -102,7 +136,7 @@ const store = useStore();
 
 .container.x {
   width: 100%;
-  height: 200px;
+  height: 40px;
   flex-flow: row nowrap;
 }
 
@@ -118,10 +152,10 @@ const store = useStore();
 }
 
 .x.container > div {
-  line-height: 52px;
-  font-size: 14px;
+  line-height: 40px;
+  font-size: 16px;
   width: 100%;
-  height: 52px;
+  height: 40px;
 }
 
 .site {
@@ -129,11 +163,12 @@ const store = useStore();
   align-self: stretch;
   white-space: nowrap;
   flex-grow: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.14;
   letter-spacing: normal;
+  padding: 15px 0px 0px 0px;
   text-align: left;
   color: #071621;
   text-overflow: ellipsis; /* Au cas où le nom du site est trop grand */
@@ -142,8 +177,8 @@ const store = useStore();
   -webkit-box-orient: vertical;
 }
 .value {
-  height: 52px;
-  padding: 15px 15px 0px 0px;
+  height: 40px;
+  padding: 15px 0px 0px 0px;
   flex-grow: 1;
   font-size: 14px;
   font-weight: normal;
@@ -159,9 +194,11 @@ const store = useStore();
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 5px;
 }
+
 .my_grid {
   display: grid;
-  grid-template-columns: 200px;
+  grid-template-columns: 230px repeat(8,50px);
+  gap:10px;
   grid-template-rows: 40px;
 }
 [class^="c-item"] {

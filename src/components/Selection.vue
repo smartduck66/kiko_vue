@@ -1,8 +1,21 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import Résultats from "./Results.vue";
+import { ref, Ref } from "vue";
 import Panel from "primevue/panel";
 import { Form, Field } from "vee-validate";
 import * as Yup from "yup";
+import { convert_DMS_DD, site_dangereux_le_plus_proche } from "../assets/mixins/distances.js";
+import { fiche_climatique, results } from "../assets/mixins/types";
+import fc from "../data/fc.json";
+import { useStore } from "../assets/mixins/store.js";
+const store = useStore();
+
+// Stockage local des fichiers json pour les réutiliser lors de cette session
+localStorage.fc = JSON.stringify(fc);
+
+// Définition des colonnes des résultats en valeurs réactives
+const nb_occurences = ref("");
+let results_table: Ref<results[]> = ref([]);
 
 // Définition des valeurs par défaut des critères de sélection des sites climatiques
 const min_temp = ref(10);
@@ -13,18 +26,6 @@ const min_pluie = ref(600);
 const max_pluie = ref(900);
 const min_vent = ref(0);
 const max_vent = ref(50);
-
-function onSearch(values: any) {
-  alert(JSON.stringify(values, null, 2));
-}
-
-function onInvalidSearch() {
-  const submitBtn = document.querySelector(".search-btn");
-  submitBtn!.classList.add("invalid");
-  setTimeout(() => {
-    submitBtn!.classList.remove("invalid");
-  }, 1000);
-}
 
 // Using yup to generate a validation schema
 // https://vee-validate.logaretm.com/v4/guide/validation#validation-schemas-with-yup
@@ -38,6 +39,96 @@ const schema = Yup.object().shape({
   min_vent: Yup.number().min(0).max(999).integer(),
   max_vent: Yup.number().max(999).positive().integer(),
 });
+
+function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void {
+  // Affichage des fiches par colonne
+  
+  // Comment remettre à zéro ????????
+  Object.getOwnPropertyNames(results_table).forEach(function (prop) {
+    results_table.value.pop();
+});
+
+
+
+  for (let i = 0; i < results.length; i++) {
+    const row = Object.create(results);
+    const ref: string = results[i].indicatif;
+    row.site = ref + " " + results[i].ville + " (" + results[i].altitude.toString() + " m)";
+    /*
+    if (window.screen.width > 768) {
+      row.site = ref + " " + results[i].ville + " (" + results[i].altitude.toString() + " m)";
+    } else {
+      //row.site="<a onclick="showModal_ref('` + ref + `')">` + ref + "</a>");
+    } // En mobile, affichage seulement de l'indicatif (modale pour le détail)
+    */
+    row.tmoy = results[i].temp_moy;
+    row.tmin=results[i].temp_min;
+    row.tmax=results[i].temp_max;
+    isNaN(Number(results[i].ensoleillement))?row.soleil="-":row.soleil=store.milliers_0.format(Number(results[i].ensoleillement));
+    isNaN(Number(results[i].pluie))?row.pluie="-":row.pluie=store.milliers_0.format(Number(results[i].pluie));
+    isNaN(Number(results[i].vent))?row.vent="-":row.vent=store.milliers_0.format(Number(results[i].vent));
+    row.cnpe=results[i].distance_cnpe;
+    isNaN(Number(results[i].prix_maisons))?row.prix="-":row.prix=store.euros_0.format(Number(results[i].prix_maisons));
+    results_table.value.push(row);
+    
+  }
+
+  nb_occurences.value = results.length.toString()+" résultats";
+}
+
+function onSearch(criteres: any) {
+  // Appui sur le bouton 'Recherche' : affichage des fiches climatiques correspondantes
+
+  // Dé-référencement de l'objet pour récupérer les valeurs
+  let p1 = Object(criteres).min_temp;
+  let p2 = Object(criteres).max_temp;
+  let p3 = Object(criteres).min_soleil;
+  let p4 = Object(criteres).max_soleil;
+  let p5 = Object(criteres).min_pluie;
+  let p6 = Object(criteres).max_pluie;
+  let p7 = Object(criteres).min_vent;
+  let p8 = Object(criteres).max_vent;
+
+  const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
+
+  // Sélection des fiches climatiques et tri ascendant
+  let results = data;
+  if (p1 + p2 > 0) {
+    results = results.filter((x: { temp_moy: number }) => x.temp_moy >= p1 && x.temp_moy <= p2);
+    results.sort(function (a: { temp_moy: number }, b: { temp_moy: number }) {
+      return a.temp_moy - b.temp_moy;
+    });
+  }
+  if (p3 + p4 > 0) {
+    results = results.filter((x: { ensoleillement: number }) => x.ensoleillement >= p3 && x.ensoleillement <= p4);
+    results.sort(function (a: { ensoleillement: number }, b: { ensoleillement: number }) {
+      return a.ensoleillement - b.ensoleillement;
+    });
+  }
+  if (p5 + p6 > 0) {
+    results = results.filter((x: { pluie: number }) => x.pluie >= p5 && x.pluie <= p6);
+    results.sort(function (a: { pluie: number }, b: { pluie: number }) {
+      return a.pluie - b.pluie;
+    });
+  }
+  if (p7 + p8 > 0) {
+    results = results.filter((x: { vent: number }) => x.vent >= p7 && x.vent <= p8);
+    results.sort(function (a: { vent: number }, b: { vent: number }) {
+      return a.vent - b.vent;
+    });
+  }
+  
+  affichage_fiches(results);
+}
+
+function onInvalidSearch() {
+  // Un ou plusieurs critères sont invalides et ne correspondent pas au schéma défini avec Yup
+  const submitBtn = document.querySelector(".search-btn");
+  submitBtn!.classList.add("invalid");
+  setTimeout(() => {
+    submitBtn!.classList.remove("invalid");
+  }, 1000);
+}
 </script>
 
 <template>
@@ -72,6 +163,8 @@ const schema = Yup.object().shape({
       </div>
     </Form>
   </Panel>
+
+  <Résultats :key="nb_occurences" v-bind="{ occurences: nb_occurences, results_rows: results_table }" />
 </template>
 
 <style scoped>
