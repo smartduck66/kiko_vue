@@ -14,7 +14,7 @@ const store = useStore();
 localStorage.fc = JSON.stringify(fc);
 
 // Définition des colonnes des résultats en valeurs réactives
-const nb_occurences = ref("");
+const nb_occurences = ref(0);
 let results_table: Ref<results[]> = ref([]);
 
 // Définition des valeurs par défaut des critères de sélection des sites climatiques
@@ -63,7 +63,7 @@ function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void 
     
   }
 
-  nb_occurences.value = results.length.toString()+" résultats";
+  nb_occurences.value = results.length //.toString()+" résultats";
 }
 
 function onSearch(criteres: any) {
@@ -154,7 +154,7 @@ function onInvalidSearch() {
     </Form>
   </Panel>
 
-  <Résultats :key="nb_occurences" v-bind="{ occurences: nb_occurences, results_rows: results_table }" />
+  <Résultats :key="nb_occurences" v-if="nb_occurences" v-bind="{ occurences: nb_occurences, results_rows: results_table }" />
 </template>
 
 <style scoped>

@@ -3,15 +3,15 @@ import Panel from "primevue/panel";
 import { results } from "../assets/mixins/types";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
-defineProps<{
-  occurences: string;
-  results_rows: results[];
-}>();
+
+const props = defineProps(["occurences", "results_rows"]);
+
+const nbOccurences = props.occurences.toString() + " résultats";
 </script>
 
 <template>
   <div v-if="store.sm || store.md">
-    <Panel header="Résultats">
+    <Panel v-bind="{ header: nbOccurences }">
       <!-- Taille de l'écran inférieure à 768px  -->
       <div class="my_grid_mobile">
         <div class="c-item-mobile-1">
@@ -82,7 +82,7 @@ defineProps<{
 
   <div v-else>
     <!-- Taille de l'écran supérieure à 768px  -->
-    <Panel v-bind="{ header: occurences }" style="width: 743px">
+    <Panel v-bind="{ header: nbOccurences }" style="width: 743px">
       <div class="my_grid">
         <div class="c-item-1">
           <span class="icon-text">
@@ -154,7 +154,6 @@ defineProps<{
 }
 [class^="c-item-mobile"] {
   display: inline-grid;
-  margin: 15px 0px 0px 0px;
   justify-content: right;
 }
 .c-item-mobile-1 {
@@ -191,7 +190,7 @@ defineProps<{
 }
 
 .x.container > div {
-  line-height: 40px;
+  line-height: 20px;
   font-size: 14px;
   width: 100%;
   height: 40px;
