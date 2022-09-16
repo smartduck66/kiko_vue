@@ -41,26 +41,16 @@ const schema = Yup.object().shape({
 });
 
 function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void {
-  // Affichage des fiches par colonne
+  // Fonction de construction de l'affichage des fiches par colonne
   
-  // Comment remettre à zéro ????????
-  Object.getOwnPropertyNames(results_table).forEach(function (prop) {
-    results_table.value.pop();
-});
-
-
+  // Reset de l'array des résultats
+  results_table.value.splice(0);
 
   for (let i = 0; i < results.length; i++) {
     const row = Object.create(results);
     const ref: string = results[i].indicatif;
-    row.site = ref + " " + results[i].ville + " (" + results[i].altitude.toString() + " m)";
-    /*
-    if (window.screen.width > 768) {
-      row.site = ref + " " + results[i].ville + " (" + results[i].altitude.toString() + " m)";
-    } else {
-      //row.site="<a onclick="showModal_ref('` + ref + `')">` + ref + "</a>");
-    } // En mobile, affichage seulement de l'indicatif (modale pour le détail)
-    */
+ 
+    row.site = ref + " " + results[i].ville + " (" + results[i].altitude.toString() + " m)";  
     row.tmoy = results[i].temp_moy;
     row.tmin=results[i].temp_min;
     row.tmax=results[i].temp_max;

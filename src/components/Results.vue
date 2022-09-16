@@ -7,8 +7,6 @@ defineProps<{
   occurences: string;
   results_rows: results[];
 }>();
-
-
 </script>
 
 <template>
@@ -17,24 +15,49 @@ defineProps<{
       <!-- Taille de l'écran inférieure à 768px  -->
       <div class="my_grid_mobile">
         <div class="c-item-mobile-1">
-          <div class="site">
-            <span class="icon-text">
-              <span class="icon"><i class="fas fa-city"></i></span>
-              <span class="label">Site</span>
-            </span>
+          <span class="icon-text">
+            <span class="icon"><i class="fas fa-city"></i></span>
+            <span class="label">Site</span>
+          </span>
+          <div v-for="item in results_rows">
+            <div class="site">{{ Object(item).site }}</div>
           </div>
         </div>
 
         <div class="c-item-mobile-2">
           <div class="container x mandatory-scroll-snapping" dir="ltr">
             <div class="icon"><i class="fas fa-thermometer-half"></i></div>
+            <div v-for="item in results_rows">
+              <div class="value">{{ Object(item).tmoy }}</div>
+            </div>
             <div class="icon"><i class="fas fa-temperature-low"></i></div>
+            <div v-for="item in results_rows">
+              <div class="value">{{ Object(item).tmin }}</div>
+            </div>
             <div class="icon"><i class="fas fa-temperature-high"></i></div>
+            <div v-for="item in results_rows">
+              <div class="value">{{ Object(item).tmax }}</div>
+            </div>
             <div class="icon"><i class="fas fa-sun"></i></div>
+            <div v-for="item in results_rows">
+              <div class="value">{{ Object(item).soleil }}</div>
+            </div>
             <div class="icon"><i class="fas fa-cloud-rain"></i></div>
+            <div v-for="item in results_rows">
+              <div class="value">{{ Object(item).pluie }}</div>
+            </div>
             <div class="icon"><i class="fas fa-wind"></i></div>
+            <div v-for="item in results_rows">
+              <div class="value">{{ Object(item).vent }}</div>
+            </div>
             <div class="icon"><i class="fas fa-atom"></i></div>
+            <div v-for="item in results_rows">
+              <div class="value">{{ Object(item).cnpe }}</div>
+            </div>
             <div class="icon"><i class="fas fa-home"></i></div>
+            <div v-for="item in results_rows">
+              <div class="value">{{ Object(item).prix }}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -42,16 +65,17 @@ defineProps<{
   </div>
 
   <div v-else>
+    <!-- Taille de l'écran supérieure à 768px  -->
     <Panel v-bind="{ header: occurences }" style="width: 743px">
       <div class="my_grid">
         <div class="c-item-1">
           <span class="icon-text">
             <span class="icon"><i class="fas fa-city"></i></span>
             <span class="label">Site</span>
-            <div v-for="item in results_rows">
-              <div class="site">{{ Object(item).site }}</div>
-            </div>
           </span>
+          <div v-for="item in results_rows">
+            <div class="site">{{ Object(item).site }}</div>
+          </div>
         </div>
         <div class="c-item-2">
           <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-thermometer-half"></i></span>
@@ -197,8 +221,8 @@ defineProps<{
 
 .my_grid {
   display: grid;
-  grid-template-columns: 230px repeat(8,50px);
-  gap:10px;
+  grid-template-columns: 230px repeat(8, 50px);
+  gap: 10px;
   grid-template-rows: 40px;
 }
 [class^="c-item"] {
