@@ -26,37 +26,53 @@ defineProps<{
 
         <div class="c-item-mobile-2">
           <div class="container x mandatory-scroll-snapping" dir="ltr">
-            <div class="icon"><i class="fas fa-thermometer-half"></i></div>
-            <div v-for="item in results_rows">
-              <div class="value">{{ Object(item).tmoy }}</div>
+            <div>
+              <div class="icon"><i class="fas fa-thermometer-half"></i></div>
+              <div v-for="item in results_rows">
+                <div class="value">{{ Object(item).tmoy }}</div>
+              </div>
             </div>
-            <div class="icon"><i class="fas fa-temperature-low"></i></div>
-            <div v-for="item in results_rows">
-              <div class="value">{{ Object(item).tmin }}</div>
+            <div>
+              <div class="icon"><i class="fas fa-temperature-low"></i></div>
+              <div v-for="item in results_rows">
+                <div class="value">{{ Object(item).tmin }}</div>
+              </div>
             </div>
-            <div class="icon"><i class="fas fa-temperature-high"></i></div>
-            <div v-for="item in results_rows">
-              <div class="value">{{ Object(item).tmax }}</div>
+            <div>
+              <div class="icon"><i class="fas fa-temperature-high"></i></div>
+              <div v-for="item in results_rows">
+                <div class="value">{{ Object(item).tmax }}</div>
+              </div>
             </div>
-            <div class="icon"><i class="fas fa-sun"></i></div>
-            <div v-for="item in results_rows">
-              <div class="value">{{ Object(item).soleil }}</div>
+            <div>
+              <div class="icon"><i class="fas fa-sun"></i></div>
+              <div v-for="item in results_rows">
+                <div class="value">{{ Object(item).soleil }}</div>
+              </div>
             </div>
-            <div class="icon"><i class="fas fa-cloud-rain"></i></div>
-            <div v-for="item in results_rows">
-              <div class="value">{{ Object(item).pluie }}</div>
+            <div>
+              <div class="icon"><i class="fas fa-cloud-rain"></i></div>
+              <div v-for="item in results_rows">
+                <div class="value">{{ Object(item).pluie }}</div>
+              </div>
             </div>
-            <div class="icon"><i class="fas fa-wind"></i></div>
-            <div v-for="item in results_rows">
-              <div class="value">{{ Object(item).vent }}</div>
+            <div>
+              <div class="icon"><i class="fas fa-wind"></i></div>
+              <div v-for="item in results_rows">
+                <div class="value">{{ Object(item).vent }}</div>
+              </div>
             </div>
-            <div class="icon"><i class="fas fa-atom"></i></div>
-            <div v-for="item in results_rows">
-              <div class="value">{{ Object(item).cnpe }}</div>
+            <div>
+              <div class="icon"><i class="fas fa-atom"></i></div>
+              <div v-for="item in results_rows">
+                <div class="value">{{ Object(item).cnpe }}</div>
+              </div>
             </div>
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <div v-for="item in results_rows">
-              <div class="value">{{ Object(item).prix }}</div>
+            <div>
+              <div class="icon"><i class="fas fa-home"></i></div>
+              <div v-for="item in results_rows">
+                <div class="value">{{ Object(item).prix }}</div>
+              </div>
             </div>
           </div>
         </div>
@@ -133,7 +149,7 @@ defineProps<{
 <style scoped>
 .my_grid_mobile {
   display: grid;
-  grid-template-columns: 170px 155px;
+  grid-template-columns: 250px 75px;
   grid-template-rows: 40px;
 }
 [class^="c-item-mobile"] {
@@ -144,7 +160,6 @@ defineProps<{
 .c-item-mobile-1 {
   grid-column: 1;
   justify-content: left;
-  background: #da1639;
 }
 .c-item-mobile-2 {
   grid-column: 2;
@@ -160,7 +175,7 @@ defineProps<{
 
 .container.x {
   width: 100%;
-  height: 40px;
+  height: 2000px;
   flex-flow: row nowrap;
 }
 
@@ -177,7 +192,7 @@ defineProps<{
 
 .x.container > div {
   line-height: 40px;
-  font-size: 16px;
+  font-size: 14px;
   width: 100%;
   height: 40px;
 }
