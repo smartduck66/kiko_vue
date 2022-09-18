@@ -1,17 +1,53 @@
 <script setup lang="ts">
-import Panel from "primevue/panel";
+import { ref, Ref } from "vue";
 import { results } from "../assets/mixins/types";
+import { useOffsetPagination } from "@vueuse/core";
+import Panel from "primevue/panel";
+import Button from "primevue/button";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
-
 const props = defineProps(["occurences", "results_rows"]);
 
 const nbOccurences = props.occurences.toString() + " résultats";
+
+// Mécanique de pagination adaptée à 'results_rows' : https://github.com/vueuse/vueuse/blob/main/packages/core/useOffsetPagination/demo.vue
+const data: Ref<results[]> = ref([]);
+const page = ref(1);
+const pageSize = ref(10);
+
+function fetch(page: number, pageSize: number) {
+  return new Promise<results[]>((resolve, reject) => {
+    const start = (page - 1) * pageSize;
+    const end = start + pageSize;
+    setTimeout(() => {
+      resolve(props.results_rows.slice(start, end));
+    }, 100);
+  });
+}
+
+function fetchData({ currentPage, currentPageSize }: { currentPage: number; currentPageSize: number }) {
+  fetch(currentPage, currentPageSize).then((responseData) => {
+    data.value = responseData;
+  });
+}
+
+fetchData({
+  currentPage: page.value,
+  currentPageSize: pageSize.value,
+});
+
+const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, next } = useOffsetPagination({
+  total: props.results_rows.length,
+  page: 1,
+  pageSize,
+  onPageChange: fetchData,
+  onPageSizeChange: fetchData,
+});
 </script>
 
 <template>
   <div v-if="store.sm || store.md">
-    <Panel v-bind="{ header: nbOccurences }">
+    <Panel v-bind="{ header: nbOccurences }" style="height: 500px">
       <!-- Taille de l'écran inférieure à 768px  -->
       <div class="my_grid_mobile">
         <div class="c-item-mobile-1">
@@ -19,7 +55,7 @@ const nbOccurences = props.occurences.toString() + " résultats";
             <span class="icon"><i class="fas fa-city"></i></span>
             <span class="label">Site</span>
           </span>
-          <div v-for="item in results_rows">
+          <div v-for="item in data">
             <div class="site">{{ Object(item).site }}</div>
           </div>
         </div>
@@ -28,49 +64,49 @@ const nbOccurences = props.occurences.toString() + " résultats";
           <div class="container x mandatory-scroll-snapping" dir="ltr">
             <div>
               <div class="icon"><i class="fas fa-thermometer-half"></i></div>
-              <div v-for="item in results_rows">
+              <div v-for="item in data">
                 <div class="value">{{ Object(item).tmoy }}</div>
               </div>
             </div>
             <div>
               <div class="icon"><i class="fas fa-temperature-low"></i></div>
-              <div v-for="item in results_rows">
+              <div v-for="item in data">
                 <div class="value">{{ Object(item).tmin }}</div>
               </div>
             </div>
             <div>
               <div class="icon"><i class="fas fa-temperature-high"></i></div>
-              <div v-for="item in results_rows">
+              <div v-for="item in data">
                 <div class="value">{{ Object(item).tmax }}</div>
               </div>
             </div>
             <div>
               <div class="icon"><i class="fas fa-sun"></i></div>
-              <div v-for="item in results_rows">
+              <div v-for="item in data">
                 <div class="value">{{ Object(item).soleil }}</div>
               </div>
             </div>
             <div>
               <div class="icon"><i class="fas fa-cloud-rain"></i></div>
-              <div v-for="item in results_rows">
+              <div v-for="item in data">
                 <div class="value">{{ Object(item).pluie }}</div>
               </div>
             </div>
             <div>
               <div class="icon"><i class="fas fa-wind"></i></div>
-              <div v-for="item in results_rows">
+              <div v-for="item in data">
                 <div class="value">{{ Object(item).vent }}</div>
               </div>
             </div>
             <div>
               <div class="icon"><i class="fas fa-atom"></i></div>
-              <div v-for="item in results_rows">
+              <div v-for="item in data">
                 <div class="value">{{ Object(item).cnpe }}</div>
               </div>
             </div>
             <div>
               <div class="icon"><i class="fas fa-home"></i></div>
-              <div v-for="item in results_rows">
+              <div v-for="item in data">
                 <div class="value">{{ Object(item).prix }}</div>
               </div>
             </div>
@@ -78,72 +114,87 @@ const nbOccurences = props.occurences.toString() + " résultats";
         </div>
       </div>
     </Panel>
+    <div class="FlexWrapper">
+            <Button class="ButtonSize p-button-success" :disabled="isFirstPage" @click="prev">&#8249</Button>
+            <Button class="ButtonSize p-button-success" v-for="item in pageCount" :key="item" :disabled="currentPage === item" @click="currentPage = item">
+            {{ item }}
+            </Button>
+            <Button class="ButtonSize p-button-success" :disabled="isLastPage" @click="next">&#8250</Button>
+    </div>
   </div>
 
   <div v-else>
     <!-- Taille de l'écran supérieure à 768px  -->
-    <Panel v-bind="{ header: nbOccurences }" style="width: 743px">
+    <Panel v-bind="{ header: nbOccurences }" style="width: 743px; height: 500px">
       <div class="my_grid">
         <div class="c-item-1">
           <span class="icon-text">
             <span class="icon"><i class="fas fa-city"></i></span>
             <span class="label">Site</span>
           </span>
-          <div v-for="item in results_rows">
+          <div v-for="item in data">
             <div class="site">{{ Object(item).site }}</div>
           </div>
         </div>
         <div class="c-item-2">
           <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-thermometer-half"></i></span>
-          <div v-for="item in results_rows">
+          <div v-for="item in data">
             <div class="value">{{ Object(item).tmoy }}</div>
           </div>
         </div>
         <div class="c-item-3">
           <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-low"></i></span>
-          <div v-for="item in results_rows">
+          <div v-for="item in data">
             <div class="value">{{ Object(item).tmin }}</div>
           </div>
         </div>
         <div class="c-item-4">
           <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-high"></i></span>
-          <div v-for="item in results_rows">
+          <div v-for="item in data">
             <div class="value">{{ Object(item).tmax }}</div>
           </div>
         </div>
         <div class="c-item-5">
           <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-sun"></i></span>
-          <div v-for="item in results_rows">
+          <div v-for="item in data">
             <div class="value">{{ Object(item).soleil }}</div>
           </div>
         </div>
         <div class="c-item-6">
           <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-cloud-rain"></i></span>
-          <div v-for="item in results_rows">
+          <div v-for="item in data">
             <div class="value">{{ Object(item).pluie }}</div>
           </div>
         </div>
         <div class="c-item-7">
           <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-wind"></i></span>
-          <div v-for="item in results_rows">
+          <div v-for="item in data">
             <div class="value">{{ Object(item).vent }}</div>
           </div>
         </div>
         <div class="c-item-8">
           <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-atom"></i></span>
-          <div v-for="item in results_rows">
+          <div v-for="item in data">
             <div class="value">{{ Object(item).cnpe }}</div>
           </div>
         </div>
         <div class="c-item-9">
           <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-home"></i></span>
-          <div v-for="item in results_rows">
+          <div v-for="item in data">
             <div class="value">{{ Object(item).prix }}</div>
           </div>
         </div>
       </div>
     </Panel>
+    <div class="FlexWrapper">
+            <Button class="ButtonSize p-button-success" :disabled="isFirstPage" @click="prev">&#8249</Button>
+            <Button class="ButtonSize p-button-success" v-for="item in pageCount" :key="item" :disabled="currentPage === item" @click="currentPage = item">
+            {{ item }}
+            </Button>
+            <Button class="ButtonSize p-button-success" :disabled="isLastPage" @click="next">&#8250</Button>
+    </div>
   </div>
+  
 </template>
 
 <style scoped>
@@ -174,7 +225,7 @@ const nbOccurences = props.occurences.toString() + " résultats";
 
 .container.x {
   width: 100%;
-  height: 2000px;
+  height: 380px;
   flex-flow: row nowrap;
 }
 
@@ -270,5 +321,23 @@ const nbOccurences = props.occurences.toString() + " résultats";
 }
 .c-item-9 {
   grid-column: 9;
+}
+
+.FlexWrapper {
+  width: auto;
+  height: auto;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: left;
+
+  gap: 5px;
+}
+
+.ButtonSize {
+  height: 20px;
+  width: 20px;
+  font-size: 12px;
 }
 </style>

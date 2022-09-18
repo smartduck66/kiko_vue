@@ -42,28 +42,26 @@ const schema = Yup.object().shape({
 
 function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void {
   // Fonction de construction de l'affichage des fiches par colonne
-  
+
   // Reset de l'array des résultats
   results_table.value.splice(0);
 
-  for (let i = 0; i < results.length; i++) {
+  results_table.value = results.map((r) => {
     const row = Object.create(results);
-    const ref: string = results[i].indicatif;
- 
-    row.site = ref + " " + results[i].ville + " (" + results[i].altitude.toString() + " m)";  
-    row.tmoy = results[i].temp_moy;
-    row.tmin=results[i].temp_min;
-    row.tmax=results[i].temp_max;
-    isNaN(Number(results[i].ensoleillement))?row.soleil="-":row.soleil=store.milliers_0.format(Number(results[i].ensoleillement));
-    isNaN(Number(results[i].pluie))?row.pluie="-":row.pluie=store.milliers_0.format(Number(results[i].pluie));
-    isNaN(Number(results[i].vent))?row.vent="-":row.vent=store.milliers_0.format(Number(results[i].vent));
-    row.cnpe=results[i].distance_cnpe;
-    isNaN(Number(results[i].prix_maisons))?row.prix="-":row.prix=store.euros_0.format(Number(results[i].prix_maisons));
-    results_table.value.push(row);
-    
-  }
+    const ref: string = r.indicatif;
+    row.site = ref + " " + r.ville + " (" + r.altitude.toString() + " m)";
+    row.tmoy = r.temp_moy;
+    row.tmin = r.temp_min;
+    row.tmax = r.temp_max;
+    isNaN(Number(r.ensoleillement)) ? (row.soleil = "-") : (row.soleil = store.milliers_0.format(Number(r.ensoleillement)));
+    isNaN(Number(r.pluie)) ? (row.pluie = "-") : (row.pluie = store.milliers_0.format(Number(r.pluie)));
+    isNaN(Number(r.vent)) ? (row.vent = "-") : (row.vent = store.milliers_0.format(Number(r.vent)));
+    row.cnpe = r.distance_cnpe;
+    isNaN(Number(r.prix_maisons)) ? (row.prix = "-") : (row.prix = store.euros_0.format(Number(r.prix_maisons)));
+    return row;
+  });
 
-  nb_occurences.value = results.length //.toString()+" résultats";
+  nb_occurences.value = results.length; //.toString()+" résultats";
 }
 
 function onSearch(criteres: any) {
@@ -107,7 +105,7 @@ function onSearch(criteres: any) {
       return a.vent - b.vent;
     });
   }
-  
+
   affichage_fiches(results);
 }
 
@@ -230,6 +228,7 @@ code {
   border: none;
   color: #fff;
   font-size: 16px;
+  font-weight: 500;
   padding: 10px 15px;
   text-align: center;
   display: block;
@@ -249,10 +248,11 @@ code {
 }
 
 .reset-btn {
-  background: #da1639;
+  background: none;
   outline: none;
   border: none;
-  color: #fff;
+  font-weight: 500;
+  color: #666e8a;
   font-size: 16px;
   padding: 10px 15px;
   text-align: center;
