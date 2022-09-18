@@ -3,6 +3,7 @@ import { ref, Ref } from "vue";
 import { results } from "../assets/mixins/types";
 import { useOffsetPagination } from "@vueuse/core";
 import Panel from "primevue/panel";
+import Card from 'primevue/card';
 import Button from "primevue/button";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
@@ -13,7 +14,7 @@ const nbOccurences = props.occurences.toString() + " résultats";
 // Mécanique de pagination adaptée à 'results_rows' : https://github.com/vueuse/vueuse/blob/main/packages/core/useOffsetPagination/demo.vue
 const data: Ref<results[]> = ref([]);
 const page = ref(1);
-const pageSize = ref(10);
+const pageSize = ref((store.sm || store.md)?10:15); // Nombre de lignes affichables par page
 
 function fetch(page: number, pageSize: number) {
   return new Promise<results[]>((resolve, reject) => {
@@ -43,11 +44,19 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
   onPageChange: fetchData,
   onPageSizeChange: fetchData,
 });
+
+// <span :style="store.sm || store.md ? { height: 500px } : { width: 743px; height:700px }">
 </script>
 
 <template>
-  <div v-if="store.sm || store.md">
-    <Panel v-bind="{ header: nbOccurences }" style="height: 500px">
+
+  <Card :style="store.sm || store.md ? { height: '500px' } : { width: '743px', height:'700px' }">
+    <template #title>
+      {{nbOccurences}}
+    </template>
+    <template #content>
+      <div v-if="store.sm || store.md">
+      
       <!-- Taille de l'écran inférieure à 768px  -->
       <div class="my_grid_mobile">
         <div class="c-item-mobile-1">
@@ -59,7 +68,6 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
             <div class="site">{{ Object(item).site }}</div>
           </div>
         </div>
-
         <div class="c-item-mobile-2">
           <div class="container x mandatory-scroll-snapping" dir="ltr">
             <div>
@@ -113,20 +121,12 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
           </div>
         </div>
       </div>
-    </Panel>
-    <div class="FlexWrapper">
-            <Button class="ButtonSize p-button-success" :disabled="isFirstPage" @click="prev">&#8249</Button>
-            <Button class="ButtonSize p-button-success" v-for="item in pageCount" :key="item" :disabled="currentPage === item" @click="currentPage = item">
-            {{ item }}
-            </Button>
-            <Button class="ButtonSize p-button-success" :disabled="isLastPage" @click="next">&#8250</Button>
-    </div>
+
   </div>
 
   <div v-else>
     <!-- Taille de l'écran supérieure à 768px  -->
-    <Panel v-bind="{ header: nbOccurences }" style="width: 743px; height: 500px">
-      <div class="my_grid">
+              <div class="my_grid">
         <div class="c-item-1">
           <span class="icon-text">
             <span class="icon"><i class="fas fa-city"></i></span>
@@ -185,14 +185,21 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
           </div>
         </div>
       </div>
-    </Panel>
-    <div class="FlexWrapper">
-            <Button class="ButtonSize p-button-success" :disabled="isFirstPage" @click="prev">&#8249</Button>
-            <Button class="ButtonSize p-button-success" v-for="item in pageCount" :key="item" :disabled="currentPage === item" @click="currentPage = item">
-            {{ item }}
-            </Button>
-            <Button class="ButtonSize p-button-success" :disabled="isLastPage" @click="next">&#8250</Button>
-    </div>
+  
+  </div>
+
+
+            
+    </template>
+        
+  </Card>
+
+  <div class="FlexWrapper">
+      <Button class="ButtonSize p-button-success" :disabled="isFirstPage" @click="prev">&#8249</Button>
+      <Button class="ButtonSize p-button-success" v-for="item in pageCount" :key="item" :disabled="currentPage === item" @click="currentPage = item">
+      {{ item }}
+      </Button>
+      <Button class="ButtonSize p-button-success" :disabled="isLastPage" @click="next">&#8250</Button>
   </div>
   
 </template>
@@ -202,6 +209,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
   display: grid;
   grid-template-columns: 250px 75px;
   grid-template-rows: 40px;
+  
 }
 [class^="c-item-mobile"] {
   display: inline-grid;
@@ -225,7 +233,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
 
 .container.x {
   width: 100%;
-  height: 380px;
+  height: 420px;
   flex-flow: row nowrap;
 }
 
@@ -289,6 +297,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
   grid-template-columns: 230px repeat(8, 50px);
   gap: 10px;
   grid-template-rows: 40px;
+  margin-top: -6px;
 }
 [class^="c-item"] {
   display: inline-grid;
@@ -324,14 +333,13 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
 }
 
 .FlexWrapper {
-  width: auto;
+  width: 100%;
   height: auto;
   flex-grow: 0;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: left;
-
+  justify-content: end;
+  margin: 0px 18px 20px 0px;
   gap: 5px;
 }
 

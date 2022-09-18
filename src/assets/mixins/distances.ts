@@ -16,12 +16,7 @@ function rad2deg(rad: number): number {
   return (rad * 180) / M_PI;
 }
 
-function distanceEarth(
-  lat1d: number,
-  lon1d: number,
-  lat2d: number,
-  lon2d: number
-): number {
+function distanceEarth(lat1d: number, lon1d: number, lat2d: number, lon2d: number): number {
   /**
    * Returns the distance between two points on the Earth.
    * Direct translation from http://en.wikipedia.org/wiki/Haversine_formula
@@ -38,11 +33,7 @@ function distanceEarth(
   const lon2r: number = deg2rad(lon2d);
   const u: number = Math.sin((lat2r - lat1r) / 2);
   const v: number = Math.sin((lon2r - lon1r) / 2);
-  return (
-    2.0 *
-    EARTH_RADIUS_KM *
-    Math.asin(Math.sqrt(u * u + Math.cos(lat1r) * Math.cos(lat2r) * v * v))
-  );
+  return 2.0 * EARTH_RADIUS_KM * Math.asin(Math.sqrt(u * u + Math.cos(lat1r) * Math.cos(lat2r) * v * v));
 }
 
 function convert_DMS_DD(coord: string): number {
@@ -101,20 +92,13 @@ function site_dangereux_le_plus_proche<Type extends coords_sites_dangereux[]>(
     }
   }
 
-  const fiches: distance_sites_dangereux[] = coords_sites_dangereux.map(
-    (item) => {
-      const d = new distance_sites_dangereux(); // note the "new" keyword here
+  const fiches: distance_sites_dangereux[] = coords_sites_dangereux.map((item) => {
+    const d = new distance_sites_dangereux(); // note the "new" keyword here
 
-      d.distance = distanceEarth(
-        latitude_to_test,
-        longitude_to_test,
-        item.latitude,
-        item.longitude
-      );
-      d.site = item.site;
-      return d;
-    }
-  );
+    d.distance = distanceEarth(latitude_to_test, longitude_to_test, item.latitude, item.longitude);
+    d.site = item.site;
+    return d;
+  });
 
   fiches.sort(function (a, b): number {
     return a.distance - b.distance;
