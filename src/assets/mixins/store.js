@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 
 // Responsive
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
-const breakpoints = useBreakpoints(breakpointsTailwind)
+const breakpoints = useBreakpoints(breakpointsTailwind);
 
 export const useStore = defineStore("storeId", {
   // arrow function recommended for full type inference

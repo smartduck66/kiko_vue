@@ -25,5 +25,4 @@ export interface results {
   vent: string;
   cnpe: string;
   prix: string;
-
 }

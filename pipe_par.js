@@ -41,16 +41,16 @@ const child_process = require("child_process");
 const util = require("util");
 const execP = util.promisify(child_process.exec);
 
-const files = ["csv_to_json.ts", "kiko_init.ts", "distances.ts", "kiko.ts"];
+const files = ["csv_to_json.ts", "kiko_init.ts", "distances.ts"];
 let promises = files.map((file) => execP("tsc src/assets/mixins/" + file));
 
 Promise.all(promises)
   .then((bodies) => {
-    lines_delete();
+    console.log("traitement en cours");
   })
   .catch((e) => console.error(e));
 
-let tsc2 = child_process.execSync("npx prettier --write .");
+//let tsc2 = child_process.execSync("npx prettier --write .");
 
 var endTime = performance.now();
 

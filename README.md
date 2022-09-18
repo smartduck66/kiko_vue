@@ -43,7 +43,7 @@ Installations de modules NPM complémentaires :
 - VueUse : npm i @vueuse/core (utilitaires)
 - PrimeVue : npm i primevue (composants graphiques)
 - Vee-validate : npm i vee-validate --save (VeeValidate is the most popular Vue.js form library. It takes care of value tracking, validation, errors, submissions and more.)
-- Yup : npm install -S yup   (Yup is a schema builder for runtime value parsing and validation)
+- Yup : npm install -S yup (Yup is a schema builder for runtime value parsing and validation)
 - Pinia : npm install pinia (gestion des états)
 
 ---

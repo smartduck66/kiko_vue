@@ -1,23 +1,31 @@
 <script setup lang="ts">
+import * as faunadb from "faunadb";
 import Résultats from "./Results.vue";
 import { ref, Ref } from "vue";
 import Panel from "primevue/panel";
 import { Form, Field } from "vee-validate";
 import * as Yup from "yup";
-import { convert_DMS_DD, site_dangereux_le_plus_proche } from "../assets/mixins/distances.js";
 import { fiche_climatique, results } from "../assets/mixins/types";
 import fc from "../data/fc.json";
+import seveso from "../data/seveso.json";
+import cnpe from "../data/centrales.json";
+import { convert_DMS_DD, site_dangereux_le_plus_proche } from "../assets/mixins/distances.js";
+
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 
 // Stockage local des fichiers json pour les réutiliser lors de cette session
 localStorage.fc = JSON.stringify(fc);
+localStorage.seveso = JSON.stringify(seveso);
+localStorage.cnpe = JSON.stringify(cnpe);
+
+const open = ref(false); //gestion de la fenêtre modale des risques
 
 // Définition des colonnes des résultats en valeurs réactives
 const nb_occurences = ref(0);
 let results_table: Ref<results[]> = ref([]);
 
-// Définition des valeurs par défaut des critères de sélection des sites climatiques
+// Définition des valeurs par défaut des critères de sélection des sites climatiques et de la recherche rapide
 const min_temp = ref(10);
 const max_temp = ref(20);
 const min_soleil = ref(1700);
@@ -26,10 +34,12 @@ const min_pluie = ref(600);
 const max_pluie = ref(900);
 const min_vent = ref(0);
 const max_vent = ref(50);
+const dpt = ref(78);
+const commune = ref(78190);
 
-// Using yup to generate a validation schema
+// Schéma de validation
 // https://vee-validate.logaretm.com/v4/guide/validation#validation-schemas-with-yup
-const schema = Yup.object().shape({
+const schema_selection = Yup.object().shape({
   min_temp: Yup.number().max(40).positive().integer(),
   max_temp: Yup.number().max(40).positive().integer(),
   min_soleil: Yup.number().max(4000).positive().integer(),
@@ -38,6 +48,14 @@ const schema = Yup.object().shape({
   max_pluie: Yup.number().max(2000).positive().integer(),
   min_vent: Yup.number().min(0).max(999).integer(),
   max_vent: Yup.number().max(999).positive().integer(),
+});
+
+const schema_fast_Dpt = Yup.object().shape({
+  dpt: Yup.number().max(1000).positive().integer(),
+});
+
+const schema_fast_Commune = Yup.object().shape({
+  commune: Yup.number().max(99999).positive().integer(),
 });
 
 function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void {
@@ -68,14 +86,14 @@ function onSearch(criteres: any) {
   // Appui sur le bouton 'Recherche' : affichage des fiches climatiques correspondantes
 
   // Dé-référencement de l'objet pour récupérer les valeurs
-  let p1 = Object(criteres).min_temp;
-  let p2 = Object(criteres).max_temp;
-  let p3 = Object(criteres).min_soleil;
-  let p4 = Object(criteres).max_soleil;
-  let p5 = Object(criteres).min_pluie;
-  let p6 = Object(criteres).max_pluie;
-  let p7 = Object(criteres).min_vent;
-  let p8 = Object(criteres).max_vent;
+  let p1 = Number(Object(criteres).min_temp);
+  let p2 = Number(Object(criteres).max_temp);
+  let p3 = Number(Object(criteres).min_soleil);
+  let p4 = Number(Object(criteres).max_soleil);
+  let p5 = Number(Object(criteres).min_pluie);
+  let p6 = Number(Object(criteres).max_pluie);
+  let p7 = Number(Object(criteres).min_vent);
+  let p8 = Number(Object(criteres).max_vent);
 
   const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
 
@@ -109,9 +127,69 @@ function onSearch(criteres: any) {
   affichage_fiches(results);
 }
 
-function onInvalidSearch() {
+function onFastSearchDpt(criteres: any) {
+  // Appui sur le 1er bouton 'GO' : affichage des fiches climatiques correspondantes au département saisi
+
+  let p1 = Object(criteres).dpt; // Dé-référencement de l'objet pour récupérer les valeurs
+
+  const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
+
+  // Sélection des fiches climatiques
+  let results = data;
+  results = results.filter((x: { departement: string }) => x.departement == p1);
+  affichage_fiches(results);
+}
+
+function onFastSearchCommune(criteres: any) {
+  // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
+
+  let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
+
+  const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
+  const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
+
+  let risques = "";
+
+  const q = faunadb.query;
+  const client = new faunadb.Client({
+    secret: "fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMo",
+    domain: "db.eu.fauna.com",
+    port: 443,
+    scheme: "https",
+  });
+
+  client
+    .query(q.Get(q.Match(q.Index("code_postal"), cp)))
+    .then((ret) => {
+      const result = Object.values(ret); // fauna renvoie ref, ts, data
+      const ville: string = result[2].ville;
+      const lat: number = result[2].latitude;
+      const lon: number = result[2].longitude;
+
+      const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
+      const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
+      risques =
+        "Concernant la commune de " +
+        ville +
+        "(" +
+        cp +
+        "), la CNPE la plus proche est située à " +
+        Math.trunc(cnpe.distance) +
+        " kms (" +
+        cnpe.site +
+        ") ; le site SEVESO le plus proche est situé à " +
+        Math.trunc(seveso.distance) +
+        " kms (" +
+        seveso.site +
+        ")";
+      alert(risques);
+    })
+    .catch((err: string) => console.log("Une erreur s'est produite : " + err));
+}
+
+function onInvalidSearch(button: string) {
   // Un ou plusieurs critères sont invalides et ne correspondent pas au schéma défini avec Yup
-  const submitBtn = document.querySelector(".search-btn");
+  const submitBtn = document.querySelector(button);
   submitBtn!.classList.add("invalid");
   setTimeout(() => {
     submitBtn!.classList.remove("invalid");
@@ -120,37 +198,68 @@ function onInvalidSearch() {
 </script>
 
 <template>
-  <Panel header="Critères de sélection des sites">
-    <Form @submit="onSearch" :validation-schema="schema" @invalid-submit="onInvalidSearch">
-      <div class="my_grid">
-        <div class="c-item-1">
-          <span>-----------------------</span>
-          <span>Température moyenne :</span>
-          <span>Durée d'insolation :</span>
-          <span>Précipitations :</span>
-          <span>Nb jours avec rafales :</span>
+  <div class="FlexWrapper-panel">
+    <Panel header="Critères de sélection des sites">
+      <Form @submit="onSearch" :validation-schema="schema_selection" @invalid-submit="onInvalidSearch('.search-btn')">
+        <div class="my_grid">
+          <div class="c-item-1">
+            <span>-----------------------</span>
+            <span>Température moyenne :</span>
+            <span>Durée d'insolation :</span>
+            <span>Précipitations :</span>
+            <span>Nb jours avec rafales :</span>
+          </div>
+          <div class="c-item-2">
+            <span><b>min</b></span>
+            <Field name="min_temp" class="saisie-valeur" type="text" v-model="min_temp" maxlength="2" />
+            <Field name="min_soleil" class="saisie-valeur" type="text" v-model="min_soleil" maxlength="4" />
+            <Field name="min_pluie" class="saisie-valeur" type="text" v-model="min_pluie" maxlength="4" />
+            <Field name="min_vent" class="saisie-valeur" type="text" v-model="min_vent" maxlength="3" />
+          </div>
+          <div class="c-item-3">
+            <span><b>max</b></span>
+            <Field name="max_temp" class="saisie-valeur" type="text" v-model="max_temp" maxlength="2" />
+            <Field name="max_soleil" class="saisie-valeur" type="text" v-model="max_soleil" maxlength="4" />
+            <Field name="max_pluie" class="saisie-valeur" type="text" v-model="max_pluie" maxlength="4" />
+            <Field name="max_vent" class="saisie-valeur" type="text" v-model="max_vent" maxlength="3" />
+          </div>
         </div>
-        <div class="c-item-2">
-          <span><b>min</b></span>
-          <Field name="min_temp" class="saisie-valeur" type="text" v-model="min_temp" maxlength="2" />
-          <Field name="min_soleil" class="saisie-valeur" type="text" v-model="min_soleil" maxlength="4" />
-          <Field name="min_pluie" class="saisie-valeur" type="text" v-model="min_pluie" maxlength="4" />
-          <Field name="min_vent" class="saisie-valeur" type="text" v-model="min_vent" maxlength="3" />
+        <div class="FlexWrapper-btn">
+          <button class="search-btn" type="submit">Rechercher</button>
+          <button class="reset-btn" type="reset">Réinitialiser</button>
         </div>
-        <div class="c-item-3">
-          <span><b>max</b></span>
-          <Field name="max_temp" class="saisie-valeur" type="text" v-model="max_temp" maxlength="2" />
-          <Field name="max_soleil" class="saisie-valeur" type="text" v-model="max_soleil" maxlength="4" />
-          <Field name="max_pluie" class="saisie-valeur" type="text" v-model="max_pluie" maxlength="4" />
-          <Field name="max_vent" class="saisie-valeur" type="text" v-model="max_vent" maxlength="3" />
+      </Form>
+    </Panel>
+
+    <Panel header="Recherche rapide">
+      <Form @submit="onFastSearchDpt" :validation-schema="schema_fast_Dpt" @invalid-submit="onInvalidSearch('.go-btn1')">
+        <div class="my_fast_grid">
+          <div class="c-fast-item-1">
+            <span>Fiches d'un département :</span>
+          </div>
+          <div class="c-fast-item-2">
+            <Field name="dpt" class="saisie-valeur" type="text" v-model="dpt" maxlength="3" />
+          </div>
+          <div class="c-fast-item-3">
+            <button class="go-btn1" type="submit">GO</button>
+          </div>
         </div>
-      </div>
-      <div class="FlexWrapper">
-        <button class="search-btn" type="submit">Rechercher</button>
-        <button class="reset-btn" type="reset">Réinitialiser</button>
-      </div>
-    </Form>
-  </Panel>
+      </Form>
+      <Form @submit="onFastSearchCommune" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
+        <div class="my_fast_grid">
+          <div class="c-fast-item-1">
+            <span>Risques communal (CP) :</span>
+          </div>
+          <div class="c-fast-item-2">
+            <Field name="commune" class="saisie-valeur" type="text" v-model="commune" maxlength="5" />
+          </div>
+          <div class="c-fast-item-3">
+            <button class="go-btn2" type="submit">GO</button>
+          </div>
+        </div>
+      </Form>
+    </Panel>
+  </div>
 
   <Résultats :key="nb_occurences" v-if="nb_occurences" v-bind="{ occurences: nb_occurences, results_rows: results_table }" />
 </template>
@@ -172,6 +281,17 @@ code {
   color: #304455;
 }
 
+.FlexWrapper-panel {
+  width: auto;
+  height: auto;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  gap: 20px;
+  margin-bottom: 20px;
+}
 .my_grid {
   display: grid;
   grid-template-columns: 175px 75px 75px;
@@ -197,6 +317,31 @@ code {
   text-align: right;
 }
 
+.my_fast_grid {
+  display: grid;
+  grid-template-columns: 185px 80px 60px;
+  grid-template-rows: 50px;
+}
+
+[class^="c-fast-item"] {
+  display: inline-grid;
+}
+
+.c-fast-item-1 {
+  grid-column: 1;
+  justify-content: left;
+}
+.c-fast-item-2 {
+  grid-column: 2;
+  justify-content: right;
+  text-align: right;
+}
+
+.c-fast-item-3 {
+  grid-column: 3;
+  justify-content: right;
+  text-align: right;
+}
 .saisie-valeur {
   width: 60px;
   height: 25px;
@@ -212,7 +357,7 @@ code {
   padding: 8px 5px;
 }
 
-.FlexWrapper {
+.FlexWrapper-btn {
   width: auto;
   height: auto;
   flex-grow: 0;
@@ -242,6 +387,56 @@ code {
   transform: scale(1.1);
 }
 .search-btn.invalid {
+  animation: shake 0.5s;
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+.go-btn1 {
+  background: var(--primary-color);
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  display: block;
+  width: 50px;
+  height: 25px;
+  border-radius: 7px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.go-btn1:hover {
+  transform: scale(1.1);
+}
+.go-btn1.invalid {
+  animation: shake 0.5s;
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+.go-btn2 {
+  background: var(--primary-color);
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  display: block;
+  width: 50px;
+  height: 25px;
+  border-radius: 7px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.go-btn2:hover {
+  transform: scale(1.1);
+}
+.go-btn2:invalid {
   animation: shake 0.5s;
   /* When the animation is finished, start again */
   animation-iteration-count: infinite;
@@ -301,5 +496,24 @@ code {
   100% {
     transform: translate(1px, -2px);
   }
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 20%;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+}
+
+.FlexWrapper_modal {
+  width: 300px;
+  height: 470px;
+  flex-grow: 0;
+  display: flex;
+  margin: 0px 0px 0px 32px;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 </style>

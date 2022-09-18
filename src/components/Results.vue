@@ -2,7 +2,6 @@
 import { ref, Ref } from "vue";
 import { results } from "../assets/mixins/types";
 import { useOffsetPagination } from "@vueuse/core";
-import Panel from "primevue/panel";
 import Card from 'primevue/card';
 import Button from "primevue/button";
 import { useStore } from "../assets/mixins/store.js";
@@ -45,7 +44,6 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
   onPageSizeChange: fetchData,
 });
 
-// <span :style="store.sm || store.md ? { height: 500px } : { width: 743px; height:700px }">
 </script>
 
 <template>
@@ -56,7 +54,6 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
     </template>
     <template #content>
       <div v-if="store.sm || store.md">
-      
       <!-- Taille de l'écran inférieure à 768px  -->
       <div class="my_grid_mobile">
         <div class="c-item-mobile-1">
@@ -121,12 +118,11 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
           </div>
         </div>
       </div>
-
   </div>
 
   <div v-else>
     <!-- Taille de l'écran supérieure à 768px  -->
-              <div class="my_grid">
+      <div class="my_grid">
         <div class="c-item-1">
           <span class="icon-text">
             <span class="icon"><i class="fas fa-city"></i></span>
@@ -188,9 +184,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
   
   </div>
 
-
-            
-    </template>
+  </template>
         
   </Card>
 
@@ -265,7 +259,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
   font-style: normal;
   line-height: 1.14;
   letter-spacing: normal;
-  padding: 15px 0px 0px 0px;
+  padding: 15px 10px 0px 0px;
   text-align: left;
   color: #071621;
   text-overflow: ellipsis; /* Au cas où le nom du site est trop grand */
@@ -275,7 +269,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
 }
 .value {
   height: 40px;
-  padding: 15px 0px 0px 0px;
+  padding: 15px 20px 0px 0px;
   flex-grow: 1;
   font-size: 14px;
   font-weight: normal;
@@ -339,7 +333,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
   display: flex;
   flex-direction: row;
   justify-content: end;
-  margin: 0px 18px 20px 0px;
+  margin: 0px 60px 40px 0px;
   gap: 5px;
 }
 

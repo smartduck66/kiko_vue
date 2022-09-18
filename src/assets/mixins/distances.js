@@ -1,8 +1,7 @@
-"use strict";
+
 // Distance entre deux lieux via leurs coordonnées géographiques
 // Version du 3/9/2022
-exports.__esModule = true;
-exports.convert_DMS_DD = exports.site_dangereux_le_plus_proche = void 0;
+
 // Initialisation de variables-clés
 var EARTH_RADIUS_KM = 6371;
 var M_PI = Math.acos(-1.0);
@@ -35,7 +34,7 @@ function distanceEarth(lat1d, lon1d, lat2d, lon2d) {
         EARTH_RADIUS_KM *
         Math.asin(Math.sqrt(u * u + Math.cos(lat1r) * Math.cos(lat2r) * v * v)));
 }
-function convert_DMS_DD(coord) {
+export function convert_DMS_DD(coord) {
     // Fonction qui convertit des coordonnées GPS d'une station météo en Degrés, Minutes, Secondes en Degrés Décimaux
     // Ex : latitude: 45°38'24"N longitude : 05°52'36"E donnera latitude : 45.64   longitude : 5.8766
     // Pas de guard supplémentaire dans cette fonction : le format de la coordonnées DMS a déjà été vérifié lors de la création des fiches climatiques
@@ -54,8 +53,8 @@ function convert_DMS_DD(coord) {
     }
     return c;
 }
-exports.convert_DMS_DD = convert_DMS_DD;
-function site_dangereux_le_plus_proche(coords_sites_dangereux, latitude_to_test, longitude_to_test) {
+
+export function site_dangereux_le_plus_proche(coords_sites_dangereux, latitude_to_test, longitude_to_test) {
     // Fonction qui retourne la distance à vol d'oiseau (en kms) soit :
     // - de la plus proche centrale nucléaire répertoriée sur le territoire français (IRSN.fr)
     //   19 centrales en exploitation en 2020 et 1 en construction (EPR Flamanville)
@@ -81,4 +80,3 @@ function site_dangereux_le_plus_proche(coords_sites_dangereux, latitude_to_test,
     // ... et on renvoit la distance minimale
     return fiches[0];
 }
-exports.site_dangereux_le_plus_proche = site_dangereux_le_plus_proche;
