@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import * as faunadb from "faunadb";
+import { database } from "../assets/mixins/utils.js";
 import Résultats from "./Results.vue";
 import { ref, Ref } from "vue";
 import Panel from "primevue/panel";
@@ -9,7 +10,7 @@ import { fiche_climatique, results } from "../assets/mixins/types";
 import fc from "../data/fc.json";
 import seveso from "../data/seveso.json";
 import cnpe from "../data/centrales.json";
-import { convert_DMS_DD, site_dangereux_le_plus_proche } from "../assets/mixins/distances.js";
+import { site_dangereux_le_plus_proche } from "../assets/mixins/distances.js";
 
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
@@ -140,7 +141,7 @@ function onFastSearchDpt(criteres: any) {
   affichage_fiches(results);
 }
 
-function onFastSearchCommune(criteres: any) {
+async function onFastSearchCommune(criteres: any) {
   // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
 
   let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
@@ -148,43 +149,28 @@ function onFastSearchCommune(criteres: any) {
   const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
   const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
 
-  let risques = "";
+  const result = await database("communes", cp);
+  const ville: string = result[0].ville;
+  const lat: number = result[0].latitude;
+  const lon: number = result[0].longitude;
 
-  const q = faunadb.query;
-  const client = new faunadb.Client({
-    secret: "fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMo",
-    domain: "db.eu.fauna.com",
-    port: 443,
-    scheme: "https",
-  });
-
-  client
-    .query(q.Get(q.Match(q.Index("code_postal"), cp)))
-    .then((ret) => {
-      const result = Object.values(ret); // fauna renvoie ref, ts, data
-      const ville: string = result[2].ville;
-      const lat: number = result[2].latitude;
-      const lon: number = result[2].longitude;
-
-      const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
-      const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
-      risques =
-        "Concernant la commune de " +
-        ville +
-        "(" +
-        cp +
-        "), la CNPE la plus proche est située à " +
-        Math.trunc(cnpe.distance) +
-        " kms (" +
-        cnpe.site +
-        ") ; le site SEVESO le plus proche est situé à " +
-        Math.trunc(seveso.distance) +
-        " kms (" +
-        seveso.site +
-        ")";
-      alert(risques);
-    })
-    .catch((err: string) => console.log("Une erreur s'est produite : " + err));
+  const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
+  const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
+  const risques =
+    "Concernant la commune de " +
+    ville +
+    " (" +
+    cp +
+    "), la CNPE la plus proche est située à " +
+    Math.trunc(cnpe.distance) +
+    " kms (" +
+    cnpe.site +
+    ") ; le site SEVESO le plus proche est situé à " +
+    Math.trunc(seveso.distance) +
+    " kms (" +
+    seveso.site +
+    ")";
+  alert(risques);
 }
 
 function onInvalidSearch(button: string) {
