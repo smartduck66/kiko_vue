@@ -5,7 +5,7 @@ defineProps<{ valeur_ref: string[] }>();
 </script>
 
 <template>
-  <Panel v-bind="{ header: valeur_ref[0] }" :toggleable="true">
+  <Panel v-bind="{ header: valeur_ref[0] }">
     <div class="my_grid">
       <div class="c-item-1">
         <p>
