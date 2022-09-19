@@ -47,153 +47,156 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
 </script>
 
 <template>
+  <div v-if="occurences">
+  <!-- Le template de résultats ne s'affiche que s'il y a au moins UN résultat  -->
+    <Card :style="store.sm || store.md ? { height: '500px' } : { width: '743px', height:'700px' }">
+      <template #title>
+        {{nbOccurences}}
+      </template>
+      <template #content>
+        <div v-if="store.sm || store.md">
+        <!-- Taille de l'écran inférieure à 768px  -->
+        <div class="my_grid_mobile">
+          <div class="c-item-mobile-1">
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-city"></i></span>
+              <span class="label">Site</span>
+            </span>
+            <div v-for="item in data">
+              <div class="site">{{ Object(item).site }}</div>
+            </div>
+          </div>
+          <div class="c-item-mobile-2">
+            <div class="container x mandatory-scroll-snapping" dir="ltr">
+              <div>
+                <div class="icon"><i class="fas fa-thermometer-half"></i></div>
+                <div v-for="item in data">
+                  <div class="value">{{ Object(item).tmoy }}</div>
+                </div>
+              </div>
+              <div>
+                <div class="icon"><i class="fas fa-temperature-low"></i></div>
+                <div v-for="item in data">
+                  <div class="value">{{ Object(item).tmin }}</div>
+                </div>
+              </div>
+              <div>
+                <div class="icon"><i class="fas fa-temperature-high"></i></div>
+                <div v-for="item in data">
+                  <div class="value">{{ Object(item).tmax }}</div>
+                </div>
+              </div>
+              <div>
+                <div class="icon"><i class="fas fa-sun"></i></div>
+                <div v-for="item in data">
+                  <div class="value">{{ Object(item).soleil }}</div>
+                </div>
+              </div>
+              <div>
+                <div class="icon"><i class="fas fa-cloud-rain"></i></div>
+                <div v-for="item in data">
+                  <div class="value">{{ Object(item).pluie }}</div>
+                </div>
+              </div>
+              <div>
+                <div class="icon"><i class="fas fa-wind"></i></div>
+                <div v-for="item in data">
+                  <div class="value">{{ Object(item).vent }}</div>
+                </div>
+              </div>
+              <div>
+                <div class="icon"><i class="fas fa-atom"></i></div>
+                <div v-for="item in data">
+                  <div class="value">{{ Object(item).cnpe }}</div>
+                </div>
+              </div>
+              <div>
+                <div class="icon"><i class="fas fa-home"></i></div>
+                <div v-for="item in data">
+                  <div class="value">{{ Object(item).prix }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
 
-  <Card :style="store.sm || store.md ? { height: '500px' } : { width: '743px', height:'700px' }">
-    <template #title>
-      {{nbOccurences}}
+    <div v-else>
+      <!-- Taille de l'écran supérieure à 768px  -->
+        <div class="my_grid">
+          <div class="c-item-1">
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-city"></i></span>
+              <span class="label">Site</span>
+            </span>
+            <div v-for="item in data">
+              <div class="site">{{ Object(item).site }}</div>
+            </div>
+          </div>
+          <div class="c-item-2">
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-thermometer-half"></i></span>
+            <div v-for="item in data">
+              <div class="value">{{ Object(item).tmoy }}</div>
+            </div>
+          </div>
+          <div class="c-item-3">
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-low"></i></span>
+            <div v-for="item in data">
+              <div class="value">{{ Object(item).tmin }}</div>
+            </div>
+          </div>
+          <div class="c-item-4">
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-high"></i></span>
+            <div v-for="item in data">
+              <div class="value">{{ Object(item).tmax }}</div>
+            </div>
+          </div>
+          <div class="c-item-5">
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-sun"></i></span>
+            <div v-for="item in data">
+              <div class="value">{{ Object(item).soleil }}</div>
+            </div>
+          </div>
+          <div class="c-item-6">
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-cloud-rain"></i></span>
+            <div v-for="item in data">
+              <div class="value">{{ Object(item).pluie }}</div>
+            </div>
+          </div>
+          <div class="c-item-7">
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-wind"></i></span>
+            <div v-for="item in data">
+              <div class="value">{{ Object(item).vent }}</div>
+            </div>
+          </div>
+          <div class="c-item-8">
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-atom"></i></span>
+            <div v-for="item in data">
+              <div class="value">{{ Object(item).cnpe }}</div>
+            </div>
+          </div>
+          <div class="c-item-9">
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-home"></i></span>
+            <div v-for="item in data">
+              <div class="value">{{ Object(item).prix }}</div>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+
     </template>
-    <template #content>
-      <div v-if="store.sm || store.md">
-      <!-- Taille de l'écran inférieure à 768px  -->
-      <div class="my_grid_mobile">
-        <div class="c-item-mobile-1">
-          <span class="icon-text">
-            <span class="icon"><i class="fas fa-city"></i></span>
-            <span class="label">Site</span>
-          </span>
-          <div v-for="item in data">
-            <div class="site">{{ Object(item).site }}</div>
-          </div>
-        </div>
-        <div class="c-item-mobile-2">
-          <div class="container x mandatory-scroll-snapping" dir="ltr">
-            <div>
-              <div class="icon"><i class="fas fa-thermometer-half"></i></div>
-              <div v-for="item in data">
-                <div class="value">{{ Object(item).tmoy }}</div>
-              </div>
-            </div>
-            <div>
-              <div class="icon"><i class="fas fa-temperature-low"></i></div>
-              <div v-for="item in data">
-                <div class="value">{{ Object(item).tmin }}</div>
-              </div>
-            </div>
-            <div>
-              <div class="icon"><i class="fas fa-temperature-high"></i></div>
-              <div v-for="item in data">
-                <div class="value">{{ Object(item).tmax }}</div>
-              </div>
-            </div>
-            <div>
-              <div class="icon"><i class="fas fa-sun"></i></div>
-              <div v-for="item in data">
-                <div class="value">{{ Object(item).soleil }}</div>
-              </div>
-            </div>
-            <div>
-              <div class="icon"><i class="fas fa-cloud-rain"></i></div>
-              <div v-for="item in data">
-                <div class="value">{{ Object(item).pluie }}</div>
-              </div>
-            </div>
-            <div>
-              <div class="icon"><i class="fas fa-wind"></i></div>
-              <div v-for="item in data">
-                <div class="value">{{ Object(item).vent }}</div>
-              </div>
-            </div>
-            <div>
-              <div class="icon"><i class="fas fa-atom"></i></div>
-              <div v-for="item in data">
-                <div class="value">{{ Object(item).cnpe }}</div>
-              </div>
-            </div>
-            <div>
-              <div class="icon"><i class="fas fa-home"></i></div>
-              <div v-for="item in data">
-                <div class="value">{{ Object(item).prix }}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
+          
+    </Card>
 
-  <div v-else>
-    <!-- Taille de l'écran supérieure à 768px  -->
-      <div class="my_grid">
-        <div class="c-item-1">
-          <span class="icon-text">
-            <span class="icon"><i class="fas fa-city"></i></span>
-            <span class="label">Site</span>
-          </span>
-          <div v-for="item in data">
-            <div class="site">{{ Object(item).site }}</div>
-          </div>
-        </div>
-        <div class="c-item-2">
-          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-thermometer-half"></i></span>
-          <div v-for="item in data">
-            <div class="value">{{ Object(item).tmoy }}</div>
-          </div>
-        </div>
-        <div class="c-item-3">
-          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-low"></i></span>
-          <div v-for="item in data">
-            <div class="value">{{ Object(item).tmin }}</div>
-          </div>
-        </div>
-        <div class="c-item-4">
-          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-high"></i></span>
-          <div v-for="item in data">
-            <div class="value">{{ Object(item).tmax }}</div>
-          </div>
-        </div>
-        <div class="c-item-5">
-          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-sun"></i></span>
-          <div v-for="item in data">
-            <div class="value">{{ Object(item).soleil }}</div>
-          </div>
-        </div>
-        <div class="c-item-6">
-          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-cloud-rain"></i></span>
-          <div v-for="item in data">
-            <div class="value">{{ Object(item).pluie }}</div>
-          </div>
-        </div>
-        <div class="c-item-7">
-          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-wind"></i></span>
-          <div v-for="item in data">
-            <div class="value">{{ Object(item).vent }}</div>
-          </div>
-        </div>
-        <div class="c-item-8">
-          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-atom"></i></span>
-          <div v-for="item in data">
-            <div class="value">{{ Object(item).cnpe }}</div>
-          </div>
-        </div>
-        <div class="c-item-9">
-          <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-home"></i></span>
-          <div v-for="item in data">
-            <div class="value">{{ Object(item).prix }}</div>
-          </div>
-        </div>
-      </div>
+    <div class="FlexWrapper">
+        <Button class="ButtonSize p-button-success" :disabled="isFirstPage" @click="prev">&#8249</Button>
+        <Button class="ButtonSize p-button-success" v-for="item in pageCount" :key="item" :disabled="currentPage === item" @click="currentPage = item">
+        {{ item }}
+        </Button>
+        <Button class="ButtonSize p-button-success" :disabled="isLastPage" @click="next">&#8250</Button>
+    </div>
   
-  </div>
-
-  </template>
-        
-  </Card>
-
-  <div class="FlexWrapper">
-      <Button class="ButtonSize p-button-success" :disabled="isFirstPage" @click="prev">&#8249</Button>
-      <Button class="ButtonSize p-button-success" v-for="item in pageCount" :key="item" :disabled="currentPage === item" @click="currentPage = item">
-      {{ item }}
-      </Button>
-      <Button class="ButtonSize p-button-success" :disabled="isLastPage" @click="next">&#8250</Button>
   </div>
   
 </template>
@@ -333,7 +336,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
   display: flex;
   flex-direction: row;
   justify-content: end;
-  margin: 0px 60px 40px 0px;
+  margin: 10px 60px 40px 0px;
   gap: 5px;
 }
 

@@ -24,6 +24,9 @@ const open = ref(false); //gestion de la fenêtre modale des risques
 // Définition des colonnes des résultats en valeurs réactives
 const nb_occurences = ref(0);
 let results_table: Ref<results[]> = ref([]);
+const danger_ville = ref("");
+const danger_cnpe = ref("");
+const danger_seveso = ref("");
 
 // Définition des valeurs par défaut des critères de sélection des sites climatiques et de la recherche rapide
 const min_temp = ref(10);
@@ -155,21 +158,12 @@ async function onFastSearchCommune(criteres: any) {
 
   const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
   const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
-  const risques =
-    "Concernant la commune de " +
-    ville +
-    " (" +
-    cp +
-    "), la CNPE la plus proche est située à " +
-    Math.trunc(cnpe.distance) +
-    " kms (" +
-    cnpe.site +
-    ") ; le site SEVESO le plus proche est situé à " +
-    Math.trunc(seveso.distance) +
-    " kms (" +
-    seveso.site +
-    ")";
-  alert(risques);
+
+  danger_ville.value = ville + " (" + cp + ")";
+  danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance)+ "  kms)";
+  danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance)+ "  kms)";
+
+  open.value = true;  // Affichage de la modale
 }
 
 function onInvalidSearch(button: string) {
@@ -220,7 +214,7 @@ function onInvalidSearch(button: string) {
       <Form @submit="onFastSearchDpt" :validation-schema="schema_fast_Dpt" @invalid-submit="onInvalidSearch('.go-btn1')">
         <div class="my_fast_grid">
           <div class="c-fast-item-1">
-            <span>Fiches d'un département :</span>
+            <span>Fiches département :</span>
           </div>
           <div class="c-fast-item-2">
             <Field name="dpt" class="saisie-valeur" type="text" v-model="dpt" maxlength="3" />
@@ -245,8 +239,24 @@ function onInvalidSearch(button: string) {
       </Form>
     </Panel>
   </div>
-
-  <Résultats :key="nb_occurences" v-if="nb_occurences" v-bind="{ occurences: nb_occurences, results_rows: results_table }" />
+  <Teleport to="body">
+    <div v-if="open" class="modal">
+      <div @click="open = false">
+        <img src="../../public/close.png" class="Close" />
+      </div>
+      <div class="FlexWrapper_modal">
+        <div></div>
+        <span>Commune de {{danger_ville}}</span>
+        <div></div>
+        <span>Centrale nucléaire la plus proche :</span>
+        <span :style="{ 'font-weight': 'bold' }">{{danger_cnpe}}</span>
+        <div></div>
+        <span>Site Seveso le plus proche :</span>
+        <span :style="{ 'font-weight': 'bold' }">{{danger_seveso}}</span>
+      </div>
+    </div>
+  </Teleport>
+  <Résultats :key="nb_occurences" v-bind="{ occurences: nb_occurences, results_rows: results_table }" />
 </template>
 
 <style scoped>
@@ -486,19 +496,40 @@ code {
 .modal {
   position: fixed;
   z-index: 999;
-  top: 20%;
-  left: 50%;
-  width: 300px;
+  top: 10%;
+  left: 41.5%;
   margin-left: -150px;
+  width: 360px;
+  height: 360px;
+  flex-grow: 0;
+  border-radius: 10px;
+  background-color: #e62f44;
 }
 
+img.Close {
+  width: 32px;
+  height: 32px;
+  flex-grow: 0;
+  margin: 16px 0px 2px 310px;
+  object-fit: contain;
+}
 .FlexWrapper_modal {
   width: 300px;
   height: 470px;
   flex-grow: 0;
   display: flex;
+  gap:20px;
   margin: 0px 0px 0px 32px;
   flex-direction: column;
   justify-content: flex-start;
+  color: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: center;
 }
 </style>
