@@ -14,11 +14,8 @@
     # To permit external fonts, fontawesome and google, style-src, font-src and script-src (optional) are mandatory
     # default-src 'self'; connect-src 'self' https://www.google-analytics.com;
     Content-Security-Policy = '''
-      style-src 'self' 'unsafe-inline' https://cdn.snipcart.com/themes/v3.2.0/default/ https://fonts.googleapis.com;
-      font-src 'self' 'unsafe-inline' https://fonts.gstatic.com;
-    	script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.snipcart.com/themes/v3.2.0/default/ https://identity.netlify.com/v1/ https://unpkg.com/netlify-cms@^2.9.1/dist/ https://www.google-analytics.com https://www.googletagmanager.com; 
-	    img-src 'self' blob: *.technosaures.fr data: *.technosaures.fr *.google-analytics.com *.googletagmanager.com;
-      child-src 'self' 'unsafe-inline' https://www.youtube.com/embed/ https://payment.snipcart.com/;
+    	script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com; 
+	    img-src 'self' blob: *.google-analytics.com *.googletagmanager.com;
       worker-src 'self';
       '''
     

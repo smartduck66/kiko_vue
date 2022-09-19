@@ -10,25 +10,25 @@ defineProps<{ valeur_ref: string[] }>();
       <div class="c-item-1">
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-thermometer-half"></i></span>
+            <span class="icon"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }"></i></span>
             {{ valeur_ref[1] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-temperature-low"></i></span>
+            <span class="icon"><i class="fas fa-temperature-low" :style="{ 'font-family': 'fa-solid' }"></i></span>
             {{ valeur_ref[2] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-temperature-high"></i></span>
+            <span class="icon"><i class="fas fa-temperature-high" :style="{ 'font-family': 'fa-solid' }"></i></span>
             {{ valeur_ref[3] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-atom"></i></span>
+            <span class="icon"><i class="fas fa-atom" :style="{ 'font-family': 'fa-solid' }"></i></span>
             {{ valeur_ref[4] }}
           </span>
         </p>
@@ -36,25 +36,25 @@ defineProps<{ valeur_ref: string[] }>();
       <div class="c-item-2">
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-sun"></i></span>
+            <span class="icon"><i class="fas fa-sun" :style="{ 'font-family': 'fa-solid' }"></i></span>
             {{ valeur_ref[5] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-cloud-rain"></i></span>
+            <span class="icon"><i class="fas fa-cloud-rain" :style="{ 'font-family': 'fa-solid' }"></i></span>
             {{ valeur_ref[6] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-wind"></i></span>
+            <span class="icon"><i class="fas fa-wind" :style="{ 'font-family': 'fa-solid' }"></i></span>
             {{ valeur_ref[7] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="icon"><i class="fas fa-home" :style="{ 'font-family': 'fa-solid' }"></i></span>
             {{ valeur_ref[8] }}
           </span>
         </p>

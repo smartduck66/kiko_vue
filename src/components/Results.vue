@@ -6,8 +6,8 @@ import Card from 'primevue/card';
 import Button from "primevue/button";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
-const props = defineProps(["occurences", "results_rows"]);
 
+const props = defineProps(["occurences", "results_rows"]);
 const nbOccurences = props.occurences.toString() + " résultats";
 
 // Mécanique de pagination adaptée à 'results_rows' : https://github.com/vueuse/vueuse/blob/main/packages/core/useOffsetPagination/demo.vue
@@ -59,7 +59,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
         <div class="my_grid_mobile">
           <div class="c-item-mobile-1">
             <span class="icon-text">
-              <span class="icon"><i class="fas fa-city"></i></span>
+              <span class="icon"><i class="fas fa-city" :style="{ 'font-family': 'fa-solid' }"></i></span>
               <span class="label">Site</span>
             </span>
             <div v-for="item in data">
@@ -69,49 +69,49 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
           <div class="c-item-mobile-2">
             <div class="container x mandatory-scroll-snapping" dir="ltr">
               <div>
-                <div class="icon"><i class="fas fa-thermometer-half"></i></div>
+                <div class="icon"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }"></i></div>
                 <div v-for="item in data">
                   <div class="value">{{ Object(item).tmoy }}</div>
                 </div>
               </div>
               <div>
-                <div class="icon"><i class="fas fa-temperature-low"></i></div>
+                <div class="icon"><i class="fas fa-temperature-low" :style="{ 'font-family': 'fa-solid' }"></i></div>
                 <div v-for="item in data">
                   <div class="value">{{ Object(item).tmin }}</div>
                 </div>
               </div>
               <div>
-                <div class="icon"><i class="fas fa-temperature-high"></i></div>
+                <div class="icon"><i class="fas fa-temperature-high" :style="{ 'font-family': 'fa-solid' }"></i></div>
                 <div v-for="item in data">
                   <div class="value">{{ Object(item).tmax }}</div>
                 </div>
               </div>
               <div>
-                <div class="icon"><i class="fas fa-sun"></i></div>
+                <div class="icon"><i class="fas fa-sun" :style="{ 'font-family': 'fa-solid' }"></i></div>
                 <div v-for="item in data">
                   <div class="value">{{ Object(item).soleil }}</div>
                 </div>
               </div>
               <div>
-                <div class="icon"><i class="fas fa-cloud-rain"></i></div>
+                <div class="icon"><i class="fas fa-cloud-rain" :style="{ 'font-family': 'fa-solid' }"></i></div>
                 <div v-for="item in data">
                   <div class="value">{{ Object(item).pluie }}</div>
                 </div>
               </div>
               <div>
-                <div class="icon"><i class="fas fa-wind"></i></div>
+                <div class="icon"><i class="fas fa-wind" :style="{ 'font-family': 'fa-solid' }"></i></div>
                 <div v-for="item in data">
                   <div class="value">{{ Object(item).vent }}</div>
                 </div>
               </div>
               <div>
-                <div class="icon"><i class="fas fa-atom"></i></div>
+                <div class="icon"><i class="fas fa-atom" :style="{ 'font-family': 'fa-solid' }"></i></div>
                 <div v-for="item in data">
                   <div class="value">{{ Object(item).cnpe }}</div>
                 </div>
               </div>
               <div>
-                <div class="icon"><i class="fas fa-home"></i></div>
+                <div class="icon"><i class="fas fa-home" :style="{ 'font-family': 'fa-solid' }"></i></div>
                 <div v-for="item in data">
                   <div class="value">{{ Object(item).prix }}</div>
                 </div>
@@ -126,7 +126,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
         <div class="my_grid">
           <div class="c-item-1">
             <span class="icon-text">
-              <span class="icon"><i class="fas fa-city"></i></span>
+              <span class="icon"><i class="fas fa-city" :style="{ 'font-family': 'fa-solid' }"></i></span>
               <span class="label">Site</span>
             </span>
             <div v-for="item in data">
@@ -134,49 +134,49 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
             </div>
           </div>
           <div class="c-item-2">
-            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-thermometer-half"></i></span>
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }"></i></span>
             <div v-for="item in data">
               <div class="value">{{ Object(item).tmoy }}</div>
             </div>
           </div>
           <div class="c-item-3">
-            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-low"></i></span>
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-low" :style="{ 'font-family': 'fa-solid' }"></i></span>
             <div v-for="item in data">
               <div class="value">{{ Object(item).tmin }}</div>
             </div>
           </div>
           <div class="c-item-4">
-            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-high"></i></span>
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-temperature-high" :style="{ 'font-family': 'fa-solid' }"></i></span>
             <div v-for="item in data">
               <div class="value">{{ Object(item).tmax }}</div>
             </div>
           </div>
           <div class="c-item-5">
-            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-sun"></i></span>
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-sun" :style="{ 'font-family': 'fa-solid' }"></i></span>
             <div v-for="item in data">
               <div class="value">{{ Object(item).soleil }}</div>
             </div>
           </div>
           <div class="c-item-6">
-            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-cloud-rain"></i></span>
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-cloud-rain" :style="{ 'font-family': 'fa-solid' }"></i></span>
             <div v-for="item in data">
               <div class="value">{{ Object(item).pluie }}</div>
             </div>
           </div>
           <div class="c-item-7">
-            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-wind"></i></span>
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-wind" :style="{ 'font-family': 'fa-solid' }"></i></span>
             <div v-for="item in data">
               <div class="value">{{ Object(item).vent }}</div>
             </div>
           </div>
           <div class="c-item-8">
-            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-atom"></i></span>
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-atom" :style="{ 'font-family': 'fa-solid' }"></i></span>
             <div v-for="item in data">
               <div class="value">{{ Object(item).cnpe }}</div>
             </div>
           </div>
           <div class="c-item-9">
-            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-home"></i></span>
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-home" :style="{ 'font-family': 'fa-solid' }"></i></span>
             <div v-for="item in data">
               <div class="value">{{ Object(item).prix }}</div>
             </div>

@@ -37,38 +37,10 @@ button {
   font-family: inherit;
 }
 
-img.erreur-global {
-  width: 302px;
-  height: 226px;
-  flex-grow: 0;
-  margin: 0 152px 22px 124px;
-  object-fit: contain;
-}
-
-.CenterMe-global {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.menu-global {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
-  margin-bottom: 24px;
-  height: 26px;
-  flex-grow: 0;
-}
-
-.scrollWrapper-global {
-  display: flex;
-  width: 100%;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  /*Give us inertia style scrolling on WebKit based touch devices*/
-  -webkit-overflow-scrolling: touch;
-  /*Remove the scrollbars in supporting versions of IE*/
-  -ms-overflow-style: none;
+/* Le chargement d'un SEUL fichier police pour les icônes fait économiser plusieurs centaines de kilo-octets */
+@font-face {
+  font-family: "fa-solid";
+  src: url("../assets/fonts/webfonts/fa-solid-900.woff2") format("woff2-variations");
+  font-weight: 900;
+  font-display: fallback;
 }

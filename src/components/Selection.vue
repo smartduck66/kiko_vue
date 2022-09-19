@@ -10,7 +10,6 @@ import fc from "../data/fc.json";
 import seveso from "../data/seveso.json";
 import cnpe from "../data/centrales.json";
 import { site_dangereux_le_plus_proche } from "../assets/mixins/distances.js";
-
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 
@@ -242,7 +241,7 @@ function onInvalidSearch(button: string) {
   <Teleport to="body">
     <div v-if="open" class="modal">
       <div @click="open = false">
-        <img src="../../public/close.png" class="Close" />
+        <img src="../assets/img/close.png" class="Close" />
       </div>
       <div class="FlexWrapper_modal">
         <div></div>
