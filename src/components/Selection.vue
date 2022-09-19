@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import * as faunadb from "faunadb";
 import { database } from "../assets/mixins/utils.js";
 import Résultats from "./Results.vue";
 import { ref, Ref } from "vue";
