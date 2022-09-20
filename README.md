@@ -6,6 +6,7 @@
 30/08/2022 - MAJ modules NPM à part TS qui doit rester en 4.7.4 à cause d'une incompatibilité avec la nouvelle version de Vue 3.2.38
 03/09/2022 - Début de programmation fonctionnelle sur les modules batch
 11/09/2022 - Réécriture de l'interface de saisie avec les composants PrimeVue
+20/09/2022 - 1ère version alpha avec l'ensemble des fonctionnalités de kiko_web (v1)
 
 ---
 

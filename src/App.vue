@@ -39,6 +39,7 @@ val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format
   align-items: left;
   gap: 30px;
 }
+
 .FlexWrapperMobile {
   width: auto;
   height: auto;

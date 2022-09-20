@@ -67,7 +67,7 @@ function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void 
   results_table.value.splice(0);
 
   results_table.value = results.map((r) => {
-    const row = Object.create(results);
+    const row: results = Object.create(results);
     const ref: string = r.indicatif;
     row.site = ref + " " + r.ville + " (" + r.altitude.toString() + " m)";
     row.tmoy = r.temp_moy;
@@ -159,10 +159,10 @@ async function onFastSearchCommune(criteres: any) {
   const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
 
   danger_ville.value = ville + " (" + cp + ")";
-  danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance)+ "  kms)";
-  danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance)+ "  kms)";
+  danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
+  danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
 
-  open.value = true;  // Affichage de la modale
+  open.value = true; // Affichage de la modale
 }
 
 function onInvalidSearch(button: string) {
@@ -245,13 +245,13 @@ function onInvalidSearch(button: string) {
       </div>
       <div class="FlexWrapper_modal">
         <div></div>
-        <span>Commune de {{danger_ville}}</span>
+        <span>Commune de {{ danger_ville }}</span>
         <div></div>
         <span>Centrale nucléaire la plus proche :</span>
-        <span :style="{ 'font-weight': 'bold' }">{{danger_cnpe}}</span>
+        <span :style="{ 'font-weight': 'bold' }">{{ danger_cnpe }}</span>
         <div></div>
         <span>Site Seveso le plus proche :</span>
-        <span :style="{ 'font-weight': 'bold' }">{{danger_seveso}}</span>
+        <span :style="{ 'font-weight': 'bold' }">{{ danger_seveso }}</span>
       </div>
     </div>
   </Teleport>
@@ -517,7 +517,7 @@ img.Close {
   height: 470px;
   flex-grow: 0;
   display: flex;
-  gap:20px;
+  gap: 20px;
   margin: 0px 0px 0px 32px;
   flex-direction: column;
   justify-content: flex-start;

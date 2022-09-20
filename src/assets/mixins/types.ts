@@ -17,12 +17,12 @@ export interface fiche_climatique {
 
 export interface results {
   site: string;
-  tmoy: string;
-  tmin: string;
+  tmoy: number;
+  tmin: number;
   tmax: number;
   soleil: string;
   pluie: string;
   vent: string;
-  cnpe: string;
+  cnpe: number;
   prix: string;
 }
