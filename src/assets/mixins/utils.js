@@ -72,7 +72,7 @@ async function database(collection, cp) {
   } = q;
 
   const client = new faunadb.Client({
-    secret: process.env.FAUNADB_SECRET, // généré via le dashboard de Fauna, exclusif à la base de données 'kiko'
+    secret: process.env.FAUNADB_SERVER_SECRET, // généré via le dashboard de Fauna, exclusif à la base de données 'kiko', données publiques
     domain: "db.eu.fauna.com",
     port: 443,
     scheme: "https",
