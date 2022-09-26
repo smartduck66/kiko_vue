@@ -28,11 +28,3 @@
 [functions]
   directory = "./functions"
 
-[dev]
-  framework = "vue"
-  functionsPort = 5174
-  targetPort = 5173
-
-[build]
-  functions = "lambda"
-  Command = "npm run prod"
