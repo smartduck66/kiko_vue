@@ -144,12 +144,34 @@ function onFastSearchDpt(criteres: any) {
 
 async function onFastSearchCommune(criteres: any) {
   // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
+  const cp = Object(criteres).commune; // Dé-référencement de l'objet pour récupérer les valeurs
+
+  const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
+  const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
+  console.log("Avant le try");
+
+  const API_URL = `/.netlify/functions/hello`;
+  let result;
+  try {
+    const res = await fetch(API_URL);
+    result = await res.json();
+    console.log(result);
+  } catch (err) {
+    console.log(err);
+  }
+
+
+}
+
+/*
+async function onFastSearchCommune(criteres: any) {
+  // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
 
   let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
 
   const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
   const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
-
+  
   const result = await database("communes", cp);
   const ville: string = result[0].ville;
   const lat: number = result[0].latitude;
@@ -164,6 +186,11 @@ async function onFastSearchCommune(criteres: any) {
 
   open.value = true; // Affichage de la modale
 }
+
+
+
+
+*/
 
 function onInvalidSearch(button: string) {
   // Un ou plusieurs critères sont invalides et ne correspondent pas au schéma défini avec Yup
