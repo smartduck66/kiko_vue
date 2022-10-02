@@ -175,21 +175,28 @@ async function onFastSearchCommune_serverless(criteres: any) {
   try {
     const response = await fetch(API_URL);
     const result = (await response.json()).data;
-    console.log(result);
-    const ville: string = result[0].ville;
-    const lat: number = result[0].latitude;
-    const lon: number = result[0].longitude;
+    if (!result.ok) {
+      alert("Le code postal " + cp + " n'existe pas dans la base de référence des communes !");
+      throw await response.json();
+    } else {
+      const data = await response.json();
 
-    const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
-    const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
+      const result = data.data;
+      const ville: string = result[0].ville;
+      const lat: number = result[0].latitude;
+      const lon: number = result[0].longitude;
 
-    danger_ville.value = ville + " (" + cp + ")";
-    danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
-    danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
+      const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
+      const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
 
-    open.value = true; // Affichage de la modale
+      danger_ville.value = ville + " (" + cp + ")";
+      danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
+      danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
+
+      open.value = true; // Affichage de la modale
+    }
   } catch (err) {
-    console.log(err);
+    alert("La base de données de référence des communes n'est pas accessible ! Erreur : " + err);
   }
 }
 
