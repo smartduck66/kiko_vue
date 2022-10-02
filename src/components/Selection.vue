@@ -181,7 +181,7 @@ async function onFastSearchCommune_serverless(criteres: any) {
     if (data.statusCode != 200) {
       alert("Le code postal saisi n'existe pas !");
     } else {
-      const result = data.risques;
+      const result = data.data;
       const ville: string = result[0].ville;
       const lat: number = result[0].latitude;
       const lon: number = result[0].longitude;
