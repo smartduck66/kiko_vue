@@ -171,24 +171,32 @@ async function onFastSearchCommune_serverless(criteres: any) {
   const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
   const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
 
-  //const result = await database("communes", cp);
   const API_URL = "/.netlify/functions/database?code_postal=" + cp;
-  console.log(API_URL);
-  const resp = await fetch(API_URL);
-  const result = (await resp.json()).data;
+  const response = await fetch(API_URL);
+  if (!response.ok) {
+    throw await response.json();
 
-  const ville: string = result[0].ville;
-  const lat: number = result[0].latitude;
-  const lon: number = result[0].longitude;
+  } else {
+    const data = await response.json();
+    if (data.statusCode != 200) {
+      alert("Le code postal saisi n'existe pas !");
+    } else {
+      const result = data.risques;
+      const ville: string = result[0].ville;
+      const lat: number = result[0].latitude;
+      const lon: number = result[0].longitude;
 
-  const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
-  const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
+      const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
+      const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
 
-  danger_ville.value = ville + " (" + cp + ")";
-  danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
-  danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
+      danger_ville.value = ville + " (" + cp + ")";
+      danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
+      danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
 
-  open.value = true; // Affichage de la modale
+      open.value = true; // Affichage de la modale
+      
+    }
+  }
 }
 
 function onInvalidSearch(button: string) {

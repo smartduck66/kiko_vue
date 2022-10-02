@@ -1,10 +1,8 @@
 // Serverless function qui sert à rechercher les coordonnées géographiques d'une commune dont le code postal est passé en paramètre (cp)
 // Ce mécanisme est la seule solution pour masquer le passage d'un 'secret' en clair à parti du front
-// Tests finaux : 26/9 - L'environnement netlify dev ne fonctionne pas (problèmes de ports) - En production, un test avec hello.js a été concluant
-// Conclusion : solution en attente
+// Tests finaux : 2/10/2022 - L'environnement netlify dev ne fonctionne pas (problèmes de ports ou de routage ?) - En production, OK
 // Inspired by https://dev.to/maxiggle/a-definitive-guide-to-using-serverless-functions-in-a-serverless-databases-with-netlify-and-vuejs-4ieg
 import * as faunadb from "faunadb";
-console.log("je rentre dans la serverless");
 
 // Fauna typically returns objects that look like:
 // {
@@ -75,7 +73,7 @@ const {
 } = q;
 
 const client = new faunadb.Client({
-  secret: process.env.FAUNADB_SERVER_SECRET, // généré via le dashboard de Fauna, exclusif à la base de données 'kiko'
+  secret: 'process.env.FAUNADB_SERVER_SECRET', // généré via le dashboard de Fauna, exclusif à la base de données 'kiko'
   domain: "db.eu.fauna.com",
   port: 443,
   scheme: "https",
@@ -97,12 +95,12 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: "Successfully created document",
-        data: result,
+        message: "Recherche réussie",
+        risques: result,
       }),
     };
   } catch (error) {
-    console.log(error);
+    console.log("Recherche non aboutie : " + error);
     return {
       statusCode: 400,
       body: JSON.stringify({

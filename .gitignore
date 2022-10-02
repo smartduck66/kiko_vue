@@ -6,3 +6,4 @@ dist-ssr
 /src/ficheclim
 /src/data_source
 .env
+.netlify
