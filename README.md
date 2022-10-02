@@ -52,3 +52,4 @@ Installations de modules NPM complémentaires :
 ---
 
 Recommandation : passer le site en production au "checker" HTML régulièrement -> https://validator.w3.org/
+Alerte : netlify cli a été désinstallé car il induit des problèmes de sécurité dans les packages NPM au 30/9/2022
