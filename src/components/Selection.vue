@@ -172,30 +172,23 @@ async function onFastSearchCommune_serverless(criteres: any) {
   const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
 
   const API_URL = "/.netlify/functions/database?code_postal=" + cp;
-  const response = await fetch(API_URL);
-  if (!response.ok) {
-    alert("La base de données de référence des communes n'est pas accessible !");
-    throw await response.json();
-  } else {
-    const data = await response.json();
-    console.log(data.statusCode);
-    if (data.statusCode == 200) {
-      const result = data.data;
-      const ville: string = result[0].ville;
-      const lat: number = result[0].latitude;
-      const lon: number = result[0].longitude;
+  try {
+    const response = await fetch(API_URL);
+    const result = (await response.json()).data;
+    const ville: string = result[0].ville;
+    const lat: number = result[0].latitude;
+    const lon: number = result[0].longitude;
 
-      const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
-      const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
+    const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
+    const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
 
-      danger_ville.value = ville + " (" + cp + ")";
-      danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
-      danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
+    danger_ville.value = ville + " (" + cp + ")";
+    danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
+    danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
 
-      open.value = true; // Affichage de la modale
-    } else {
-      alert("Le code postal " + cp + " n'existe pas dans la base de référence des communes !");
-    }
+    open.value = true; // Affichage de la modale
+  } catch (err) {
+    console.log(err);
   }
 }
 
