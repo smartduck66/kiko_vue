@@ -82,9 +82,8 @@ const client = new faunadb.Client({
 });
 
 exports.handler = async (event, context) => {
-  // get the data from the body of the request
-  const cp = JSON.parse(event.body);
-  
+  // Récupération du code postal passé en paramètre de l'URL d'appel
+  const cp = event.queryStringParameters.code_postal;
 
   try {
     const result = flattenDataKeys(

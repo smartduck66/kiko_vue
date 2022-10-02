@@ -144,13 +144,39 @@ function onFastSearchDpt(criteres: any) {
 
 async function onFastSearchCommune(criteres: any) {
   // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
-
   let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
 
   const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
   const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
 
   const result = await database("communes", cp);
+  const ville: string = result[0].ville;
+  const lat: number = result[0].latitude;
+  const lon: number = result[0].longitude;
+
+  const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
+  const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
+
+  danger_ville.value = ville + " (" + cp + ")";
+  danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
+  danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
+
+  open.value = true; // Affichage de la modale
+}
+
+async function onFastSearchCommune_serverless(criteres: any) {
+  // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
+  let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
+
+  const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
+  const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
+
+  //const result = await database("communes", cp);
+  const API_URL = "/.netlify/functions/database?code_postal=" + cp;
+  console.log(API_URL);
+  const resp = await fetch(API_URL);
+  const result = (await resp.json()).data;
+
   const ville: string = result[0].ville;
   const lat: number = result[0].latitude;
   const lon: number = result[0].longitude;
@@ -223,7 +249,7 @@ function onInvalidSearch(button: string) {
           </div>
         </div>
       </Form>
-      <Form @submit="onFastSearchCommune" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
+      <Form @submit="onFastSearchCommune_serverless" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
         <div class="my_fast_grid">
           <div class="c-fast-item-1">
             <span>Risques communal (CP) :</span>
