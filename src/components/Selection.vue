@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { database } from "../assets/mixins/utils.js";
+//import { database } from "../assets/mixins/utils.js";
 import Résultats from "./Results.vue";
 import { ref, Ref } from "vue";
 import Panel from "primevue/panel";
@@ -142,7 +142,9 @@ function onFastSearchDpt(criteres: any) {
   affichage_fiches(results);
 }
 
+/*
 async function onFastSearchCommune(criteres: any) {
+  // Ancienne fonction PLUS UTILISEE liée à l'import d'utils.js
   // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
   let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
 
@@ -163,9 +165,10 @@ async function onFastSearchCommune(criteres: any) {
 
   open.value = true; // Affichage de la modale
 }
-
+*/
 async function onFastSearchCommune_serverless(criteres: any) {
   // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
+  // Appel d'une fonction serveless sécurisée
   let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
 
   const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
@@ -174,7 +177,7 @@ async function onFastSearchCommune_serverless(criteres: any) {
   const API_URL = "/.netlify/functions/database?code_postal=" + cp;
   const response = await fetch(API_URL);
   if (!response.ok) {
-    alert("Le code postal " + cp + " n'existe pas dans la base de référence des communes !");
+    alert("Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide.");
   } else {
     const result = (await response.json()).data;
     const ville: string = result[0].ville;
