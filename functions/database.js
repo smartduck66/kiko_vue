@@ -100,7 +100,6 @@ exports.handler = async (event, context) => {
       }),
     };
   } catch (error) {
-    console.log("Recherche non aboutie : " + error);
     return {
       statusCode: 400,
       body: JSON.stringify({

@@ -175,6 +175,7 @@ async function onFastSearchCommune_serverless(criteres: any) {
   try {
     const response = await fetch(API_URL);
     const result = (await response.json()).data;
+    console.log(result);
     const ville: string = result[0].ville;
     const lat: number = result[0].latitude;
     const lon: number = result[0].longitude;
