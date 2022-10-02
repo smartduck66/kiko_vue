@@ -7,6 +7,7 @@
 03/09/2022 - Début de programmation fonctionnelle sur les modules batch
 11/09/2022 - Réécriture de l'interface de saisie avec les composants PrimeVue
 20/09/2022 - 1ère version alpha avec l'ensemble des fonctionnalités de kiko_web (v1)
+02/10/2022 - Finalisation serverless function qui masque le secret 'faunadb', saisi d'une manière sécurisée dans la console netlify (variable d'environnement)
 
 ---
 

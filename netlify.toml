@@ -26,5 +26,5 @@
     cache-control = "public; max-age=691200"
 
 [functions]
-  # Indique l'utilisation potentielle de fonctions 'serverless' - Inutilisé au 26/9/2022
+  # Indique l'utilisation potentielle de fonctions 'serverless'
   directory = "./functions"
