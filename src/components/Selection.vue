@@ -174,13 +174,12 @@ async function onFastSearchCommune_serverless(criteres: any) {
   const API_URL = "/.netlify/functions/database?code_postal=" + cp;
   const response = await fetch(API_URL);
   if (!response.ok) {
+    alert("La base de données de référence des communes n'est pas accessible !");
     throw await response.json();
-
   } else {
     const data = await response.json();
-    if (data.statusCode != 200) {
-      alert("Le code postal saisi n'existe pas !");
-    } else {
+    console.log(data.statusCode);
+    if (data.statusCode == 200) {
       const result = data.data;
       const ville: string = result[0].ville;
       const lat: number = result[0].latitude;
@@ -194,7 +193,8 @@ async function onFastSearchCommune_serverless(criteres: any) {
       danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
 
       open.value = true; // Affichage de la modale
-      
+    } else {
+      alert("Le code postal " + cp + " n'existe pas dans la base de référence des communes !");
     }
   }
 }
