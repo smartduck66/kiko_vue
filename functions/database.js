@@ -73,7 +73,7 @@ const {
 } = q;
 
 const client = new faunadb.Client({
-  secret: fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMs, // généré via le dashboard de Fauna, exclusif à la base de données 'kiko'
+  secret: process.env.FAUNADB_SERVER_SECRET, // généré via le dashboard de Fauna, exclusif à la base de données 'kiko'
   domain: "db.eu.fauna.com",
   port: 443,
   scheme: "https",
@@ -95,7 +95,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: "Recherche réussie",
+        message: "ok",
         data: result,
       }),
     };
