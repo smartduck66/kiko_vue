@@ -28,3 +28,4 @@
 [functions]
   # Indique l'utilisation potentielle de fonctions 'serverless'
   directory = "./functions"
+

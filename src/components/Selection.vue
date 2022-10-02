@@ -222,17 +222,17 @@ function onInvalidSearch(button: string) {
           </div>
           <div class="c-item-2">
             <span><b>min</b></span>
-            <Field name="min_temp" class="saisie-valeur" type="text" v-model="min_temp" maxlength="2" />
-            <Field name="min_soleil" class="saisie-valeur" type="text" v-model="min_soleil" maxlength="4" />
-            <Field name="min_pluie" class="saisie-valeur" type="text" v-model="min_pluie" maxlength="4" />
-            <Field name="min_vent" class="saisie-valeur" type="text" v-model="min_vent" maxlength="3" />
+            <Field name="min_temp" class="saisie-valeur" type="text" v-model="min_temp" maxlength="2" aria-label="Temp. moy. mini"/>
+            <Field name="min_soleil" class="saisie-valeur" type="text" v-model="min_soleil" maxlength="4" aria-label="Soleil mini"/>
+            <Field name="min_pluie" class="saisie-valeur" type="text" v-model="min_pluie" maxlength="4" aria-label="Pluie mini"/>
+            <Field name="min_vent" class="saisie-valeur" type="text" v-model="min_vent" maxlength="3" aria-label="Vent mini"/>
           </div>
           <div class="c-item-3">
             <span><b>max</b></span>
-            <Field name="max_temp" class="saisie-valeur" type="text" v-model="max_temp" maxlength="2" />
-            <Field name="max_soleil" class="saisie-valeur" type="text" v-model="max_soleil" maxlength="4" />
-            <Field name="max_pluie" class="saisie-valeur" type="text" v-model="max_pluie" maxlength="4" />
-            <Field name="max_vent" class="saisie-valeur" type="text" v-model="max_vent" maxlength="3" />
+            <Field name="max_temp" class="saisie-valeur" type="text" v-model="max_temp" maxlength="2" aria-label="Temp. moy. max"/>
+            <Field name="max_soleil" class="saisie-valeur" type="text" v-model="max_soleil" maxlength="4" aria-label="Soleil max"/>
+            <Field name="max_pluie" class="saisie-valeur" type="text" v-model="max_pluie" maxlength="4" aria-label="Pluie max"/>
+            <Field name="max_vent" class="saisie-valeur" type="text" v-model="max_vent" maxlength="3" aria-label="Vent max"/>
           </div>
         </div>
         <div class="FlexWrapper-btn">
@@ -249,7 +249,7 @@ function onInvalidSearch(button: string) {
             <span>Fiches département :</span>
           </div>
           <div class="c-fast-item-2">
-            <Field name="dpt" class="saisie-valeur" type="text" v-model="dpt" maxlength="3" />
+            <Field name="dpt" class="saisie-valeur" type="text" v-model="dpt" maxlength="3" aria-label="Code département"/>
           </div>
           <div class="c-fast-item-3">
             <button class="go-btn1" type="submit">GO</button>
@@ -262,7 +262,7 @@ function onInvalidSearch(button: string) {
             <span>Risques communal (CP) :</span>
           </div>
           <div class="c-fast-item-2">
-            <Field name="commune" class="saisie-valeur" type="text" v-model="commune" maxlength="5" />
+            <Field name="commune" class="saisie-valeur" type="text" v-model="commune" maxlength="5" aria-label="Code postal"/>
           </div>
           <div class="c-fast-item-3">
             <button class="go-btn2" type="submit">GO</button>
@@ -305,7 +305,7 @@ code {
   background-color: #eee;
   padding: 2px 4px;
   border-radius: 4px;
-  color: #304455;
+  color: #022542;
 }
 
 .FlexWrapper-panel {
@@ -395,7 +395,7 @@ code {
   gap: 60px;
 }
 .search-btn {
-  background: var(--primary-color);
+  background: #022542;
   outline: none;
   border: none;
   color: #fff;
@@ -420,7 +420,7 @@ code {
 }
 
 .go-btn1 {
-  background: var(--primary-color);
+  background: #022542;
   outline: none;
   border: none;
   color: #fff;
@@ -445,7 +445,7 @@ code {
 }
 
 .go-btn2 {
-  background: var(--primary-color);
+  background: #022542;
   outline: none;
   border: none;
   color: #fff;

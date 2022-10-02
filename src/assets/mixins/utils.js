@@ -1,3 +1,4 @@
+// Ancienne fonction plus utilisée (2/10/2022) et remplacée par une fonction serverless
 import * as faunadb from "faunadb";
 
 // Fauna typically returns objects that look like:
