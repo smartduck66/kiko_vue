@@ -177,7 +177,10 @@ async function onFastSearchCommune_serverless(criteres: any) {
   const API_URL = "/.netlify/functions/database?code_postal=" + cp;
   const response = await fetch(API_URL);
   if (!response.ok) {
-    alert("Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide.");
+    alert(
+      "Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide."
+    );
+    commune.value = 78190; // Réaffichage du code postal de référence
   } else {
     const result = (await response.json()).data;
     const ville: string = result[0].ville;
