@@ -175,7 +175,7 @@ async function onFastSearchCommune_serverless(criteres: any) {
   try {
     const response = await fetch(API_URL);
     const result = (await response.json()).data;
-    if (!result.ok) {
+    if (!result) {
       alert("Le code postal " + cp + " n'existe pas dans la base de référence des communes !");
       throw await response.json();
     } else {
