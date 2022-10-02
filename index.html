@@ -5,8 +5,8 @@
     <title>KIKO - v2.00q</title>
     <meta name="description" content="Outil climatique" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/assets/styles.css" />
-    <link href="/src/assets/fonts/css/fontawesome.min.css" rel="stylesheet" />
+    <link rel="preload" rel="stylesheet" href="/src/assets/styles.css" as="style" />
+    <link rel="preload" href="/src/assets/fonts/css/fontawesome.min.css" as="style" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -28,6 +28,6 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/main.ts" defer></script>
   </body>
 </html>
