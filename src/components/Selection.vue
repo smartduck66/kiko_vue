@@ -179,9 +179,6 @@ async function onFastSearchCommune_serverless(criteres: any) {
       alert("Le code postal " + cp + " n'existe pas dans la base de référence des communes !");
       throw await response.json();
     } else {
-      const data = await response.json();
-
-      const result = data.data;
       const ville: string = result[0].ville;
       const lat: number = result[0].latitude;
       const lon: number = result[0].longitude;
