@@ -230,6 +230,7 @@ async function onFastSearchCommune_serverless1(criteres: any) {
       open.value = true; // Affichage de la modale
     })
     .catch(function (err) {
+      console.log(err);
       alert(
         "Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide."
       );
