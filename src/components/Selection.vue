@@ -230,12 +230,10 @@ async function onFastSearchCommune_serverless1(criteres: any) {
       open.value = true; // Affichage de la modale
     })
     .catch(function (error) {
-      if (error) {
-        alert(
-          "Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide."
-        );
-        commune.value = 78190; // Réaffichage du code postal de référence
-      }
+      alert(
+        "Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide."
+      );
+      commune.value = 78190; // Réaffichage du code postal de référence
     });
 }
 
@@ -297,7 +295,7 @@ function onInvalidSearch(button: string) {
           </div>
         </div>
       </Form>
-      <Form @submit="onFastSearchCommune_serverless" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
+      <Form @submit="onFastSearchCommune_serverless1" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
         <div class="my_fast_grid">
           <div class="c-fast-item-1">
             <span>Risques communal (CP) :</span>
