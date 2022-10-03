@@ -198,6 +198,44 @@ async function onFastSearchCommune_serverless(criteres: any) {
   }
 }
 
+async function onFastSearchCommune_serverless1(criteres: any) {
+  // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
+  // Appel d'une fonction serveless sécurisée
+  let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
+
+  const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
+  const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
+
+  const API_URL = "/.netlify/functions/database?code_postal=" + cp;
+
+  open.value = await fetch(API_URL)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      const result = data;
+      const ville: string = result[0].ville;
+      const lat: number = result[0].latitude;
+      const lon: number = result[0].longitude;
+
+      const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
+      const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
+
+      danger_ville.value = ville + " (" + cp + ")";
+      danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
+      danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
+
+      return true; // Affichage de la modale
+    })
+    .catch(function (err) {
+      alert(
+        "Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide."
+      );
+      commune.value = 78190; // Réaffichage du code postal de référence
+      return false;
+    });
+}
+
 function onInvalidSearch(button: string) {
   // Un ou plusieurs critères sont invalides et ne correspondent pas au schéma défini avec Yup
   const submitBtn = document.querySelector(button);
@@ -222,17 +260,17 @@ function onInvalidSearch(button: string) {
           </div>
           <div class="c-item-2">
             <span><b>min</b></span>
-            <Field name="min_temp" class="saisie-valeur" type="text" v-model="min_temp" maxlength="2" aria-label="Temp. moy. mini"/>
-            <Field name="min_soleil" class="saisie-valeur" type="text" v-model="min_soleil" maxlength="4" aria-label="Soleil mini"/>
-            <Field name="min_pluie" class="saisie-valeur" type="text" v-model="min_pluie" maxlength="4" aria-label="Pluie mini"/>
-            <Field name="min_vent" class="saisie-valeur" type="text" v-model="min_vent" maxlength="3" aria-label="Vent mini"/>
+            <Field name="min_temp" class="saisie-valeur" type="text" v-model="min_temp" maxlength="2" aria-label="Temp. moy. mini" />
+            <Field name="min_soleil" class="saisie-valeur" type="text" v-model="min_soleil" maxlength="4" aria-label="Soleil mini" />
+            <Field name="min_pluie" class="saisie-valeur" type="text" v-model="min_pluie" maxlength="4" aria-label="Pluie mini" />
+            <Field name="min_vent" class="saisie-valeur" type="text" v-model="min_vent" maxlength="3" aria-label="Vent mini" />
           </div>
           <div class="c-item-3">
             <span><b>max</b></span>
-            <Field name="max_temp" class="saisie-valeur" type="text" v-model="max_temp" maxlength="2" aria-label="Temp. moy. max"/>
-            <Field name="max_soleil" class="saisie-valeur" type="text" v-model="max_soleil" maxlength="4" aria-label="Soleil max"/>
-            <Field name="max_pluie" class="saisie-valeur" type="text" v-model="max_pluie" maxlength="4" aria-label="Pluie max"/>
-            <Field name="max_vent" class="saisie-valeur" type="text" v-model="max_vent" maxlength="3" aria-label="Vent max"/>
+            <Field name="max_temp" class="saisie-valeur" type="text" v-model="max_temp" maxlength="2" aria-label="Temp. moy. max" />
+            <Field name="max_soleil" class="saisie-valeur" type="text" v-model="max_soleil" maxlength="4" aria-label="Soleil max" />
+            <Field name="max_pluie" class="saisie-valeur" type="text" v-model="max_pluie" maxlength="4" aria-label="Pluie max" />
+            <Field name="max_vent" class="saisie-valeur" type="text" v-model="max_vent" maxlength="3" aria-label="Vent max" />
           </div>
         </div>
         <div class="FlexWrapper-btn">
@@ -249,20 +287,20 @@ function onInvalidSearch(button: string) {
             <span>Fiches département :</span>
           </div>
           <div class="c-fast-item-2">
-            <Field name="dpt" class="saisie-valeur" type="text" v-model="dpt" maxlength="3" aria-label="Code département"/>
+            <Field name="dpt" class="saisie-valeur" type="text" v-model="dpt" maxlength="3" aria-label="Code département" />
           </div>
           <div class="c-fast-item-3">
             <button class="go-btn1" type="submit">GO</button>
           </div>
         </div>
       </Form>
-      <Form @submit="onFastSearchCommune_serverless" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
+      <Form @submit="onFastSearchCommune_serverless1" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
         <div class="my_fast_grid">
           <div class="c-fast-item-1">
             <span>Risques communal (CP) :</span>
           </div>
           <div class="c-fast-item-2">
-            <Field name="commune" class="saisie-valeur" type="text" v-model="commune" maxlength="5" aria-label="Code postal"/>
+            <Field name="commune" class="saisie-valeur" type="text" v-model="commune" maxlength="5" aria-label="Code postal" />
           </div>
           <div class="c-fast-item-3">
             <button class="go-btn2" type="submit">GO</button>
