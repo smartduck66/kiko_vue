@@ -209,7 +209,7 @@ async function onFastSearchCommune_serverless1(criteres: any) {
   const API_URL = "/.netlify/functions/database?code_postal=" + cp;
   console.log(API_URL);
 
-  open.value = await fetch(API_URL)
+  await fetch(API_URL)
     .then(function (response) {
       return response.json();
     })
@@ -227,15 +227,15 @@ async function onFastSearchCommune_serverless1(criteres: any) {
       danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
       danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
 
-      return true; // Affichage de la modale
+      open.value = true; // Affichage de la modale
     })
     .catch(function (error) {
-      console.log(error);
-      alert(
-        "Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide."
-      );
-      commune.value = 78190; // Réaffichage du code postal de référence
-      return false;
+      if (error) {
+        alert(
+          "Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide."
+        );
+        commune.value = 78190; // Réaffichage du code postal de référence
+      }
     });
 }
 
