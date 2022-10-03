@@ -207,6 +207,7 @@ async function onFastSearchCommune_serverless1(criteres: any) {
   const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
 
   const API_URL = "/.netlify/functions/database?code_postal=" + cp;
+  console.log(API_URL);
 
   await fetch(API_URL)
     .then(function (response) {
@@ -214,6 +215,7 @@ async function onFastSearchCommune_serverless1(criteres: any) {
     })
     .then(function (data) {
       const result = data;
+      console.log(result);
       const ville: string = result[0].ville;
       const lat: number = result[0].latitude;
       const lon: number = result[0].longitude;
