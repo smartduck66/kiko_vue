@@ -100,6 +100,11 @@ exports.handler = async (event, context) => {
       }),
     };
   } catch (error) {
-    return new Error(error);
+    return {
+      statusCode: 400,
+      body: JSON.stringify({
+        error,
+      }),
+    };
   }
 };
