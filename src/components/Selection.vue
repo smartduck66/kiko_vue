@@ -297,7 +297,7 @@ function onInvalidSearch(button: string) {
           </div>
         </div>
       </Form>
-      <Form @submit="onFastSearchCommune_serverless1" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
+      <Form @submit="onFastSearchCommune_serverless" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
         <div class="my_fast_grid">
           <div class="c-fast-item-1">
             <span>Risques communal (CP) :</span>
