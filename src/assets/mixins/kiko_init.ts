@@ -13,10 +13,7 @@
 // **********************************************************************************************************************
 
 // On 'importe' des fonctions de distances.js
-import {
-  convert_DMS_DD,
-  site_dangereux_le_plus_proche,
-} from "../mixins/distances.js";
+import { convert_DMS_DD, site_dangereux_le_plus_proche } from "../mixins/distances.js";
 
 // Chargement des prix au m2 et des coordonnées des CNPE
 import * as prix_m2 from "../../data/prix_maisons_m2.json";
@@ -27,28 +24,15 @@ import * as https from "https";
 import * as fs from "fs";
 import * as ref from "../../data/ListeFichesClimatiques.json";
 
-function extract_alone_value(
-  ref: string,
-  pattern: RegExp,
-  data: string,
-  value_name: string
-): string {
+function extract_alone_value(ref: string, pattern: RegExp, data: string, value_name: string): string {
   // Fonction qui extrait une valeur seule
   const match = data.match(pattern);
   if (match !== null) {
     return match[0];
-  } else
-    throw new Error(
-      "La fiche " + ref + " semble ne pas avoir de données : " + value_name
-    );
+  } else throw new Error("La fiche " + ref + " semble ne pas avoir de données : " + value_name);
 }
 
-function extract_value_in_a_list(
-  ref: string,
-  pattern: RegExp,
-  data: string,
-  value_name: string
-): string {
+function extract_value_in_a_list(ref: string, pattern: RegExp, data: string, value_name: string): string {
   // Fonction qui extrait une valeur dans une liste
   const match = data.match(pattern);
 
@@ -75,10 +59,7 @@ function extract_value_in_a_list(
         return s2[13].trimStart(); // On ne renvoit que la moyenne annuelle
       }
     }
-  } else
-    throw new Error(
-      "La fiche " + ref + " semble ne pas avoir de données : " + value_name
-    );
+  } else throw new Error("La fiche " + ref + " semble ne pas avoir de données : " + value_name);
 }
 
 // *********************************************************************************************************************************************
@@ -89,19 +70,13 @@ console.log("myArgs: ", myArgs);
 
 switch (myArgs[0]) {
   case "mf": {
-    console.log(
-      "Chargement des données climatiques brutes en provenance du site de Météo France"
-    );
+    console.log("Chargement des données climatiques brutes en provenance du site de Météo France");
 
     // Balayage de l'ensemble des fiches MF et création des fichiers .data sur disque (assets/ficheclim)
     ref.map((refcli) => {
       const filename = refcli.ref + ".data";
-      console.log(
-        "Chargement de la fiche climatique de la ville : " + refcli.town
-      );
-      const url =
-        "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_" +
-        filename;
+      console.log("Chargement de la fiche climatique de la ville : " + refcli.town);
+      const url = "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_" + filename;
 
       const request = https.get(url);
 
@@ -131,9 +106,7 @@ switch (myArgs[0]) {
   }
 
   case "clim": {
-    console.log(
-      "Création du fichier fc.json regroupant les fiches climatiques"
-    );
+    console.log("Création du fichier fc.json regroupant les fiches climatiques");
 
     class data_MF {
       indicatif: string;
@@ -171,21 +144,13 @@ switch (myArgs[0]) {
 
     // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
     const fiches: data_MF[] = ref.map((refcli) => {
-      const text = fs.readFileSync(
-        "../../ficheclim/" + refcli.ref + ".data",
-        "utf8"
-      );
+      const text = fs.readFileSync("../../ficheclim/" + refcli.ref + ".data", "utf8");
       const item = new data_MF(); // note the "new" keyword here
 
       item.indicatif = refcli.ref;
       item.ville = refcli.town;
 
-      let s: string = extract_alone_value(
-        item.indicatif,
-        /\(\d{1,3}\)/,
-        text,
-        "département"
-      );
+      let s: string = extract_alone_value(item.indicatif, /\(\d{1,3}\)/, text, "département");
       item.departement = s.substring(s.indexOf("(") + 1, s.indexOf(")"));
 
       s = extract_alone_value(item.indicatif, /alt : \d+m/, text, "altitude");
@@ -197,39 +162,13 @@ switch (myArgs[0]) {
       s = extract_alone_value(item.indicatif, /lon : .+;/, text, "longitude");
       item.longitude = s.substring(s.indexOf(":") + 2, s.indexOf(";"));
 
-      item.temp_moy = Number(
-        extract_value_in_a_list(
-          item.indicatif,
-          /Température moyenne/,
-          text,
-          "Température moyenne (Moyenne en °C)"
-        )
-      );
+      item.temp_moy = Number(extract_value_in_a_list(item.indicatif, /Température moyenne/, text, "Température moyenne (Moyenne en °C)"));
 
-      item.temp_max = Number(
-        extract_value_in_a_list(
-          item.indicatif,
-          /Température maximale/,
-          text,
-          "Température maximale (Moyenne en °C)"
-        )
-      );
+      item.temp_max = Number(extract_value_in_a_list(item.indicatif, /Température maximale/, text, "Température maximale (Moyenne en °C)"));
 
-      item.temp_min = Number(
-        extract_value_in_a_list(
-          item.indicatif,
-          /Température minimale/,
-          text,
-          "Température minimale (Moyenne en °C)"
-        )
-      );
+      item.temp_min = Number(extract_value_in_a_list(item.indicatif, /Température minimale/, text, "Température minimale (Moyenne en °C)"));
 
-      item.ensoleillement = extract_value_in_a_list(
-        item.indicatif,
-        /Durée d'insolation/,
-        text,
-        "Durée d'insolation (Moyenne en heures)"
-      );
+      item.ensoleillement = extract_value_in_a_list(item.indicatif, /Durée d'insolation/, text, "Durée d'insolation (Moyenne en heures)");
 
       item.pluie = extract_value_in_a_list(
         item.indicatif,
@@ -238,25 +177,13 @@ switch (myArgs[0]) {
         "Précipitations : Hauteur moyenne mensuelle (mm)"
       );
 
-      item.vent = extract_value_in_a_list(
-        item.indicatif,
-        /Nombre moyen de jours avec rafales/,
-        text,
-        "Nombre moyen de jours avec rafales"
-      );
+      item.vent = extract_value_in_a_list(item.indicatif, /Nombre moyen de jours avec rafales/, text, "Nombre moyen de jours avec rafales");
 
-      const d = site_dangereux_le_plus_proche(
-        lat_long_CNPE,
-        convert_DMS_DD(item.latitude),
-        convert_DMS_DD(item.longitude)
-      );
+      const d = site_dangereux_le_plus_proche(lat_long_CNPE, convert_DMS_DD(item.latitude), convert_DMS_DD(item.longitude));
       item.distance_cnpe = Math.trunc(d.distance);
 
       try {
-        item.prix_maisons =
-          prix_m2[
-            prix_m2.findIndex((x: { dpt: string }) => x.dpt == item.departement)
-          ]["prix"].toString();
+        item.prix_maisons = prix_m2[prix_m2.findIndex((x: { dpt: string }) => x.dpt == item.departement)]["prix"].toString();
       } catch (ex) {
         item.prix_maisons = "-";
       }
@@ -270,20 +197,17 @@ switch (myArgs[0]) {
   case "immo": {
     // Chargement du fichier des valeurs foncières et création du fichier afférent sur le disque dur
     // Source : https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
-    console.log(
-      "Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons"
-    );
+    console.log("Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons");
 
-    // Dernières valeurs disponibles complètes : 2021 - Chargées le 10 septembre 2022
-    const url =
-      "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20220408-143516/valeursfoncieres-2021.txt";
-    const filename = "../../data_source/valeursfoncieres-2021.txt";
+    // Dernières valeurs disponibles complètes : S1/2022 - Chargées le 5 mars 2023
+    const url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20221017-152027/valeursfoncieres-2022-s1.txt";
+    const filename = "../../data_source/valeursfoncieres-2022-s1.txt";
 
     const request = https.get(url);
-
+    
     request.on("response", (response) => {
       const httpStatus = response.statusCode;
-
+      console.log("httpStatus : "+httpStatus);  
       response.setEncoding("utf-8");
       let body = "";
       response.on("data", (chunk: string) => {
@@ -292,7 +216,7 @@ switch (myArgs[0]) {
 
       response.on("end", () => {
         if (httpStatus === 200) {
-          // On crée le fichier sur disque si tout est OK (442 Mo pour 2021, 3,379 millions de lignes) *************************************************
+          // On crée le fichier sur disque si tout est OK (183 Mo pour s1/2022, 1,429 millions de lignes) *************************************************
           // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
           // Code service CH
           // Reference document
@@ -353,7 +277,7 @@ switch (myArgs[0]) {
         console.log(error);
       });
     });
-
+    
     // Création du fichier prix_maisons_m2.json *****************************************************************************
     class prix_maisons {
       dpt: string;
@@ -387,9 +311,7 @@ switch (myArgs[0]) {
         const item = new prix_maisons(); // note the "new" keyword here
 
         const departement: string = fields[18];
-        const prix: number = !fields[10]
-          ? 0
-          : Number(fields[10].substring(0, fields[10].indexOf(","))); // Guard si le prix est vide ; suppression des décimales sinon
+        const prix: number = !fields[10] ? 0 : Number(fields[10].substring(0, fields[10].indexOf(","))); // Guard si le prix est vide ; suppression des décimales sinon
         const type_bien: string = fields[36];
         const surface: number = !fields[38] ? 0 : Number(fields[38]); // Guard si la surface est vide
 
@@ -401,20 +323,10 @@ switch (myArgs[0]) {
             ++nb_vente;
           }
         } else {
-          item.prix = cumul_surface
-            ? Math.trunc(cumul_prix / cumul_surface)
-            : 0; // Guard : pour le département 2B, pas de maison donc pas de surface...
+          item.prix = cumul_surface ? Math.trunc(cumul_prix / cumul_surface) : 0; // Guard : pour le département 2B, pas de maison donc pas de surface...
           item.nb_ventes = nb_vente;
           item.dpt = current_district;
-          console.log(
-            "Traitement du département " +
-              item.dpt +
-              " : prix moyen au m2 = " +
-              item.prix +
-              " euros (" +
-              item.nb_ventes +
-              " ventes)"
-          );
+          console.log("Traitement du département " + item.dpt + " : prix moyen au m2 = " + item.prix + " euros (" + item.nb_ventes + " ventes)");
           fiches1.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
           current_district = departement;
           cumul_prix = cumul_surface = nb_vente = 0;
@@ -424,16 +336,11 @@ switch (myArgs[0]) {
     });
 
     lineReader.on("close", function () {
-      fs.writeFileSync(
-        "../../data/prix_maisons_m2.json",
-        JSON.stringify(fiches1, null, 2)
-      ); // Création du json final sur disque
+      fs.writeFileSync("../../data/prix_maisons_m2.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
     });
     break;
   }
 
   default:
-    console.log(
-      "Désolé mais seule l'une des 3 commandes suivantes est autorisée : mf, clim, immo"
-    );
+    console.log("Désolé mais seule l'une des 3 commandes suivantes est autorisée : mf, clim, immo");
 }

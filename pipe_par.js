@@ -42,7 +42,7 @@ const util = require("util");
 const execP = util.promisify(child_process.exec);
 
 const files = ["csv_to_json.ts", "kiko_init.ts", "distances.ts"];
-let promises = files.map((file) => execP("tsc src/assets/mixins/" + file));
+let promises = files.map((file) => execP("tsc src/assets/mixins/" + file+" --resolveJsonModule"));
 
 Promise.all(promises)
   .then((bodies) => {

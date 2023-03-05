@@ -1,487 +1,487 @@
 [
   {
     "dpt": "01",
-    "prix": 2631,
-    "nb_ventes": 5343
+    "prix": 2896,
+    "nb_ventes": 1114
   },
   {
     "dpt": "02",
-    "prix": 1380,
-    "nb_ventes": 8707
+    "prix": 1417,
+    "nb_ventes": 3838
   },
   {
     "dpt": "03",
-    "prix": 1352,
-    "nb_ventes": 4661
+    "prix": 1399,
+    "nb_ventes": 1652
   },
   {
     "dpt": "04",
-    "prix": 2765,
-    "nb_ventes": 1239
+    "prix": 2828,
+    "nb_ventes": 135
   },
   {
     "dpt": "05",
-    "prix": 2560,
-    "nb_ventes": 444
+    "prix": 2723,
+    "nb_ventes": 97
   },
   {
     "dpt": "06",
-    "prix": 6666,
-    "nb_ventes": 6583
+    "prix": 7219,
+    "nb_ventes": 2962
   },
   {
     "dpt": "07",
-    "prix": 2193,
-    "nb_ventes": 837
+    "prix": 2294,
+    "nb_ventes": 441
   },
   {
     "dpt": "08",
-    "prix": 1209,
-    "nb_ventes": 3135
+    "prix": 1224,
+    "nb_ventes": 1315
   },
   {
     "dpt": "09",
-    "prix": 1455,
-    "nb_ventes": 3408
+    "prix": 1699,
+    "nb_ventes": 1579
   },
   {
     "dpt": "10",
-    "prix": 1549,
-    "nb_ventes": 3694
+    "prix": 1618,
+    "nb_ventes": 1091
   },
   {
     "dpt": "11",
-    "prix": 1811,
-    "nb_ventes": 5656
+    "prix": 1912,
+    "nb_ventes": 2934
   },
   {
     "dpt": "12",
-    "prix": 1473,
-    "nb_ventes": 1332
+    "prix": 1866,
+    "nb_ventes": 87
   },
   {
     "dpt": "13",
-    "prix": 4720,
-    "nb_ventes": 9491
+    "prix": 4891,
+    "nb_ventes": 3060
   },
   {
     "dpt": "14",
-    "prix": 2570,
-    "nb_ventes": 6438
+    "prix": 2957,
+    "nb_ventes": 431
   },
   {
     "dpt": "15",
-    "prix": 1249,
-    "nb_ventes": 2148
+    "prix": 1299,
+    "nb_ventes": 979
   },
   {
     "dpt": "16",
-    "prix": 1462,
-    "nb_ventes": 8176
+    "prix": 1559,
+    "nb_ventes": 3926
   },
   {
     "dpt": "17",
-    "prix": 3040,
-    "nb_ventes": 7169
+    "prix": 3541,
+    "nb_ventes": 2962
   },
   {
     "dpt": "18",
-    "prix": 1667,
-    "nb_ventes": 6430
+    "prix": 1389,
+    "nb_ventes": 2927
   },
   {
     "dpt": "19",
-    "prix": 1559,
-    "nb_ventes": 4384
+    "prix": 1507,
+    "nb_ventes": 1606
   },
   {
     "dpt": "21",
-    "prix": 2002,
-    "nb_ventes": 2162
+    "prix": 2256,
+    "nb_ventes": 7
   },
   {
     "dpt": "22",
-    "prix": 1855,
-    "nb_ventes": 13385
+    "prix": 2024,
+    "nb_ventes": 3186
   },
   {
     "dpt": "23",
-    "prix": 889,
-    "nb_ventes": 2253
+    "prix": 979,
+    "nb_ventes": 567
   },
   {
     "dpt": "24",
-    "prix": 1756,
-    "nb_ventes": 8598
+    "prix": 1959,
+    "nb_ventes": 2437
   },
   {
     "dpt": "25",
-    "prix": 1901,
-    "nb_ventes": 2541
+    "prix": 2105,
+    "nb_ventes": 990
   },
   {
     "dpt": "26",
-    "prix": 2462,
-    "nb_ventes": 5063
+    "prix": 2640,
+    "nb_ventes": 2897
   },
   {
     "dpt": "27",
-    "prix": 2230,
-    "nb_ventes": 9532
+    "prix": 2094,
+    "nb_ventes": 2385
   },
   {
     "dpt": "28",
-    "prix": 2011,
-    "nb_ventes": 8539
+    "prix": 1975,
+    "nb_ventes": 3557
   },
   {
     "dpt": "29",
-    "prix": 2042,
-    "nb_ventes": 5919
+    "prix": 2242,
+    "nb_ventes": 1117
   },
   {
     "dpt": "2A",
-    "prix": 6077,
-    "nb_ventes": 756
+    "prix": 6753,
+    "nb_ventes": 362
   },
   {
     "dpt": "2B",
-    "prix": 4127,
-    "nb_ventes": 238
+    "prix": 3720,
+    "nb_ventes": 145
   },
   {
     "dpt": "30",
-    "prix": 2684,
-    "nb_ventes": 11022
+    "prix": 2829,
+    "nb_ventes": 5169
   },
   {
     "dpt": "31",
-    "prix": 2748,
-    "nb_ventes": 7617
+    "prix": 2767,
+    "nb_ventes": 2437
   },
   {
     "dpt": "32",
-    "prix": 1703,
-    "nb_ventes": 3358
+    "prix": 1745,
+    "nb_ventes": 1467
   },
   {
     "dpt": "33",
-    "prix": 3576,
-    "nb_ventes": 23382
+    "prix": 3819,
+    "nb_ventes": 10519
   },
   {
     "dpt": "34",
-    "prix": 3018,
-    "nb_ventes": 11979
+    "prix": 3152,
+    "nb_ventes": 4636
   },
   {
     "dpt": "35",
-    "prix": 2475,
-    "nb_ventes": 14254
+    "prix": 2686,
+    "nb_ventes": 6196
   },
   {
     "dpt": "36",
-    "prix": 1166,
-    "nb_ventes": 3365
+    "prix": 1264,
+    "nb_ventes": 969
   },
   {
     "dpt": "37",
-    "prix": 2205,
-    "nb_ventes": 6623
+    "prix": 2403,
+    "nb_ventes": 2233
   },
   {
     "dpt": "38",
-    "prix": 3048,
-    "nb_ventes": 3879
+    "prix": 3265,
+    "nb_ventes": 565
   },
   {
     "dpt": "39",
-    "prix": 1691,
-    "nb_ventes": 3688
+    "prix": 1653,
+    "nb_ventes": 1555
   },
   {
     "dpt": "40",
-    "prix": 2832,
-    "nb_ventes": 7295
+    "prix": 3024,
+    "nb_ventes": 2149
   },
   {
     "dpt": "41",
-    "prix": 1866,
-    "nb_ventes": 7511
+    "prix": 2120,
+    "nb_ventes": 3373
   },
   {
     "dpt": "42",
-    "prix": 2041,
-    "nb_ventes": 7678
+    "prix": 2098,
+    "nb_ventes": 3217
   },
   {
     "dpt": "43",
-    "prix": 1420,
-    "nb_ventes": 1721
+    "prix": 1515,
+    "nb_ventes": 750
   },
   {
     "dpt": "44",
-    "prix": 3026,
-    "nb_ventes": 20222
+    "prix": 3266,
+    "nb_ventes": 8205
   },
   {
     "dpt": "45",
-    "prix": 1876,
-    "nb_ventes": 8518
+    "prix": 2407,
+    "nb_ventes": 4077
   },
   {
     "dpt": "46",
-    "prix": 1723,
-    "nb_ventes": 1302
+    "prix": 1875,
+    "nb_ventes": 1826
   },
   {
     "dpt": "47",
-    "prix": 1784,
-    "nb_ventes": 5495
+    "prix": 1733,
+    "nb_ventes": 792
   },
   {
     "dpt": "48",
-    "prix": 1461,
-    "nb_ventes": 545
+    "prix": 1556,
+    "nb_ventes": 135
   },
   {
     "dpt": "49",
-    "prix": 1991,
-    "nb_ventes": 11014
+    "prix": 2231,
+    "nb_ventes": 2443
   },
   {
     "dpt": "50",
-    "prix": 1779,
-    "nb_ventes": 5134
+    "prix": 1844,
+    "nb_ventes": 1237
   },
   {
     "dpt": "51",
-    "prix": 1983,
-    "nb_ventes": 4434
+    "prix": 1969,
+    "nb_ventes": 1746
   },
   {
     "dpt": "52",
-    "prix": 1021,
-    "nb_ventes": 2146
+    "prix": 1066,
+    "nb_ventes": 1147
   },
   {
     "dpt": "53",
-    "prix": 1451,
-    "nb_ventes": 6273
+    "prix": 1656,
+    "nb_ventes": 2429
   },
   {
     "dpt": "54",
-    "prix": 1781,
-    "nb_ventes": 7345
+    "prix": 1980,
+    "nb_ventes": 2733
   },
   {
     "dpt": "55",
-    "prix": 1019,
-    "nb_ventes": 2468
+    "prix": 1105,
+    "nb_ventes": 493
   },
   {
     "dpt": "56",
-    "prix": 2366,
-    "nb_ventes": 11240
+    "prix": 2811,
+    "nb_ventes": 4199
   },
   {
     "dpt": "58",
-    "prix": 1094,
-    "nb_ventes": 3784
+    "prix": 1192,
+    "nb_ventes": 1039
   },
   {
     "dpt": "59",
-    "prix": 2160,
-    "nb_ventes": 33095
+    "prix": 2176,
+    "nb_ventes": 15065
   },
   {
     "dpt": "60",
-    "prix": 2460,
-    "nb_ventes": 11604
+    "prix": 2470,
+    "nb_ventes": 4395
   },
   {
     "dpt": "61",
-    "prix": 1498,
-    "nb_ventes": 4407
+    "prix": 1453,
+    "nb_ventes": 444
   },
   {
     "dpt": "62",
-    "prix": 1877,
-    "nb_ventes": 14979
+    "prix": 2007,
+    "nb_ventes": 5789
   },
   {
     "dpt": "63",
-    "prix": 1805,
-    "nb_ventes": 1265
+    "prix": 1990,
+    "nb_ventes": 829
   },
   {
     "dpt": "64",
-    "prix": 3375,
-    "nb_ventes": 4158
+    "prix": 5169,
+    "nb_ventes": 1114
   },
   {
     "dpt": "65",
-    "prix": 1543,
-    "nb_ventes": 2464
+    "prix": 1653,
+    "nb_ventes": 908
   },
   {
     "dpt": "66",
-    "prix": 2274,
-    "nb_ventes": 2291
+    "prix": 2363,
+    "nb_ventes": 1155
   },
   {
     "dpt": "69",
-    "prix": 4094,
-    "nb_ventes": 9714
+    "prix": 4425,
+    "nb_ventes": 3873
   },
   {
     "dpt": "70",
-    "prix": 1204,
-    "nb_ventes": 2629
+    "prix": 1277,
+    "nb_ventes": 643
   },
   {
     "dpt": "71",
-    "prix": 1616,
-    "nb_ventes": 7336
+    "prix": 1479,
+    "nb_ventes": 1381
   },
   {
     "dpt": "72",
-    "prix": 1647,
-    "nb_ventes": 11452
+    "prix": 1692,
+    "nb_ventes": 5022
   },
   {
     "dpt": "73",
-    "prix": 3455,
-    "nb_ventes": 3805
+    "prix": 4010,
+    "nb_ventes": 1773
   },
   {
     "dpt": "74",
-    "prix": 4893,
-    "nb_ventes": 2555
+    "prix": 5546,
+    "nb_ventes": 614
   },
   {
     "dpt": "76",
-    "prix": 2140,
-    "nb_ventes": 10551
+    "prix": 2212,
+    "nb_ventes": 4445
   },
   {
     "dpt": "77",
-    "prix": 3026,
-    "nb_ventes": 17876
+    "prix": 3213,
+    "nb_ventes": 7536
   },
   {
     "dpt": "78",
-    "prix": 4582,
-    "nb_ventes": 10544
+    "prix": 4623,
+    "nb_ventes": 4233
   },
   {
     "dpt": "79",
-    "prix": 1352,
-    "nb_ventes": 7873
+    "prix": 1445,
+    "nb_ventes": 2144
   },
   {
     "dpt": "80",
-    "prix": 1700,
-    "nb_ventes": 7190
+    "prix": 1835,
+    "nb_ventes": 1645
   },
   {
     "dpt": "81",
-    "prix": 1758,
-    "nb_ventes": 3402
+    "prix": 1901,
+    "nb_ventes": 1797
   },
   {
     "dpt": "82",
-    "prix": 1793,
-    "nb_ventes": 4016
+    "prix": 1865,
+    "nb_ventes": 1248
   },
   {
     "dpt": "83",
-    "prix": 5081,
-    "nb_ventes": 6475
+    "prix": 5527,
+    "nb_ventes": 2889
   },
   {
     "dpt": "84",
-    "prix": 3363,
-    "nb_ventes": 7569
+    "prix": 3673,
+    "nb_ventes": 3541
   },
   {
     "dpt": "85",
-    "prix": 2359,
-    "nb_ventes": 16117
+    "prix": 2569,
+    "nb_ventes": 7325
   },
   {
     "dpt": "86",
-    "prix": 1500,
-    "nb_ventes": 7846
+    "prix": 1554,
+    "nb_ventes": 3006
   },
   {
     "dpt": "87",
-    "prix": 1516,
-    "nb_ventes": 6543
+    "prix": 1542,
+    "nb_ventes": 2973
   },
   {
     "dpt": "88",
-    "prix": 1367,
-    "nb_ventes": 4857
+    "prix": 1577,
+    "nb_ventes": 2163
   },
   {
     "dpt": "89",
-    "prix": 1433,
-    "nb_ventes": 7168
+    "prix": 1436,
+    "nb_ventes": 2924
   },
   {
     "dpt": "90",
-    "prix": 1815,
-    "nb_ventes": 1102
+    "prix": 1781,
+    "nb_ventes": 458
   },
   {
     "dpt": "91",
-    "prix": 3591,
-    "nb_ventes": 11191
+    "prix": 3699,
+    "nb_ventes": 4649
   },
   {
     "dpt": "92",
-    "prix": 8715,
-    "nb_ventes": 2867
+    "prix": 9095,
+    "nb_ventes": 1400
   },
   {
     "dpt": "93",
-    "prix": 4521,
-    "nb_ventes": 4878
+    "prix": 4606,
+    "nb_ventes": 1850
   },
   {
     "dpt": "94",
-    "prix": 5805,
-    "nb_ventes": 5115
+    "prix": 6275,
+    "nb_ventes": 2149
   },
   {
     "dpt": "95",
-    "prix": 3865,
-    "nb_ventes": 9411
+    "prix": 4090,
+    "nb_ventes": 4127
   },
   {
     "dpt": "971",
-    "prix": 3887,
-    "nb_ventes": 586
+    "prix": 3265,
+    "nb_ventes": 125
   },
   {
     "dpt": "972",
-    "prix": 3450,
-    "nb_ventes": 1088
+    "prix": 3057,
+    "nb_ventes": 249
   },
   {
     "dpt": "973",
-    "prix": 3752,
-    "nb_ventes": 974
+    "prix": 2737,
+    "nb_ventes": 417
   },
   {
     "dpt": "974",
-    "prix": 2989,
-    "nb_ventes": 2038
+    "prix": 4658,
+    "nb_ventes": 492
   },
   {
     "dpt": "75",
-    "prix": 19048,
-    "nb_ventes": 214
+    "prix": 16449,
+    "nb_ventes": 102
   }
 ]

@@ -69,8 +69,7 @@ switch (myArgs[0]) {
         ref.map(function (refcli) {
             var filename = refcli.ref + ".data";
             console.log("Chargement de la fiche climatique de la ville : " + refcli.town);
-            var url = "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_" +
-                filename;
+            var url = "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_" + filename;
             var request = https.get(url);
             request.on("response", function (response) {
                 var httpStatus = response.statusCode;
@@ -138,8 +137,7 @@ switch (myArgs[0]) {
             var d = (0, distances_js_1.site_dangereux_le_plus_proche)(lat_long_CNPE, (0, distances_js_1.convert_DMS_DD)(item.latitude), (0, distances_js_1.convert_DMS_DD)(item.longitude));
             item.distance_cnpe = Math.trunc(d.distance);
             try {
-                item.prix_maisons =
-                    prix_m2[prix_m2.findIndex(function (x) { return x.dpt == item.departement; })]["prix"].toString();
+                item.prix_maisons = prix_m2[prix_m2.findIndex(function (x) { return x.dpt == item.departement; })]["prix"].toString();
             }
             catch (ex) {
                 item.prix_maisons = "-";
@@ -153,12 +151,13 @@ switch (myArgs[0]) {
         // Chargement du fichier des valeurs foncières et création du fichier afférent sur le disque dur
         // Source : https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
         console.log("Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons");
-        // Dernières valeurs disponibles complètes : 2021 - Chargées le 10 septembre 2022
-        var url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20220408-143516/valeursfoncieres-2021.txt";
-        var filename_1 = "../../data_source/valeursfoncieres-2021.txt";
+        // Dernières valeurs disponibles complètes : S1/2022 - Chargées le 5 mars 2023
+        var url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20221017-152027/valeursfoncieres-2022-s1.txt";
+        var filename_1 = "../../data_source/valeursfoncieres-2022-s1.txt";
         var request_1 = https.get(url);
         request_1.on("response", function (response) {
             var httpStatus = response.statusCode;
+            console.log("httpStatus : " + httpStatus);
             response.setEncoding("utf-8");
             var body = "";
             response.on("data", function (chunk) {
@@ -166,7 +165,7 @@ switch (myArgs[0]) {
             });
             response.on("end", function () {
                 if (httpStatus === 200) {
-                    // On crée le fichier sur disque si tout est OK (442 Mo pour 2021, 3,379 millions de lignes) *************************************************
+                    // On crée le fichier sur disque si tout est OK (183 Mo pour s1/2022, 1,429 millions de lignes) *************************************************
                     // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
                     // Code service CH
                     // Reference document
@@ -250,9 +249,7 @@ switch (myArgs[0]) {
                 var fields = line_read.split("|");
                 var item = new prix_maisons_1(); // note the "new" keyword here
                 var departement = fields[18];
-                var prix = !fields[10]
-                    ? 0
-                    : Number(fields[10].substring(0, fields[10].indexOf(","))); // Guard si le prix est vide ; suppression des décimales sinon
+                var prix = !fields[10] ? 0 : Number(fields[10].substring(0, fields[10].indexOf(","))); // Guard si le prix est vide ; suppression des décimales sinon
                 var type_bien = fields[36];
                 var surface = !fields[38] ? 0 : Number(fields[38]); // Guard si la surface est vide
                 if (departement == current_district_1) {
@@ -264,18 +261,10 @@ switch (myArgs[0]) {
                     }
                 }
                 else {
-                    item.prix = cumul_surface_1
-                        ? Math.trunc(cumul_prix_1 / cumul_surface_1)
-                        : 0; // Guard : pour le département 2B, pas de maison donc pas de surface...
+                    item.prix = cumul_surface_1 ? Math.trunc(cumul_prix_1 / cumul_surface_1) : 0; // Guard : pour le département 2B, pas de maison donc pas de surface...
                     item.nb_ventes = nb_vente_1;
                     item.dpt = current_district_1;
-                    console.log("Traitement du département " +
-                        item.dpt +
-                        " : prix moyen au m2 = " +
-                        item.prix +
-                        " euros (" +
-                        item.nb_ventes +
-                        " ventes)");
+                    console.log("Traitement du département " + item.dpt + " : prix moyen au m2 = " + item.prix + " euros (" + item.nb_ventes + " ventes)");
                     fiches1_1.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
                     current_district_1 = departement;
                     cumul_prix_1 = cumul_surface_1 = nb_vente_1 = 0;

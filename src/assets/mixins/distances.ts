@@ -45,7 +45,7 @@ function distanceEarth(
   );
 }
 
-export function convert_DMS_DD(coord: string): number {
+function convert_DMS_DD(coord: string): number {
   // Fonction qui convertit des coordonnées GPS d'une station météo en Degrés, Minutes, Secondes en Degrés Décimaux
   // Ex : latitude: 45°38'24"N longitude : 05°52'36"E donnera latitude : 45.64   longitude : 5.8766
   // Pas de guard supplémentaire dans cette fonction : le format de la coordonnées DMS a déjà été vérifié lors de la création des fiches climatiques
@@ -79,7 +79,7 @@ interface coords_sites_dangereux {
   longitude: number;
 }
 
-export function site_dangereux_le_plus_proche<
+function site_dangereux_le_plus_proche<
   Type extends coords_sites_dangereux[]
 >(
   coords_sites_dangereux: Type,
@@ -125,3 +125,5 @@ export function site_dangereux_le_plus_proche<
   // ... et on renvoit la distance minimale
   return fiches[0];
 }
+
+export { site_dangereux_le_plus_proche, convert_DMS_DD };
