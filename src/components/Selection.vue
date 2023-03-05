@@ -249,7 +249,7 @@ function onInvalidSearch(button: string) {
 
 <template>
   <div class="FlexWrapper-panel">
-    <Panel header="Critères de sélection des sites">
+    <Panel header="Critères de sélection des stations météo">
       <Form @submit="onSearch" :validation-schema="schema_selection" @invalid-submit="onInvalidSearch('.search-btn')">
         <div class="my_grid">
           <div class="c-item-1">
@@ -285,7 +285,7 @@ function onInvalidSearch(button: string) {
       <Form @submit="onFastSearchDpt" :validation-schema="schema_fast_Dpt" @invalid-submit="onInvalidSearch('.go-btn1')">
         <div class="my_fast_grid">
           <div class="c-fast-item-1">
-            <span>Fiches département :</span>
+            <span>Fiches d'un département :</span>
           </div>
           <div class="c-fast-item-2">
             <Field name="dpt" class="saisie-valeur" type="text" v-model="dpt" maxlength="3" aria-label="Code département" />

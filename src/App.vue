@@ -9,7 +9,7 @@ const store = useStore();
 const station = data[data.findIndex((x: { indicatif: string }) => x.indicatif == "78621001")]; // Station météo de Trappes
 
 let val_ref_78: string[] = [];
-val_ref_78.push(station.indicatif + " - " + station.ville + " (alt. : " + station.altitude + " m)");
+val_ref_78.push("Référence : "+station.indicatif + " - " + station.ville + " (alt. : " + station.altitude + " m)");
 val_ref_78.push(station.temp_moy + "°");
 val_ref_78.push(station.temp_min + "°");
 val_ref_78.push(station.temp_max + "°");

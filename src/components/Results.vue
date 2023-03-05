@@ -60,7 +60,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
           <div class="c-item-mobile-1">
             <span class="icon-text">
               <span class="icon"><i class="fas fa-city" :style="{ 'font-family': 'fa-solid' }"></i></span>
-              <span class="label">Site</span>
+              <span class="label">Station météo</span>
             </span>
             <div v-for="item in data">
               <div class="site">{{ Object(item).site }}</div>
@@ -127,14 +127,14 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
           <div class="c-item-1">
             <span class="icon-text">
               <span class="icon"><i class="fas fa-city" :style="{ 'font-family': 'fa-solid' }"></i></span>
-              <span class="label">Site</span>
+              <span class="label">Station météo</span>
             </span>
             <div v-for="item in data">
               <div class="site">{{ Object(item).site }}</div>
             </div>
           </div>
           <div class="c-item-2">
-            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }"></i></span>
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }" ></i></span>
             <div v-for="item in data">
               <div class="value">{{ Object(item).tmoy }}</div>
             </div>
