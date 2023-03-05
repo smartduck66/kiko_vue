@@ -201,13 +201,13 @@ async function onFastSearchCommune_serverless(criteres: any) {
 async function onFastSearchCommune_serverless1(criteres: any) {
   // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
   // Appel d'une fonction serveless sécurisée
+  // NE FONCTIONNE PAS AU 3/10/2022 -> Tombe systématiquement en erreur
   let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
 
   const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
   const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
 
   const API_URL = "/.netlify/functions/database?code_postal=" + cp;
-  console.log(API_URL);
 
   await fetch(API_URL)
     .then(function (response) {
