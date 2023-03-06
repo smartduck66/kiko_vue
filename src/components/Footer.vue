@@ -15,7 +15,7 @@ a {
   padding: 2px 1px 0;
 }
 .copyright {
-  font-size: 12px;
+  font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-stretch: normal;
