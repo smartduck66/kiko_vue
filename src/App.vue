@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Station78 from "./components/Station78.vue";
-import Sélection from "./components/Selection.vue";
+import Selection from "./components/Selection.vue";
+import Footer from "./components/Footer.vue";
 import data from "./data/fc.json";
 import { useStore } from "./assets/mixins/store.js";
 const store = useStore();
@@ -23,8 +24,9 @@ val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format
 <template>
   <div v-bind:class="{ FlexWrapperMobile: store.sm, FlexWrapper: !store.sm }">
     <Station78 v-bind="{ valeur_ref: val_ref_78 }" />
-    <Sélection />
+    <Selection />
   </div>
+  <Footer />
 </template>
 
 <style>
