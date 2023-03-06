@@ -360,7 +360,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-size: 24px;
+  font-size: 22px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-stretch: normal;

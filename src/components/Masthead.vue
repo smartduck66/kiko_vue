@@ -15,7 +15,7 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
           <span class="sous-titre">Visualisation de données climatiques</span>
         </div>
         <div class="c-item-1">
-          <a class="sous-titre" @click="open = true">Sources des données</a>
+          <button class="CTA" @click="open = true">Sources des données</button>
         </div>
       </div>
     </div>
@@ -88,7 +88,7 @@ a {
   letter-spacing: normal;
   text-align: left;
   color: grey;
-  margin-left: 6px;
+
 }
 
 .my_grid {
@@ -128,13 +128,6 @@ img.Close {
   object-fit: contain;
 }
 
-img.Eye {
-  width: 24px;
-  height: 24px;
-  flex-grow: 0;
-  margin: 17px 0 17px 153px;
-  object-fit: contain;
-}
 .FlexWrapper_modal {
   width: 300px;
   height: 470px;
@@ -153,5 +146,25 @@ img.Eye {
   line-height: 1.17;
   letter-spacing: normal;
   text-align: center;
+}
+
+.CTA {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 20px;
+  margin: 10px 20px 0 0;
+  padding: 2px 10px 0;
+  border-radius: 24px;
+  border: solid 1px #007461;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: center;
+  color:#42b983;
 }
 </style>
