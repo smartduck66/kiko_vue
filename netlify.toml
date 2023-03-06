@@ -18,14 +18,26 @@
 	    img-src 'self' data: blob: *.google-analytics.com *.googletagmanager.com;
       worker-src 'self';
       '''
-    
+
+# Override cache duration for static assets : 1 an
 [[headers]]
-  # Override cache duration for assets with periods in the filename (i.e. static assets) : 8 days
-  for = "/*.*"
-    [headers.values]
-    cache-control = "public; max-age=691200"
+  for = "*.webp" # webp files should be set this way
+  [headers.values]
+    cache-control = "public, max-age=31536000"
+[[headers]]
+  for = "*.svg" # svg files too
+  [headers.values]
+    cache-control = "public, max-age=31536000"
+[[headers]]
+  for = "*.woff2" # fonts files too
+  [headers.values]
+    cache-control = "public, max-age=31536000"
+[[headers]]
+  for = "*.js" # js files too
+  [headers.values]
+    cache-control = "public, max-age=31536000"
 
 [functions]
   # Indique l'utilisation potentielle de fonctions 'serverless'
-  directory = "./functions"
+  directory = "functions/"
 
