@@ -201,7 +201,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
   <div v-else>
     <Card :style="store.sm || store.md ? { height: '200px' } : { width: '743px', height:'585px' }">
       <template #content>
-        <div class="mention">Cliquer sur le bouton Rechercher pour afficher des résultats...</div>
+        <div class="mention">Veuillez effectuer une recherche pour afficher des résultats...</div>
       </template>
     
     </Card>
