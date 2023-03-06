@@ -25,6 +25,6 @@ a {
   text-align: center;
   color: black;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 </style>
