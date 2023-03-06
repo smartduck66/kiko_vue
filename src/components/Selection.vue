@@ -1,6 +1,6 @@
 <script setup lang="ts">
 //import { database } from "../assets/mixins/utils.js";
-import Résultats from "./Results.vue";
+import Results from "./Results.vue";
 import { ref, Ref } from "vue";
 import Panel from "primevue/panel";
 import { Form, Field } from "vee-validate";
@@ -327,7 +327,7 @@ function onInvalidSearch(button: string) {
       </div>
     </div>
   </Teleport>
-  <Résultats :key="nb_occurences" v-bind="{ occurences: nb_occurences, results_rows: results_table }" />
+  <Results :key="nb_occurences" v-bind="{ occurences: nb_occurences, results_rows: results_table }" />
 </template>
 
 <style scoped>

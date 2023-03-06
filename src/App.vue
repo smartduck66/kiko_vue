@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Station78 from "./components/Station78.vue";
 import Selection from "./components/Selection.vue";
+import Masthead from "./components/Masthead.vue";
 import Footer from "./components/Footer.vue";
 import data from "./data/fc.json";
 import { useStore } from "./assets/mixins/store.js";
@@ -10,7 +11,7 @@ const store = useStore();
 const station = data[data.findIndex((x: { indicatif: string }) => x.indicatif == "78621001")]; // Station météo de Trappes
 
 let val_ref_78: string[] = [];
-val_ref_78.push("Réf. : "+station.indicatif + " - " + station.ville + " (alt. : " + station.altitude + " m)");
+val_ref_78.push("Réf. : " + station.indicatif + " - " + station.ville + " (alt. : " + station.altitude + " m)");
 val_ref_78.push(station.temp_moy + "°");
 val_ref_78.push(station.temp_min + "°");
 val_ref_78.push(station.temp_max + "°");
@@ -22,6 +23,7 @@ val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format
 </script>
 
 <template>
+  <Masthead />
   <div v-bind:class="{ FlexWrapperMobile: store.sm, FlexWrapper: !store.sm }">
     <Station78 v-bind="{ valeur_ref: val_ref_78 }" />
     <Selection />

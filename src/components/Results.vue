@@ -49,7 +49,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
 <template>
   <div v-if="occurences">
   <!-- Le template de résultats ne s'affiche que s'il y a au moins UN résultat  -->
-    <Card :style="store.sm || store.md ? { height: '500px' } : { width: '743px', height:'700px' }">
+    <Card :style="store.sm || store.md ? { height: '500px' } : { width: '743px', height:'700px' }">     
       <template #title>
         {{nbOccurences}}
       </template>
@@ -198,7 +198,15 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
     </div>
   
   </div>
-  
+  <div v-else>
+    <Card :style="store.sm || store.md ? { height: '200px' } : { width: '743px', height:'585px' }">
+      <template #content>
+        <div class="mention">Cliquer sur le bouton Rechercher pour afficher des résultats...</div>
+      </template>
+    
+    </Card>
+    
+  </div>
 </template>
 
 <style scoped>
@@ -344,5 +352,22 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
   height: 20px;
   width: 20px;
   font-size: 12px;
+}
+
+.mention {
+  width: 100%;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+  text-align:center;
+  color: grey;
 }
 </style>
