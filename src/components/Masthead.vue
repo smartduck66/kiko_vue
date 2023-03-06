@@ -9,10 +9,10 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
   <div v-bind:class="{ FlexWrapperMobile: store.sm, FlexWrapper: !store.sm }">
     <img src="/img/fuji.webp" alt="Mont Fuji" />
     <div>
-      <span class="titre">KIKO</span>
+      <span class="titre">Kikō</span>
       <div class="my_grid">
         <div class="c-item-1">
-          <span class="sous-titre">Visualisation de données climatiques</span>
+          <span class="sous-titre">Données climatiques françaises</span>
         </div>
         <div class="c-item-1">
           <button class="CTA" @click="open = true">Source des données</button>
@@ -26,7 +26,7 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
         <img src="../assets/img/close.png" class="Close" />
       </div>
       <div class="FlexWrapper_modal">
-        Vous pouvez accéder à chaque source de données utilisée dans KIKO, en cliquant sur l'un des liens suivants :
+        Vous pouvez accéder à chaque source de données utilisée dans Kikō (climat, en japonais), en cliquant sur l'un des liens suivants :
         <a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">Statistiques Météo France entre 1991 et 2020 (records inclus)</a>
         <a target="_blank" href="https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres" aria-label="Valeurs foncières">Valeurs foncières mises à jour en S1/2022</a>
         <a target="_blank" href="https://public.opendatasoft.com/explore/dataset/sites-seveso/table" aria-label="Météo France">Sites Seveso</a>

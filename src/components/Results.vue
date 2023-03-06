@@ -69,7 +69,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
           <div class="c-item-mobile-2">
             <div class="container x mandatory-scroll-snapping" dir="ltr">
               <div>
-                <div class="icon"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }"></i></div>
+                <div class="icon"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }" ></i></div>
                 <div v-for="item in data">
                   <div class="value">{{ Object(item).tmoy }}</div>
                 </div>
@@ -134,7 +134,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
             </div>
           </div>
           <div class="c-item-2">
-            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }" ></i></span>
+            <span class="icon" :style="{ 'text-align': 'center' }" ><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }" ></i></span>
             <div v-for="item in data">
               <div class="value">{{ Object(item).tmoy }}</div>
             </div>

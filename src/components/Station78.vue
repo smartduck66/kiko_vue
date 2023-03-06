@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import Panel from "primevue/panel";
 defineProps<{ valeur_ref: string[] }>();
-
-
 </script>
 
 <template>
@@ -11,25 +9,25 @@ defineProps<{ valeur_ref: string[] }>();
       <div class="c-item-1">
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }"></i></span>
+            <span class="icon"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Température moyenne'"></i></span>
             {{ valeur_ref[1] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-temperature-low" :style="{ 'font-family': 'fa-solid' }"></i></span>
+            <span class="icon"><i class="fas fa-temperature-low" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Température minimale'"></i></span>
             {{ valeur_ref[2] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-temperature-high" :style="{ 'font-family': 'fa-solid' }"></i></span>
+            <span class="icon"><i class="fas fa-temperature-high" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Température maximale'"></i></span>
             {{ valeur_ref[3] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-atom" :style="{ 'font-family': 'fa-solid' }"></i></span>
+            <span class="icon"><i class="fas fa-atom" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Distance centrale nucléaire la plus proche'"></i></span>
             {{ valeur_ref[4] }}
           </span>
         </p>
@@ -37,25 +35,25 @@ defineProps<{ valeur_ref: string[] }>();
       <div class="c-item-2">
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-sun" :style="{ 'font-family': 'fa-solid' }"></i></span>
+            <span class="icon"><i class="fas fa-sun" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="`Durée d'insolation`"></i></span>
             {{ valeur_ref[5] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-cloud-rain" :style="{ 'font-family': 'fa-solid' }"></i></span>
+            <span class="icon"><i class="fas fa-cloud-rain" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Précipitations'"></i></span>
             {{ valeur_ref[6] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-wind" :style="{ 'font-family': 'fa-solid' }"></i></span>
+            <span class="icon"><i class="fas fa-wind" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Nombre moyen de jours avec rafales de vent'"></i></span>
             {{ valeur_ref[7] }}
           </span>
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-home" :style="{ 'font-family': 'fa-solid' }"></i></span>
+            <span class="icon"><i class="fas fa-home" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Prix moyen au m2 des maisons'"></i></span>
             {{ valeur_ref[8] }}
           </span>
         </p>
