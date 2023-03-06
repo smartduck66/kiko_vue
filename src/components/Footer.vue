@@ -2,8 +2,9 @@
 
 <template>
   <div class="copyright">
-    <div>© André Tonic 2023 - Présent</div>
+    <div>Site généré avec Vue.js - Hébergé @Netlify</div>
     <a target="_blank" href="https://www.andretonic.fr/" aria-label="blog personnel">Visitez mon blog personnel</a>
+    <div>© André Tonic 2023 - Présent</div>
   </div>
 </template>
 
@@ -24,7 +25,7 @@ a {
   letter-spacing: normal;
   text-align: center;
   color: black;
-  margin-top: 10px;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 </style>
