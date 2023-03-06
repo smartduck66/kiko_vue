@@ -15,7 +15,7 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
           <span class="sous-titre">Visualisation de données climatiques</span>
         </div>
         <div class="c-item-1">
-          <button class="CTA" @click="open = true">Sources des données</button>
+          <button class="CTA" @click="open = true">Source des données</button>
         </div>
       </div>
     </div>
@@ -68,7 +68,7 @@ a {
 }
 
 .titre {
-  font-size: 20px;
+  font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-stretch: normal;
@@ -79,7 +79,7 @@ a {
   color: #42b983;
 }
 .sous-titre {
-  font-size: 14px;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-stretch: normal;
@@ -151,14 +151,14 @@ img.Close {
 .CTA {
   background-color: transparent;
   background-repeat: no-repeat;
-  width: 160px;
-  height: 20px;
+  width: 200px;
+  height: 24px;
   margin: 10px 20px 0 0;
   padding: 2px 10px 0;
   border-radius: 24px;
   border: solid 1px #007461;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
