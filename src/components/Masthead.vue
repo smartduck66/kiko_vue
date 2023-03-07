@@ -26,7 +26,7 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
         <img src="../assets/img/close.png" class="Close" />
       </div>
       <div class="FlexWrapper_modal">
-        <b>Kikō (climat, en japonais)</b>
+        <h2>Kikō (climat, en japonais)</h2>
         Cet outil permet de visualiser une sélection de données climatiques et environnementales :
         <br /><br />
         . Le premier bloc inclut les références de Trappes (78)<br />
@@ -34,7 +34,7 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
         . Le troisième autorise des recherches immédiates<br />
         <br />
         La recherche renvoie l'ensemble des stations météo repertoriées par MF, répondant aux critères saisis. Passer la souris sur une icône affiche son infobulle.
-        <i>Source des données utilisées :</i>
+        <h4>Source des données utilisées :</h4>
         <div>
           <a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">. Statistiques Météo France (MF) entre 1991 et 2020</a>
           <br />
