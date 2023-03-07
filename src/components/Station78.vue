@@ -8,10 +8,10 @@ defineProps<{ valeur_ref: string[] }>();
     <div class="my_grid">
       <div class="c-item-1">
         <p>
-          <div>
+          <span class="icon-text">
             <span class="icon"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Température moyenne'"></i></span>
             {{ valeur_ref[1] }}
-          </div>
+          </span>
         </p>
         <p>
           <span class="icon-text">

@@ -33,7 +33,7 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
         . Le second permet de borner 4 critères principaux<br />
         . Le troisième autorise des recherches immédiates<br />
         <br />
-        La recherche renvoie l'ensemble des stations météo repertoriées par MF, répondant aux critères saisis. Passer la souris sur une icône affiche son infobulle.
+        La recherche renvoie une liste de stations météo avec les données suivantes : température moyenne, température minimale, température maximale, ensoleillement, précipitations, rafales de vent, distance de la centrale nucléaire la plus proche, prix moyen au m2 des maisons.
         <h4>Source des données utilisées :</h4>
         <div>
           <a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">. Statistiques Météo France (MF) entre 1991 et 2020</a>
@@ -123,11 +123,11 @@ a {
 .modal {
   position: fixed;
   z-index: 999;
-  top: 15%;
-  left: 41.5%;
+  top: 10%;
+  left: 42.5%;
   margin-left: -150px;
   width: 360px;
-  height: 420px;
+  height: 450px;
   flex-grow: 0;
   border-radius: 10px;
   background-color: #42b983;
@@ -147,7 +147,7 @@ img.Close {
   flex-grow: 0;
   display: flex;
   gap: 20px;
-  margin: 0px 0px 0px 20px;
+  margin: -20px 0px 0px 20px;
   flex-direction: column;
   justify-content: flex-start;
   color: white;
