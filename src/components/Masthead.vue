@@ -124,7 +124,7 @@ a {
   position: fixed;
   z-index: 999;
   top: 10%;
-  left: 42.5%;
+  left: 43.5%;
   margin-left: -150px;
   width: 360px;
   height: 450px;
