@@ -127,7 +127,7 @@ a {
   left: 41.5%;
   margin-left: -150px;
   width: 360px;
-  height: 410px;
+  height: 420px;
   flex-grow: 0;
   border-radius: 10px;
   background-color: #42b983;
@@ -143,7 +143,7 @@ img.Close {
 
 .FlexWrapper_modal {
   width: 300px;
-  height: 380px;
+  height: 400px;
   flex-grow: 0;
   display: flex;
   gap: 20px;
