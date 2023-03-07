@@ -15,7 +15,7 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
           <span class="sous-titre">Données climatiques France & DOM-TOM</span>
         </div>
         <div class="c-item-1">
-          <button class="CTA" @click="open = true">Source des données</button>
+          <button class="CTA" @click="open = true">A propos</button>
         </div>
       </div>
     </div>
@@ -26,10 +26,23 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
         <img src="../assets/img/close.png" class="Close" />
       </div>
       <div class="FlexWrapper_modal">
-        Vous pouvez accéder à chaque source de données utilisée dans Kikō (climat, en japonais), en cliquant sur l'un des liens suivants :
-        <a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">Statistiques Météo France entre 1991 et 2020 (records inclus)</a>
-        <a target="_blank" href="https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres" aria-label="Valeurs foncières">Valeurs foncières mises à jour en S1/2022</a>
-        <a target="_blank" href="https://public.opendatasoft.com/explore/dataset/sites-seveso/table" aria-label="Météo France">Sites Seveso</a>
+        <b>Kikō (climat, en japonais)</b>
+        Cet outil permet de visualiser une sélection de données climatiques et environnementales :
+        <br /><br />
+        . Le premier bloc inclut les références de Trappes (78)<br />
+        . Le second permet de borner 4 critères principaux<br />
+        . Le troisième autorise des recherches immédiates<br />
+        <br />
+        <i>Source des données utilisées :</i>
+        <div>
+          <a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">. Statistiques Météo France 1991-2020</a>
+          <br />
+          <a target="_blank" href="https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres" aria-label="Valeurs foncières"
+            >. Valeurs foncières du S1/2022</a
+          >
+          <br />
+          <a target="_blank" href="https://public.opendatasoft.com/explore/dataset/sites-seveso/table" aria-label="Météo France">. Sites Seveso</a>
+        </div>
       </div>
     </div>
   </Teleport>
@@ -88,7 +101,6 @@ a {
   letter-spacing: normal;
   text-align: left;
   color: grey;
-
 }
 
 .my_grid {
@@ -105,7 +117,6 @@ a {
   grid-column: 1;
   justify-content: left;
   margin-top: 5px;
-
 }
 
 .modal {
@@ -131,28 +142,28 @@ img.Close {
 
 .FlexWrapper_modal {
   width: 300px;
-  height: 470px;
+  height: 490px;
   flex-grow: 0;
   display: flex;
   gap: 20px;
-  margin: 20px 0px 0px 32px;
+  margin: 0px 0px 0px 20px;
   flex-direction: column;
   justify-content: flex-start;
-  color: #eee;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.17;
+  line-height: 1.5;
   letter-spacing: normal;
-  text-align: center;
+  text-align: left;
 }
 
 .CTA {
   background-color: transparent;
   background-repeat: no-repeat;
-  width: 200px;
+  width: 120px;
   height: 30px;
   margin: 10px 20px 0 0;
   padding: 2px 10px 0;
@@ -166,7 +177,7 @@ img.Close {
   line-height: 1.29;
   letter-spacing: normal;
   text-align: center;
-  color:white;
+  color: white;
   background-color: #42b983;
   margin-top: 32px;
 }
