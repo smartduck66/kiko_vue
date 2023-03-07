@@ -33,12 +33,13 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
         . Le second permet de borner 4 critères principaux<br />
         . Le troisième autorise des recherches immédiates<br />
         <br />
+        La recherche renvoie l'ensemble des stations météo repertoriées par MF, répondant aux critères saisis. Passer la souris sur une icône affiche son infobulle.
         <i>Source des données utilisées :</i>
         <div>
-          <a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">. Statistiques Météo France 1991-2020</a>
+          <a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">. Statistiques Météo France (MF) entre 1991 et 2020</a>
           <br />
           <a target="_blank" href="https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres" aria-label="Valeurs foncières"
-            >. Valeurs foncières du S1/2022</a
+            >. Valeurs foncières du 1er semestre 2022</a
           >
           <br />
           <a target="_blank" href="https://public.opendatasoft.com/explore/dataset/sites-seveso/table" aria-label="Météo France">. Sites Seveso</a>
@@ -126,7 +127,7 @@ a {
   left: 41.5%;
   margin-left: -150px;
   width: 360px;
-  height: 360px;
+  height: 410px;
   flex-grow: 0;
   border-radius: 10px;
   background-color: #42b983;
@@ -142,7 +143,7 @@ img.Close {
 
 .FlexWrapper_modal {
   width: 300px;
-  height: 490px;
+  height: 380px;
   flex-grow: 0;
   display: flex;
   gap: 20px;
