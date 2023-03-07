@@ -12,7 +12,7 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
       <span class="titre">Kikō</span>
       <div class="my_grid">
         <div class="c-item-1">
-          <span class="sous-titre">Données climatiques françaises</span>
+          <span class="sous-titre">Données climatiques France & DOM-TOM</span>
         </div>
         <div class="c-item-1">
           <button class="CTA" @click="open = true">Source des données</button>
