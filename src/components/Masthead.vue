@@ -105,12 +105,13 @@ a {
   grid-column: 1;
   justify-content: left;
   margin-top: 5px;
+
 }
 
 .modal {
   position: fixed;
   z-index: 999;
-  top: 10%;
+  top: 15%;
   left: 41.5%;
   margin-left: -150px;
   width: 360px;
@@ -152,11 +153,11 @@ img.Close {
   background-color: transparent;
   background-repeat: no-repeat;
   width: 200px;
-  height: 24px;
+  height: 30px;
   margin: 10px 20px 0 0;
   padding: 2px 10px 0;
   border-radius: 24px;
-  border: solid 1px #007461;
+  border: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -165,6 +166,8 @@ img.Close {
   line-height: 1.29;
   letter-spacing: normal;
   text-align: center;
-  color:#42b983;
+  color:white;
+  background-color: #42b983;
+  margin-top: 32px;
 }
 </style>
