@@ -47,7 +47,7 @@ defineProps<{ valeur_ref: string[] }>();
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-wind" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Nombre moyen de jours avec rafales de vent'"></i></span>
+            <span class="icon"><i class="fas fa-wind" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Nombre moyen de jours avec rafales de vent (vitesse > 58 km/h)'"></i></span>
             {{ valeur_ref[7] }}
           </span>
         </p>

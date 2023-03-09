@@ -164,7 +164,7 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
             </div>
           </div>
           <div class="c-item-7">
-            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-wind" :style="{ 'font-family': 'fa-solid' }" v-tooltip.left="'Nombre moyen de jours avec rafales de vent'"></i></span>
+            <span class="icon" :style="{ 'text-align': 'center' }"><i class="fas fa-wind" :style="{ 'font-family': 'fa-solid' }" v-tooltip.left="'Nombre moyen de jours avec rafales de vent (vitesse > 58 km/h)' "></i></span>
             <div v-for="item in data">
               <div class="value">{{ Object(item).vent }}</div>
             </div>
