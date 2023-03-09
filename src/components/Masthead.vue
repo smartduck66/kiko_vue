@@ -65,7 +65,7 @@ a {
   flex-direction: row;
   justify-content: flex-start;
   align-items: left;
-  gap: 10px;
+  gap: 30px;
   margin-bottom: 20px;
 }
 
