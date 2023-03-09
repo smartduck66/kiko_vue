@@ -9,6 +9,7 @@
 20/09/2022 - 1ère version alpha avec l'ensemble des fonctionnalités de kiko_web (v1)
 02/10/2022 - Finalisation serverless function qui masque le secret 'faunadb', saisi d'une manière sécurisée dans la console netlify (variable d'environnement)
 05/03/2023 - Reprise des travaux en vue de finaliser une version Beta au cours du S1/2023 (mise en ligne sous https://andretonic.kiko.fr)
+09/03/2023 - MEL sous https://kiko.andretonic.fr
 
 ---
 
