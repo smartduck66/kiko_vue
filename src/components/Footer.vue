@@ -3,7 +3,7 @@
 <template>
   <div class="copyright">
     <div>Site généré avec Vue.js - Hébergé @Netlify</div>
-    <a target="_blank" href="http://www.andretonic.fr/posts/kiko_data_climat_france_dom_tom.html" aria-label="blog personnel">Retrouvez le genèse de Kikō sur mon blog personnel</a>
+    <a target="_blank" href="http://www.andretonic.fr/posts/kiko_data_climat_france_dom_tom.html" aria-label="blog personnel">Retrouvez la genèse de Kikō sur mon blog personnel</a>
     <div>© André Tonic 2023 - Présent</div>
   </div>
 </template>
