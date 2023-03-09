@@ -17,7 +17,7 @@ val_ref_78.push(station.temp_min + "°");
 val_ref_78.push(station.temp_max + "°");
 val_ref_78.push(station.distance_cnpe + " kms");
 val_ref_78.push(isNaN(Number(station.ensoleillement)) ? "-" : store.milliers_0.format(station.ensoleillement) + " h/an");
-val_ref_78.push(isNaN(Number(station.pluie)) ? "-" : store.milliers_0.format(station.pluie) + " mm/an");
+val_ref_78.push(isNaN(Number(station.pluie)) ? "-" : store.milliers_0.format(station.pluie) + " mm/mois");
 val_ref_78.push(isNaN(Number(station.vent)) ? "-" : store.milliers_0.format(station.vent) + " j/an");
 val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format(station.prix_maisons) + "/m2");
 </script>
