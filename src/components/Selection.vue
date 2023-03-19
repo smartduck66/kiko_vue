@@ -355,7 +355,7 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: left;
+  align-items: start;
   gap: 20px;
   margin-bottom: 20px;
 }

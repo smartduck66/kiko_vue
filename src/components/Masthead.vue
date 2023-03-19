@@ -64,7 +64,7 @@ a {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: left;
+  align-items: start;
   gap: 30px;
   margin-bottom: 20px;
 }
@@ -76,7 +76,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: left;
+  align-items: start;
   gap: 10px;
   margin-bottom: 20px;
 }

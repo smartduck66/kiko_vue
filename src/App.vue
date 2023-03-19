@@ -40,7 +40,7 @@ val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: left;
+  align-items: start;
   gap: 30px;
 }
 
@@ -51,7 +51,7 @@ val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: left;
+  align-items: start;
   gap: 10px;
 }
 </style>
