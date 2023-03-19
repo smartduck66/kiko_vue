@@ -33,7 +33,7 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
         . Le second permet de borner 4 critères principaux<br />
         . Le troisième autorise des recherches immédiates<br />
         <br />
-        La recherche renvoie une liste de stations météo avec les données suivantes : température moyenne, température minimale, température maximale, ensoleillement, précipitations, rafales de vent, distance de la centrale nucléaire la plus proche, prix moyen au m2 des maisons.
+        La recherche renvoie une liste de stations météo 'complètes' avec les données suivantes : température moyenne, température minimale, température maximale, ensoleillement, précipitations, rafales de vent, distance de la centrale nucléaire la plus proche, prix moyen au m2 des maisons.
         <h4>Source des données utilisées :</h4>
         <div>
           <a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">. Statistiques Météo France (MF) entre 1991 et 2020</a>
