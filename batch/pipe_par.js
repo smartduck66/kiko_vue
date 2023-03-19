@@ -4,6 +4,7 @@
 // Utilisation : 'node pipe_par' à la racine
 // 20/01/2022 : moins de 5 secondes de traitement
 // 31/08/2022 : reprise de ce pipeline de kiko_web -> La compilation de kiko.ts dont les fonctions seront reprises dans les templates Vue est inutile (A SUPPRIMER)
+// 19/03/2023 : regroupement des fichiers de code dédiés aux traitements batch - ATTENTION : distances.ts est également nécessaire au site interactif (/src/assets/mixins)
 
 var startTime = performance.now();
 
@@ -42,7 +43,7 @@ const util = require("util");
 const execP = util.promisify(child_process.exec);
 
 const files = ["csv_to_json.ts", "kiko_init.ts", "distances.ts"];
-let promises = files.map((file) => execP("tsc src/assets/mixins/" + file+" --resolveJsonModule"));
+let promises = files.map((file) => execP("tsc " + file+" --resolveJsonModule"));
 
 Promise.all(promises)
   .then((bodies) => {

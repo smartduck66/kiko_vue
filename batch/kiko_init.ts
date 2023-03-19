@@ -13,16 +13,16 @@
 // **********************************************************************************************************************
 
 // On 'importe' des fonctions de distances.js
-import { convert_DMS_DD, site_dangereux_le_plus_proche } from "../mixins/distances.js";
+import { convert_DMS_DD, site_dangereux_le_plus_proche } from "../batch/distances";
 
 // Chargement des prix au m2 et des coordonnées des CNPE
-import * as prix_m2 from "../../data/prix_maisons_m2.json";
-import * as lat_long_CNPE from "../../data/centrales.json";
+import * as prix_m2 from "../src/data/prix_maisons_m2.json";
+import * as lat_long_CNPE from "../src/data/centrales.json";
 
 // Constantes communes à l'ensemble des traitements
 import * as https from "https";
 import * as fs from "fs";
-import * as ref from "../../data/ListeFichesClimatiques.json";
+import * as ref from "../src/data/ListeFichesClimatiques.json";
 
 function extract_alone_value(ref: string, pattern: RegExp, data: string, value_name: string): string {
   // Fonction qui extrait une valeur seule

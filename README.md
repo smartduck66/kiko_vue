@@ -10,6 +10,7 @@
 02/10/2022 - Finalisation serverless function qui masque le secret 'faunadb', saisi d'une manière sécurisée dans la console netlify (variable d'environnement)
 05/03/2023 - Reprise des travaux en vue de finaliser une version Beta au cours du S1/2023
 09/03/2023 - MEL sous https://kiko.andretonic.fr
+19/03/2023 - Création d'un répertoire 'batch' dédié pour les traitements annuels : fc, immo, clim
 
 ---
 
@@ -56,3 +57,7 @@ Installations de modules NPM complémentaires :
 
 Recommandation : passer le site en production au "checker" HTML régulièrement -> https://validator.w3.org/
 Alerte : netlify cli a été désinstallé car il induit des problèmes de sécurité dans les packages NPM au 30/9/2022
+
+---
+
+Traitements annuels nécessaires, à lancer du répertoire /batch : node kiko_init ...

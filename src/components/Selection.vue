@@ -9,7 +9,7 @@ import { fiche_climatique, results } from "../assets/mixins/types";
 import fc from "../data/fc.json";
 import seveso from "../data/seveso.json";
 import cnpe from "../data/centrales.json";
-import { site_dangereux_le_plus_proche } from "../assets/mixins/distances.ts";
+import { site_dangereux_le_plus_proche } from "../assets/mixins/distances";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 

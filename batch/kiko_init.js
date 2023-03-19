@@ -14,14 +14,14 @@
 // **********************************************************************************************************************
 exports.__esModule = true;
 // On 'importe' des fonctions de distances.js
-var distances_js_1 = require("../mixins/distances.js");
+var distances_1 = require("../batch/distances");
 // Chargement des prix au m2 et des coordonnées des CNPE
-var prix_m2 = require("../../data/prix_maisons_m2.json");
-var lat_long_CNPE = require("../../data/centrales.json");
+var prix_m2 = require("../src/data/prix_maisons_m2.json");
+var lat_long_CNPE = require("../src/data/centrales.json");
 // Constantes communes à l'ensemble des traitements
 var https = require("https");
 var fs = require("fs");
-var ref = require("../../data/ListeFichesClimatiques.json");
+var ref = require("../src/data/ListeFichesClimatiques.json");
 function extract_alone_value(ref, pattern, data, value_name) {
     // Fonction qui extrait une valeur seule
     var match = data.match(pattern);
@@ -134,7 +134,7 @@ switch (myArgs[0]) {
             item.ensoleillement = extract_value_in_a_list(item.indicatif, /Durée d'insolation/, text, "Durée d'insolation (Moyenne en heures)");
             item.pluie = extract_value_in_a_list(item.indicatif, /Précipitations : Hauteur moyenne mensuelle/, text, "Précipitations : Hauteur moyenne mensuelle (mm)");
             item.vent = extract_value_in_a_list(item.indicatif, /Nombre moyen de jours avec rafales/, text, "Nombre moyen de jours avec rafales");
-            var d = (0, distances_js_1.site_dangereux_le_plus_proche)(lat_long_CNPE, (0, distances_js_1.convert_DMS_DD)(item.latitude), (0, distances_js_1.convert_DMS_DD)(item.longitude));
+            var d = (0, distances_1.site_dangereux_le_plus_proche)(lat_long_CNPE, (0, distances_1.convert_DMS_DD)(item.latitude), (0, distances_1.convert_DMS_DD)(item.longitude));
             item.distance_cnpe = Math.trunc(d.distance);
             try {
                 item.prix_maisons = prix_m2[prix_m2.findIndex(function (x) { return x.dpt == item.departement; })]["prix"].toString();
