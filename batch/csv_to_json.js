@@ -1,6 +1,7 @@
 "use strict";
 // Utilitaire "mode batch" (node csv_to_json.js) permettant de créer des fichiers json à partir de fichiers csv 'open data'
 // 03/09/2022 : FP version
+// 19/03/2023 : rajout de la constitution du fichier 'ListeFichesClimatiques.json' à partir d'un fichier .txt
 // ************************************************************************************************************************
 exports.__esModule = true;
 // Transformation d'un fichier CSV des communes françaises (https://www.data.gouv.fr/fr/datasets/base-officielle-des-codes-postaux/)
@@ -21,7 +22,7 @@ var fs1 = require("fs");
 // Format : Code_commune_INSEE;Nom_commune;Code_postal;Ligne_5;Libellé_d_acheminement;coordonnees_gps
 // Ex : 05024;VALDOULE;05150;STE MARIE;VALDOULE;44.4677366709,5.50388863719
 var allTextLines = fs1
-    .readFileSync("../../data_source/communes.csv", "utf8")
+    .readFileSync("../src/data_source/communes.csv", "utf8")
     .split(/\r\n|\n/);
 var fiches = allTextLines.map(function (item) {
     var c = new communes(); // note the "new" keyword here
@@ -33,7 +34,7 @@ var fiches = allTextLines.map(function (item) {
     c.longitude = Number(coords[1]);
     return c;
 });
-fs1.writeFileSync("../../data/communes.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
+fs1.writeFileSync("../src/data/communes.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
 // ***********************************************************************************************************************************
 // Transformation d'un fichier CSV des sites Seveso (https://public.opendatasoft.com/explore/dataset/sites-seveso/export/?flg=fr&location=9,44.52588,1.0643&basemap=jawg.streets)
 // en un fichier json contenant le nom de l'usine et la commune hébergeant chaque site classé seveso, la latitude, la longitude
@@ -47,7 +48,7 @@ var seveso = /** @class */ (function () {
 }());
 // Balayage du fichier csv, enrichissement de l'Array fiches1, création du JSON sur disque
 var allTextLines1 = fs1
-    .readFileSync("../../data_source/sites-seveso.csv", "utf8")
+    .readFileSync("../src/data_source/sites-seveso.csv", "utf8")
     .split(/\r\n|\n/);
 var fiches1 = allTextLines1.map(function (item) {
     var s = new seveso(); // note the "new" keyword here
@@ -58,4 +59,29 @@ var fiches1 = allTextLines1.map(function (item) {
     s.longitude = Number(coords1[1]);
     return s;
 });
-fs1.writeFileSync("../../data/seveso.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
+fs1.writeFileSync("../src/data/seveso.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
+// ***********************************************************************************************************************************
+// Transformation d'un fichier TXT des stations météo (https://donneespubliques.meteofrance.fr/?fond=produit&id_produit=117&id_rubrique=39)
+// en un fichier json contenant la référence et la ville de la station météo
+var stations = /** @class */ (function () {
+    function stations() {
+        this.ref = "";
+        this.town = "";
+    }
+    return stations;
+}());
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+var fs2 = require("fs");
+// Balayage du fichier txt, enrichissement de l'Array fiches, création du JSON sur disque
+var allTextLines2 = fs2
+    .readFileSync("../src/data_source/Liste_stations_météo_complètes.txt", "utf8")
+    .split(/\r\n|\n/);
+var fiches2 = allTextLines2.map(function (item) {
+    var c = new stations(); // note the "new" keyword here
+    var fields = item.split("	");
+    c.ref = fields[0];
+    c.town = fields[1];
+    return c;
+});
+fs2.writeFileSync("../src/data/ListeFichesClimatiques.json", JSON.stringify(fiches2, null, 2)); // Création du json final sur disque
+// ***********************************************************************************************************************************

@@ -91,7 +91,7 @@ switch (myArgs[0]) {
 
         response.on("end", () => {
           if (httpStatus === 200) {
-            fs.writeFileSync("../../ficheclim/" + filename, body); // Création du fichier brut, mode texte, sur disque
+            fs.writeFileSync("../src/ficheclim/" + filename, body); // Création du fichier brut, mode texte, sur disque
           } else {
             new Error("HTTP status ${response.statusCode}");
           }
@@ -144,7 +144,7 @@ switch (myArgs[0]) {
 
     // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
     const fiches: data_MF[] = ref.map((refcli) => {
-      const text = fs.readFileSync("../../ficheclim/" + refcli.ref + ".data", "utf8");
+      const text = fs.readFileSync("../src/ficheclim/" + refcli.ref + ".data", "utf8");
       const item = new data_MF(); // note the "new" keyword here
 
       item.indicatif = refcli.ref;
@@ -190,7 +190,7 @@ switch (myArgs[0]) {
       return item;
     });
 
-    fs.writeFileSync("../../data/fc.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
+    fs.writeFileSync("../src/data/fc.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
     break;
   }
 
@@ -201,7 +201,7 @@ switch (myArgs[0]) {
 
     // Dernières valeurs disponibles complètes : S1/2022 - Chargées le 5 mars 2023
     const url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20221017-152027/valeursfoncieres-2022-s1.txt";
-    const filename = "../../data_source/valeursfoncieres-2022-s1.txt";
+    const filename = "../src/data_source/valeursfoncieres-2022-s1.txt";
 
     const request = https.get(url);
     
@@ -336,7 +336,7 @@ switch (myArgs[0]) {
     });
 
     lineReader.on("close", function () {
-      fs.writeFileSync("../../data/prix_maisons_m2.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
+      fs.writeFileSync("../src/data/prix_maisons_m2.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
     });
     break;
   }

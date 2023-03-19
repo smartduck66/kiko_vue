@@ -80,7 +80,7 @@ switch (myArgs[0]) {
                 });
                 response.on("end", function () {
                     if (httpStatus === 200) {
-                        fs.writeFileSync("../../ficheclim/" + filename, body); // Création du fichier brut, mode texte, sur disque
+                        fs.writeFileSync("../src/ficheclim/" + filename, body); // Création du fichier brut, mode texte, sur disque
                     }
                     else {
                         new Error("HTTP status ${response.statusCode}");
@@ -116,7 +116,7 @@ switch (myArgs[0]) {
         }());
         // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
         var fiches = ref.map(function (refcli) {
-            var text = fs.readFileSync("../../ficheclim/" + refcli.ref + ".data", "utf8");
+            var text = fs.readFileSync("../src/ficheclim/" + refcli.ref + ".data", "utf8");
             var item = new data_MF_1(); // note the "new" keyword here
             item.indicatif = refcli.ref;
             item.ville = refcli.town;
@@ -144,7 +144,7 @@ switch (myArgs[0]) {
             }
             return item;
         });
-        fs.writeFileSync("../../data/fc.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
+        fs.writeFileSync("../src/data/fc.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
         break;
     }
     case "immo": {
@@ -153,7 +153,7 @@ switch (myArgs[0]) {
         console.log("Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons");
         // Dernières valeurs disponibles complètes : S1/2022 - Chargées le 5 mars 2023
         var url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20221017-152027/valeursfoncieres-2022-s1.txt";
-        var filename_1 = "../../data_source/valeursfoncieres-2022-s1.txt";
+        var filename_1 = "../src/data_source/valeursfoncieres-2022-s1.txt";
         var request_1 = https.get(url);
         request_1.on("response", function (response) {
             var httpStatus = response.statusCode;
@@ -273,7 +273,7 @@ switch (myArgs[0]) {
             ++num_line_1;
         });
         lineReader.on("close", function () {
-            fs.writeFileSync("../../data/prix_maisons_m2.json", JSON.stringify(fiches1_1, null, 2)); // Création du json final sur disque
+            fs.writeFileSync("../src/data/prix_maisons_m2.json", JSON.stringify(fiches1_1, null, 2)); // Création du json final sur disque
         });
         break;
     }
