@@ -7,6 +7,7 @@
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans cet ordre :
 //      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
+//        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car des stations météo peuvent disparaître...
 //      - node kiko_init.js immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
 //      - node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
