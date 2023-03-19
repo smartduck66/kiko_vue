@@ -27,17 +27,17 @@ const danger_ville = ref("");
 const danger_cnpe = ref("");
 const danger_seveso = ref("");
 
-// Définition des valeurs par défaut des critères de sélection des sites climatiques et de la recherche rapide
-const min_temp = ref(10);
-const max_temp = ref(20);
-const min_soleil = ref(1700);
-const max_soleil = ref(2200);
-const min_pluie = ref(600);
-const max_pluie = ref(900);
-const min_vent = ref(0);
-const max_vent = ref(50);
-const dpt = ref(78);
-const commune = ref(78190);
+// Définition des valeurs par défaut (vd) des critères de sélection des sites climatiques et de la recherche rapide
+const vd_min_temp = ref(10);
+const vd_max_temp = ref(20);
+const vd_min_soleil = ref(1700);
+const vd_max_soleil = ref(2200);
+const vd_min_pluie = ref(600);
+const vd_max_pluie = ref(900);
+const vd_min_vent = ref(0);
+const vd_max_vent = ref(50);
+const vd_dpt = ref(78);
+const vd_commune = ref(78190);
 
 // Schéma de validation
 // https://vee-validate.logaretm.com/v4/guide/validation#validation-schemas-with-yup
@@ -180,7 +180,7 @@ async function onFastSearchCommune_serverless(criteres: any) {
     alert(
       "Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide."
     );
-    commune.value = 78190; // Réaffichage du code postal de référence
+    vd_commune.value = 78190; // Réaffichage du code postal de référence
   } else {
     const result = (await response.json()).data;
     const ville: string = result[0].ville;
@@ -233,7 +233,7 @@ async function onFastSearchCommune_serverless1(criteres: any) {
       alert(
         "Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide."
       );
-      commune.value = 78190; // Réaffichage du code postal de référence
+      vd_commune.value = 78190; // Réaffichage du code postal de référence
     });
 }
 
@@ -245,6 +245,7 @@ function onInvalidSearch(button: string) {
     submitBtn!.classList.remove("invalid");
   }, 1000);
 }
+
 </script>
 
 <template>
@@ -261,22 +262,22 @@ function onInvalidSearch(button: string) {
           </div>
           <div class="c-item-2">
             <span><b>min</b></span>
-            <Field name="min_temp" class="saisie-valeur" type="text" v-model="min_temp" maxlength="2" aria-label="Temp. moy. mini" />
-            <Field name="min_soleil" class="saisie-valeur" type="text" v-model="min_soleil" maxlength="4" aria-label="Soleil mini" />
-            <Field name="min_pluie" class="saisie-valeur" type="text" v-model="min_pluie" maxlength="4" aria-label="Pluie mini" />
-            <Field name="min_vent" class="saisie-valeur" type="text" v-model="min_vent" maxlength="3" aria-label="Vent mini" />
+            <Field name="min_temp" class="saisie-valeur" type="text" v-model="vd_min_temp" maxlength="2" aria-label="Temp. moy. mini" />
+            <Field name="min_soleil" class="saisie-valeur" type="text" v-model="vd_min_soleil" maxlength="4" aria-label="Soleil mini" />
+            <Field name="min_pluie" class="saisie-valeur" type="text" v-model="vd_min_pluie" maxlength="4" aria-label="Pluie mini" />
+            <Field name="min_vent" class="saisie-valeur" type="text" v-model="vd_min_vent" maxlength="3" aria-label="Vent mini" />
           </div>
           <div class="c-item-3">
             <span><b>max</b></span>
-            <Field name="max_temp" class="saisie-valeur" type="text" v-model="max_temp" maxlength="2" aria-label="Temp. moy. max" />
-            <Field name="max_soleil" class="saisie-valeur" type="text" v-model="max_soleil" maxlength="4" aria-label="Soleil max" />
-            <Field name="max_pluie" class="saisie-valeur" type="text" v-model="max_pluie" maxlength="4" aria-label="Pluie max" />
-            <Field name="max_vent" class="saisie-valeur" type="text" v-model="max_vent" maxlength="3" aria-label="Vent max" />
+            <Field name="max_temp" class="saisie-valeur" type="text" v-model="vd_max_temp" maxlength="2" aria-label="Temp. moy. max" />
+            <Field name="max_soleil" class="saisie-valeur" type="text" v-model="vd_max_soleil" maxlength="4" aria-label="Soleil max" />
+            <Field name="max_pluie" class="saisie-valeur" type="text" v-model="vd_max_pluie" maxlength="4" aria-label="Pluie max" />
+            <Field name="max_vent" class="saisie-valeur" type="text" v-model="vd_max_vent" maxlength="3" aria-label="Vent max" />
           </div>
         </div>
         <div class="FlexWrapper-btn">
           <button class="search-btn" type="submit">Rechercher</button>
-          <button class="reset-btn" type="reset">Réinitialiser</button>
+          
         </div>
       </Form>
     </Panel>
@@ -288,7 +289,7 @@ function onInvalidSearch(button: string) {
             <span>Fiches département :</span>
           </div>
           <div class="c-fast-item-2">
-            <Field name="dpt" class="saisie-valeur" type="text" v-model="dpt" maxlength="3" aria-label="Code département" />
+            <Field name="dpt" class="saisie-valeur" type="text" v-model="vd_dpt" maxlength="3" aria-label="Code département" />
           </div>
           <div class="c-fast-item-3">
             <button class="go-btn1" type="submit">GO</button>
@@ -301,7 +302,7 @@ function onInvalidSearch(button: string) {
             <span>Risques communal (CP) :</span>
           </div>
           <div class="c-fast-item-2">
-            <Field name="commune" class="saisie-valeur" type="text" v-model="commune" maxlength="5" aria-label="Code postal" />
+            <Field name="commune" class="saisie-valeur" type="text" v-model="vd_commune" maxlength="5" aria-label="Code postal" />
           </div>
           <div class="c-fast-item-3">
             <button class="go-btn2" type="submit">GO</button>
@@ -429,8 +430,7 @@ code {
   flex-grow: 0;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: left;
+  justify-content: right;
   gap: 60px;
 }
 .search-btn {
