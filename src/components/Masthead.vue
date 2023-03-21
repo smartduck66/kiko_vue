@@ -7,7 +7,7 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
 
 <template>
   <div v-bind:class="{ FlexWrapperMobile: store.sm, FlexWrapper: !store.sm }">
-    <img src="/img/fuji.webp" alt="Mont Fuji" />
+    <img v-if="!store.sm" src="/img/fuji.webp" alt="Mont Fuji" />
     <div>
       <span class="titre">Kikō</span>
       <div class="my_grid">
