@@ -299,7 +299,7 @@ function onInvalidSearch(button: string) {
       <Form @submit="onFastSearchCommune_serverless" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
         <div class="my_fast_grid">
           <div class="c-fast-item-1">
-            <span>Risques communal (CP) :</span>
+            <span>Risques commune (CP) :</span>
           </div>
           <div class="c-fast-item-2">
             <Field name="commune" class="saisie-valeur" type="text" v-model="vd_commune" maxlength="5" aria-label="Code postal" />
