@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import Panel from "primevue/panel";
+import { ref } from "vue";
 defineProps<{ valeur_ref: string[] }>();
+
+const open = ref(false); //gestion de la fenêtre modale
 </script>
 
 <template>
   <Panel v-bind="{ header: valeur_ref[0] }">
+    <template #icons>
+      <button class="fas fa-pen CTA" :style="{ 'font-family': 'fa-solid' }" @click="open = true"></button>
+    </template>
     <div class="my_grid">
       <div class="c-item-1">
         <p>
@@ -27,7 +33,9 @@ defineProps<{ valeur_ref: string[] }>();
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-atom" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Distance centrale nucléaire la plus proche'"></i></span>
+            <span class="icon"
+              ><i class="fas fa-atom" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Distance centrale nucléaire la plus proche'"></i
+            ></span>
             {{ valeur_ref[4] }}
           </span>
         </p>
@@ -47,7 +55,13 @@ defineProps<{ valeur_ref: string[] }>();
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-wind" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Nombre moyen de jours avec rafales de vent (vitesse > 58 km/h)'"></i></span>
+            <span class="icon"
+              ><i
+                class="fas fa-wind"
+                :style="{ 'font-family': 'fa-solid' }"
+                v-tooltip.right="'Nombre moyen de jours avec rafales de vent (vitesse > 58 km/h)'"
+              ></i
+            ></span>
             {{ valeur_ref[7] }}
           </span>
         </p>
@@ -60,6 +74,13 @@ defineProps<{ valeur_ref: string[] }>();
       </div>
     </div>
   </Panel>
+  <Teleport to="body">
+    <div v-if="open" class="modal">
+      <div @click="open = false">
+        <img src="../assets/img/close.png" class="Close" />
+      </div>
+    </div>
+  </Teleport>
 </template>
 
 <style scoped>
@@ -100,5 +121,32 @@ code {
 .c-item-2 {
   grid-column: 2;
   justify-content: left;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 10%;
+  left: 43.5%;
+  margin-left: -150px;
+  width: 360px;
+  height: 450px;
+  flex-grow: 0;
+  border-radius: 10px;
+  background-color: lightgrey;
+}
+.CTA {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  text-align: center;
+}
+
+img.Close {
+  width: 32px;
+  height: 32px;
+  flex-grow: 0;
+  margin: 16px 0px 2px 310px;
+  object-fit: contain;
 }
 </style>

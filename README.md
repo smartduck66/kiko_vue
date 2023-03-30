@@ -8,9 +8,10 @@
 11/09/2022 - Réécriture de l'interface de saisie avec les composants PrimeVue
 20/09/2022 - 1ère version alpha avec l'ensemble des fonctionnalités de kiko_web (v1)
 02/10/2022 - Finalisation serverless function qui masque le secret 'faunadb', saisi d'une manière sécurisée dans la console netlify (variable d'environnement)
-05/03/2023 - Reprise des travaux en vue de finaliser une version Beta au cours du S1/2023
+05/03/2023 - Reprise des travaux en vue de finaliser une version Beta plus aboutie au cours du S1/2023
 09/03/2023 - MEL sous https://kiko.andretonic.fr
 19/03/2023 - Création d'un répertoire 'batch' dédié pour les traitements annuels : fc, immo, clim
+30/03/2023 - Pouvoir changer sa station de référence pour la session en cours
 
 ---
 
