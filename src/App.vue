@@ -7,9 +7,9 @@ import data from "./data/fc.json";
 import { useStore } from "./assets/mixins/store.js";
 const store = useStore();
 
-// Constitution des valeurs de référence
+// Récupération des valeurs de la station de référence
 // Par défaut, on choisit la station météo de Trappes, la plus proche de Vaucresson
-const station = data[data.findIndex((x: { indicatif: string }) => x.indicatif == "78621001")]; 
+const station = data[data.findIndex((x: { indicatif: string }) => x.indicatif == "78621001")];
 
 let val_ref_78: string[] = [];
 val_ref_78.push(station.indicatif + " - " + station.ville + " (alt. : " + station.altitude + " m)");
