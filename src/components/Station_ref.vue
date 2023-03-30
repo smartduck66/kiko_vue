@@ -53,6 +53,7 @@ function newStationRef(new_indicatif_station_ref: string) {
 
   open.value = false; // On ferme la modale
   refresh.value += 1; // refresh des valeurs de référence
+  selectedStationRef.value = ""; // RAZ afin de pouvoir rechanger une nouvelle fois la station de référence
 }
 </script>
 
