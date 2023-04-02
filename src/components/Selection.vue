@@ -70,7 +70,7 @@ function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void 
   results_table.value = results.map((r) => {
     const row: results = Object.create(results);
     row.site = r.indicatif + " " + r.ville + " (" + r.altitude.toString() + " m)";
-    row.lat = convert_DMS_DD(r.latitude);   // Non affiché dans les résultats mais utilisé pour la carte Google Maps
+    row.lat = convert_DMS_DD(r.latitude); // Non affiché dans les résultats mais utilisé pour la carte Google Maps
     row.long = convert_DMS_DD(r.longitude); // Non affiché dans les résultats mais utilisé pour la carte Google Maps
     row.tmoy = r.temp_moy;
     row.tmin = r.temp_min;
@@ -101,34 +101,27 @@ function onSearch(criteres: any) {
 
   const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
 
-  // Sélection des fiches climatiques et tri ascendant
+  // Sélection des fiches climatiques
   let results = data;
   if (p1 + p2 > 0) {
     results = results.filter((x: { temp_moy: number }) => x.temp_moy >= p1 && x.temp_moy <= p2);
-    results.sort(function (a: { temp_moy: number }, b: { temp_moy: number }) {
-      return a.temp_moy - b.temp_moy;
-    });
   }
   if (p3 + p4 > 0) {
     results = results.filter((x: { ensoleillement: number }) => x.ensoleillement >= p3 && x.ensoleillement <= p4);
-    results.sort(function (a: { ensoleillement: number }, b: { ensoleillement: number }) {
-      return a.ensoleillement - b.ensoleillement;
-    });
   }
   if (p5 + p6 > 0) {
     results = results.filter((x: { pluie: number }) => x.pluie >= p5 && x.pluie <= p6);
-    results.sort(function (a: { pluie: number }, b: { pluie: number }) {
-      return a.pluie - b.pluie;
-    });
   }
   if (p7 + p8 > 0) {
     results = results.filter((x: { vent: number }) => x.vent >= p7 && x.vent <= p8);
-    results.sort(function (a: { vent: number }, b: { vent: number }) {
-      return a.vent - b.vent;
-    });
   }
 
-  affichage_fiches(results);
+  // Tri ascendant sur les fiches (par l'indicatif)
+  affichage_fiches(
+    results.sort(function (a: { indicatif: any }, b: { indicatif: any }) {
+      return a.indicatif - b.indicatif;
+    })
+  );
 }
 
 function onFastSearchDpt(criteres: any) {
