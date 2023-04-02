@@ -14,7 +14,7 @@
     # To permit external fonts, fontawesome and google, style-src, font-src and script-src (optional) are mandatory
     # default-src 'self'; connect-src 'self' https://www.google-analytics.com;
     Content-Security-Policy = '''
-    	script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com; 
+    	script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com https://maps.googleapis.com; 
 	    img-src 'self' data: blob: *.google-analytics.com *.googletagmanager.com;
       worker-src 'self';
       '''
