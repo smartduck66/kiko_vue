@@ -182,7 +182,6 @@ const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, 
             </div>
           </div>
         </div>
-    
     </div>
 
     </template>

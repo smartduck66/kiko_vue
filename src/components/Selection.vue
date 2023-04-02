@@ -1,6 +1,7 @@
 <script setup lang="ts">
 //import { database } from "../assets/mixins/utils.js";
 import Results from "./Results.vue";
+import Map from "./Map.vue";
 import { ref, Ref } from "vue";
 import Panel from "primevue/panel";
 import { Form, Field } from "vee-validate";
@@ -9,7 +10,7 @@ import { fiche_climatique, results } from "../assets/mixins/types";
 import fc from "../data/fc.json";
 import seveso from "../data/seveso.json";
 import cnpe from "../data/centrales.json";
-import { site_dangereux_le_plus_proche } from "../assets/mixins/distances";
+import { site_dangereux_le_plus_proche, convert_DMS_DD } from "../assets/mixins/distances";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 
@@ -68,8 +69,9 @@ function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void 
 
   results_table.value = results.map((r) => {
     const row: results = Object.create(results);
-    const ref: string = r.indicatif;
-    row.site = ref + " " + r.ville + " (" + r.altitude.toString() + " m)";
+    row.site = r.indicatif + " " + r.ville + " (" + r.altitude.toString() + " m)";
+    row.lat = convert_DMS_DD(r.latitude);   // Non affiché dans les résultats mais utilisé pour la carte Google Maps
+    row.long = convert_DMS_DD(r.longitude); // Non affiché dans les résultats mais utilisé pour la carte Google Maps
     row.tmoy = r.temp_moy;
     row.tmin = r.temp_min;
     row.tmax = r.temp_max;
@@ -245,7 +247,6 @@ function onInvalidSearch(button: string) {
     submitBtn!.classList.remove("invalid");
   }, 1000);
 }
-
 </script>
 
 <template>
@@ -277,7 +278,6 @@ function onInvalidSearch(button: string) {
         </div>
         <div class="FlexWrapper-btn">
           <button class="search-btn" type="submit">Rechercher</button>
-          
         </div>
       </Form>
     </Panel>
@@ -329,6 +329,7 @@ function onInvalidSearch(button: string) {
     </div>
   </Teleport>
   <Results :key="nb_occurences" v-bind="{ occurences: nb_occurences, results_rows: results_table }" />
+  <Map :key="nb_occurences" v-bind="{ markers: results_table }" />
 </template>
 
 <style scoped>

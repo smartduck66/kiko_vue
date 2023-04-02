@@ -29,7 +29,7 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
         <h2>Kikō (climat, en japonais)</h2>
         Cet outil permet de visualiser une sélection de données climatiques et environnementales :
         <br /><br />
-        . Le premier bloc inclut les références de Trappes (78)<br />
+        . Le premier bloc expose la station météo de référence<br />
         . Le second permet de borner 4 critères principaux<br />
         . Le troisième autorise des recherches immédiates<br />
         <br />

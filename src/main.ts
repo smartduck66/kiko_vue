@@ -21,3 +21,4 @@ app
   .use(createPinia())
   .directive("tooltip", Tooltip)
   .mount("#app");
+

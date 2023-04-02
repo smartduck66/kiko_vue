@@ -17,6 +17,8 @@ export interface fiche_climatique {
 
 export interface results {
   site: string;
+  lat: number;
+  long: number;
   tmoy: number;
   tmin: number;
   tmax: number;
