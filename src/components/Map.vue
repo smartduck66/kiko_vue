@@ -22,6 +22,7 @@ class coords {
   }
 }
 
+// Contruction des 'markers' à afficher sur la carte qui sont en fait les coordonnées des stations météo affichées dans les résultats de recherche
 const locations = props.markers.map((item: results) => {
   const s = new coords(); // note the "new" keyword here
   s.lat = item.lat;
