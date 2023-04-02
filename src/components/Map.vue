@@ -10,6 +10,7 @@ const center = { lat: 46.227638, lng: 2.213749 };
 
 // Dimensions de la carte en fonction de la taille de l'écran
 const dimension_map = store.sm ? 'width: 100%; height: 500px' : 'width: 100%; height: 1000px';
+const zoom_map = store.sm ? 5 : 7;
 
 class coords {
   lat: number;
@@ -31,7 +32,7 @@ const locations = props.markers.map((item: results) => {
 </script>
 
 <template>
-  <GoogleMap api-key="AIzaSyBs8dFKJpbnpPksN0ihjzG_Udlhtt3F7TY" :style="dimension_map" :center="center" :zoom="7">
+  <GoogleMap api-key="AIzaSyBs8dFKJpbnpPksN0ihjzG_Udlhtt3F7TY" :style="dimension_map" :center="center" :zoom=zoom_map>
     <MarkerCluster>
       <Marker v-for="(location, i) in locations" :options="{ position: location }" :key="i" />
     </MarkerCluster>

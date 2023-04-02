@@ -12,6 +12,7 @@
 09/03/2023 - MEL sous https://kiko.andretonic.fr
 19/03/2023 - Création d'un répertoire 'batch' dédié pour les traitements annuels : fc, immo, clim
 30/03/2023 - Pouvoir changer sa station de référence pour la session en cours
+02/04/2023 - Implémentation de l'API Google Maps pour afficher les stations météo affichées dans les résultats
 
 ---
 
@@ -53,7 +54,7 @@ Installations de modules NPM complémentaires :
 - Yup : npm install -S yup (Yup is a schema builder for runtime value parsing and validation)
 - Pinia : npm install pinia (gestion des états)
 - Sharp : npm install sharp (package utilisé dans le script webp.cjs pour transformer en masse les images png/jpg en webp)
-- google-map : npm install vue3-google-map (package simplifiant l'utilisation de l'API Google Maps)
+- google-map : npm install vue3-google-map (package simplifiant l'utilisation de l'API Google Maps - Restricted APIkey in GoogleMaps Console)
 - Type Google Maps : npm i -D @types/google.maps (obligatoire pour le build) - Réf : https://developers.google.com/maps/documentation/javascript/using-typescript
 
 ---
