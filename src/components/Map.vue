@@ -9,7 +9,7 @@ const props = defineProps(["markers"]);
 const center = { lat: 46.227638, lng: 2.213749 };
 
 // Dimensions de la carte en fonction de la taille de l'écran
-const dimension_map = store.sm ? "width: 100%; height: 500px" : "width: 100%; height: 1000px";
+const dimension_map = store.sm ? 'width: 100%; height: 500px' : 'width: 100%; height: 1000px';
 
 class coords {
   lat: number;

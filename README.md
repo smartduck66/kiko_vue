@@ -54,6 +54,7 @@ Installations de modules NPM complémentaires :
 - Pinia : npm install pinia (gestion des états)
 - Sharp : npm install sharp (package utilisé dans le script webp.cjs pour transformer en masse les images png/jpg en webp)
 - google-map : npm install vue3-google-map (package simplifiant l'utilisation de l'API Google Maps)
+- Type Google Maps : npm i -D @types/google.maps (obligatoire pour le build)
 
 ---
 
