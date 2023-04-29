@@ -119,6 +119,7 @@ switch (myArgs[0]) {
       temp_moy: number;
       temp_min: number;
       temp_max: number;
+      canicule: number;
       ensoleillement: string; // Peut être indisponible
       pluie: string; // Peut être indisponible
       vent: string; // Peut être indisponible
@@ -135,6 +136,7 @@ switch (myArgs[0]) {
         this.temp_moy = 0;
         this.temp_min = 0;
         this.temp_max = 0;
+        this.canicule = 0;
         this.ensoleillement = "";
         this.pluie = "";
         this.vent = "";
@@ -169,6 +171,8 @@ switch (myArgs[0]) {
 
       item.temp_min = Number(extract_value_in_a_list(item.indicatif, /Température minimale/, text, "Température minimale (Moyenne en °C)"));
 
+      item.canicule = Number(extract_value_in_a_list(item.indicatif, /Nombre moyen de jours avec/, text, "Nombre moyen de jours avec")); // Tx >= 30°C (1ère ligne)
+
       item.ensoleillement = extract_value_in_a_list(item.indicatif, /Durée d'insolation/, text, "Durée d'insolation (Moyenne en heures)");
 
       item.pluie = extract_value_in_a_list(
@@ -200,15 +204,15 @@ switch (myArgs[0]) {
     // Source : https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
     console.log("Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons");
 
-    // Dernières valeurs disponibles complètes : S1/2022 - Chargées le 5 mars 2023
-    const url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20221017-152027/valeursfoncieres-2022-s1.txt";
-    const filename = "../src/data_source/valeursfoncieres-2022-s1.txt";
+    // Dernières valeurs disponibles complètes : 2022 - Chargées le 29 avril 2023
+    const url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20230405-160733/valeursfoncieres-2022.txt";
+    const filename = "../src/data_source/valeursfoncieres-2022.txt";
 
     const request = https.get(url);
-    
+
     request.on("response", (response) => {
       const httpStatus = response.statusCode;
-      console.log("httpStatus : "+httpStatus);  
+      console.log("httpStatus : " + httpStatus);
       response.setEncoding("utf-8");
       let body = "";
       response.on("data", (chunk: string) => {
@@ -217,7 +221,7 @@ switch (myArgs[0]) {
 
       response.on("end", () => {
         if (httpStatus === 200) {
-          // On crée le fichier sur disque si tout est OK (183 Mo pour s1/2022, 1,429 millions de lignes) *************************************************
+          // On crée le fichier sur disque si tout est OK (498 Mo pour 2022, 3,803 millions de lignes) *************************************************
           // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
           // Code service CH
           // Reference document
@@ -265,10 +269,7 @@ switch (myArgs[0]) {
           // Nature culture speciale
           // Surface terrain
           fs.writeFileSync(filename, body); // Création du fichier brut, mode texte, sur disque
-          fs.appendFileSync(
-            filename,
-            "|||||||999999|99/99/9999|Vente|99999999,99|99||RUE|9999||99999||99||||||||||||||||9|9|||||||999"
-          ); // Guard à la fin du fichier
+          fs.appendFileSync(filename, "|||||||999999|99/99/9999|Vente|99999999,99|99||RUE|9999||99999||99||||||||||||||||9|9|||||||999"); // Guard à la fin du fichier
         } else {
           new Error("HTTP status ${response.statusCode}");
         }
@@ -278,7 +279,7 @@ switch (myArgs[0]) {
         console.log(error);
       });
     });
-    
+
     // Création du fichier prix_maisons_m2.json *****************************************************************************
     class prix_maisons {
       dpt: string;

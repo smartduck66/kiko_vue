@@ -8,6 +8,7 @@ export interface fiche_climatique {
   temp_moy: number;
   temp_min: number;
   temp_max: number;
+  canicule: number;
   ensoleillement: string;
   pluie: string;
   vent: string;
@@ -22,6 +23,7 @@ export interface results {
   tmoy: number;
   tmin: number;
   tmax: number;
+  canicule: number;
   soleil: string;
   pluie: string;
   vent: string;

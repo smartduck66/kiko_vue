@@ -3,6 +3,7 @@ import { ref } from "vue";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 const open = ref(false); //gestion de la fenêtre modale des sources de données
+const props = defineProps(["nb_stations_meteo"]);
 </script>
 
 <template>
@@ -33,13 +34,15 @@ const open = ref(false); //gestion de la fenêtre modale des sources de données
         . Le second permet de borner 4 critères principaux<br />
         . Le troisième autorise des recherches immédiates<br />
         <br />
-        La recherche renvoie une liste de stations météo 'complètes' avec les données suivantes : température moyenne, température minimale, température maximale, ensoleillement, précipitations, rafales de vent, distance de la centrale nucléaire la plus proche, prix moyen au m2 des maisons.
+        La recherche renvoie une liste de stations météo 'complètes' avec les données suivantes, sur une période comprise entre 1994 et 2020 : température moyenne, température minimale, température maximale, ensoleillement, précipitations, rafales de vent, distance de la centrale nucléaire la plus proche, prix moyen au m2 des maisons.
         <h4>Source des données utilisées :</h4>
         <div>
-          <a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">. Statistiques Météo France (MF) entre 1991 et 2020</a>
+          <a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">. Statistiques en provenance de Météo France (MF)</a>
+          <br />
+          . Nombre de stations météo référencées : {{ nb_stations_meteo }}
           <br />
           <a target="_blank" href="https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres" aria-label="Valeurs foncières"
-            >. Valeurs foncières du 1er semestre 2022</a
+            >. Valeurs foncières de l'année 2022</a
           >
           <br />
           <a target="_blank" href="https://public.opendatasoft.com/explore/dataset/sites-seveso/table" aria-label="Météo France">. Sites Seveso</a>
@@ -127,7 +130,7 @@ a {
   left: 43.5%;
   margin-left: -150px;
   width: 360px;
-  height: 450px;
+  height: 490px;
   flex-grow: 0;
   border-radius: 10px;
   background-color: #42b983;
@@ -143,7 +146,7 @@ img.Close {
 
 .FlexWrapper_modal {
   width: 300px;
-  height: 400px;
+  height: 440px;
   flex-grow: 0;
   display: flex;
   gap: 20px;

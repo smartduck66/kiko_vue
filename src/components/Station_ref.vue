@@ -27,7 +27,7 @@ class station_meteo {
 const liste_stations: Ref<station_meteo[] | undefined> = ref(undefined);
 
 // Construction des options de la liste - A priori, le passage par une classe (et pas uniquement par un string[] semble obligatoire pour 'options')
-liste_stations.value = data.map((item: fiche_climatique) => {
+liste_stations.value = data.map((item: any) => {
   const s = new station_meteo(); // note the "new" keyword here
   s.indicatif = item.indicatif;
   s.ville = item.departement + " " + item.ville;
@@ -45,11 +45,12 @@ function newStationRef(new_indicatif_station_ref: string) {
   props.valeur_ref[1] = station.temp_moy + "°";
   props.valeur_ref[2] = station.temp_min + "°";
   props.valeur_ref[3] = station.temp_max + "°";
-  props.valeur_ref[4] = station.distance_cnpe + " kms";
+  props.valeur_ref[4] = station.canicule + " j/an";
   props.valeur_ref[5] = isNaN(Number(station.ensoleillement)) ? "-" : store.milliers_0.format(station.ensoleillement) + " h/an";
   props.valeur_ref[6] = isNaN(Number(station.pluie)) ? "-" : store.milliers_0.format(station.pluie) + " mm/mois";
   props.valeur_ref[7] = isNaN(Number(station.vent)) ? "-" : store.milliers_0.format(station.vent) + " j/an";
-  props.valeur_ref[8] = isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format(station.prix_maisons) + "/m2";
+  props.valeur_ref[8] = isNaN(Number(station.distance_cnpe)) ? "-" : store.milliers_0.format(station.distance_cnpe) + " kms";
+  props.valeur_ref[9] = isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format(station.prix_maisons) + "/m2";
 
   open.value = false; // On ferme la modale
   refresh.value += 1; // refresh des valeurs de référence
@@ -84,20 +85,18 @@ function newStationRef(new_indicatif_station_ref: string) {
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"
-              ><i class="fas fa-atom" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Distance centrale nucléaire la plus proche'"></i
-            ></span>
+            <span class="icon"><i class="fas fa-temperature-arrow-up" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Canicule (T >= 30°C)'"></i></span>
             {{ valeur_ref[4] }}
           </span>
         </p>
-      </div>
-      <div class="c-item-2">
         <p>
           <span class="icon-text">
             <span class="icon"><i class="fas fa-sun" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="`Durée d'insolation`"></i></span>
             {{ valeur_ref[5] }}
           </span>
         </p>
+      </div>
+      <div class="c-item-2">
         <p>
           <span class="icon-text">
             <span class="icon"><i class="fas fa-cloud-rain" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Précipitations'"></i></span>
@@ -118,8 +117,21 @@ function newStationRef(new_indicatif_station_ref: string) {
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-home" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Prix moyen au m2 des maisons'"></i></span>
+            <span class="icon"
+              ><i class="fas fa-atom" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Distance centrale nucléaire la plus proche'"></i
+            ></span>
             {{ valeur_ref[8] }}
+          </span>
+        </p>
+        <p>
+          <span class="icon-text">
+            <span class="icon"><i class="fas fa-home" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Prix moyen au m2 des maisons'"></i></span>
+            {{ valeur_ref[9] }}
+          </span>
+        </p>
+        <p>
+          <span>
+            <span>-------------------</span>
           </span>
         </p>
       </div>

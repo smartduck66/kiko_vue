@@ -2,11 +2,10 @@
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 import Card from "primevue/card";
-import { useStore } from "../assets/mixins/store.js";
-const store = useStore();
+
 const props = defineProps(["occurences", "results_rows"]);
 const nbOccurences = props.occurences.toString() + " résultats";
-const max_width = window.innerWidth < 1920 ? window.innerWidth - 15 : 1100;
+const max_width = window.innerWidth < 1920 ? window.innerWidth - 15 : 1100; // On détermine la taille maximum du tableau des résultats
 
 </script>
 
@@ -23,6 +22,7 @@ const max_width = window.innerWidth < 1920 ? window.innerWidth - 15 : 1100;
           <Column field="tmoy" sortable header="T° moy"></Column>
           <Column field="tmin" sortable header="T° min"></Column>
           <Column field="tmax" sortable header="T° max"></Column>
+          <Column field="canicule" sortable header="Cani."></Column>
           <Column field="soleil" sortable header="Soleil"></Column>
           <Column field="pluie" sortable header="Pluie"></Column>
           <Column field="vent" sortable header="Vent"></Column>

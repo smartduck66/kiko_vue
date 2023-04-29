@@ -8,6 +8,7 @@
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans cet ordre :
 //      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
+//        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car des stations météo peuvent disparaître...
 //      - node kiko_init.js immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
 //      - node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
@@ -106,6 +107,7 @@ switch (myArgs[0]) {
                 this.temp_moy = 0;
                 this.temp_min = 0;
                 this.temp_max = 0;
+                this.canicule = 0;
                 this.ensoleillement = "";
                 this.pluie = "";
                 this.vent = "";
@@ -131,6 +133,7 @@ switch (myArgs[0]) {
             item.temp_moy = Number(extract_value_in_a_list(item.indicatif, /Température moyenne/, text, "Température moyenne (Moyenne en °C)"));
             item.temp_max = Number(extract_value_in_a_list(item.indicatif, /Température maximale/, text, "Température maximale (Moyenne en °C)"));
             item.temp_min = Number(extract_value_in_a_list(item.indicatif, /Température minimale/, text, "Température minimale (Moyenne en °C)"));
+            item.canicule = Number(extract_value_in_a_list(item.indicatif, /Nombre moyen de jours avec/, text, "Nombre moyen de jours avec")); // Tx >= 30°C (1ère ligne)
             item.ensoleillement = extract_value_in_a_list(item.indicatif, /Durée d'insolation/, text, "Durée d'insolation (Moyenne en heures)");
             item.pluie = extract_value_in_a_list(item.indicatif, /Précipitations : Hauteur moyenne mensuelle/, text, "Précipitations : Hauteur moyenne mensuelle (mm)");
             item.vent = extract_value_in_a_list(item.indicatif, /Nombre moyen de jours avec rafales/, text, "Nombre moyen de jours avec rafales");
@@ -151,9 +154,9 @@ switch (myArgs[0]) {
         // Chargement du fichier des valeurs foncières et création du fichier afférent sur le disque dur
         // Source : https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
         console.log("Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons");
-        // Dernières valeurs disponibles complètes : S1/2022 - Chargées le 5 mars 2023
-        var url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20221017-152027/valeursfoncieres-2022-s1.txt";
-        var filename_1 = "../src/data_source/valeursfoncieres-2022-s1.txt";
+        // Dernières valeurs disponibles complètes : 2022 - Chargées le 29 avril 2023
+        var url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20230405-160733/valeursfoncieres-2022.txt";
+        var filename_1 = "../src/data_source/valeursfoncieres-2022.txt";
         var request_1 = https.get(url);
         request_1.on("response", function (response) {
             var httpStatus = response.statusCode;
@@ -165,7 +168,7 @@ switch (myArgs[0]) {
             });
             response.on("end", function () {
                 if (httpStatus === 200) {
-                    // On crée le fichier sur disque si tout est OK (183 Mo pour s1/2022, 1,429 millions de lignes) *************************************************
+                    // On crée le fichier sur disque si tout est OK (498 Mo pour 2022, 3,803 millions de lignes) *************************************************
                     // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
                     // Code service CH
                     // Reference document

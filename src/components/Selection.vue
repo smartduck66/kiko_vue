@@ -31,10 +31,12 @@ const danger_seveso = ref("");
 // Définition des valeurs par défaut (vd) des critères de sélection des sites climatiques et de la recherche rapide
 const vd_min_temp = ref(10);
 const vd_max_temp = ref(20);
+const vd_min_canicule = ref(0);
+const vd_max_canicule = ref(30);
 const vd_min_soleil = ref(1700);
 const vd_max_soleil = ref(2200);
 const vd_min_pluie = ref(600);
-const vd_max_pluie = ref(900);
+const vd_max_pluie = ref(1000);
 const vd_min_vent = ref(0);
 const vd_max_vent = ref(50);
 const vd_dpt = ref(78);
@@ -43,14 +45,16 @@ const vd_commune = ref(78190);
 // Schéma de validation
 // https://vee-validate.logaretm.com/v4/guide/validation#validation-schemas-with-yup
 const schema_selection = Yup.object().shape({
-  min_temp: Yup.number().max(40).positive().integer(),
-  max_temp: Yup.number().max(40).positive().integer(),
-  min_soleil: Yup.number().max(4000).positive().integer(),
-  max_soleil: Yup.number().max(4000).positive().integer(),
-  min_pluie: Yup.number().max(2000).positive().integer(),
-  max_pluie: Yup.number().max(2000).positive().integer(),
+  min_temp: Yup.number().max(40).integer(),
+  max_temp: Yup.number().max(40).integer(),
+  min_canicule: Yup.number().min(0).max(300).integer(),
+  max_canicule: Yup.number().max(300).integer(),
+  min_soleil: Yup.number().max(4000).integer(),
+  max_soleil: Yup.number().max(4000).integer(),
+  min_pluie: Yup.number().max(2000).integer(),
+  max_pluie: Yup.number().max(2000).integer(),
   min_vent: Yup.number().min(0).max(999).integer(),
-  max_vent: Yup.number().max(999).positive().integer(),
+  max_vent: Yup.number().max(999).integer(),
 });
 
 const schema_fast_Dpt = Yup.object().shape({
@@ -75,6 +79,7 @@ function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void 
     row.tmoy = r.temp_moy;
     row.tmin = r.temp_min;
     row.tmax = r.temp_max;
+    row.canicule = r.canicule;
     isNaN(Number(r.ensoleillement)) ? (row.soleil = "-") : (row.soleil = store.milliers_0.format(Number(r.ensoleillement)));
     isNaN(Number(r.pluie)) ? (row.pluie = "-") : (row.pluie = store.milliers_0.format(Number(r.pluie)));
     isNaN(Number(r.vent)) ? (row.vent = "-") : (row.vent = store.milliers_0.format(Number(r.vent)));
@@ -87,18 +92,19 @@ function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void 
 }
 
 function onSearch(criteres: any) {
-  // Appui sur le bouton 'Recherche' : affichage des fiches climatiques correspondantes
+  // Appui sur le bouton 'Rechercher' : affichage des fiches climatiques correspondantes
 
   // Dé-référencement de l'objet pour récupérer les valeurs
   let p1 = Number(Object(criteres).min_temp);
   let p2 = Number(Object(criteres).max_temp);
-  let p3 = Number(Object(criteres).min_soleil);
-  let p4 = Number(Object(criteres).max_soleil);
-  let p5 = Number(Object(criteres).min_pluie);
-  let p6 = Number(Object(criteres).max_pluie);
-  let p7 = Number(Object(criteres).min_vent);
-  let p8 = Number(Object(criteres).max_vent);
-
+  let p3 = Number(Object(criteres).min_canicule);
+  let p4 = Number(Object(criteres).max_canicule);
+  let p5 = Number(Object(criteres).min_soleil);
+  let p6 = Number(Object(criteres).max_soleil);
+  let p7 = Number(Object(criteres).min_pluie);
+  let p8 = Number(Object(criteres).max_pluie);
+  let p9 = Number(Object(criteres).min_vent);
+  let p10 = Number(Object(criteres).max_vent);
   const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
 
   // Sélection des fiches climatiques
@@ -107,19 +113,22 @@ function onSearch(criteres: any) {
     results = results.filter((x: { temp_moy: number }) => x.temp_moy >= p1 && x.temp_moy <= p2);
   }
   if (p3 + p4 > 0) {
-    results = results.filter((x: { ensoleillement: number }) => x.ensoleillement >= p3 && x.ensoleillement <= p4);
+    results = results.filter((x: { canicule: number }) => x.canicule >= p3 && x.canicule <= p4);
   }
   if (p5 + p6 > 0) {
-    results = results.filter((x: { pluie: number }) => x.pluie >= p5 && x.pluie <= p6);
+    results = results.filter((x: { ensoleillement: number }) => x.ensoleillement >= p5 && x.ensoleillement <= p6);
   }
   if (p7 + p8 > 0) {
-    results = results.filter((x: { vent: number }) => x.vent >= p7 && x.vent <= p8);
+    results = results.filter((x: { pluie: number }) => x.pluie >= p7 && x.pluie <= p8);
+  }
+  if (p9 + p10 > 0) {
+    results = results.filter((x: { vent: number }) => x.vent >= p9 && x.vent <= p10);
   }
 
-  // Tri ascendant sur les fiches (par l'indicatif)
+  // Tri ascendant sur les fiches (par le nombre de jours de canicule)
   affichage_fiches(
-    results.sort(function (a: { indicatif: any }, b: { indicatif: any }) {
-      return a.indicatif - b.indicatif;
+    results.sort(function (a: { canicule: number }, b: { canicule: number }) {
+      return a.canicule - b.canicule;
     })
   );
 }
@@ -210,7 +219,6 @@ async function onFastSearchCommune_serverless1(criteres: any) {
     })
     .then(function (data) {
       const result = data;
-      console.log(result);
       const ville: string = result[0].ville;
       const lat: number = result[0].latitude;
       const lon: number = result[0].longitude;
@@ -250,6 +258,7 @@ function onInvalidSearch(button: string) {
           <div class="c-item-1">
             <span>-----------------------</span>
             <span>Température moyenne :</span>
+            <span>Nb jours caniculaires :</span>
             <span>Durée d'insolation :</span>
             <span>Précipitations :</span>
             <span>Nb jours avec rafales :</span>
@@ -257,6 +266,7 @@ function onInvalidSearch(button: string) {
           <div class="c-item-2">
             <span><b>min</b></span>
             <Field name="min_temp" class="saisie-valeur" type="text" v-model="vd_min_temp" maxlength="2" aria-label="Temp. moy. mini" />
+            <Field name="min_canicule" class="saisie-valeur" type="text" v-model="vd_min_canicule" maxlength="3" aria-label="Temp. caniculaire" />
             <Field name="min_soleil" class="saisie-valeur" type="text" v-model="vd_min_soleil" maxlength="4" aria-label="Soleil mini" />
             <Field name="min_pluie" class="saisie-valeur" type="text" v-model="vd_min_pluie" maxlength="4" aria-label="Pluie mini" />
             <Field name="min_vent" class="saisie-valeur" type="text" v-model="vd_min_vent" maxlength="3" aria-label="Vent mini" />
@@ -264,6 +274,7 @@ function onInvalidSearch(button: string) {
           <div class="c-item-3">
             <span><b>max</b></span>
             <Field name="max_temp" class="saisie-valeur" type="text" v-model="vd_max_temp" maxlength="2" aria-label="Temp. moy. max" />
+            <Field name="max_canicule" class="saisie-valeur" type="text" v-model="vd_max_canicule" maxlength="3" aria-label="Temp. caniculaire" />
             <Field name="max_soleil" class="saisie-valeur" type="text" v-model="vd_max_soleil" maxlength="4" aria-label="Soleil max" />
             <Field name="max_pluie" class="saisie-valeur" type="text" v-model="vd_max_pluie" maxlength="4" aria-label="Pluie max" />
             <Field name="max_vent" class="saisie-valeur" type="text" v-model="vd_max_vent" maxlength="3" aria-label="Vent max" />
@@ -304,6 +315,7 @@ function onInvalidSearch(button: string) {
       </Form>
     </Panel>
   </div>
+
   <Teleport to="body">
     <div v-if="open" class="modal">
       <div @click="open = false">

@@ -13,7 +13,7 @@
 19/03/2023 - Création d'un répertoire 'batch' dédié pour les traitements annuels : fc, immo, clim
 30/03/2023 - Pouvoir changer sa station de référence pour la session en cours
 02/04/2023 - Implémentation de l'API Google Maps pour afficher les stations météo affichées dans les résultats
-29/04/2023 - Réécriture de Results.vue autour du composant DataTable de PrimeVue - Ancien composant conservé (.old)
+29/04/2023 - Réécriture de Results.vue autour du composant DataTable de PrimeVue - Ancien composant néanmoins conservé (.old)
 
 ---
 
@@ -65,4 +65,8 @@ Alerte : netlify cli a été désinstallé car il induit des problèmes de sécu
 
 ---
 
-Traitements annuels nécessaires, à lancer du répertoire /batch : node kiko_init ...
+Traitements annuels nécessaires, à lancer du répertoire /batch. Une fois/an, lancer dans cet ordre :
+. node csv_to_json       : mise à jour du fichier ListeFichesClimatiques.json, basé sur Liste_stations_météo_complètes.txt construit à la main (des stations peuvent 'bouger')
+. node kiko_init.js mf   : chargement des données climatiques de Météo France (MF)
+. node kiko_init.js immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
+. node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France
