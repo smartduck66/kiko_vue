@@ -10,17 +10,22 @@ const props = defineProps(["occurences", "results_rows"]);
 <template>
   <div v-if="occurences">
     <!-- Le template de résultats ne s'affiche que s'il y a au moins UN résultat  -->
-    <DataTable :value="props.results_rows" paginator :rows="10" :rowsPerPageOptions="[10, 20, 50]">
-      <Column field="site" sortable header="Station météo"></Column>
-      <Column field="tmoy" sortable header="T° moy"></Column>
-      <Column field="tmin" sortable header="T° min"></Column>
-      <Column field="tmax" sortable header="T° max"></Column>
-      <Column field="soleil" sortable header="Soleil"></Column>
-      <Column field="pluie" sortable header="Pluie"></Column>
-      <Column field="vent" sortable header="Vent"></Column>
-      <Column field="cnpe" sortable header="CNPE"></Column>
-      <Column field="prix" sortable header="Prix"></Column>
-    </DataTable>
+    <Card>
+      <template #content>
+        <DataTable :value="props.results_rows" scrollable paginator :rows="10" :rowsPerPageOptions="[10, 20, 50]">
+        <Column field="site" sortable header="Station météo"></Column>
+        <Column field="tmoy" sortable header="T° moy"></Column>
+        <Column field="tmin" sortable header="T° min"></Column>
+        <Column field="tmax" sortable header="T° max"></Column>
+        <Column field="soleil" sortable header="Soleil"></Column>
+        <Column field="pluie" sortable header="Pluie"></Column>
+        <Column field="vent" sortable header="Vent"></Column>
+        <Column field="cnpe" sortable header="CNPE"></Column>
+        <Column field="prix" sortable header="Prix"></Column>
+      </DataTable>
+      </template>
+      
+    </Card>
   </div>
   <div v-else>
     <Card :style="store.sm || store.md ? { height: '200px' } : { width: '1100px', height: '585px' }">
