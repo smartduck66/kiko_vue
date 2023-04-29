@@ -5,15 +5,21 @@ import Card from "primevue/card";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 const props = defineProps(["occurences", "results_rows"]);
+const nbOccurences = props.occurences.toString() + " résultats";
+const max_width = window.innerWidth < 1920 ? window.innerWidth - 15 : 1100;
+
 </script>
 
 <template>
   <div v-if="occurences">
     <!-- Le template de résultats ne s'affiche que s'il y a au moins UN résultat  -->
-    <Card :style="store.sm || store.md ? { 'max-width': '360px' } : { 'max-width': '1100px' }">
+    <Card :style="{ 'max-width': max_width + 'px' }">
+      <template #title>
+        {{ nbOccurences }}
+      </template>
       <template #content>
-        <DataTable :value="props.results_rows" scrollable paginator :rows="10" :rowsPerPageOptions="[10, 20, 50]" >
-          <Column field="site" sortable header="Station météo" ></Column>
+        <DataTable :value="props.results_rows" scrollable paginator :rows="10" :rowsPerPageOptions="[10, 20, 50]">
+          <Column field="site" sortable header="Station météo"></Column>
           <Column field="tmoy" sortable header="T° moy"></Column>
           <Column field="tmin" sortable header="T° min"></Column>
           <Column field="tmax" sortable header="T° max"></Column>
@@ -27,7 +33,7 @@ const props = defineProps(["occurences", "results_rows"]);
     </Card>
   </div>
   <div v-else>
-    <Card :style="store.sm || store.md ? { height: '200px' } : { width: '1100px', height: '585px' }">
+    <Card :style="{ 'max-width': max_width + 'px' }">
       <template #content>
         <div class="mention">Veuillez effectuer une recherche pour afficher des résultats...</div>
       </template>
