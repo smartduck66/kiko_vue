@@ -13,6 +13,7 @@
 19/03/2023 - Création d'un répertoire 'batch' dédié pour les traitements annuels : fc, immo, clim
 30/03/2023 - Pouvoir changer sa station de référence pour la session en cours
 02/04/2023 - Implémentation de l'API Google Maps pour afficher les stations météo affichées dans les résultats
+29/04/2023 - Réécriture de Results.vue autour du composant DataTable de PrimeVue - Ancien composant conservé (.old)
 
 ---
 
