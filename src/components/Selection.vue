@@ -248,11 +248,27 @@ function onInvalidSearch(button: string) {
     submitBtn!.classList.remove("invalid");
   }, 1000);
 }
+
+function ResetFiltres(): void {
+  vd_min_temp.value = 0;
+  vd_max_temp.value = 0;
+  vd_min_canicule.value = 0;
+  vd_max_canicule.value = 0;
+  vd_min_soleil.value = 0;
+  vd_max_soleil.value = 0;
+  vd_min_pluie.value = 0;
+  vd_max_pluie.value = 0;
+  vd_min_vent.value = 0;
+  vd_max_vent.value = 0;
+}
 </script>
 
 <template>
   <div class="FlexWrapper-panel">
-    <Panel header="Critères de sélection des stations météo">
+    <Panel header="Sélection des stations météo">
+      <template #icons>
+        <button class="fas fa-eraser CTA" :style="{ 'font-family': 'fa-solid' }" @click="ResetFiltres()" v-tooltip.right="'Réinitialiser les filtres'"></button>
+      </template>
       <Form @submit="onSearch" :validation-schema="schema_selection" @invalid-submit="onInvalidSearch('.search-btn')">
         <div class="my_grid">
           <div class="c-item-1">
@@ -437,7 +453,14 @@ code {
   display: flex;
   flex-direction: row;
   justify-content: right;
-  gap: 60px;
+  gap: 30px;
+}
+
+.CTA {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  text-align: center;
 }
 .search-btn {
   background: #022542;

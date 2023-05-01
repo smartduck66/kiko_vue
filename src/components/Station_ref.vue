@@ -61,7 +61,7 @@ function newStationRef(new_indicatif_station_ref: string) {
 <template>
   <Panel v-bind="{ header: valeur_ref[0] }">
     <template #icons>
-      <button class="fas fa-pen CTA" :style="{ 'font-family': 'fa-solid' }" @click="open = true"></button>
+      <button class="fas fa-pen CTA" :style="{ 'font-family': 'fa-solid' }" @click="open = true" v-tooltip.right="'Modifier la station météo de référence'"></button>
     </template>
     <div class="my_grid" v-if="refresh">
       <div class="c-item-1">
