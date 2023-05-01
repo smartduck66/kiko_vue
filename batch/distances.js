@@ -48,7 +48,7 @@ function convert_DMS_DD(coord) {
     var c = h + m + s;
     // Les coordonnées Sud et Ouest sont négatives
     var n4 = coord.indexOf("S");
-    var n5 = coord.indexOf("W");
+    var n5 = coord.indexOf("O"); // Attention si la coordonnée est exprimée en anglais "W pour O"
     if (n4 != -1 || n5 != -1) {
         c = -c;
     }

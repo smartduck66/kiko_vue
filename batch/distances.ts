@@ -59,7 +59,7 @@ function convert_DMS_DD(coord: string): number {
 
   // Les coordonnées Sud et Ouest sont négatives
   const n4: number = coord.indexOf("S");
-  const n5: number = coord.indexOf("W");
+  const n5: number = coord.indexOf("O");  // Attention si la coordonnée est exprimée en anglais "W pour O"
 
   if (n4 != -1 || n5 != -1) {
     c = -c;

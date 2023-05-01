@@ -27,7 +27,7 @@ class station_meteo {
 const liste_stations: Ref<station_meteo[] | undefined> = ref(undefined);
 
 // Construction des options de la liste - A priori, le passage par une classe (et pas uniquement par un string[] semble obligatoire pour 'options')
-liste_stations.value = data.map((item: any) => {
+liste_stations.value = data.map((item) => {
   const s = new station_meteo(); // note the "new" keyword here
   s.indicatif = item.indicatif;
   s.ville = item.departement + " " + item.ville;
