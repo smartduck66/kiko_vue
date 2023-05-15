@@ -2,8 +2,6 @@
 import Panel from "primevue/panel";
 import Listbox from "primevue/listbox";
 import { ref, Ref } from "vue";
-import { fiche_climatique } from "../assets/mixins/types";
-import data from "../data/fc.json";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 const props = defineProps(["valeur_ref"]);
@@ -27,7 +25,7 @@ class station_meteo {
 const liste_stations: Ref<station_meteo[] | undefined> = ref(undefined);
 
 // Construction des options de la liste - A priori, le passage par une classe (et pas uniquement par un string[] semble obligatoire pour 'options')
-liste_stations.value = data.map((item) => {
+liste_stations.value = store.fc.map((item: any) => {
   const s = new station_meteo(); // note the "new" keyword here
   s.indicatif = item.indicatif;
   s.ville = item.departement + " " + item.ville;
@@ -39,7 +37,7 @@ refresh.value += 1; // refresh des valeurs de référence
 
 function newStationRef(new_indicatif_station_ref: string) {
   // On modifie la station de référence pour la durée de la session
-  const station = data[data.findIndex((x: { indicatif: string }) => x.indicatif == new_indicatif_station_ref)];
+  const station = store.fc[store.fc.findIndex((x: { indicatif: string }) => x.indicatif == new_indicatif_station_ref)];
 
   props.valeur_ref[0] = station.indicatif + " - " + station.ville + " (alt. : " + station.altitude + " m)";
   props.valeur_ref[1] = station.temp_moy + "°";

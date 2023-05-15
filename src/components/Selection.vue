@@ -7,17 +7,9 @@ import Panel from "primevue/panel";
 import { Form, Field } from "vee-validate";
 import * as Yup from "yup";
 import { fiche_climatique, results } from "../assets/mixins/types";
-import fc from "../data/fc.json";
-import seveso from "../data/seveso.json";
-import cnpe from "../data/centrales.json";
 import { site_dangereux_le_plus_proche, convert_DMS_DD } from "../assets/mixins/distances";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
-
-// Stockage local des fichiers json pour les réutiliser lors de cette session
-localStorage.fc = JSON.stringify(fc);
-localStorage.seveso = JSON.stringify(seveso);
-localStorage.cnpe = JSON.stringify(cnpe);
 
 const open = ref(false); //gestion de la fenêtre modale des risques
 
@@ -105,10 +97,9 @@ function onSearch(criteres: any) {
   let p8 = Number(Object(criteres).max_pluie);
   let p9 = Number(Object(criteres).min_vent);
   let p10 = Number(Object(criteres).max_vent);
-  const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
 
   // Sélection des fiches climatiques
-  let results = data;
+  let results = store.fc;
   if (p1 + p2 > 0) {
     results = results.filter((x: { temp_moy: number }) => x.temp_moy >= p1 && x.temp_moy <= p2);
   }
@@ -135,48 +126,18 @@ function onSearch(criteres: any) {
 
 function onFastSearchDpt(criteres: any) {
   // Appui sur le 1er bouton 'GO' : affichage des fiches climatiques correspondantes au département saisi
-
   let p1 = Object(criteres).dpt; // Dé-référencement de l'objet pour récupérer les valeurs
 
-  const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
-
   // Sélection des fiches climatiques
-  let results = data;
+  let results = store.fc;
   results = results.filter((x: { departement: string }) => x.departement == p1);
   affichage_fiches(results);
 }
 
-/*
-async function onFastSearchCommune(criteres: any) {
-  // Ancienne fonction PLUS UTILISEE liée à l'import d'utils.js
-  // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
-  let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
-
-  const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
-  const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
-
-  const result = await database("communes", cp);
-  const ville: string = result[0].ville;
-  const lat: number = result[0].latitude;
-  const lon: number = result[0].longitude;
-
-  const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
-  const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
-
-  danger_ville.value = ville + " (" + cp + ")";
-  danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
-  danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
-
-  open.value = true; // Affichage de la modale
-}
-*/
 async function onFastSearchCommune_serverless(criteres: any) {
   // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
   // Appel d'une fonction serveless sécurisée
   let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
-
-  const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
-  const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
 
   const API_URL = "/.netlify/functions/database?code_postal=" + cp;
   const response = await fetch(API_URL);
@@ -191,8 +152,8 @@ async function onFastSearchCommune_serverless(criteres: any) {
     const lat: number = result[0].latitude;
     const lon: number = result[0].longitude;
 
-    const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
-    const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
+    const cnpe = site_dangereux_le_plus_proche(store.cnpe, lat, lon); // Fonction 'importée' de distances.js
+    const seveso = site_dangereux_le_plus_proche(store.seveso, lat, lon); // Fonction 'importée' de distances.js
 
     danger_ville.value = ville + " (" + cp + ")";
     danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
@@ -208,9 +169,6 @@ async function onFastSearchCommune_serverless1(criteres: any) {
   // NE FONCTIONNE PAS AU 3/10/2022 -> Tombe systématiquement en erreur
   let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
 
-  const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
-  const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
-
   const API_URL = "/.netlify/functions/database?code_postal=" + cp;
 
   await fetch(API_URL)
@@ -223,8 +181,8 @@ async function onFastSearchCommune_serverless1(criteres: any) {
       const lat: number = result[0].latitude;
       const lon: number = result[0].longitude;
 
-      const cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
-      const seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
+      const cnpe = site_dangereux_le_plus_proche(store.cnpe, lat, lon); // Fonction 'importée' de distances.js
+      const seveso = site_dangereux_le_plus_proche(store.seveso, lat, lon); // Fonction 'importée' de distances.js
 
       danger_ville.value = ville + " (" + cp + ")";
       danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";

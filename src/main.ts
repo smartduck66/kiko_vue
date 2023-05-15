@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import App from "./App.vue";
+import { router } from "./router";
 
 // Composants graphiques
 import PrimeVue from "primevue/config";
@@ -13,6 +14,7 @@ import Tooltip from "primevue/tooltip";
 const app = createApp(App);
 
 app
+  .use(router)
   .use(PrimeVue, {
     locale: {
       emptyFilterMessage: "Aucun résultat trouvé",
@@ -21,4 +23,3 @@ app
   .use(createPinia())
   .directive("tooltip", Tooltip)
   .mount("#app");
-

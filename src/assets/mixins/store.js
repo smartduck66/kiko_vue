@@ -5,6 +5,11 @@ import { defineStore } from "pinia";
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
 const breakpoints = useBreakpoints(breakpointsTailwind);
 
+// Data
+import fc from "../../data/fc.json";
+import seveso from "../../data/seveso.json";
+import cnpe from "../../data/centrales.json";
+
 export const useStore = defineStore("storeId", {
   // arrow function recommended for full type inference
   state: () => {
@@ -41,6 +46,8 @@ export const useStore = defineStore("storeId", {
       xl: breakpoints.between("lg", "xl"),
       xxl: breakpoints.between("xl", "2xl"),
       xxxl: breakpoints["2xl"],
+
+      fc, seveso, cnpe,
     };
   },
 });

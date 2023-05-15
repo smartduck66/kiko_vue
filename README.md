@@ -49,6 +49,7 @@ Installations de modules NPM complémentaires :
 
 - Types Babel : npm i -D @babel/types
 - Faunadb : npm install --save faunadb (DB en mode serverless)
+- Vue Router : npm install vue-router@4
 - VueUse : npm i @vueuse/core (utilitaires)
 - PrimeVue : npm i primevue (composants graphiques)
 - Vee-validate : npm i vee-validate --save (VeeValidate is the most popular Vue.js form library. It takes care of value tracking, validation, errors, submissions and more.)
