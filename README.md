@@ -1,19 +1,5 @@
 # Cette nouvelle version de kiko (v2) s'appuie sur Vue 3 + Typescript + Vite
-
-# Derniers travaux :
-
-01/08/2022 - Ré-Initialisation du projet après 6 mois de pose
-30/08/2022 - MAJ modules NPM à part TS qui doit rester en 4.7.4 à cause d'une incompatibilité avec la nouvelle version de Vue 3.2.38
-03/09/2022 - Début de programmation fonctionnelle sur les modules batch
-11/09/2022 - Réécriture de l'interface de saisie avec les composants PrimeVue
-20/09/2022 - 1ère version alpha avec l'ensemble des fonctionnalités de kiko_web (v1)
-02/10/2022 - Finalisation serverless function qui masque le secret 'faunadb', saisi d'une manière sécurisée dans la console netlify (variable d'environnement)
-05/03/2023 - Reprise des travaux en vue de finaliser une version Beta plus aboutie au cours du S1/2023
-09/03/2023 - MEL sous https://kiko.andretonic.fr
-19/03/2023 - Création d'un répertoire 'batch' dédié pour les traitements annuels : fc, immo, clim
-30/03/2023 - Pouvoir changer sa station de référence pour la session en cours
-02/04/2023 - Implémentation de l'API Google Maps pour afficher les stations météo affichées dans les résultats
-29/04/2023 - Réécriture de Results.vue autour du composant DataTable de PrimeVue - Ancien composant néanmoins conservé (.old)
+# Derniers travaux : voir changelog.vue
 
 ---
 

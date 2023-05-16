@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import Footer from "./Footer.vue";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
   <div class="text">
+    <h1>Changelog de Kikō</h1>
+    <br />
+    <br />
     <h4>Mai 2023</h4>
     <ul>
       <li>Menu et routage</li>
+      <li>Pouvoir réinitialiser les filtres de sélection des stations</li>
     </ul>
     <br />
     <h4>Avril 2023</h4>
@@ -33,6 +38,8 @@ import Footer from "./Footer.vue";
       <li>Ré-Initialisation du projet après 6 mois de pose</li>
     </ul>
     <br />
+    <br />
+    <RouterLink to="/"><span class="Home"> > Retour à Kikō </span></RouterLink>
   </div>
   <Footer />
 </template>
@@ -52,6 +59,22 @@ import Footer from "./Footer.vue";
   letter-spacing: normal;
   text-align: left;
   color: black;
-  padding-top: 50px;
+  padding-top: 20px;
+}
+a {
+  outline: none;
+  color: grey;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+.Home {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
 }
 </style>

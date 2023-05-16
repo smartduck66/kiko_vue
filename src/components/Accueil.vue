@@ -3,6 +3,7 @@ import StationRef from "./Station_ref.vue";
 import Selection from "./Selection.vue";
 import Footer from "./Footer.vue";
 import { useStore } from "../assets/mixins/store.js";
+import Masthead from "./Masthead.vue";
 const store = useStore();
 
 // Récupération des valeurs de la station de référence
@@ -23,7 +24,10 @@ val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format
 </script>
 
 <template>
+
+<Masthead />
   <div v-bind:class="{ FlexWrapperMobile: store.sm, FlexWrapper: !store.sm }">
+
     <StationRef v-bind="{ valeur_ref: val_ref_78 }" />
     <Selection />
   </div>

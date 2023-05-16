@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Footer from "./Footer.vue";
+import { RouterLink } from "vue-router";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 </script>
@@ -34,15 +35,17 @@ const store = useStore();
     <h4>Source des données utilisées :</h4>
     <br />
     <ul>
-      <li><a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">Statistiques en provenance de Météo France (MF)</a></li>
       <li>Nombre de stations météo référencées : {{ store.fc.length }}</li>
+      <li><a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">Statistiques en provenance de Météo France (MF)</a></li>
       <li>
         <a target="_blank" href="https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres" aria-label="Valeurs foncières"
           >Valeurs foncières de l'année 2022</a
         >
       </li>
-      <li>Valeurs foncières de l'année 2022</li>
     </ul>
+    <br />
+    <br />
+    <RouterLink to="/"><span class="Home"> > Retour à Kikō </span></RouterLink>
   </div>
   <Footer />
 </template>
@@ -50,9 +53,20 @@ const store = useStore();
 <style scoped>
 a {
   outline: none;
-  color: black;
+  color: grey;
   text-decoration: none;
   padding: 2px 1px 0;
+}
+
+.Home {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
 }
 .text {
   width: 90%;
@@ -68,6 +82,6 @@ a {
   letter-spacing: normal;
   text-align: left;
   color: black;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 </style>
