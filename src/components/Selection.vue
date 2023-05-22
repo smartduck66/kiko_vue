@@ -148,10 +148,9 @@ async function onFastSearchCommune_serverless(criteres: any) {
     vd_commune.value = 78190; // Réaffichage du code postal de référence
   } else {
     const result = (await response.json()).data;
-    alert(result.ville)
-    const ville: string = result[0].ville;
-    const lat: number = result[0].latitude;
-    const lon: number = result[0].longitude;
+    const ville: string = result.ville;
+    const lat: number = result.latitude;
+    const lon: number = result.longitude;
 
     const cnpe = site_dangereux_le_plus_proche(store.cnpe, lat, lon); // Fonction 'importée' de distances.js
     const seveso = site_dangereux_le_plus_proche(store.seveso, lat, lon); // Fonction 'importée' de distances.js
