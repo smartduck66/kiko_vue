@@ -84,27 +84,16 @@ exports.handler = async (event, context) => {
   const cp = event.queryStringParameters.code_postal;
 
   try {
-    const result = flattenDataKeys(
-      await client.query(
-        q.Map(
-          q.Paginate(Documents(Collection("communes"))),
-          q.Lambda((x) => q.Get(q.Match(q.Index("code_postal"), cp)))
-        )
-      )
-    );
+    const result = flattenDataKeys(await client.query(q.Get(q.Match(q.Index("code_postal"), cp))));
+
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: "ok",
-        data: result,
-      }),
+      data: result,
     };
   } catch (error) {
     return {
       statusCode: 400,
-      body: JSON.stringify({
-        error,
-      }),
+      data: error,
     };
   }
 };

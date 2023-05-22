@@ -147,6 +147,7 @@ async function onFastSearchCommune_serverless(criteres: any) {
     );
     vd_commune.value = 78190; // Réaffichage du code postal de référence
   } else {
+    alert(response)
     const result = (await response.json()).data;
     const ville: string = result[0].ville;
     const lat: number = result[0].latitude;
