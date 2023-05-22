@@ -177,9 +177,9 @@ async function onFastSearchCommune_serverless1(criteres: any) {
     })
     .then(function (data) {
       const result = data;
-      const ville: string = result[0].ville;
-      const lat: number = result[0].latitude;
-      const lon: number = result[0].longitude;
+      const ville: string = result.ville;
+      const lat: number = result.latitude;
+      const lon: number = result.longitude;
 
       const cnpe = site_dangereux_le_plus_proche(store.cnpe, lat, lon); // Fonction 'importée' de distances.js
       const seveso = site_dangereux_le_plus_proche(store.seveso, lat, lon); // Fonction 'importée' de distances.js
@@ -274,7 +274,7 @@ function ResetFiltres(): void {
           </div>
         </div>
       </Form>
-      <Form @submit="onFastSearchCommune_serverless" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
+      <Form @submit="onFastSearchCommune_serverless1" :validation-schema="schema_fast_Commune" @invalid-submit="onInvalidSearch('.go-btn2')">
         <div class="my_fast_grid">
           <div class="c-fast-item-1">
             <span>Risques commune (CP) :</span>
