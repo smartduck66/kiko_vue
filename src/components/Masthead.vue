@@ -33,7 +33,7 @@ function menu() {
           <span class="sous-titre">Données climatiques France & DOM-TOM</span>
         </div>
         <div class="card flex justify-content-center">
-          <Dropdown class="menu" v-model="selectedOption" :options="optionsMenu" optionLabel="name" placeholder="v2.01j" @update:modelValue="menu" />
+          <Dropdown class="menu" v-model="selectedOption" :options="optionsMenu" optionLabel="name" placeholder="v2.01k" @update:modelValue="menu" />
         </div>
       </div>
     </div>
@@ -128,5 +128,6 @@ a {
   letter-spacing: normal;
   text-align: center;
   margin-top: 35px;
+  padding-top:0.5em;
 }
 </style>

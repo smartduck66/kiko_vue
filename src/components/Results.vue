@@ -17,7 +17,7 @@ const max_width = window.innerWidth < 1920 ? window.innerWidth - 15 : 1100; // O
         {{ nbOccurences }}
       </template>
       <template #content>
-        <DataTable :value="props.results_rows" scrollable paginator :rows="10" :rowsPerPageOptions="[10, 20, 50]">
+        <DataTable :value="props.results_rows" tableStyle="min-width: 65rem" scrollable paginator :rows="20" :rowsPerPageOptions="[10, 20, 50]">
           <Column field="site" sortable header="Station météo"></Column>
           <Column field="tmoy" sortable header="T° moy"></Column>
           <Column field="tmin" sortable header="T° min"></Column>
@@ -53,9 +53,10 @@ const max_width = window.innerWidth < 1920 ? window.innerWidth - 15 : 1100; // O
   font-weight: 400;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.8;
+  line-height: 1;
   letter-spacing: normal;
   text-align: center;
   color: grey;
+  padding: 0.5em;
 }
 </style>

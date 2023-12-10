@@ -308,7 +308,7 @@ function ResetFiltres(): void {
     </div>
   </Teleport>
   <Results :key="nb_occurences" v-bind="{ occurences: nb_occurences, results_rows: results_table }" />
-  <Map :key="nb_occurences" v-bind="{ markers: results_table }" />
+  <!-- <Map :key="nb_occurences" v-bind="{ markers: results_table }" /> -->
 </template>
 
 <style scoped>
@@ -343,6 +343,7 @@ code {
   display: grid;
   grid-template-columns: 175px 75px 75px;
   grid-template-rows: 250px;
+  padding: 1em;
 }
 
 [class^="c-item"] {
@@ -367,7 +368,8 @@ code {
 .my_fast_grid {
   display: grid;
   grid-template-columns: 185px 80px 60px;
-  grid-template-rows: 50px;
+  grid-template-rows: 20px;
+  padding: 1em;
 }
 
 [class^="c-fast-item"] {
@@ -377,6 +379,7 @@ code {
 .c-fast-item-1 {
   grid-column: 1;
   justify-content: left;
+  
 }
 .c-fast-item-2 {
   grid-column: 2;
@@ -432,9 +435,11 @@ code {
   display: block;
   width: 130px;
   border-radius: 7px;
-  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 15px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+  
 }
 .search-btn:hover {
   transform: scale(1.1);

@@ -57,7 +57,7 @@ function newStationRef(new_indicatif_station_ref: string) {
 </script>
 
 <template>
-  <Panel v-bind="{ header: valeur_ref[0] }">
+  <Panel v-bind="{ header: valeur_ref[0] }" >
     <template #icons>
       <button class="fas fa-pen CTA" :style="{ 'font-family': 'fa-solid' }" @click="open = true" v-tooltip.right="'Modifier la station météo de référence'"></button>
     </template>
@@ -145,7 +145,7 @@ function newStationRef(new_indicatif_station_ref: string) {
         Choisissez la station météo de votre choix pour la durée de la session :
         <Listbox v-model="selectedStationRef" :options="liste_stations" filter optionLabel="ville" listStyle="height:200px" />
       </div>
-      <div v-if="selectedStationRef" v-bind="newStationRef(selectedStationRef.indicatif)"></div>
+      <div v-if="selectedStationRef" v-bind="newStationRef(selectedStationRef.indicatif)"></div> 
     </div>
   </Teleport>
 </template>
@@ -175,6 +175,7 @@ code {
 .my_grid {
   display: grid;
   grid-template-columns: 160px 160px;
+  padding: 1em;
 }
 
 [class^="c-item"] {
@@ -238,4 +239,6 @@ img.Close {
   letter-spacing: normal;
   text-align: left;
 }
+
+
 </style>
