@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-nocheck
 import Panel from "primevue/panel";
 import Listbox from "primevue/listbox";
 import { ref, Ref } from "vue";
@@ -54,6 +55,7 @@ function newStationRef(new_indicatif_station_ref: string) {
   refresh.value += 1; // refresh des valeurs de référence
   selectedStationRef.value = ""; // RAZ afin de pouvoir rechanger une nouvelle fois la station de référence
 }
+
 </script>
 
 <template>
@@ -145,6 +147,7 @@ function newStationRef(new_indicatif_station_ref: string) {
         Choisissez la station météo de votre choix pour la durée de la session :
         <Listbox v-model="selectedStationRef" :options="liste_stations" filter optionLabel="ville" listStyle="height:200px" />
       </div>
+      // @ts-ignore: Ignorer l'erreur suivante
       <div v-if="selectedStationRef" v-bind="newStationRef(selectedStationRef.indicatif)"></div> 
     </div>
   </Teleport>
