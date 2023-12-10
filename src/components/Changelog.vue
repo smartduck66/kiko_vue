@@ -8,6 +8,11 @@ import { RouterLink } from "vue-router";
     <h1>Changelog de Kikō</h1>
     <br />
     <br />
+    <h4>Décembre 2023</h4>
+    <ul>
+      <li>Mise à jour des librairies utilisées par le projet et des données climatiques</li>
+    </ul>
+    <br />
     <h4>Mai 2023</h4>
     <ul>
       <li>Menu et routage</li>
