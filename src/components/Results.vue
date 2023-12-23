@@ -31,10 +31,10 @@ const onRowSelect = (event: any) => {
         console.error("Erreur:", error.message);
       });
 
-    selectedStation.value = null;
   } else {
     alert("La visualisation d'une fiche climatique ne peut se faire que sur un écran full HD");
   }
+  selectedStation.value = null;
 };
 </script>
 
