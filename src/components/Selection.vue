@@ -247,7 +247,7 @@ function ResetFiltres(): void {
   <div class="FlexWrapper-panel">
     <Panel header="Sélection des stations météo">
       <template #icons>
-        <button class="fas fa-eraser CTA" :style="{ 'font-family': 'fa-solid' }" @click="ResetFiltres()" v-tooltip.right="'Réinitialiser les filtres'"></button>
+        <button name="effacer les valeurs" class="fas fa-eraser CTA" :style="{ 'font-family': 'fa-solid' }" @click="ResetFiltres()" v-tooltip.right="'Réinitialiser les filtres'"></button>
       </template>
       <Form @submit="onSearch" :validation-schema="schema_selection" @invalid-submit="onInvalidSearch('.search-btn')">
         <div class="my_grid">

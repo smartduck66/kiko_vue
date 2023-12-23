@@ -30,7 +30,6 @@ const onRowSelect = (event: any) => {
       .catch((error) => {
         console.error("Erreur:", error.message);
       });
-
   } else {
     alert("La visualisation d'une fiche climatique ne peut se faire que sur un écran full HD");
   }
