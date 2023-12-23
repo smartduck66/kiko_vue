@@ -3,7 +3,7 @@
 // 03/09/2022 : FP version
 // 19/03/2023 : rajout de la constitution du fichier 'ListeFichesClimatiques.json' à partir d'un fichier .txt
 // ************************************************************************************************************************
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 // Transformation d'un fichier CSV des communes françaises (https://www.data.gouv.fr/fr/datasets/base-officielle-des-codes-postaux/)
 // en un fichier json contenant le nom, la latitude et la longitude de chaque commune française référencée
 // Import de communes.json dans fauna via shell : fauna import --path=./assets/data/communes.json --collection=communes --append

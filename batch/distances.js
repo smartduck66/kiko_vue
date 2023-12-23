@@ -1,7 +1,7 @@
 "use strict";
 // Distance entre deux lieux via leurs coordonnées géographiques
 // Version du 3/9/2022
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.convert_DMS_DD = exports.site_dangereux_le_plus_proche = void 0;
 // Initialisation de variables-clés
 var EARTH_RADIUS_KM = 6371;

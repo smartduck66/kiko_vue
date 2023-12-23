@@ -29,7 +29,7 @@ const store = useStore();
       <li>précipitations</li>
       <li>rafales de vent</li>
       <li>distance de la centrale nucléaire la plus proche</li>
-      <li>prix moyen au m2 des maisons</li>
+      <li>prix moyen au m2 des maisons (calcul approximatif - vérifier plus finement sur seloger.com par exemple)</li>
     </ul>
     <br /><br />
     <h4>Source des données utilisées :</h4>

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // Squelette de pipeline d'intégration (plus évolué : utiliser gulp.js)
-// Utilisation : 'node pipe_par' à la racine
+// Utilisation : 'node pipe_par' à la racine dès qu'un batch.ts est modifié
 // 20/01/2022 : moins de 5 secondes de traitement
 // 31/08/2022 : reprise de ce pipeline de kiko_web -> La compilation de kiko.ts dont les fonctions seront reprises dans les templates Vue est inutile (A SUPPRIMER)
 // 19/03/2023 : regroupement des fichiers de code dédiés aux traitements batch - ATTENTION : distances.ts est également nécessaire au site interactif (/src/assets/mixins)

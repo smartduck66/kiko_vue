@@ -5,9 +5,9 @@
 // 03/09/2022 : passage en FP, remplacement des require par des import
 //
 // Mode d'emploi :
-// 1. Une fois/an, lancer dans cet ordre :
+// 1. Une fois/an, lancer dans CET ORDRE :
 //      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
-//        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car des stations météo peuvent disparaître...
+//        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car les stations météo évoluent (dernièe MAJ : 23/12/2023)
 //      - node kiko_init.js immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
 //      - node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
@@ -24,6 +24,156 @@ import * as lat_long_CNPE from "../src/data/centrales.json";
 import * as https from "https";
 import * as fs from "fs";
 import * as ref from "../src/data/ListeFichesClimatiques.json";
+
+// Fonction de création du fichier de valeurs foncières
+const filename = "../src/data_source/valeursfoncieres.txt";
+async function CreationFichierValeursFoncieres(url: string) {
+  fs.unlink(filename, (err) => {
+    if (err) {
+      console.error("Erreur lors de la suppression du fichier de valeurs foncières : ", err);
+    } else {
+      console.log("Le précédent fichier de valeurs foncières a été supprimé avec succès.");
+    }
+  });
+
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error("Erreur de chargement du fichier");
+  }
+
+  // Créer un objet ReadableStream depuis la réponse
+  const reader = response.body!.getReader();
+
+  // Fonction récursive pour lire les morceaux du fichier
+  async function read() {
+    const { done, value } = await reader.read();
+
+    if (done) {
+      // Fin de la lecture du fichier
+      console.log("Chargement en local du fichier des valeurs foncières terminé");
+      return;
+    }
+
+    // Utiliser la partie 'value', qui contient le morceau de données
+    // On crée le fichier sur disque si tout est OK (591 Mo pour 2022, 4,7 millions de lignes) *************************************************
+          // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
+          // Code service CH
+          // Reference document
+          // 1 Articles CGI
+          // 2 Articles CGI
+          // 3 Articles CGI
+          // 4 Articles CGI
+          // 5 Articles CGI
+          // No disposition
+          // Date mutation
+          // Nature mutation
+          // Valeur fonciere
+          // No voie
+          // B
+          // T
+          // Q
+          // Type de voie
+          // Code voie
+          // Voie
+          // Code postal
+          // Commune
+          // Code departement
+          // Code commune
+          // Prefixe de section
+          // Section
+          // No plan
+          // No Volume
+          // 1er lot
+          // Surface Carrez du 1er lot
+          // 2eme lot
+          // Surface Carrez du 2eme lot
+          // 3eme lot
+          // Surface Carrez du 3eme lot
+          // 4eme lot
+          // Surface Carrez du 4eme lot
+          // 5eme lot
+          // Surface Carrez du 5eme lot
+          // Nombre de lots
+          // Code type local
+          // Type local
+          // Identifiant local
+          // Surface reelle bati
+          // Nombre pieces principales
+          // Nature culture
+          // Nature culture speciale
+          // Surface terrain
+    fs.appendFileSync(filename, value); // Création incrémentale du fichier brut, mode texte, sur disque
+
+    // Appeler récursivement la fonction pour lire le morceau suivant
+    await read();
+  }
+
+  // Démarrer la lecture
+  await read();
+
+  // Création du fichier prix_maisons_m2.json *****************************************************************************
+  class prix_maisons {
+    dpt: string;
+    prix: number;
+    nb_ventes: number;
+
+    constructor() {
+      this.dpt = "";
+      this.prix = 0;
+      this.nb_ventes = 0;
+    }
+  }
+
+  // Balayage du fichier des valeurs foncières, enrichissement de l'Array fiches, création du JSON sur disque
+  const fiches1: prix_maisons[] = [];
+  let cumul_prix = 0;
+  let cumul_surface = 0;
+  let nb_vente = 0;
+  let num_line = 0;
+  let current_district = "01";
+
+  const lineReader = require("readline").createInterface({
+    // Nouveau package depuis Node 4.0.0 qui facilite la lecture d'un fichier ligne à ligne
+    input: require("fs").createReadStream(filename),
+  });
+
+  lineReader.on("line", function (line_read: string) {
+    if (num_line > 0) {
+      // on saute la 1ère ligne du fichier
+      const fields: string[] = line_read.split("|");
+      const item = new prix_maisons(); // note the "new" keyword here
+
+      const departement: string = fields[18];
+      const prix: number = !fields[10] ? 0 : Number(fields[10].substring(0, fields[10].indexOf(","))); // Guard si le prix est vide ; suppression des décimales sinon
+      const type_bien: string = fields[36];
+      const surface: number = !fields[38] ? 0 : Number(fields[38]); // Guard si la surface est vide
+
+      if (departement == current_district) {
+        if (type_bien == "Maison" && prix / surface < 50000) {
+          // Guard : on ne retient pas les prix au m2 hors norme (vente de domaine, etc.)
+          // ATTENTION : le cas où la parcelle contient plusieurs maisons habitables fausse les calculs (cela peut arriver surtout en province)
+          cumul_prix += prix;
+          cumul_surface += surface;
+          ++nb_vente;
+        }
+      } else {
+        item.prix = cumul_surface ? Math.trunc(cumul_prix / cumul_surface) : 0; // Guard : pour le département 2B, pas de maison donc pas de surface...
+        item.nb_ventes = nb_vente;
+        item.dpt = current_district;
+        console.log("Traitement du département " + item.dpt + " : prix moyen au m2 = " + item.prix + " euros (" + item.nb_ventes + " ventes)");
+        fiches1.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
+        current_district = departement;
+        cumul_prix = cumul_surface = nb_vente = 0;
+      }
+    }
+    ++num_line;
+  });
+
+  lineReader.on("close", function () {
+    fs.writeFileSync("../src/data/prix_maisons_m2.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
+  });
+}
 
 function extract_alone_value(ref: string, pattern: RegExp, data: string, value_name: string): string {
   // Fonction qui extrait une valeur seule
@@ -204,142 +354,11 @@ switch (myArgs[0]) {
     // Source : https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
     console.log("Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons");
 
-    // Dernières valeurs disponibles complètes : 2022 - Chargées le 29 avril 2023
-    const url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20230405-160733/valeursfoncieres-2022.txt";
-    const filename = "../src/data_source/valeursfoncieres-2022.txt";
+    // Dernières valeurs disponibles complètes : 2022 - Chargées le 23 décembre 2023
+    const url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20231010-093059/valeursfoncieres-2022.txt";
 
-    const request = https.get(url);
-
-    request.on("response", (response) => {
-      const httpStatus = response.statusCode;
-      console.log("httpStatus : " + httpStatus);
-      response.setEncoding("utf-8");
-      let body = "";
-      response.on("data", (chunk: string) => {
-        body += chunk;
-      });
-
-      response.on("end", () => {
-        if (httpStatus === 200) {
-          // On crée le fichier sur disque si tout est OK (498 Mo pour 2022, 3,803 millions de lignes) *************************************************
-          // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
-          // Code service CH
-          // Reference document
-          // 1 Articles CGI
-          // 2 Articles CGI
-          // 3 Articles CGI
-          // 4 Articles CGI
-          // 5 Articles CGI
-          // No disposition
-          // Date mutation
-          // Nature mutation
-          // Valeur fonciere
-          // No voie
-          // B
-          // T
-          // Q
-          // Type de voie
-          // Code voie
-          // Voie
-          // Code postal
-          // Commune
-          // Code departement
-          // Code commune
-          // Prefixe de section
-          // Section
-          // No plan
-          // No Volume
-          // 1er lot
-          // Surface Carrez du 1er lot
-          // 2eme lot
-          // Surface Carrez du 2eme lot
-          // 3eme lot
-          // Surface Carrez du 3eme lot
-          // 4eme lot
-          // Surface Carrez du 4eme lot
-          // 5eme lot
-          // Surface Carrez du 5eme lot
-          // Nombre de lots
-          // Code type local
-          // Type local
-          // Identifiant local
-          // Surface reelle bati
-          // Nombre pieces principales
-          // Nature culture
-          // Nature culture speciale
-          // Surface terrain
-          fs.writeFileSync(filename, body); // Création du fichier brut, mode texte, sur disque
-          fs.appendFileSync(filename, "|||||||999999|99/99/9999|Vente|99999999,99|99||RUE|9999||99999||99||||||||||||||||9|9|||||||999"); // Guard à la fin du fichier
-        } else {
-          new Error("HTTP status ${response.statusCode}");
-        }
-      });
-
-      request.on("error", (error: string) => {
-        console.log(error);
-      });
-    });
-
-    // Création du fichier prix_maisons_m2.json *****************************************************************************
-    class prix_maisons {
-      dpt: string;
-      prix: number;
-      nb_ventes: number;
-
-      constructor() {
-        this.dpt = "";
-        this.prix = 0;
-        this.nb_ventes = 0;
-      }
-    }
-
-    // Balayage du fichier des valeurs foncières, enrichissement de l'Array fiches, création du JSON sur disque
-    const fiches1: prix_maisons[] = [];
-    let cumul_prix = 0;
-    let cumul_surface = 0;
-    let nb_vente = 0;
-    let num_line = 0;
-    let current_district = "01";
-
-    const lineReader = require("readline").createInterface({
-      // Nouveau package depuis Node 4.0.0 qui facilite la lecture d'un fichier ligne à ligne
-      input: require("fs").createReadStream(filename),
-    });
-
-    lineReader.on("line", function (line_read: string) {
-      if (num_line > 0) {
-        // on saute la 1ère ligne du fichier
-        const fields: string[] = line_read.split("|");
-        const item = new prix_maisons(); // note the "new" keyword here
-
-        const departement: string = fields[18];
-        const prix: number = !fields[10] ? 0 : Number(fields[10].substring(0, fields[10].indexOf(","))); // Guard si le prix est vide ; suppression des décimales sinon
-        const type_bien: string = fields[36];
-        const surface: number = !fields[38] ? 0 : Number(fields[38]); // Guard si la surface est vide
-
-        if (departement == current_district) {
-          if (type_bien == "Maison" && prix / surface < 50000) {
-            // Guard : on ne retient pas les prix au m2 hors norme (vente de domaine, etc.)
-            cumul_prix += prix;
-            cumul_surface += surface;
-            ++nb_vente;
-          }
-        } else {
-          item.prix = cumul_surface ? Math.trunc(cumul_prix / cumul_surface) : 0; // Guard : pour le département 2B, pas de maison donc pas de surface...
-          item.nb_ventes = nb_vente;
-          item.dpt = current_district;
-          console.log("Traitement du département " + item.dpt + " : prix moyen au m2 = " + item.prix + " euros (" + item.nb_ventes + " ventes)");
-          fiches1.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
-          current_district = departement;
-          cumul_prix = cumul_surface = nb_vente = 0;
-        }
-      }
-      ++num_line;
-    });
-
-    lineReader.on("close", function () {
-      fs.writeFileSync("../src/data/prix_maisons_m2.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
-    });
+    // Appeler la fonction pour charger le fichier par morceaux, en provenance de data.gouv, puis création de prix_maisons_m2.json
+    CreationFichierValeursFoncieres(url);
     break;
   }
 
