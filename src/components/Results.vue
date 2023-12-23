@@ -12,7 +12,7 @@ const open = ref(false); //gestion de la fenêtre modale de la fiche climatique 
 const fiche_climatique = ref("");
 
 const onRowSelect = (event: any) => {
-  fetch("/public/ficheclim/" + event.data.site.substr(0, 8) + ".data")
+  fetch("/ficheclim/" + event.data.site.substr(0, 8) + ".data")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`Erreur de chargement du fichier: ${response.statusText}`);
