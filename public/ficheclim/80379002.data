@@ -1,0 +1,105 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1991-2020  et  records;
+AMIENS-GLISY (80)      Indicatif : 80379002, alt : 60m, lat : 49°52'19"N, lon : 2°22'56"E;
+Edité le : 06/12/2023 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-01-1988 au 03-12-2023);
+            ;      15.8;      19.4;      24.1;      26.7;      31.5;        36;      41.7;      38.1;      34.2;        28;      20.7;      17.1;      41.7;
+Date        ;   09-2015;   24-1990;   31-2021;   19-2018;   27-2005;   27-2011;   25-2019;   10-2003;   15-2020;   10-2023;   07-2015;   07-2000;      2019;
+
+
+Température maximale (Moyenne en °C);
+            ;       6.7;       7.8;      11.5;      15.2;      18.5;      21.6;      23.9;        24;      20.5;      15.6;      10.5;       7.1;      15.2;
+
+
+Température moyenne (Moyenne en °C);
+            ;       4.2;       4.7;       7.5;      10.1;      13.5;      16.5;      18.7;      18.7;      15.6;      11.8;       7.6;       4.7;      11.1;
+
+
+Température minimale (Moyenne en °C);
+            ;       1.6;       1.6;       3.4;       5.1;       8.4;      11.4;      13.4;      13.3;      10.7;         8;       4.7;       2.2;         7;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-01-1988 au 03-12-2023);
+            ;     -14.6;     -12.7;       -10;      -3.9;      -1.2;       0.1;       4.5;       5.2;       1.1;      -5.4;      -9.5;     -13.5;     -14.6;
+Date        ;   10-2009;   07-1991;   04-2005;   08-2003;   07-1997;   05-1991;   04-1990;   08-1990;   27-1990;   30-1997;   24-1998;   29-1996;      2009;
+
+
+Nombre moyen de jours avec;
+Tx >=  30°C ;         .;         .;         .;         .;       0.1;       1.1;       2.7;       3.3;       0.4;         .;         .;         .;       7.5;
+Tx >=  25°C ;         .;         .;         .;       0.4;       2.8;       5.7;      11.7;      10.7;       3.5;       0.2;         .;         .;      35.0;
+Tx <=   0°C ;       1.9;       1.1;       0.1;         .;         .;         .;         .;         .;         .;         .;       0.3;       1.7;       5.0;
+Tn <=   0°C ;      11.2;       9.8;       6.1;       2.8;       0.1;         .;         .;         .;         .;       1.2;       4.0;      10.2;      45.4;
+Tn <=  -5°C ;       2.8;       1.9;       0.1;         .;         .;         .;         .;         .;         .;       0.0;       0.4;       1.7;       7.0;
+Tn <= -10°C ;       0.4;       0.2;       0.0;         .;         .;         .;         .;         .;         .;         .;         .;       0.1;       0.8;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-01-1987 au 03-12-2023);
+            ;        24;      28.2;      30.1;      25.2;      53.4;      55.8;        56;      65.7;        49;      33.4;      37.4;      42.4;      65.7;
+Date        ;   01-2003;   24-1997;   10-2018;   26-2003;   30-2016;   20-1992;   06-2001;   07-2008;   03-2011;   02-2021;   10-2002;   02-2000;      2008;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+            ;      48.8;        45;      45.3;      39.4;      55.9;      54.6;      58.9;      59.9;      48.4;      57.7;      60.4;      72.3;     646.6;
+
+
+Nombre moyen de jours avec;
+Rr >=  1 mm ;      10.1;       9.7;       9.8;       8.3;       9.6;       8.7;       8.2;       9.0;       8.1;      10.4;      11.1;      11.8;     114.9;
+Rr >=  5 mm ;       3.4;       3.0;       2.9;       2.9;       3.4;       3.5;       3.9;       4.0;       3.5;       3.9;       4.2;       5.2;      43.8;
+Rr >= 10 mm ;       0.7;       0.8;       0.8;       0.6;       1.5;       1.6;       1.8;       1.7;       1.1;       1.6;       1.6;       2.1;      15.8;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+            ;     429.2;     375.6;     326.6;     236.6;     144.7;      63.8;      24.5;      23.8;      81.9;     192.8;     312.3;     413.3;    2625.1;
+
+
+Rayonnement global (Moyenne en J/cm²);
+Statistiques établies sur la période 2005-2020;
+            ;      9134;     15391;     31580;     48408;     55729;     60301;     59281;     48948;     36432;     22243;     10875;      7931;  406253.0;
+
+
+Durée d'insolation (Moyenne en heures);
+Statistiques établies sur la période 2005-2020;
+            ;      63.7;      86.5;     146.9;     206.3;     202.7;     220.3;       224;     188.1;       168;     116.9;      71.1;      66.5;    1760.9;
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+Données non disponibles;
+
+
+
+Rafale maximale de vent (m/s);
+(Records établis sur la période du 01-01-1988 au 03-12-2023);
+            ;        33;        33;      27.9;        27;        26;        24;      28.2;      22.5;        23;        30;      31.8;        37;        37;
+Date        ;   25-1990;   28-1990;   10-2019;   04-1994;   02-2003;   04-1994;   04-2023;   13-2008;   13-1998;   27-2002;   02-2023;   17-2004;      2004;
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+            ;         4;         4;       3.9;       3.6;       3.5;       3.2;       3.2;         3;       3.1;       3.4;       3.5;       3.9;       3.5;
+
+
+Nombre moyen de jours avec rafales;
+>= 16 m/s   ;       6.4;       5.3;       4.9;       3.3;       2.6;       1.5;       1.4;       1.4;       1.8;       2.8;       3.6;       4.6;      39.5;
+>= 28 m/s   ;       0.2;       0.1;         .;         .;         .;         .;         .;         .;         .;       0.0;         .;       0.1;       0.5;
+(16 m/s = 58 km/h,  28 m/s = 100 km/h);
+
+
+Nombre moyen de jours avec brouillard / orage / grêle / neige;
+Données non disponibles;
+
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1991-2020 sauf pour les paramètres suivants :  rayonnement global (2005-2020), insolation (2005-2020);
+

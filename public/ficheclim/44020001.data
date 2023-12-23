@@ -1,0 +1,107 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1991-2020  et  records;
+NANTES-BOUGUENAIS (44)      Indicatif : 44020001, alt : 26m, lat : 47°08'59"N, lon : 1°36'31"O;
+Edité le : 06/12/2023 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-05-1945 au 03-12-2023);
+            ;      18.2;      22.6;      24.2;      28.3;      32.8;      39.1;        42;      39.6;      35.4;      30.4;      21.8;      18.4;        42;
+Date        ;   27-2003;   27-2019;   30-2021;   30-2005;   26-2017;   18-2022;   18-2022;   07-2020;   09-2023;   09-2023;   01-2015;   04-1953;      2022;
+
+
+Température maximale (Moyenne en °C);
+            ;       9.3;      10.5;      13.5;      16.2;      19.6;        23;      25.1;      25.4;      22.4;      17.6;      12.9;       9.8;      17.1;
+
+
+Température moyenne (Moyenne en °C);
+            ;       6.4;       6.7;       9.2;      11.4;      14.7;      17.8;      19.7;      19.8;      17.1;      13.5;       9.4;       6.7;      12.7;
+
+
+Température minimale (Moyenne en °C);
+            ;       3.4;         3;       4.9;       6.6;       9.8;      12.7;      14.3;      14.2;      11.8;       9.5;       5.9;       3.7;       8.3;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-05-1945 au 03-12-2023);
+            ;       -13;     -15.6;      -9.6;      -2.8;      -1.5;       3.8;       5.8;       5.6;       2.8;      -3.3;      -6.8;     -10.8;     -15.6;
+Date        ;   16-1985;   15-1956;   01-2005;   07-2008;   01-1945;   01-2006;   10-1948;   07-1956;   19-1952;   30-1997;   21-1993;   21-1946;      1956;
+
+
+Nombre moyen de jours avec;
+Tx >=  30°C ;         .;         .;         .;         .;       0.1;       1.9;       4.3;       4.3;       1.1;       0.0;         .;         .;      11.8;
+Tx >=  25°C ;         .;         .;         .;       0.7;       3.8;       8.5;      14.1;      14.3;       6.6;       0.6;         .;         .;      48.6;
+Tx <=   0°C ;       0.6;       0.1;         .;         .;         .;         .;         .;         .;         .;         .;       0.0;       0.3;       1.0;
+Tn <=   0°C ;       7.8;       7.2;       3.1;       0.8;         .;         .;         .;         .;         .;       0.4;       2.5;       7.4;      29.1;
+Tn <=  -5°C ;       0.8;       0.8;       0.0;         .;         .;         .;         .;         .;         .;         .;       0.2;       0.8;       2.6;
+Tn <= -10°C ;       0.0;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;       0.0;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-05-1945 au 03-12-2023);
+            ;      50.1;      34.5;      47.4;      43.6;      56.5;      70.1;      94.9;      53.4;      48.2;      96.7;      45.9;      38.6;      96.7;
+Date        ;   02-1961;   04-1951;   01-2020;   30-2015;   26-1950;   11-2018;   07-1977;   28-1970;   25-1975;   02-2021;   03-1957;   03-1992;      2021;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+            ;      87.9;      67.5;      58.4;      58.3;        61;      48.5;      44.2;      50.3;      59.5;      88.8;      94.1;       101;     819.5;
+
+
+Nombre moyen de jours avec;
+Rr >=  1 mm ;      12.5;      10.6;       9.4;       9.7;       9.6;       7.6;       7.1;       7.2;       7.8;      11.8;      13.0;      13.5;     119.7;
+Rr >=  5 mm ;       6.0;       5.3;       3.8;       4.1;       4.1;       3.3;       2.8;       2.9;       3.9;       5.7;       6.2;       6.8;      54.9;
+Rr >= 10 mm ;       2.6;       1.9;       1.6;       1.8;       1.9;       1.0;       1.1;       1.6;       2.0;       3.0;       3.1;       3.6;      25.4;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+            ;       361;     318.3;     273.4;     199.1;       111;      40.3;      14.2;      11.5;      50.6;     141.3;     258.4;     348.8;    2127.9;
+
+
+Rayonnement global (Moyenne en J/cm²);
+            ;     11658;     19447;     34523;     48315;     60318;     64389;     64957;     57438;     42204;     25059;     14285;     10044;  452637.0;
+
+
+Durée d'insolation (Moyenne en heures);
+            ;      72.6;     102.3;     147.3;     182.7;     203.4;     213.1;       229;     232.6;     198.7;     122.7;      91.3;      77.6;    1873.3;
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+            ;      12.3;      25.2;      55.8;      89.6;     120.5;     141.9;     148.5;     124.1;      84.3;      41.4;      15.5;      11.0;     870.1;
+
+
+Rafale maximale de vent (m/s);
+(Records établis sur la période du 01-01-1981 au 03-12-2023);
+            ;        32;        37;        31;        27;        27;        27;        24;      34.9;        30;        32;      29.5;        35;        37;
+Date        ;   04-1998;   03-1990;   24-1986;   18-2004;   12-1983;   11-1997;   21-2006;   22-2011;   13-1993;   15-1987;   02-2023;   26-1999;      1990;
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+            ;       4.1;         4;       3.9;       3.7;       3.5;       3.4;       3.3;       3.1;       3.1;       3.4;       3.5;       3.9;       3.6;
+
+
+Nombre moyen de jours avec rafales;
+>= 16 m/s   ;       6.3;       5.5;       4.7;       4.3;       2.7;       1.7;       1.1;       1.2;       1.7;       3.5;       3.8;       6.3;      42.8;
+>= 28 m/s   ;       0.3;       0.2;       0.1;         .;         .;         .;         .;       0.0;       0.0;       0.1;       0.1;       0.3;       1.1;
+(16 m/s = 58 km/h,  28 m/s = 100 km/h);
+
+
+Nombre moyen de jours avec ;
+Données non disponibles;
+
+Données non disponibles;
+
+Données non disponibles;
+
+Neige       ;       1.3;       2.0;       0.3;         .;         .;         .;         .;         .;         .;         .;       0.3;       0.9;       4.7;
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1991-2020 sauf pour les paramètres suivants :  ETP (2001-2020);
+

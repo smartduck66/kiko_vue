@@ -10,6 +10,7 @@ import { RouterLink } from "vue-router";
     <br />
     <h4>Décembre 2023</h4>
     <ul>
+      <li>Affichage de la fiche climatique complète en sélectionnant une station spécifique des résultats d'une recherche</li>
       <li>Saisie multiple de départements</li>
       <li>Mise à jour des librairies utilisées par le projet et des données climatiques</li>
     </ul>

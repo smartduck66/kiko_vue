@@ -4,11 +4,12 @@
 // Bibliothéque JavaScript utilisée en mode "batch" :
 // 18/12/2021 : passage en Typescript
 // 03/09/2022 : passage en FP, remplacement des require par des import
+// 23/12/2023 : réécriture de la création du fichier de valeurs immobilières (async/await)
 //
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans CET ORDRE :
 //      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
-//        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car des stations météo peuvent disparaître...
+//        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car les stations météo évoluent (dernièe MAJ : 23/12/2023)
 //      - node kiko_init.js immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
 //      - node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
@@ -190,6 +191,7 @@ function CreationFichierValeursFoncieres(url) {
                             if (departement == current_district) {
                                 if (type_bien == "Maison" && prix / surface < 50000) {
                                     // Guard : on ne retient pas les prix au m2 hors norme (vente de domaine, etc.)
+                                    // ATTENTION : le cas où la parcelle contient plusieurs maisons habitables fausse les calculs (cela peut arriver surtout en province)
                                     cumul_prix += prix;
                                     cumul_surface += surface;
                                     ++nb_vente;
@@ -273,7 +275,7 @@ switch (myArgs[0]) {
                 });
                 response.on("end", function () {
                     if (httpStatus === 200) {
-                        fs.writeFileSync("../src/ficheclim/" + filename, body); // Création du fichier brut, mode texte, sur disque
+                        fs.writeFileSync("../public/ficheclim/" + filename, body); // Création du fichier brut, mode texte, sur disque
                     }
                     else {
                         new Error("HTTP status ${response.statusCode}");
@@ -310,7 +312,7 @@ switch (myArgs[0]) {
         }());
         // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
         var fiches = ref.map(function (refcli) {
-            var text = fs.readFileSync("../src/ficheclim/" + refcli.ref + ".data", "utf8");
+            var text = fs.readFileSync("../public/ficheclim/" + refcli.ref + ".data", "utf8");
             var item = new data_MF_1(); // note the "new" keyword here
             item.indicatif = refcli.ref;
             item.ville = refcli.town;

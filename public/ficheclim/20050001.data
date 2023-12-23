@@ -1,0 +1,110 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1991-2020  et  records;
+CALVI (20)      Indicatif : 20050001, alt : 57m, lat : 42°31'46"N, lon : 8°47'29"E;
+Edité le : 06/12/2023 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-07-1960 au 03-12-2023);
+            ;      23.3;      23.6;      28.8;      32.1;        36;        40;      42.1;      40.6;      37.4;      32.9;      29.8;      25.4;      42.1;
+Date        ;   02-1962;   18-2022;   21-1974;   30-2003;   22-2009;   22-2023;   29-1983;   05-2017;   11-2008;   06-1981;   10-1985;   16-1989;      1983;
+
+
+Température maximale (Moyenne en °C);
+            ;        14;      14.2;      16.4;      19.1;      23.1;      27.2;      30.2;      30.2;      26.4;      22.4;      17.8;      14.9;      21.3;
+
+
+Température moyenne (Moyenne en °C);
+            ;       9.5;       9.4;      11.5;        14;      17.8;      21.8;      24.6;      24.7;      21.3;      17.7;      13.6;      10.6;      16.4;
+
+
+Température minimale (Moyenne en °C);
+            ;         5;       4.7;       6.6;       8.9;      12.5;      16.4;        19;      19.2;      16.2;        13;       9.3;       6.2;      11.4;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-07-1960 au 03-12-2023);
+            ;      -5.6;      -3.9;      -4.6;      -0.4;       3.7;       7.5;      10.6;      12.3;       7.9;       2.6;      -2.3;      -4.2;      -5.6;
+Date        ;   30-1963;   24-1993;   02-2005;   08-2003;   06-1987;   06-1962;   01-1981;   31-2006;   18-1971;   30-1974;   24-1975;   28-1996;      1963;
+
+
+Nombre moyen de jours avec;
+Tx >=  30°C ;         .;         .;         .;       0.0;       0.7;       6.1;      16.0;      15.7;       3.1;       0.1;         .;         .;      41.7;
+Tx >=  25°C ;         .;         .;       0.2;       1.0;       8.4;      21.9;      29.7;      30.4;      21.3;       5.5;       0.3;         .;     118.7;
+Tx <=   0°C ;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;
+Tn <=   0°C ;       1.9;       1.9;       0.4;       0.0;         .;         .;         .;         .;         .;         .;       0.1;       0.8;       5.1;
+Tn <=  -5°C ;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;
+Tn <= -10°C ;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-07-1960 au 03-12-2023);
+            ;      58.5;     100.2;      71.1;      80.6;        50;     114.8;      42.4;        74;      81.2;      61.4;      92.4;        79;     114.8;
+Date        ;   31-2012;   13-1976;   08-1970;   03-1975;   12-1995;   15-1978;   06-1976;   28-2002;   25-2006;   03-1978;   04-1999;   30-1995;      1978;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+            ;      50.3;      53.5;      58.9;      55.8;      40.8;      32.2;       7.6;      23.3;      59.1;      79.2;     115.4;      76.7;     652.8;
+
+
+Nombre moyen de jours avec;
+Rr >=  1 mm ;       6.1;       6.0;       6.4;       6.7;       5.0;       2.9;       1.0;       1.7;       5.5;       7.1;       9.2;       7.7;      65.4;
+Rr >=  5 mm ;       3.0;       3.0;       3.2;       3.5;       2.5;       1.5;       0.5;       1.0;       3.0;       4.4;       5.8;       4.2;      35.7;
+Rr >= 10 mm ;       1.6;       1.6;       1.9;       1.7;       1.2;       0.8;       0.2;       0.6;       1.9;       2.9;       3.5;       2.9;      21.0;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+            ;     263.5;     241.7;       202;     122.4;      34.9;       2.7;       0.1;         0;       2.8;      35.5;       135;     230.5;    1271.1;
+
+
+Rayonnement global (Moyenne en J/cm²);
+Données non disponibles;
+
+
+
+Durée d'insolation (Moyenne en heures);
+Statistiques établies sur la période 1991-2018;
+            ;     132.7;       150;     204.6;     237.9;     296.1;     330.9;     370.6;     331.3;       247;     189.6;     131.8;     123.3;    2745.6;
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+Données non disponibles;
+
+
+
+Rafale maximale de vent (m/s);
+(Records établis sur la période du 01-01-1981 au 03-12-2023);
+            ;      31.5;        34;      39.8;        31;      28.4;        28;        30;      54.7;      30.7;      41.6;        32;        44;      54.7;
+Date        ;   17-2018;   08-1984;   06-2017;   13-1989;   05-2019;   22-1996;   03-1981;   18-2022;   25-2020;   14-2016;   19-1999;   28-1999;      2022;
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+            ;       3.6;       3.7;       3.9;       3.6;       3.4;       3.5;       3.7;       3.5;       3.5;       3.3;       3.4;       3.7;       3.6;
+
+
+Nombre moyen de jours avec rafales;
+>= 16 m/s   ;       8.0;       7.3;       8.4;       6.3;       4.0;       3.8;       4.3;       4.2;       5.2;       5.6;       7.0;       8.8;      72.8;
+>= 28 m/s   ;       0.2;       0.2;       0.3;       0.1;       0.1;       0.0;         .;         .;       0.1;       0.3;       0.2;       0.5;       1.8;
+(16 m/s = 58 km/h,  28 m/s = 100 km/h);
+
+
+Nombre moyen de jours avec ;
+Données non disponibles;
+
+Données non disponibles;
+
+Données non disponibles;
+
+Neige       ;       0.5;       0.8;       0.2;       0.1;         .;         .;         .;         .;         .;       0.0;       0.1;       0.2;       1.9;
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1991-2020 sauf pour les paramètres suivants :  insolation (1991-2018);
+

@@ -1,0 +1,112 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1991-2020  et  records;
+LAC AIGUEBELETTE (73)      Indicatif : 73191005, alt : 375m, lat : 45°33'53"N, lon : 5°47'44"E;
+Edité le : 06/12/2023 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-03-2004 au 01-07-2021);
+            ;      18.1;      20.2;      24.3;      28.5;      32.3;      35.9;      36.9;      36.2;      31.8;        27;      24.1;      19.6;      36.9;
+Date        ;   10-2015;   22-2021;   31-2021;   19-2018;   24-2009;   29-2019;   24-2019;   19-2009;   18-2020;   20-2019;   12-2018;   19-2019;      2019;
+
+
+Température maximale (Moyenne en °C);
+Statistiques établies sur la période 2004-2020;
+            ;       5.9;       7.6;      12.3;      17.3;      20.4;      24.9;      27.4;      26.3;      22.3;      17.2;      10.8;       6.4;      16.6;
+
+
+Température moyenne (Moyenne en °C);
+Statistiques établies sur la période 2004-2020;
+            ;       2.7;       3.5;       7.3;      11.6;        15;      19.1;      21.2;      20.4;        17;      12.8;       7.2;       3.3;      11.8;
+
+
+Température minimale (Moyenne en °C);
+Statistiques établies sur la période 2004-2020;
+            ;      -0.5;      -0.6;       2.2;       5.8;       9.5;      13.3;        15;      14.5;      11.7;       8.4;       3.6;       0.1;       6.9;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-03-2004 au 01-07-2021);
+            ;      -9.3;     -13.6;       -13;      -2.9;       0.4;         3;       8.2;       7.8;       4.4;      -1.6;      -8.4;     -14.3;     -14.3;
+Date        ;   31-2005;   05-2012;   01-2005;   08-2021;   05-2019;   01-2006;   15-2016;   29-2010;   27-2010;   30-2012;   27-2005;   20-2009;      2009;
+
+
+Nombre moyen de jours avec;
+Statistiques établies sur la période 2004-2020;
+Tx >=  30°C ;         .;         .;         .;         .;       0.3;       4.3;       9.6;       6.8;       0.8;         .;         .;         .;      21.8;
+Tx >=  25°C ;         .;         .;         .;       1.6;       6.2;      15.7;      22.5;      19.0;       8.6;       0.5;         .;         .;      74.2;
+Tx <=   0°C ;       3.0;       2.3;       0.1;         .;         .;         .;         .;         .;         .;         .;       0.2;       2.3;       7.9;
+Tn <=   0°C ;      17.8;      15.5;       7.5;       0.8;         .;         .;         .;         .;         .;       0.5;       4.9;      15.2;      62.1;
+Tn <=  -5°C ;       3.3;       2.9;       0.6;         .;         .;         .;         .;         .;         .;         .;       0.2;       1.8;       8.8;
+Tn <= -10°C ;         .;       0.7;       0.1;         .;         .;         .;         .;         .;         .;         .;         .;       0.2;       1.0;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-03-2004 au 01-07-2021);
+            ;      45.3;      37.2;      51.1;      48.5;      53.9;        63;      66.1;      66.3;        67;        64;      49.8;      42.5;        67;
+Date        ;   16-2015;   01-2019;   02-2020;   03-2019;   30-2010;   03-2017;   04-2018;   10-2004;   13-2015;   02-2020;   26-2012;   25-2013;      2015;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+Statistiques établies sur la période 2004-2020;
+            ;     107.6;      88.5;     110.2;      94.6;     141.6;     110.2;     105.2;     112.1;      89.3;     109.1;     111.4;       127;    1306.8;
+
+
+Nombre moyen de jours avec;
+Statistiques établies sur la période 2004-2020;
+Rr >=  1 mm ;      11.3;       9.3;      12.1;       9.4;      12.5;       9.8;       8.3;       9.3;       7.6;       9.7;      10.3;      12.6;     122.1;
+Rr >=  5 mm ;       6.5;       5.1;       6.9;       5.7;       8.3;       5.9;       4.8;       6.0;       4.8;       6.2;       6.3;       8.0;      74.5;
+Rr >= 10 mm ;       4.3;       3.1;       4.0;       3.6;       5.4;       4.2;       3.5;       4.0;       3.0;       3.9;       3.9;       4.9;      47.8;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+Statistiques établies sur la période 2004-2020;
+            ;     474.9;     409.1;     332.8;       193;     105.2;      26.5;       8.7;      12.5;      56.1;     163.3;     324.9;     456.8;    2563.8;
+
+
+Rayonnement global (Moyenne en J/cm²);
+Statistiques établies sur la période 2004-2020;
+            ;     11575;     17596;     34232;     46387;     53772;     60929;     65042;     55234;     39234;     24537;     12861;      9206;  430605.0;
+
+
+Durée d'insolation (Moyenne en heures);
+Données non disponibles;
+
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+Données non disponibles;
+
+
+
+Rafale maximale de vent (m/s);
+(Records établis sur la période du 13-03-2004 au 01-07-2021);
+            ;      21.4;      23.9;      22.4;      25.3;      29.5;        24;      23.9;      26.4;      19.1;      21.1;      21.4;      36.3;      36.3;
+Date        ;   11-2008;   07-2014;   04-2017;   24-2019;   26-2008;   08-2004;   13-2006;   06-2018;   04-2007;   14-2016;   03-2014;   25-2013;      2013;
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+Données non disponibles;
+
+
+
+Nombre moyen de jours avec rafales;
+Données non disponibles;
+
+
+
+Nombre moyen de jours avec brouillard / orage / grêle / neige;
+Données non disponibles;
+
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1991-2020 sauf pour les paramètres suivants :  précipitations (2004-2020), température (2004-2020), rayonnement global (2004-2020);
+

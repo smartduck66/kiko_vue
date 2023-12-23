@@ -3,6 +3,7 @@
 // Bibliothéque JavaScript utilisée en mode "batch" :
 // 18/12/2021 : passage en Typescript
 // 03/09/2022 : passage en FP, remplacement des require par des import
+// 23/12/2023 : réécriture de la création du fichier de valeurs immobilières (async/await) - Les fiches climatiques sont désormais chargées dans le répertoire \public
 //
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans CET ORDRE :
@@ -242,7 +243,7 @@ switch (myArgs[0]) {
 
         response.on("end", () => {
           if (httpStatus === 200) {
-            fs.writeFileSync("../src/ficheclim/" + filename, body); // Création du fichier brut, mode texte, sur disque
+            fs.writeFileSync("../public/ficheclim/" + filename, body); // Création du fichier brut, mode texte, sur disque
           } else {
             new Error("HTTP status ${response.statusCode}");
           }
@@ -297,7 +298,7 @@ switch (myArgs[0]) {
 
     // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
     const fiches: data_MF[] = ref.map((refcli) => {
-      const text = fs.readFileSync("../src/ficheclim/" + refcli.ref + ".data", "utf8");
+      const text = fs.readFileSync("../public/ficheclim/" + refcli.ref + ".data", "utf8");
       const item = new data_MF(); // note the "new" keyword here
 
       item.indicatif = refcli.ref;

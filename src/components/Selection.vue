@@ -9,7 +9,6 @@ import * as Yup from "yup";
 import { fiche_climatique, results } from "../assets/mixins/types";
 import { site_dangereux_le_plus_proche, convert_DMS_DD } from "../assets/mixins/distances";
 import { useStore } from "../assets/mixins/store.js";
-import { isConstructorDeclaration } from "typescript";
 const store = useStore();
 
 const open = ref(false); //gestion de la fenêtre modale des risques

@@ -1,0 +1,110 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1991-2020  et  records;
+ST-JOSEPH_SAPC (974)      Indicatif : 97412384, alt : 13m, lat : 21°23'06"S, lon : 55°36'34"E;
+Edité le : 06/12/2023 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-01-1991 au 03-12-2023);
+            ;      35.5;      34.6;      35.5;      33.3;      31.9;      30.1;      30.5;      28.6;      29.6;      31.5;        33;      33.6;      35.5;
+Date        ;   11-2012;   19-2007;   01-1991;   01-2015;   07-2003;   03-2014;   02-2011;   01-2015;   09-2004;   25-2006;   20-1997;   27-2015;      2012;
+
+
+Température maximale (Moyenne en °C);
+Statistiques établies sur la période 1991-2018;
+            ;        31;      30.9;      30.1;        29;      27.5;      25.7;      24.6;      24.7;      25.6;      26.9;      28.6;      30.1;      27.9;
+
+
+Température moyenne (Moyenne en °C);
+Statistiques établies sur la période 1991-2018;
+            ;      27.4;      27.4;      26.8;      25.7;      24.1;      22.4;      21.3;      21.3;        22;      23.2;      24.7;      26.4;      24.4;
+
+
+Température minimale (Moyenne en °C);
+Statistiques établies sur la période 1991-2018;
+            ;      23.8;        24;      23.4;      22.4;      20.8;      19.1;      18.1;        18;      18.5;      19.5;      20.9;      22.6;      20.9;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-01-1991 au 03-12-2023);
+            ;        18;      20.9;      19.5;      18.9;      16.3;      15.7;        14;      14.8;      15.1;      14.5;      16.4;      19.6;        14;
+Date        ;   01-1992;   01-1997;   04-1991;   05-1997;   10-1999;   27-2023;   25-1996;   11-2003;   02-2014;   11-2006;   19-1997;   04-2023;      1996;
+
+
+Nombre moyen de jours avec;
+Statistiques établies sur la période 1991-2018;
+Tx >=  30°C ;      24.7;      21.3;      17.7;       8.5;       1.5;       0.0;       0.0;         .;         .;       1.6;       6.1;      18.7;     100.2;
+Tx >=  25°C ;      31.0;      28.2;      30.9;      29.7;      29.3;      20.5;      11.9;      13.2;      20.8;      27.3;      29.4;      30.9;     303.2;
+Tn >=  20°C ;      31.0;      28.2;      30.9;      29.4;      23.0;       7.8;       2.4;       1.2;       3.3;      11.9;      23.4;      30.8;     223.2;
+Tn <=  10°C ;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;
+Tn <=   0°C ;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-04-1960 au 03-12-2023);
+            ;       640;       315;     715.5;       366;       169;     168.2;     112.4;       122;       169;      98.3;       180;     139.4;     715.5;
+Date        ;   29-1989;   12-1987;   15-1975;   05-2009;   17-1972;   12-2023;   02-1965;   22-1979;   15-1998;   14-1962;   15-2017;   14-1967;      1975;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+            ;     189.6;     233.4;     217.5;     192.9;       159;     126.6;     155.4;      96.5;      75.2;      56.8;      65.6;      92.7;    1661.2;
+
+
+Nombre moyen de jours avec;
+Rr >=  1 mm ;       9.5;      12.3;      13.3;      12.6;      11.9;      13.1;      15.1;      11.4;       8.2;       6.3;       5.3;       6.9;     125.9;
+Rr >=  5 mm ;       6.1;       8.1;       8.1;       7.5;       6.9;       7.3;       8.8;       5.5;       4.1;       3.1;       2.5;       3.6;      71.5;
+Rr >= 10 mm ;       4.3;       5.6;       5.5;       5.1;       4.6;       4.4;       5.0;       2.8;       2.3;       1.8;       1.7;       2.5;      45.5;
+Rr >= 50 mm ;       0.9;       1.2;       1.0;       0.8;       0.6;       0.3;       0.4;       0.2;       0.1;       0.1;       0.2;       0.4;       6.2;
+Rr >= 100 mm;       0.4;       0.3;       0.4;       0.2;       0.1;         .;       0.0;       0.0;       0.0;         .;       0.1;       0.1;       1.7;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+Statistiques établies sur la période 1991-2018;
+            ;         0;         0;         0;         0;         0;         0;         0;       0.1;         0;         0;         0;         0;       0.1;
+
+
+Rayonnement global (Moyenne en J/cm²);
+Statistiques établies sur la période 1997-2018;
+            ;     73235;     61900;     63003;     50781;     44338;     39185;     41134;     50994;     59356;     68706;     73315;     76846;  702793.0;
+
+
+Durée d'insolation (Moyenne en heures);
+Données non disponibles;
+
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+Données non disponibles;
+
+
+
+Rafale maximale de vent (m/s);
+Données non disponibles;
+
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+Données non disponibles;
+
+
+
+Nombre moyen de jours avec rafales;
+Données non disponibles;
+
+
+
+Nombre moyen de jours avec brouillard / orage / grêle / neige;
+Données non disponibles;
+
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1991-2020 sauf pour les paramètres suivants :  température (1991-2018), rayonnement global (1997-2018);
+

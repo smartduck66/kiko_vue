@@ -22,13 +22,14 @@ const store = useStore();
     <br />
     La recherche renvoie une liste de stations météo 'complètes' avec les données suivantes, sur une période comprise entre 1994 et 2020 : <br /><br />
     <ul>
-      <li>température moyenne</li>
-      <li>température minimale</li>
-      <li>température maximale</li>
-      <li>ensoleillement</li>
-      <li>précipitations</li>
-      <li>rafales de vent</li>
-      <li>distance de la centrale nucléaire la plus proche</li>
+      <li>température moyenne (degrés)</li>
+      <li>température minimale (degrés)</li>
+      <li>température maximale (degrés)</li>
+      <li>nombre moyen de jours caniculaires (temp >= 30°C)</li>
+      <li>ensoleillement (heures/an)</li>
+      <li>précipitations (mm/mois)</li>
+      <li>rafales de vent (vitesse >= 16 m/s)</li>
+      <li>distance de la centrale nucléaire la plus proche (kilomètres, à vol d'oiseau)</li>
       <li>prix moyen au m2 des maisons (calcul approximatif - vérifier plus finement sur seloger.com par exemple)</li>
     </ul>
     <br /><br />

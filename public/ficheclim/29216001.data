@@ -1,0 +1,103 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1991-2020  et  records;
+QUIMPER (29)      Indicatif : 29216001, alt : 82m, lat : 47°58'22"N, lon : 4°09'38"O;
+Edité le : 06/12/2023 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-07-1967 au 03-12-2023);
+            ;      16.9;      18.6;      23.3;      27.1;      30.3;      35.9;      35.7;      35.8;      31.1;      26.8;      19.7;      17.7;      35.9;
+Date        ;   26-1983;   24-2019;   19-2005;   23-1984;   25-2012;   30-1976;   18-2022;   09-2003;   07-2021;   02-2011;   13-1989;   19-2015;      1976;
+
+
+Température maximale (Moyenne en °C);
+            ;       9.7;      10.2;      12.3;      14.6;      17.5;      20.1;      21.8;      21.9;        20;      16.3;      12.7;      10.4;      15.6;
+
+
+Température moyenne (Moyenne en °C);
+            ;       7.1;       7.2;       8.8;      10.6;      13.4;        16;      17.7;      17.7;      15.9;        13;       9.8;       7.7;      12.1;
+
+
+Température minimale (Moyenne en °C);
+            ;       4.5;       4.1;       5.4;       6.6;       9.3;      11.9;      13.6;      13.6;      11.7;       9.8;       6.9;       5.1;       8.5;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-07-1967 au 03-12-2023);
+            ;     -10.1;      -8.4;        -7;      -2.2;       0.3;       3.9;       6.6;       6.9;       4.2;      -1.2;      -4.6;      -7.2;     -10.1;
+Date        ;   13-1987;   07-1991;   07-1971;   11-1978;   05-1979;   04-1975;   12-1970;   31-1986;   28-1987;   29-1997;   29-2010;   10-1987;      1987;
+
+
+Nombre moyen de jours avec;
+Tx >=  30°C ;         .;         .;         .;         .;       0.0;       0.4;       0.7;       0.7;       0.0;         .;         .;         .;       1.9;
+Tx >=  25°C ;         .;         .;         .;       0.2;       1.5;       3.7;       5.9;       4.4;       2.0;       0.1;         .;         .;      17.8;
+Tx <=   0°C ;       0.1;       0.1;         .;         .;         .;         .;         .;         .;         .;         .;         .;       0.0;       0.3;
+Tn <=   0°C ;       4.5;       4.4;       1.5;       0.2;         .;         .;         .;         .;         .;       0.1;       0.9;       4.0;      15.6;
+Tn <=  -5°C ;       0.3;       0.2;       0.0;         .;         .;         .;         .;         .;         .;         .;         .;       0.1;       0.7;
+Tn <= -10°C ;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-05-1948 au 03-12-2023);
+            ;      70.3;      84.1;      41.2;      56.2;     112.1;      32.3;      65.8;      45.2;      71.4;        61;      64.9;      55.4;     112.1;
+Date        ;   24-1977;   11-1988;   17-1988;   29-2012;   20-1990;   10-2020;   05-1991;   24-2005;   12-1993;   23-1999;   04-1985;   21-2002;      1990;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+            ;       144;     114.9;      83.8;      87.8;      77.1;      63.9;      69.9;      70.5;      78.2;     123.2;       148;     153.1;    1214.4;
+
+
+Nombre moyen de jours avec;
+Rr >=  1 mm ;      16.3;      13.5;      12.6;      11.6;      10.4;       9.5;       9.8;       9.4;       9.5;      14.2;      16.5;      16.5;     149.8;
+Rr >=  5 mm ;       9.4;       7.7;       6.2;       6.0;       4.6;       4.3;       4.1;       4.3;       4.8;       8.1;       9.8;       9.6;      78.8;
+Rr >= 10 mm ;       4.9;       4.5;       2.6;       2.7;       2.3;       2.0;       2.1;       2.2;       2.6;       4.1;       5.6;       5.7;      41.3;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+            ;       338;     306.4;     284.2;     222.6;     145.2;      71.9;      34.4;      30.7;      72.2;     154.2;       245;       318;    2222.8;
+
+
+Rayonnement global (Moyenne en J/cm²);
+Statistiques établies sur la période 2010-2020;
+            ;     10494;     18008;     33210;     49188;     59804;     60059;     62353;     52506;     38934;     23563;     12938;      8686;  429743.0;
+
+
+Durée d'insolation (Moyenne en heures);
+            ;        66;      89.6;     133.1;     177.4;     201.1;     208.8;     204.7;     194.5;     175.2;     112.1;      78.8;      66.9;    1708.2;
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+            ;      14.2;      24.1;      51.8;      82.4;     108.0;     122.1;     124.6;     104.4;      70.6;      36.1;      17.2;      14.6;     770.1;
+
+
+Rafale maximale de vent (m/s);
+(Records établis sur la période du 01-01-1981 au 03-12-2023);
+            ;        43;        45;      35.8;      29.2;        28;        24;        27;        27;        34;        52;      40.8;        34;        52;
+Date        ;   25-1990;   13-1990;   06-2017;   12-2023;   10-2007;   17-1982;   31-1983;   22-1992;   01-1988;   16-1987;   02-2023;   26-1999;      1987;
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+            ;       4.8;       4.6;       4.6;       4.5;       4.2;       3.9;       3.8;       3.5;       3.5;       3.9;       4.3;       4.7;       4.2;
+
+
+Nombre moyen de jours avec rafales;
+>= 16 m/s   ;      10.8;       9.0;       8.4;       6.4;       3.8;       2.6;       1.9;       2.2;       2.9;       6.6;       8.9;      10.9;      74.3;
+>= 28 m/s   ;       0.5;       0.5;       0.2;       0.1;       0.0;         .;         .;         .;       0.1;       0.1;       0.2;       0.6;       2.3;
+(16 m/s = 58 km/h,  28 m/s = 100 km/h);
+
+
+Nombre moyen de jours avec brouillard / orage / grêle / neige;
+Données non disponibles;
+
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1991-2020 sauf pour les paramètres suivants :  rayonnement global (2010-2020), ETP (2001-2020);
+

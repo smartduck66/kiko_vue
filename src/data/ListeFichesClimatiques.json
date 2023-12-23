@@ -9,7 +9,7 @@
   },
   {
     "ref": "02705001",
-    "town": "La Selve"
+    "town": "Nizy-le-comte"
   },
   {
     "ref": "03060001",
@@ -25,7 +25,7 @@
   },
   {
     "ref": "03185007",
-    "town": "Montlucon Aero"
+    "town": "Montlucon"
   },
   {
     "ref": "03248001",
@@ -1496,8 +1496,16 @@
     "town": "Le Raizet Aero"
   },
   {
+    "ref": "97209004",
+    "town": "Fort-de-france Desaix"
+  },
+  {
     "ref": "97213004",
     "town": "Lamentin-aero"
+  },
+  {
+    "ref": "97232003",
+    "town": "Vauclin"
   },
   {
     "ref": "97304003",
@@ -1624,6 +1632,10 @@
     "town": "Cilaos"
   },
   {
+    "ref": "97502001",
+    "town": "St-pierre"
+  },
+  {
     "ref": "98404001",
     "town": "Kerguelen"
   },
@@ -1638,6 +1650,22 @@
   {
     "ref": "98715002",
     "town": "Faaa"
+  },
+  {
+    "ref": "98719005",
+    "town": "Mangareva"
+  },
+  {
+    "ref": "98723001",
+    "town": "Hiva-oa"
+  },
+  {
+    "ref": "98741001",
+    "town": "Rapa"
+  },
+  {
+    "ref": "98812001",
+    "town": "Koumac"
   },
   {
     "ref": "98818001",

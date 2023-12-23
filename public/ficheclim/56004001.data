@@ -1,0 +1,108 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1991-2020  et  records;
+ARZAL (56)      Indicatif : 56004001, alt : 26m, lat : 47°30'45"N, lon : 2°22'57"O;
+Edité le : 06/12/2023 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-05-1988 au 03-12-2023);
+            ;      16.3;      21.6;      24.1;      27.7;      31.1;      35.8;      41.1;      38.3;        33;      28.8;      20.6;      16.8;      41.1;
+Date        ;   27-2003;   27-2019;   30-2021;   20-2018;   26-2017;   30-2015;   18-2022;   09-2003;   09-2023;   09-2023;   12-2022;   19-2015;      2022;
+
+
+Température maximale (Moyenne en °C);
+            ;       9.4;      10.3;        13;      15.6;      18.8;      21.8;      23.6;      23.7;      21.4;      17.1;      12.9;        10;      16.5;
+
+
+Température moyenne (Moyenne en °C);
+            ;       6.4;       6.7;         9;        11;      14.3;      17.1;      18.8;      18.8;      16.5;      13.3;       9.4;       6.9;      12.3;
+
+
+Température minimale (Moyenne en °C);
+            ;       3.5;       3.2;       4.9;       6.5;       9.7;      12.3;      13.9;      13.9;      11.6;       9.5;       5.9;       3.8;       8.2;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-05-1988 au 03-12-2023);
+            ;     -10.6;     -11.3;        -9;      -3.2;      -0.4;         2;       5.9;       6.6;       2.4;        -2;      -5.9;      -7.6;     -11.3;
+Date        ;   02-1997;   10-1991;   01-2005;   21-1991;   14-1995;   09-1989;   12-2000;   29-2009;   30-1988;   30-1997;   21-1993;   31-1996;      1991;
+
+
+Nombre moyen de jours avec;
+Tx >=  30°C ;         .;         .;         .;         .;       0.0;       1.0;       2.4;       2.1;       0.4;         .;         .;         .;       5.9;
+Tx >=  25°C ;         .;         .;         .;       0.4;       2.7;       6.1;       9.9;       9.2;       4.3;       0.2;         .;         .;      32.8;
+Tx <=   0°C ;       0.5;       0.1;         .;         .;         .;         .;         .;         .;         .;         .;       0.0;       0.2;       0.8;
+Tn <=   0°C ;       7.4;       6.8;       2.9;       0.8;       0.0;         .;         .;         .;         .;       0.3;       2.6;       7.5;      28.3;
+Tn <=  -5°C ;       0.6;       0.6;       0.0;         .;         .;         .;         .;         .;         .;         .;       0.1;       0.5;       1.8;
+Tn <= -10°C ;       0.0;       0.1;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;       0.1;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-05-1988 au 03-12-2023);
+            ;      39.4;      45.6;      39.8;      32.3;      62.4;      39.4;        43;      62.1;      37.6;      50.9;      40.9;      45.6;      62.4;
+Date        ;   11-1993;   25-1997;   01-2020;   30-2015;   28-2016;   07-2022;   01-1998;   14-2022;   30-1993;   02-2021;   11-2014;   12-2014;      2016;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+            ;      97.3;      75.7;      64.2;      66.3;      62.8;      48.8;      46.7;      55.4;      65.7;      92.9;     103.8;     107.4;       887;
+
+
+Nombre moyen de jours avec;
+Rr >=  1 mm ;      13.3;      11.0;      10.4;      10.4;       9.4;       7.8;       7.5;       7.5;       8.5;      12.2;      13.4;      13.6;     125.0;
+Rr >=  5 mm ;       6.5;       5.4;       4.1;       4.8;       4.3;       3.3;       2.8;       3.7;       4.3;       6.0;       7.3;       7.1;      59.5;
+Rr >= 10 mm ;       3.1;       2.7;       1.8;       2.1;       1.9;       1.3;       1.5;       1.8;       2.2;       3.1;       3.5;       3.5;      28.4;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+            ;       359;     318.5;     280.4;     209.3;     122.2;      52.9;      22.8;      20.7;      60.7;     146.5;     257.7;     344.6;    2195.3;
+
+
+Rayonnement global (Moyenne en J/cm²);
+Statistiques établies sur la période 1991-2006;
+            ;     11203;     18483;     33335;     45769;     60543;     65399;     63674;     57255;     40647;     24130;     13844;      9307;  443589.0;
+
+
+Durée d'insolation (Moyenne en heures);
+Données non disponibles;
+
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+Données non disponibles;
+
+
+
+Rafale maximale de vent (m/s);
+(Records établis sur la période du 06-05-1988 au 14-01-2006);
+            ;        31;        26;        25;        24;        20;        19;        22;        20;        25;        25;        25;        30;        31;
+Date        ;   04-1998;   07-1996;   07-1991;   04-1998;   27-2000;   05-1999;   08-2004;   18-2004;   13-1993;   30-2000;   25-1992;   26-1999;      1998;
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+Statistiques établies sur la période 1991-2006;
+Données non disponibles;
+
+
+
+Nombre moyen de jours avec rafales;
+Statistiques établies sur la période 1991-2006;
+>= 16 m/s   ;         -;       3.8;       2.6;       2.9;       1.2;       0.6;       0.5;       0.4;       1.2;       3.5;       2.2;         -;         -;
+>= 28 m/s   ;         -;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         -;         -;
+(16 m/s = 58 km/h,  28 m/s = 100 km/h);
+
+
+Nombre moyen de jours avec brouillard / orage / grêle / neige;
+Données non disponibles;
+
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1991-2020 sauf pour les paramètres suivants :  rayonnement global (1991-2006), vent (1991-2006);
+

@@ -1,0 +1,112 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1991-2020  et  records;
+LE GOL LES HAUTS - CIRAD (974)      Indicatif : 97414431, alt : 365m, lat : 21°14'44"S, lon : 55°25'40"E;
+Edité le : 06/12/2023 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-01-1997 au 03-12-2023);
+            ;      33.6;      34.6;      34.4;        32;      31.3;      29.4;      29.2;      27.7;      29.9;      31.7;      32.1;      33.2;      34.6;
+Date        ;   17-2023;   11-2016;   05-2004;   22-2023;   17-2023;   06-2015;   02-2011;   25-2023;   27-2023;   30-2023;   30-1997;   24-2021;      2016;
+
+
+Température maximale (Moyenne en °C);
+Statistiques établies sur la période 1997-2020;
+            ;      29.5;      29.6;      29.3;      28.1;      26.3;      24.5;      23.6;        24;      24.6;      25.8;      27.3;      28.7;      26.8;
+
+
+Température moyenne (Moyenne en °C);
+Statistiques établies sur la période 1997-2020;
+            ;      25.1;      25.2;      24.8;      23.6;      21.8;        20;        19;      19.2;      19.8;        21;      22.5;      24.1;      22.2;
+
+
+Température minimale (Moyenne en °C);
+Statistiques établies sur la période 1997-2020;
+            ;      20.7;      20.9;      20.3;      19.1;      17.3;      15.4;      14.5;      14.4;        15;      16.3;      17.8;      19.5;      17.6;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-01-1997 au 03-12-2023);
+            ;        17;      17.6;      16.4;      14.9;      12.8;      11.3;      10.7;      10.4;      11.3;      11.8;      13.6;      16.1;      10.4;
+Date        ;   27-2022;   16-2023;   15-2015;   28-2012;   30-2004;   08-2020;   03-1998;   10-2020;   10-2000;   11-2006;   01-2007;   02-1999;      2020;
+
+
+Nombre moyen de jours avec;
+Statistiques établies sur la période 1997-2020;
+Tx >=  30°C ;      12.6;      12.0;      10.3;       3.3;       0.1;         .;         .;         .;         .;       0.0;       0.9;       6.7;      46.0;
+Tx >=  25°C ;      30.8;      28.1;      30.6;      28.7;      25.7;      13.8;       6.6;       9.5;      14.2;      22.2;      28.1;      30.6;     268.8;
+Tn >=  20°C ;      23.6;      22.6;      19.3;       7.6;       0.8;         .;         .;         .;         .;       0.1;       2.0;      11.0;      86.8;
+Tn <=  10°C ;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;
+Tn <=   0°C ;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-02-1997 au 03-12-2023);
+            ;     513.5;     263.5;       185;     142.5;       117;      94.5;     125.5;        88;      71.5;      77.5;     160.5;     176.5;     513.5;
+Date        ;   22-2002;   27-2007;   05-2006;   24-2018;   15-2015;   06-2015;   13-2023;   12-2010;   15-2003;   22-2018;   07-2009;   03-2013;      2002;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+Statistiques établies sur la période 1997-2020;
+            ;     254.4;     192.9;     139.2;     117.4;      64.5;      49.6;      58.7;      26.9;      38.6;      35.2;      63.1;     121.1;    1161.6;
+
+
+Nombre moyen de jours avec;
+Statistiques établies sur la période 1997-2020;
+Rr >=  1 mm ;      11.5;      10.6;       8.4;       6.8;       6.0;       4.7;       4.7;       2.6;       3.3;       3.6;       4.7;       8.2;      75.1;
+Rr >=  5 mm ;       7.3;       7.1;       5.6;       4.5;       3.1;       2.4;       2.8;       1.4;       1.8;       1.8;       2.2;       4.6;      44.5;
+Rr >= 10 mm ;       4.8;       5.1;       3.6;       3.0;       1.9;       1.4;       1.9;       0.8;       1.2;       1.1;       1.6;       3.2;      29.8;
+Rr >= 50 mm ;       1.3;       0.8;       0.8;       0.6;       0.2;       0.1;       0.2;       0.0;       0.1;       0.1;       0.3;       0.5;       4.9;
+Rr >= 100 mm;       0.6;       0.2;       0.0;       0.1;       0.0;         .;       0.1;         .;         .;         .;       0.1;       0.1;       1.3;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+Statistiques établies sur la période 1997-2020;
+            ;         0;         0;         0;         0;       0.2;       1.1;       4.3;       3.4;       1.3;       0.5;         0;         0;      10.8;
+
+
+Rayonnement global (Moyenne en J/cm²);
+Statistiques établies sur la période 1997-2020;
+            ;     56172;     47964;     49515;     41899;     39499;     35898;     38477;     44532;     48231;     52179;     54193;     56982;  565541.0;
+
+
+Durée d'insolation (Moyenne en heures);
+Données non disponibles;
+
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+Données non disponibles;
+
+
+
+Rafale maximale de vent (m/s);
+Données non disponibles;
+
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+Données non disponibles;
+
+
+
+Nombre moyen de jours avec rafales;
+Données non disponibles;
+
+
+
+Nombre moyen de jours avec brouillard / orage / grêle / neige;
+Données non disponibles;
+
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1991-2020 sauf pour les paramètres suivants :  précipitations (1997-2020), température (1997-2020), rayonnement global (1997-2020);
+

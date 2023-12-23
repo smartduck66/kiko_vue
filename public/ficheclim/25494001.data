@@ -1,0 +1,114 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1991-2020  et  records;
+LA BOISSAUDE ROCHEJEAN (25)      Indicatif : 25494001, alt : 1222m, lat : 46°43'44"N, lon : 6°19'22"E;
+Edité le : 06/12/2023 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-06-2006 au 03-12-2023);
+            ;      14.8;      16.2;      18.5;      21.2;      26.8;      32.1;      31.7;      31.9;      26.7;      25.2;      20.2;      14.9;      32.1;
+Date        ;   01-2022;   25-2021;   30-2021;   25-2007;   25-2009;   27-2019;   05-2015;   24-2023;   05-2023;   07-2009;   08-2015;   24-2012;      2019;
+
+
+Température maximale (Moyenne en °C);
+Statistiques établies sur la période 2006-2020;
+            ;       2.1;       2.7;       5.9;        11;      13.7;      17.9;      20.3;      19.5;        16;      12.1;       6.8;       3.3;      10.9;
+
+
+Température moyenne (Moyenne en °C);
+Statistiques établies sur la période 2006-2020;
+            ;      -1.2;        -1;       1.9;       6.2;       9.1;        13;      15.1;      14.5;      11.4;         8;       3.3;      -0.1;       6.7;
+
+
+Température minimale (Moyenne en °C);
+Statistiques établies sur la période 2006-2020;
+            ;      -4.5;      -4.7;        -2;       1.4;       4.5;         8;       9.9;       9.4;       6.8;       3.8;      -0.2;      -3.5;       2.4;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-06-2006 au 03-12-2023);
+            ;     -17.6;     -20.1;     -15.5;     -11.1;      -5.6;      -0.1;       1.7;       1.4;      -2.4;      -7.5;     -14.6;     -22.3;     -22.3;
+Date        ;   17-2013;   07-2012;   24-2008;   08-2021;   06-2019;   14-2008;   15-2011;   11-2016;   27-2010;   30-2012;   27-2010;   20-2009;      2009;
+
+
+Nombre moyen de jours avec;
+Statistiques établies sur la période 2006-2020;
+Tx >=  30°C ;         .;         .;         .;         .;         .;       0.2;       0.5;       0.1;         .;         .;         .;         .;       0.8;
+Tx >=  25°C ;         .;         .;         .;         .;       0.1;       2.4;       5.3;       4.5;       0.2;       0.1;         .;         .;      12.6;
+Tx <=   0°C ;      10.4;       8.7;       4.3;       0.2;         .;         .;         .;         .;         .;       0.3;       4.0;       8.5;      36.4;
+Tn <=   0°C ;      26.9;      24.7;      22.1;      10.3;       2.9;       0.1;         .;         .;       0.5;       6.2;      15.7;      25.0;     134.5;
+Tn <=  -5°C ;      13.9;      11.8;       5.6;       0.9;       0.1;         .;         .;         .;         .;       0.4;       3.6;       9.9;      46.2;
+Tn <= -10°C ;       4.4;       3.9;       1.1;         .;         .;         .;         .;         .;         .;         .;       0.6;       2.4;      12.4;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-06-2006 au 03-12-2023);
+            ;      41.6;      41.3;      59.7;      38.3;      47.9;      50.4;        55;      72.1;      65.2;        51;        63;      53.6;      72.1;
+Date        ;   01-2007;   01-2013;   01-2007;   11-2013;   10-2021;   10-2008;   30-2008;   14-2010;   17-2006;   08-2012;   20-2015;   25-2013;      2010;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+Statistiques établies sur la période 2006-2020;
+            ;     108.2;      97.7;      98.9;      88.3;     133.3;     134.7;     143.7;     133.8;      99.5;     108.7;     115.5;     139.1;    1401.4;
+
+
+Nombre moyen de jours avec;
+Statistiques établies sur la période 2006-2020;
+Rr >=  1 mm ;      13.6;      12.5;      12.4;      10.5;      14.9;      12.8;      11.7;      11.4;       9.3;      11.7;      11.4;      14.1;     146.4;
+Rr >=  5 mm ;       7.1;       6.4;       6.6;       6.4;       8.6;       8.2;       8.1;       7.7;       5.7;       6.7;       6.9;       8.7;      87.0;
+Rr >= 10 mm ;       3.6;       3.5;       3.2;       2.9;       4.6;       5.1;       5.1;       5.0;       3.3;       4.1;       4.3;       4.9;      49.7;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+Statistiques établies sur la période 2006-2020;
+            ;     595.6;     537.5;     497.7;     354.2;     276.9;     157.3;     102.8;     120.7;     197.8;     311.5;     440.8;       560;    4152.8;
+
+
+Rayonnement global (Moyenne en J/cm²);
+Données non disponibles;
+
+
+
+Durée d'insolation (Moyenne en heures);
+Données non disponibles;
+
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+Données non disponibles;
+
+
+
+Rafale maximale de vent (m/s);
+(Records établis sur la période du 27-06-2006 au 03-12-2023);
+            ;      28.6;      31.2;      30.2;      27.6;      27.4;      26.4;      23.6;      28.7;      25.5;      31.7;      25.2;      31.8;      31.8;
+Date        ;   03-2018;   10-2009;   10-2008;   04-2007;   13-2019;   02-2011;   24-2023;   12-2021;   25-2018;   23-2007;   28-2016;   03-2018;      2018;
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+Statistiques établies sur la période 2006-2020;
+            ;       2.9;         3;         3;       2.6;       2.6;       2.4;       2.4;       2.3;       2.5;       2.6;       2.7;         3;       2.7;
+
+
+Nombre moyen de jours avec rafales;
+Statistiques établies sur la période 2006-2020;
+>= 16 m/s   ;       7.2;       7.8;       7.7;       3.6;       4.2;       2.5;       2.1;       1.4;       4.3;       4.6;       6.0;       7.9;      59.3;
+>= 28 m/s   ;       0.1;       0.2;       0.1;         .;         .;         .;         .;         .;         .;       0.1;         .;       0.2;       0.6;
+(16 m/s = 58 km/h,  28 m/s = 100 km/h);
+
+
+Nombre moyen de jours avec brouillard / orage / grêle / neige;
+Données non disponibles;
+
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1991-2020 sauf pour les paramètres suivants :  précipitations (2006-2020), température (2006-2020), vent (2006-2020);
+

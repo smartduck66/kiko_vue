@@ -1,0 +1,112 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1991-2020  et  records;
+FOURS (58)      Indicatif : 58118001, alt : 232m, lat : 46°49'00"N, lon : 3°43'12"E;
+Edité le : 06/12/2023 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-09-1995 au 01-09-2009);
+            ;      18.4;      19.6;      23.3;      28.2;      32.2;      37.5;      37.7;      40.8;      33.5;      28.6;      21.3;      17.3;      40.8;
+Date        ;   30-2002;   02-2002;   17-2004;   30-2005;   25-2009;   22-2003;   26-2006;   05-2003;   04-2005;   04-2004;   03-2005;   05-2006;      2003;
+
+
+Température maximale (Moyenne en °C);
+Statistiques établies sur la période 1995-2009;
+            ;         7;       8.7;      12.6;      16.1;      20.5;      24.2;      25.7;      25.8;      21.4;      17.2;      10.2;       6.8;      16.4;
+
+
+Température moyenne (Moyenne en °C);
+Statistiques établies sur la période 1995-2009;
+            ;       3.9;       4.7;       7.6;      10.5;      14.8;        18;      19.4;      19.5;      15.5;      12.5;       6.6;       3.9;      11.4;
+
+
+Température minimale (Moyenne en °C);
+Statistiques établies sur la période 1995-2009;
+            ;       0.7;       0.7;       2.6;       4.9;         9;      11.7;      13.1;      13.2;       9.6;       7.8;         3;         1;       6.4;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-09-1995 au 01-09-2009);
+            ;     -13.1;      -9.4;       -13;      -4.5;       0.5;       1.7;       5.1;       2.5;      -0.5;      -7.8;     -10.1;     -13.2;     -13.2;
+Date        ;   25-2007;   05-1998;   01-2005;   11-2003;   15-2003;   04-2001;   17-2000;   30-1998;   30-1995;   31-1997;   24-1998;   24-2001;      2001;
+
+
+Nombre moyen de jours avec;
+Statistiques établies sur la période 1995-2009;
+Tx >=  30°C ;         .;         .;         .;         .;       0.6;       4.1;       5.9;       5.8;       0.6;         .;         .;         .;      16.9;
+Tx >=  25°C ;         .;         .;         .;       0.9;       6.0;      13.5;      16.9;      15.9;       5.8;       0.7;         .;         .;      59.7;
+Tx <=   0°C ;       2.3;       0.9;         .;         .;         .;         .;         .;         .;         .;         .;       0.2;       1.6;       5.0;
+Tn <=   0°C ;      13.5;      12.2;       9.4;       3.4;         .;         .;         .;         .;       0.1;       1.9;       8.4;      13.2;      62.0;
+Tn <=  -5°C ;       3.4;       2.9;       0.8;         .;         .;         .;         .;         .;         .;       0.2;       1.6;       3.2;      12.1;
+Tn <= -10°C ;       0.8;         .;       0.1;         .;         .;         .;         .;         .;         .;         .;       0.1;       0.4;       1.3;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-10-1971 au 30-04-2021);
+            ;      29.6;      36.4;        34;      59.6;      52.5;      64.4;        43;        67;      50.2;      67.9;      46.7;        46;      67.9;
+Date        ;   25-1977;   08-1999;   01-2007;   26-1998;   31-2017;   03-1981;   06-2001;   30-1974;   25-1991;   12-2014;   14-2014;   23-1973;      2014;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+            ;      75.9;      63.3;      62.4;      74.6;      83.4;      70.1;      69.8;      64.8;      71.9;      83.4;      94.9;      89.6;     904.1;
+
+
+Nombre moyen de jours avec;
+Rr >=  1 mm ;      13.3;      10.7;      10.7;      11.0;      11.4;       9.2;       8.6;       8.3;       8.7;      11.5;      13.1;      13.9;     130.4;
+Rr >=  5 mm ;       5.5;       4.3;       4.7;       5.5;       5.7;       4.7;       4.4;       4.5;       4.6;       5.6;       6.1;       6.5;      62.1;
+Rr >= 10 mm ;       2.0;       1.7;       1.6;       2.2;       2.7;       2.4;       2.4;       2.1;       2.2;       2.6;       3.1;       2.7;      27.8;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+Statistiques établies sur la période 1995-2009;
+            ;     438.6;     375.6;     321.3;     224.7;       109;      43.7;      19.3;      18.8;      88.9;       172;       342;     436.6;    2590.5;
+
+
+Rayonnement global (Moyenne en J/cm²);
+Données non disponibles;
+
+
+
+Durée d'insolation (Moyenne en heures);
+Données non disponibles;
+
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+Données non disponibles;
+
+
+
+Rafale maximale de vent (m/s);
+(Records établis sur la période du 01-09-1995 au 01-09-2009);
+            ;        26;      27.4;      23.4;        25;        19;        22;      22.5;        23;        19;        22;        20;        31;        31;
+Date        ;   02-2003;   10-2009;   15-2008;   04-2001;   26-2000;   05-2002;   27-2006;   02-2001;   19-2000;   03-2006;   26-2000;   26-1999;      1999;
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+Statistiques établies sur la période 1995-2009;
+            ;       2.5;       2.4;       2.4;       2.4;         2;       1.8;       1.8;       1.6;       1.6;       1.9;         2;       2.3;       2.1;
+
+
+Nombre moyen de jours avec rafales;
+Statistiques établies sur la période 1995-2009;
+>= 16 m/s   ;       1.6;       2.1;       1.6;       1.5;       0.6;       0.8;       1.6;       0.8;       0.4;       1.3;       1.6;       1.3;      15.2;
+>= 28 m/s   ;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;         .;       0.1;       0.1;
+(16 m/s = 58 km/h,  28 m/s = 100 km/h);
+
+
+Nombre moyen de jours avec brouillard / orage / grêle / neige;
+Données non disponibles;
+
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1991-2020 sauf pour les paramètres suivants :  température (1995-2009), vent (1995-2009);
+
