@@ -3,6 +3,8 @@ import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 import Card from "primevue/card";
 import { ref } from "vue";
+import { useStore } from "../assets/mixins/store.js";
+const store = useStore();
 
 const props = defineProps(["occurences", "results_rows"]);
 const nbOccurences = props.occurences.toString() + " résultats";
@@ -12,23 +14,27 @@ const open = ref(false); //gestion de la fenêtre modale de la fiche climatique 
 const fiche_climatique = ref("");
 
 const onRowSelect = (event: any) => {
-  fetch("/ficheclim/" + event.data.site.substr(0, 8) + ".data")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Erreur de chargement du fichier: ${response.statusText}`);
-      }
-      return response.text();
-    })
-    .then((content) => {
-      // Afficher le contenu du fichier brut en modale (ATTENTION : que sur grand écran)
-      fiche_climatique.value = content;
-      open.value = true; // Affichage de la modale
-    })
-    .catch((error) => {
-      console.error("Erreur:", error.message);
-    });
+  if (store.xxxl) {
+    fetch("/ficheclim/" + event.data.site.substr(0, 8) + ".data")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Erreur de chargement du fichier: ${response.statusText}`);
+        }
+        return response.text();
+      })
+      .then((content) => {
+        // Afficher le contenu du fichier brut en modale (ATTENTION : que sur grand écran)
+        fiche_climatique.value = content;
+        open.value = true; // Affichage de la modale
+      })
+      .catch((error) => {
+        console.error("Erreur:", error.message);
+      });
 
-  selectedStation.value = null;
+    selectedStation.value = null;
+  } else {
+    alert("La visualisation d'une fiche climatique ne peut se faire que sur un écran full HD");
+  }
 };
 </script>
 
