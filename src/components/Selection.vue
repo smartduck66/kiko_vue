@@ -9,6 +9,7 @@ import * as Yup from "yup";
 import { fiche_climatique, results } from "../assets/mixins/types";
 import { site_dangereux_le_plus_proche, convert_DMS_DD } from "../assets/mixins/distances";
 import { useStore } from "../assets/mixins/store.js";
+import { isConstructorDeclaration } from "typescript";
 const store = useStore();
 
 const open = ref(false); //gestion de la fenêtre modale des risques
@@ -49,8 +50,10 @@ const schema_selection = Yup.object().shape({
   max_vent: Yup.number().max(999).integer(),
 });
 
+const dptRegex = /^\d+(;\d+)*$/;
 const schema_fast_Dpt = Yup.object().shape({
-  dpt: Yup.number().max(1000).positive().integer(),
+  //dpt: Yup.number().max(1000).positive().integer(),
+  dpt: Yup.string().matches(dptRegex),
 });
 
 const schema_fast_Commune = Yup.object().shape({
@@ -125,12 +128,32 @@ function onSearch(criteres: any) {
 }
 
 function onFastSearchDpt(criteres: any) {
-  // Appui sur le 1er bouton 'GO' : affichage des fiches climatiques correspondantes au département saisi
-  let p1 = Object(criteres).dpt; // Dé-référencement de l'objet pour récupérer les valeurs
+  // Appui sur le 1er bouton 'GO' : affichage des fiches climatiques correspondantes au(x) département(s) saisi(s)
+  // Il est en effet possible de saisir plusieurs départements séparés par un ;. Ex : 78;79;95
 
-  // Sélection des fiches climatiques
-  let results = store.fc;
-  results = results.filter((x: { departement: string }) => x.departement == p1);
+  let results: fiche_climatique[] = [];
+
+  if (Object(criteres).dpt.toString().includes(";")) {
+    // Dé-référencement de l'objet pour récupérer les différentes valeurs des départements saisis
+    let p1 = Object(criteres).dpt.split(";");
+
+    // Sélection des fiches climatiques, en recherchant les blocs de fiches climatiques de chaque département
+    [...p1.values()].map((value) => {
+      let array = store.fc.filter((x: { departement: string }) => x.departement == value);
+
+      // Transformation de l'array (= tableau de fiches climatiques) en une suite d'objets distincts
+      array.forEach((obj: fiche_climatique) => {
+        results.push(obj);
+      });
+    });
+  } else {
+    // Dé-référencement de l'objet pour récupérer le département saisi
+    let p1 = Object(criteres).dpt;
+
+    // Sélection des fiches climatiques du département unique saisi
+    results = store.fc.filter((x: { departement: string }) => x.departement == p1);
+  }
+
   affichage_fiches(results);
 }
 
@@ -264,10 +287,10 @@ function ResetFiltres(): void {
       <Form @submit="onFastSearchDpt" :validation-schema="schema_fast_Dpt" @invalid-submit="onInvalidSearch('.go-btn1')">
         <div class="my_fast_grid">
           <div class="c-fast-item-1">
-            <span>Fiches département :</span>
+            <span>Fiches département(s) :</span>
           </div>
           <div class="c-fast-item-2">
-            <Field name="dpt" class="saisie-valeur" type="text" v-model="vd_dpt" maxlength="3" aria-label="Code département" />
+            <Field name="dpt" :style="{ width: '90px' }" class="saisie-valeur" type="text" v-model="vd_dpt" maxlength="20" aria-label="Code département" />
           </div>
           <div class="c-fast-item-3">
             <button class="go-btn1" type="submit">GO</button>
@@ -379,7 +402,6 @@ code {
 .c-fast-item-1 {
   grid-column: 1;
   justify-content: left;
-  
 }
 .c-fast-item-2 {
   grid-column: 2;
@@ -439,7 +461,6 @@ code {
   margin-right: 15px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  
 }
 .search-btn:hover {
   transform: scale(1.1);

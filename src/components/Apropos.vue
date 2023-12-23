@@ -17,7 +17,7 @@ const store = useStore();
     <ul>
       <li>Le premier bloc expose la station météo de référence</li>
       <li>Le second permet de borner 4 critères principaux</li>
-      <li>Le troisième autorise des recherches immédiates</li>
+      <li>Le troisième autorise des recherches immédiates (saisie de plusieurs départements : les séparer par un ;)</li>
     </ul>
     <br />
     La recherche renvoie une liste de stations météo 'complètes' avec les données suivantes, sur une période comprise entre 1994 et 2020 : <br /><br />
