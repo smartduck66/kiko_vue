@@ -120,7 +120,7 @@ const onRowSelect = (event: any) => {
   left: 25%;
   margin-left: -150px;
   width: 1355px;
-  height: 865px;
+  height: 800px;
   flex-grow: 0;
   border-radius: 10px;
   background-color: #d0a3b3;
@@ -135,7 +135,7 @@ img.Close {
 }
 .FlexWrapper_modal {
   width: 1300px;
-  height: 800px;
+  height: 730px;
   flex-grow: 0;
   display: flex;
   gap: 20px;
