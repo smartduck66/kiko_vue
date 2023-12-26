@@ -32,6 +32,10 @@ const store = useStore();
       <li>distance de la centrale nucléaire la plus proche (kilomètres, à vol d'oiseau)</li>
       <li>prix moyen au m2 des maisons (calcul approximatif - vérifier plus finement sur seloger.com par exemple)</li>
     </ul>
+    <br />
+    Si la case 'Horizon 2050' est cochée, les prévisions climatiques issues de la DRIAS s'affichent (RPC 4.5* - Horizon H1 2021-2050)<br />
+    <i>* Scénario avec stabilisation des émissions avant la fin du XXIe siècle à un niveau faible</i>
+
     <br /><br />
     <h4>Source des données utilisées :</h4>
     <br />
