@@ -36,7 +36,7 @@ function menu() {
         <div class="FlexWrapper_choix">
           <Dropdown class="menu" v-model="selectedOption" :options="optionsMenu" optionLabel="name" placeholder="v2.01m" @update:modelValue="menu" />
           <Checkbox class="menu2" v-model="store.drias_checked" inputId="drias" :binary="true" />
-          <label for="drias" class="label"> Données Drias RPC 4.5 (horizon 2021-2050) </label>
+          <label for="drias" class="label"> Horizon 2050 </label>
         </div>
       </div>
     </div>
