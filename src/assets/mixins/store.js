@@ -12,7 +12,8 @@ import drias from "../../data/drias_H1.json";
 import seveso from "../../data/seveso.json";
 import cnpe from "../../data/centrales.json";
 
-const drias_checked = ref(false);
+const drias_checked = ref(false); // case à cocher permettant l'affichages des données climatiques issues de la DRIAS
+const nb_occurences = ref(0);     // Nombre de fiches climatiques retournées lors d'une recherche
 
 export const useStore = defineStore("storeId", {
   // arrow function recommended for full type inference
@@ -51,7 +52,7 @@ export const useStore = defineStore("storeId", {
       xxl: breakpoints.between("xl", "2xl"),
       xxxl: breakpoints["2xl"],
 
-      fc, drias, seveso, cnpe, drias_checked
+      fc, drias, seveso, cnpe, drias_checked, nb_occurences
     };
   },
 });

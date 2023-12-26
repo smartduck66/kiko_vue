@@ -22,6 +22,10 @@ function menu() {
       break;
   }
 }
+
+function RAZ_occurences() {
+  store.nb_occurences = 0;  // On réinitialise le nombre d'occurences de recherche pour forcer l'usager à relancer une recherche sinon les colonnes du tableau ne sont pas les bonnes
+}
 </script>
 
 <template>
@@ -35,7 +39,7 @@ function menu() {
         </div>
         <div class="FlexWrapper_choix">
           <Dropdown class="menu" v-model="selectedOption" :options="optionsMenu" optionLabel="name" placeholder="v2.01m" @update:modelValue="menu" />
-          <Checkbox class="menu2" v-model="store.drias_checked" inputId="drias" :binary="true" />
+          <Checkbox class="menu2" v-model="store.drias_checked" inputId="drias" :binary="true" @update:modelValue="RAZ_occurences" />
           <label for="drias" class="label"> Horizon 2050 </label>
         </div>
       </div>
@@ -172,6 +176,5 @@ a {
   text-align: center;
   margin-top: 35px;
   padding-top: 0.5em;
-
 }
 </style>

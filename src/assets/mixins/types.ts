@@ -16,21 +16,6 @@ export interface fiche_climatique {
   prix_maisons: string;
 }
 
-export interface results_old {
-  site: string;
-  lat: number;
-  long: number;
-  tmoy: number;
-  tmin: number;
-  tmax: number;
-  canicule: number;
-  soleil: string;
-  pluie: string;
-  vent: string;
-  cnpe: number;
-  prix: string;
-}
-
 export interface results {
   col1: string;
   col2: string;

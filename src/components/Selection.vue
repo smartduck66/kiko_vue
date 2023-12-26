@@ -14,7 +14,6 @@ const store = useStore();
 const open = ref(false); //gestion de la fenêtre modale des risques
 
 // Définition des colonnes des résultats en valeurs réactives
-const nb_occurences = ref(0);
 let results_table: Ref<results[]> = ref([]);
 const danger_ville = ref("");
 const danger_cnpe = ref("");
@@ -65,25 +64,6 @@ function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void 
   // Reset de l'array des résultats
   results_table.value.splice(0);
 
-  /*
-  results_table.value = results.map((r) => {
-    const row: results = Object.create(results);
-    row.site = r.indicatif + " " + r.ville + " (" + r.altitude.toString() + " m)";
-    row.lat = convert_DMS_DD(r.latitude); // Non affiché dans les résultats mais utilisé pour la carte Google Maps
-    row.long = convert_DMS_DD(r.longitude); // Non affiché dans les résultats mais utilisé pour la carte Google Maps
-    row.tmoy = r.temp_moy;
-    row.tmin = r.temp_min;
-    row.tmax = r.temp_max;
-    row.canicule = r.canicule;
-    isNaN(Number(r.ensoleillement)) ? (row.soleil = "-") : (row.soleil = store.milliers_0.format(Number(r.ensoleillement)));
-    isNaN(Number(r.pluie)) ? (row.pluie = "-") : (row.pluie = store.milliers_0.format(Number(r.pluie)));
-    isNaN(Number(r.vent)) ? (row.vent = "-") : (row.vent = store.milliers_0.format(Number(r.vent)));
-    row.cnpe = r.distance_cnpe;
-    isNaN(Number(r.prix_maisons)) ? (row.prix = "-") : (row.prix = store.euros_0.format(Number(r.prix_maisons)));
-    return row;
-  });
-  */
-
   if (store.drias_checked) {
     results_table.value = results.map((r) => {
       const row: results = Object.create(results);
@@ -119,7 +99,7 @@ function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void 
     });
   }
 
-  nb_occurences.value = results.length; //.toString()+" résultats"; -> Déclenche l'affichage du tableau de résultats dès que la valeur change
+  store.nb_occurences = results.length; //.toString()+" résultats"; -> Déclenche l'affichage du tableau de résultats dès que la valeur change
 }
 
 function onSearch(criteres: any) {
@@ -372,8 +352,8 @@ function ResetFiltres(): void {
       </div>
     </div>
   </Teleport>
-  <Results :key="nb_occurences" v-bind="{ occurences: nb_occurences, results_rows: results_table }" />
-  <!-- <Map :key="nb_occurences" v-bind="{ markers: results_table }" /> -->
+  <Results :key="store.nb_occurences" v-bind="{ occurences: store.nb_occurences, results_rows: results_table }" />
+  <!-- <Map :key="store.nb_occurences" v-bind="{ markers: results_table }" /> -->
 </template>
 
 <style scoped>
