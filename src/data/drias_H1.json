@@ -1,0 +1,3370 @@
+[
+  {
+    "indicatif": "01033002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "02320001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "02705001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "03060001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "03155003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "03180001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "03185007",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "03248001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "03285001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "04019001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "04049001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "04068001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "04070009",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "04209005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "05046001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "05061009",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "05070003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "05126001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "05170001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "05183001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "06075007",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "06088001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "06088007",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "06090002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "06118002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "06152002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "07096001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "08105005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "09099001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "09199002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "09289001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "10030001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "10228002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "10372001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "11069001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "11203004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "11260002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "11262005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "12077002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "12145001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "12154003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "12254001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "12300004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "13001009",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "13004003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "13047001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "13054001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "13103001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "14066001",
+    "temp_moy": 11.98,
+    "temp_min": 9.06,
+    "temp_max": 14.91,
+    "canicule": 5,
+    "pluie": 730.25
+  },
+  {
+    "indicatif": "14137001",
+    "temp_moy": 12.03,
+    "temp_min": 8.74,
+    "temp_max": 15.31,
+    "canicule": 11,
+    "pluie": 690.98
+  },
+  {
+    "indicatif": "14216001",
+    "temp_moy": 11.75,
+    "temp_min": 8.47,
+    "temp_max": 15.04,
+    "canicule": 14,
+    "pluie": 706.26
+  },
+  {
+    "indicatif": "14762004",
+    "temp_moy": 11.35,
+    "temp_min": 8.31,
+    "temp_max": 14.4,
+    "canicule": 13,
+    "pluie": 861.29
+  },
+  {
+    "indicatif": "15014004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "15053001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "15114002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "15120005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "15122002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "16078001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "16089001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "16113001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "16225001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "16279001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "16390001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "17268002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "17300009",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "17306004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "17323001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "17339002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "17415003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "18033001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "18092001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "18172003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "19010001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "19031008",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "19147001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "19276006",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20004002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20040004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20050001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20092001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20093002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20096008",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20114002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20148001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20154001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20185003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20232002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20254006",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20258001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20268001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20272004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "20342001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "21131001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "21154001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "21473001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "22092001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "22113006",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "22247002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "22261002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "22372001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "23030004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "23079002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "23089001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "23176001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "24035003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "24037005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "24550003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "25056001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "25223002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "25462001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "25494001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "25529002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "26002003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "26050001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "26064001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "26113003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "26116002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "26124001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "26179001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "26198001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "26292002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "26321003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "26327001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "27347001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "28070001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "28198001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "28206001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "28215001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "28305001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "28406001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "29075001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "29120001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "29155005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "29163003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "29216001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "29263002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "29264001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "29293001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "30003001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "30132004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "30164001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "30189001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "30209002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "30258001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "30339001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "31069001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "31147001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "31157001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "31406002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "31478001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "32013005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "32155001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "33080001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "33281001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "33314005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "33394002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "33504001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "33550001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "34154001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "34209002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "34237001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "34239002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "34311001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "35005001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "35110003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "35162003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "35228001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "35281001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "36063001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "36089003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "37179001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "38053003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "38384001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "38538002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "39097003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "39413001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "39485002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "39526003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "40046001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "40088001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "40192001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "40243001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "40272002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "41097001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "41281001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "42005001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "42207005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "42253001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "43046001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "43062001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "43096001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "43111002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "43130002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "43137003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "43234005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "44020001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "44103001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "44110002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "45004001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "45055001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "45340002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "46071001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "46100001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "46127001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "46181001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "47091001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "48004001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "48020003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "49020001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "49099003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "49138001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "49188001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "49191001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "50209001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "50215002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "50509002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "51015001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "51153001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "51242001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "52448001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "53116003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "53130008",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "54171001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "54405001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "54481001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "54526001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "55364001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "55386002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "55531001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "56004001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "56009001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "56017003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "56165003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "56185001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "56240003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "56243001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "57039001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "57251001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "57587003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "57644001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "57732001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "58118001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "58160001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "58218006",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "59343001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "60639001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "61001001",
+    "temp_moy": 11.73,
+    "temp_min": 8.14,
+    "temp_max": 15.31,
+    "canicule": 17,
+    "pluie": 787.5
+  },
+  {
+    "indicatif": "61006005",
+    "temp_moy": 11.31,
+    "temp_min": 7.75,
+    "temp_max": 14.87,
+    "canicule": 15,
+    "pluie": 716.48
+  },
+  {
+    "indicatif": "61214002",
+    "temp_moy": 10.87,
+    "temp_min": 7.46,
+    "temp_max": 14.29,
+    "canicule": 18,
+    "pluie": 777.32
+  },
+  {
+    "indicatif": "61328001",
+    "temp_moy": 11.15,
+    "temp_min": 7.58,
+    "temp_max": 14.71,
+    "canicule": 15,
+    "pluie": 724.97
+  },
+  {
+    "indicatif": "63003004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "63098001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "63113001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "63125002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "63178001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "63353003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "63399002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "63451001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "64010002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "64024001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "64155001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "64189001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "64422007",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "64430003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "64549001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "65075001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "65125001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "65344001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "66082004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "66136001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "66137003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "66187006",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "66233001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "67124001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "67462004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "68028001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "68062001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "68066001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "68205001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "68224006",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "68226005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "68287003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "68297001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "69029001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "69299001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "70132001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "70261001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "70473001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "70561002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "71014004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "71081001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "71105001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "71320001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "71491001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "71558001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "72172003",
+    "temp_moy": 12.45,
+    "temp_min": 8.7,
+    "temp_max": 16.2,
+    "canicule": 20,
+    "pluie": 710.72
+  },
+  {
+    "indicatif": "72175002",
+    "temp_moy": 12.67,
+    "temp_min": 8.9,
+    "temp_max": 16.44,
+    "canicule": 20,
+    "pluie": 686.44
+  },
+  {
+    "indicatif": "72181001",
+    "temp_moy": 12.58,
+    "temp_min": 8.83,
+    "temp_max": 16.33,
+    "canicule": 19,
+    "pluie": 708.1
+  },
+  {
+    "indicatif": "72255001",
+    "temp_moy": 11.87,
+    "temp_min": 8.31,
+    "temp_max": 15.43,
+    "canicule": 19,
+    "pluie": 756.28
+  },
+  {
+    "indicatif": "73054001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "73171002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "73191005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "73329001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "74105002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "74285002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "75114001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "76116001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "76481001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "77054001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "77084001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "77113002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "77211001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "77306001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "77468001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "78354001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "78620001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "78621001",
+    "temp_moy": 11.55,
+    "temp_min": 7.99,
+    "temp_max": 15.1,
+    "canicule": 18,
+    "pluie": 658.74
+  },
+  {
+    "indicatif": "79174002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "79191005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "79326004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "80001001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "80379002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "80682001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "81081002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "81115002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "81140002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "81192005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "81217002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "81284001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "81292001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "82038006",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "82121002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "83031001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "83035001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "83069001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "83069003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "83137001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "83150002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "84007005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "84025001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "84026003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "84031001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "84085004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "84087001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "84094001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "85060002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "85152001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "85163001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "85169002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "85191003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "85216001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "86027001",
+    "temp_moy": 12.8,
+    "temp_min": 8.76,
+    "temp_max": 16.83,
+    "canicule": 21,
+    "pluie": 763
+  },
+  {
+    "indicatif": "86078002",
+    "temp_moy": 12.82,
+    "temp_min": 8.99,
+    "temp_max": 16.66,
+    "canicule": 21,
+    "pluie": 827.8
+  },
+  {
+    "indicatif": "86097001",
+    "temp_moy": 12.67,
+    "temp_min": 8.67,
+    "temp_max": 16.68,
+    "canicule": 22,
+    "pluie": 778.7
+  },
+  {
+    "indicatif": "86137003",
+    "temp_moy": 12.85,
+    "temp_min": 8.89,
+    "temp_max": 16.82,
+    "canicule": 21,
+    "pluie": 642.78
+  },
+  {
+    "indicatif": "86165005",
+    "temp_moy": 12.87,
+    "temp_min": 8.92,
+    "temp_max": 16.82,
+    "canicule": 24,
+    "pluie": 760.05
+  },
+  {
+    "indicatif": "87064005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "87085006",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "87089003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "87154003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "87187003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "88033002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "88136001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "88271001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "89333001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "89365001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "89418007",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "90035001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "90052002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "91027002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "95078001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "95088001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "95527001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97101015",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97209004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97213004",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97232003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97304003",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97304005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97307001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97308001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97401540",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97404540",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97405420",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97405480",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97406220",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97407520",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97410238",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97412384",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97413520",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97413550",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97413580",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97414431",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97415516",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97415536",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97415550",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97415566",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97415590",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97416410",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97416415",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97416463",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97416465",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97418110",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97418123",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97419380",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97422440",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97422465",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97424410",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "97502001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98404001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98508001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98613001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98715002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98719005",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98723001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98741001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98812001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98818001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98818002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98821001",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  },
+  {
+    "indicatif": "98827002",
+    "temp_moy": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "canicule": 0,
+    "pluie": 0
+  }
+]

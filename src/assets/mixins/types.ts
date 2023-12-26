@@ -16,7 +16,7 @@ export interface fiche_climatique {
   prix_maisons: string;
 }
 
-export interface results {
+export interface results_old {
   site: string;
   lat: number;
   long: number;
@@ -30,3 +30,28 @@ export interface results {
   cnpe: number;
   prix: string;
 }
+
+export interface results {
+  col1: string;
+  col2: string;
+  col3: string;
+  col4: string;
+  col5: string;
+  col6: string;
+  col7: string;
+  col8: string;
+  col9: string;
+  col10: string;
+  col11: string;
+}
+
+export interface drias {
+  indicatif: string;
+  tmoy: number;
+  tmin: number;
+  tmax: number;
+  canicule: number;
+  pluie: number;
+
+}
+

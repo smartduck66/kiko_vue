@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Dropdown from "primevue/dropdown";
+import Checkbox from "primevue/checkbox";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 const router = useRouter();
@@ -30,10 +31,12 @@ function menu() {
       <span class="titre">Kikō</span>
       <div class="my_grid">
         <div class="c-item-1">
-          <span class="sous-titre">Données climatiques France & DOM-TOM</span>
+          <span class="sous-titre">Données climatiques France & DOM-TOM (1991-2020)</span>
         </div>
-        <div class="card flex justify-content-center">
-          <Dropdown class="menu" v-model="selectedOption" :options="optionsMenu" optionLabel="name" placeholder="v2.01l" @update:modelValue="menu" />
+        <div class="FlexWrapper_choix">
+          <Dropdown class="menu" v-model="selectedOption" :options="optionsMenu" optionLabel="name" placeholder="v2.01m" @update:modelValue="menu" />
+          <Checkbox class="menu2" v-model="store.drias_checked" inputId="drias" :binary="true" />
+          <label for="drias" class="label"> Données Drias RPC 4.5 (horizon 2021-2050) </label>
         </div>
       </div>
     </div>
@@ -72,6 +75,18 @@ a {
   margin-bottom: 20px;
 }
 
+.FlexWrapper_choix {
+  width: auto;
+  height: auto;
+  flex-grow: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 40px;
+}
+
 .titre {
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
@@ -95,6 +110,19 @@ a {
   color: grey;
 }
 
+.label {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: red;
+  margin-top: 45px;
+  margin-left: -30px;
+}
 .my_grid {
   display: grid;
   grid-template-columns: auto;
@@ -128,6 +156,22 @@ a {
   letter-spacing: normal;
   text-align: center;
   margin-top: 35px;
-  padding-top:0.5em;
+  padding-top: 0.5em;
+}
+
+.menu2 {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.8;
+  letter-spacing: normal;
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 0.5em;
+
 }
 </style>

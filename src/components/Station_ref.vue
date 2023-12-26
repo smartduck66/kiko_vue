@@ -1,18 +1,30 @@
 <script setup lang="ts">
 // @ts-nocheck
-// Car une erreur TS2698 'Spread types may only be created from object types' s'active sur cette ligne (build only)       
-// <div v-if="selectedStationRef" v-bind="newStationRef(selectedStationRef.indicatif)"></div> 
+// Car une erreur TS2698 'Spread types may only be created from object types' s'active sur cette ligne (build only)
+// <div v-if="selectedStationRef" v-bind="newStationRef(selectedStationRef.indicatif)"></div>
 import Panel from "primevue/panel";
 import Listbox from "primevue/listbox";
 import { ref, Ref } from "vue";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
-const props = defineProps(["valeur_ref"]);
+const props = defineProps(["valeur_ref", "valeur_ref_drias"]);
 
 const open = ref(false); //gestion de la fenêtre modale
 const refresh = ref(0); //refresh des valeurs de référence affichées après le choix d'une nouvelle station
 const selectedStationRef = ref();
 
+/*
+// Constitution des valeurs de référence DRIAS
+let val_ref_drias: Ref<drias[]> = ref([]);
+const station_drias = store.drias[store.drias.findIndex((x: { indicatif: string }) => x.indicatif == props.valeur_ref[0].substr(0, 8))];
+val_ref_drias[0] = station_drias.indicatif;
+val_ref_drias[1] = station_drias.temp_moy + "°";
+val_ref_drias[2] = station_drias.temp_min + "°";
+val_ref_drias[3] = station_drias.temp_max + "°";
+val_ref_drias[4] = station_drias.canicule + " j/an";
+val_ref_drias[5] = station_drias.pluie + " mm/mois";
+console.log(val_ref_drias[0]);
+*/
 // Constitution de la liste "département/ville de la station météo"
 // Cette liste va servir à la 'dropdown' de choix d'une nouvelle station de référence
 class station_meteo {
@@ -53,17 +65,30 @@ function newStationRef(new_indicatif_station_ref: string) {
   props.valeur_ref[8] = isNaN(Number(station.distance_cnpe)) ? "-" : store.milliers_0.format(station.distance_cnpe) + " kms";
   props.valeur_ref[9] = isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format(station.prix_maisons) + "/m2";
 
+  const station_drias = store.drias[store.drias.findIndex((x: { indicatif: string }) => x.indicatif == new_indicatif_station_ref)];
+  props.valeur_ref_drias[0] = station_drias.indicatif;
+  props.valeur_ref_drias[1] = station_drias.temp_moy + "°";
+  props.valeur_ref_drias[2] = station_drias.temp_min + "°";
+  props.valeur_ref_drias[3] = station_drias.temp_max + "°";
+  props.valeur_ref_drias[4] = station_drias.canicule + " j/an";
+  props.valeur_ref_drias[5] = station_drias.pluie + " mm/mois";
+
   open.value = false; // On ferme la modale
   refresh.value += 1; // refresh des valeurs de référence
   selectedStationRef.value = ""; // RAZ afin de pouvoir rechanger une nouvelle fois la station de référence
 }
-
 </script>
 
 <template>
-  <Panel v-bind="{ header: valeur_ref[0] }" >
+  <Panel v-bind="{ header: valeur_ref[0] }">
     <template #icons>
-      <button name="modifier la station de référence" class="fas fa-pen CTA" :style="{ 'font-family': 'fa-solid' }" @click="open = true" v-tooltip.right="'Modifier la station météo de référence'"></button>
+      <button
+        name="modifier la station de référence"
+        class="fas fa-pen CTA"
+        :style="{ 'font-family': 'fa-solid' }"
+        @click="open = true"
+        v-tooltip.right="'Modifier la station météo de référence'"
+      ></button>
     </template>
     <div class="my_grid" v-if="refresh">
       <div class="c-item-1">
@@ -87,58 +112,99 @@ function newStationRef(new_indicatif_station_ref: string) {
         </p>
         <p>
           <span class="icon-text">
-            <span class="icon"><i class="fas fa-temperature-arrow-up" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Canicule (T >= 30°C)'"></i></span>
+            <span class="icon"
+              ><i class="fas fa-temperature-arrow-up" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Canicule (T >= 30°C)'"></i
+            ></span>
             {{ valeur_ref[4] }}
           </span>
         </p>
-        <p>
-          <span class="icon-text">
-            <span class="icon"><i class="fas fa-sun" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="`Durée d'insolation`"></i></span>
-            {{ valeur_ref[5] }}
-          </span>
-        </p>
-      </div>
-      <div class="c-item-2">
         <p>
           <span class="icon-text">
             <span class="icon"><i class="fas fa-cloud-rain" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Précipitations'"></i></span>
             {{ valeur_ref[6] }}
           </span>
         </p>
-        <p>
-          <span class="icon-text">
-            <span class="icon"
-              ><i
-                class="fas fa-wind"
-                :style="{ 'font-family': 'fa-solid' }"
-                v-tooltip.right="'Nombre moyen de jours avec rafales de vent (vitesse > 58 km/h)'"
-              ></i
-            ></span>
-            {{ valeur_ref[7] }}
-          </span>
-        </p>
-        <p>
-          <span class="icon-text">
-            <span class="icon"
-              ><i class="fas fa-atom" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Distance centrale nucléaire la plus proche'"></i
-            ></span>
-            {{ valeur_ref[8] }}
-          </span>
-        </p>
-        <p>
-          <span class="icon-text">
-            <span class="icon"><i class="fas fa-home" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Prix moyen au m2 des maisons'"></i></span>
-            {{ valeur_ref[9] }}
-          </span>
-        </p>
-        <p>
-          <span>
-            <span>-------------------</span>
-          </span>
-        </p>
+      </div>
+      <div v-if="!store.drias_checked">
+        <div class="c-item-2">
+          <p>
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-sun" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="`Durée d'insolation`"></i></span>
+              {{ valeur_ref[5] }}
+            </span>
+          </p>
+          <p>
+            <span class="icon-text">
+              <span class="icon"
+                ><i
+                  class="fas fa-wind"
+                  :style="{ 'font-family': 'fa-solid' }"
+                  v-tooltip.right="'Nombre moyen de jours avec rafales de vent (vitesse > 58 km/h)'"
+                ></i
+              ></span>
+              {{ valeur_ref[7] }}
+            </span>
+          </p>
+          <p>
+            <span class="icon-text">
+              <span class="icon"
+                ><i class="fas fa-atom" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Distance centrale nucléaire la plus proche'"></i
+              ></span>
+              {{ valeur_ref[8] }}
+            </span>
+          </p>
+          <p>
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-home" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Prix moyen au m2 des maisons'"></i></span>
+              {{ valeur_ref[9] }}
+            </span>
+          </p>
+          <p>
+            <span>
+              <span>-------------------</span>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div v-else>
+        <div class="c-item-2" :style="{ 'color': 'red' }">
+          <p>
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-thermometer-half" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Température moyenne'"></i></span>
+              {{ valeur_ref_drias[1] }}
+            </span>
+          </p>
+          <p>
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-temperature-low" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Température minimale'"></i></span>
+              {{ valeur_ref_drias[2] }}
+            </span>
+          </p>
+          <p>
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-temperature-high" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Température maximale'"></i></span>
+              {{ valeur_ref_drias[3] }}
+            </span>
+          </p>
+          <p>
+            <span class="icon-text">
+              <span class="icon"
+                ><i class="fas fa-temperature-arrow-up" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Canicule (T >= 30°C)'"></i
+              ></span>
+              {{ valeur_ref_drias[4] }}
+            </span>
+          </p>
+          <p>
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-cloud-rain" :style="{ 'font-family': 'fa-solid' }" v-tooltip.right="'Précipitations'"></i></span>
+              {{valeur_ref_drias[5] }}
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   </Panel>
+
   <Teleport to="body">
     <div v-if="open" class="modal">
       <div @click="open = false">
@@ -149,7 +215,7 @@ function newStationRef(new_indicatif_station_ref: string) {
         Choisissez la station météo de votre choix pour la durée de la session :
         <Listbox v-model="selectedStationRef" :options="liste_stations" filter optionLabel="ville" listStyle="height:200px" />
       </div>
-      <div v-if="selectedStationRef" v-bind="newStationRef(selectedStationRef.indicatif)"></div> 
+      <div v-if="selectedStationRef" v-bind="newStationRef(selectedStationRef.indicatif)"></div>
     </div>
   </Teleport>
 </template>
@@ -243,6 +309,4 @@ img.Close {
   letter-spacing: normal;
   text-align: left;
 }
-
-
 </style>

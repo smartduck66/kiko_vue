@@ -1,4 +1,5 @@
 <script setup lang="ts">
+/* Décembre 2023 : mis de côté car peu d'utilité ergonomique
 import { GoogleMap, Marker, MarkerCluster} from "vue3-google-map";
 import { results } from "../assets/mixins/types";
 import { useStore } from "../assets/mixins/store.js";
@@ -36,7 +37,7 @@ const locations = props.markers.map((item: results) => {
 // https://api.sncf.com/v1/coverage/sncf/journeys?from=admin:fr:75056&to=admin:fr:35281&datetime=20230502&count=7&max_nb_transfers=1
 
 // Distance en voiture entre deux points géographiques (la création d'un objet ne fonctionne qu'en chargeant un script google -> Doublon avec vue3-google-map)
-/*
+
 var service = new google.maps.DistanceMatrixService();
 service.getDistanceMatrix(
   {
@@ -69,7 +70,7 @@ function callback(response:any, status:any) {
   }
 
 }
-*/
+
 
 </script>
 
@@ -80,5 +81,5 @@ function callback(response:any, status:any) {
     </MarkerCluster>
   </GoogleMap>
 </template>
-
+*/
 <style scoped></style>

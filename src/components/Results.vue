@@ -45,30 +45,59 @@ const onRowSelect = (event: any) => {
         {{ nbOccurences }}
       </template>
       <template #content>
-        <DataTable
-          v-model:selection="selectedStation"
-          :value="props.results_rows"
-          tableStyle="min-width: 65rem"
-          scrollable
-          paginator
-          :rows="20"
-          :rowsPerPageOptions="[10, 20, 50]"
-          selectionMode="single"
-          :metaKeySelection="false"
-          dataKey="id"
-          @rowSelect="onRowSelect"
-        >
-          <Column field="site" sortable header="Station météo"></Column>
-          <Column field="tmoy" sortable header="T° moy"></Column>
-          <Column field="tmin" sortable header="T° min"></Column>
-          <Column field="tmax" sortable header="T° max"></Column>
-          <Column field="canicule" sortable header="Cani."></Column>
-          <Column field="soleil" sortable header="Soleil"></Column>
-          <Column field="pluie" sortable header="Pluie"></Column>
-          <Column field="vent" sortable header="Vent"></Column>
-          <Column field="cnpe" sortable header="CNPE"></Column>
-          <Column field="prix" sortable header="Prix"></Column>
-        </DataTable>
+        <div v-if="!store.drias_checked">
+          <DataTable
+            v-model:selection="selectedStation"
+            :value="props.results_rows"
+            tableStyle="min-width: 65rem"
+            scrollable
+            paginator
+            :rows="20"
+            :rowsPerPageOptions="[10, 20, 50]"
+            selectionMode="single"
+            :metaKeySelection="false"
+            dataKey="id"
+            @rowSelect="onRowSelect"
+          >
+            <Column field="col1" sortable header="Station météo"></Column>
+            <Column field="col2" sortable header="T° moy"></Column>
+            <Column field="col3" sortable header="T° min"></Column>
+            <Column field="col4" sortable header="T° max"></Column>
+            <Column field="col5" sortable header="Cani."></Column>
+            <Column field="col6" sortable header="Pluie"></Column>
+            <Column field="col7" sortable header="Soleil"></Column>
+            <Column field="col8" sortable header="Vent"></Column>
+            <Column field="col9" sortable header="CNPE"></Column>
+            <Column field="col10" sortable header="Prix"></Column>
+          </DataTable>
+        </div>
+        <div v-else>
+          <DataTable
+            v-model:selection="selectedStation"
+            :value="props.results_rows"
+            tableStyle="min-width: 65rem"
+            scrollable
+            paginator
+            :rows="20"
+            :rowsPerPageOptions="[10, 20, 50]"
+            selectionMode="single"
+            :metaKeySelection="false"
+            dataKey="id"
+            @rowSelect="onRowSelect"
+          >
+            <Column field="col1" sortable header="Station météo"></Column>
+            <Column field="col2" sortable header="T° moy"></Column>
+            <Column field="col3" sortable header="T° moy" style="color: red"></Column>
+            <Column field="col4" sortable header="T° min"></Column>
+            <Column field="col5" sortable header="T° min" style="color: red"></Column>
+            <Column field="col6" sortable header="T° max"></Column>
+            <Column field="col7" sortable header="T° max" style="color: red"></Column>
+            <Column field="col8" sortable header="Cani."></Column>
+            <Column field="col9" sortable header="Cani." style="color: red"></Column>
+            <Column field="col10" sortable header="Pluie"></Column>
+            <Column field="col11" sortable header="Pluie" style="color: red"></Column>
+          </DataTable>
+        </div>
       </template>
     </Card>
   </div>

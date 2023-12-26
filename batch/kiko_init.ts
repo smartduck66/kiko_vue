@@ -10,7 +10,8 @@
 //      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
 //        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car les stations météo évoluent (dernièe MAJ : 23/12/2023)
 //      - node kiko_init.js immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
-//      - node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France
+//      - node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France et de drias_H1.json (prévisions 2021-2050/RPC 4.5)
+//        ATTENTION : le répertoire \public\drias contient les fichiers de prévision créés manuellement en partant du site https://www.drias-climat.fr/
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
 // **********************************************************************************************************************
 
@@ -58,52 +59,52 @@ async function CreationFichierValeursFoncieres(url: string) {
 
     // Utiliser la partie 'value', qui contient le morceau de données
     // On crée le fichier sur disque si tout est OK (591 Mo pour 2022, 4,7 millions de lignes) *************************************************
-          // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
-          // Code service CH
-          // Reference document
-          // 1 Articles CGI
-          // 2 Articles CGI
-          // 3 Articles CGI
-          // 4 Articles CGI
-          // 5 Articles CGI
-          // No disposition
-          // Date mutation
-          // Nature mutation
-          // Valeur fonciere
-          // No voie
-          // B
-          // T
-          // Q
-          // Type de voie
-          // Code voie
-          // Voie
-          // Code postal
-          // Commune
-          // Code departement
-          // Code commune
-          // Prefixe de section
-          // Section
-          // No plan
-          // No Volume
-          // 1er lot
-          // Surface Carrez du 1er lot
-          // 2eme lot
-          // Surface Carrez du 2eme lot
-          // 3eme lot
-          // Surface Carrez du 3eme lot
-          // 4eme lot
-          // Surface Carrez du 4eme lot
-          // 5eme lot
-          // Surface Carrez du 5eme lot
-          // Nombre de lots
-          // Code type local
-          // Type local
-          // Identifiant local
-          // Surface reelle bati
-          // Nombre pieces principales
-          // Nature culture
-          // Nature culture speciale
-          // Surface terrain
+    // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
+    // Code service CH
+    // Reference document
+    // 1 Articles CGI
+    // 2 Articles CGI
+    // 3 Articles CGI
+    // 4 Articles CGI
+    // 5 Articles CGI
+    // No disposition
+    // Date mutation
+    // Nature mutation
+    // Valeur fonciere
+    // No voie
+    // B
+    // T
+    // Q
+    // Type de voie
+    // Code voie
+    // Voie
+    // Code postal
+    // Commune
+    // Code departement
+    // Code commune
+    // Prefixe de section
+    // Section
+    // No plan
+    // No Volume
+    // 1er lot
+    // Surface Carrez du 1er lot
+    // 2eme lot
+    // Surface Carrez du 2eme lot
+    // 3eme lot
+    // Surface Carrez du 3eme lot
+    // 4eme lot
+    // Surface Carrez du 4eme lot
+    // 5eme lot
+    // Surface Carrez du 5eme lot
+    // Nombre de lots
+    // Code type local
+    // Type local
+    // Identifiant local
+    // Surface reelle bati
+    // Nombre pieces principales
+    // Nature culture
+    // Nature culture speciale
+    // Surface terrain
     fs.appendFileSync(filename, value); // Création incrémentale du fichier brut, mode texte, sur disque
 
     // Appeler récursivement la fonction pour lire le morceau suivant
@@ -258,7 +259,7 @@ switch (myArgs[0]) {
   }
 
   case "clim": {
-    console.log("Création du fichier fc.json regroupant les fiches climatiques");
+    console.log("Création du fichier fc.json regroupant les fiches climatiques, ainsi que les prévisions DRIAS H1");
 
     class data_MF {
       indicatif: string;
@@ -347,6 +348,57 @@ switch (myArgs[0]) {
     });
 
     fs.writeFileSync("../src/data/fc.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
+
+    // Même opération si le fichier indicatif.drias correspondant existe ******************************************************
+    // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches_drias, création du JSON sur disque
+
+    class data_drias_H1 {
+      indicatif: string;
+      temp_moy: number;
+      temp_min: number;
+      temp_max: number;
+      canicule: number;
+      pluie: number;
+
+      constructor() {
+        this.indicatif = "";
+        this.temp_moy = 0;
+        this.temp_min = 0;
+        this.temp_max = 0;
+        this.canicule = 0;
+        this.pluie = 0;
+      }
+    }
+
+    const fiches_drias: data_drias_H1[] = ref.map((refcli) => {
+      const drias_filename = "../public/drias/" + refcli.ref + ".H1";
+      const item = new data_drias_H1(); // note the "new" keyword here
+      try {
+        fs.accessSync(drias_filename, fs.constants.F_OK);
+        // Le fichier existe, donc on peut le lire
+        var fields = fs.readFileSync(drias_filename, "utf8").split(";");
+        //const item = new data_drias_H1(); // note the "new" keyword here
+        item.indicatif = refcli.ref;
+        item.temp_moy = Number(fields[0]);
+        item.temp_min = Number(fields[1]);
+        item.temp_max = Number(fields[2]);
+        item.canicule = Number(fields[3]);
+        item.pluie = Number(fields[4]);
+        return item;
+      } catch (error) {
+        // Si le fichier n'existe pas, on initialise l'objet à 0
+        item.indicatif = refcli.ref;
+        item.temp_moy = 0;
+        item.temp_min = 0;
+        item.temp_max = 0;
+        item.canicule = 0;
+        item.pluie = 0;
+        return item;
+      }
+    });
+
+    fs.writeFileSync("../src/data/drias_H1.json", JSON.stringify(fiches_drias, null, 2)); // Création du json final sur disque
+
     break;
   }
 

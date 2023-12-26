@@ -1,7 +1,7 @@
 <script setup lang="ts">
 //import { database } from "../assets/mixins/utils.js";
 import Results from "./Results.vue";
-import Map from "./Map.vue";
+//import Map from "./Map.vue";
 import { ref, Ref } from "vue";
 import Panel from "primevue/panel";
 import { Form, Field } from "vee-validate";
@@ -65,6 +65,7 @@ function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void 
   // Reset de l'array des résultats
   results_table.value.splice(0);
 
+  /*
   results_table.value = results.map((r) => {
     const row: results = Object.create(results);
     row.site = r.indicatif + " " + r.ville + " (" + r.altitude.toString() + " m)";
@@ -81,8 +82,44 @@ function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void 
     isNaN(Number(r.prix_maisons)) ? (row.prix = "-") : (row.prix = store.euros_0.format(Number(r.prix_maisons)));
     return row;
   });
+  */
 
-  nb_occurences.value = results.length; //.toString()+" résultats";
+  if (store.drias_checked) {
+    results_table.value = results.map((r) => {
+      const row: results = Object.create(results);
+      const station_drias = store.drias[store.drias.findIndex((x: { indicatif: string }) => x.indicatif == r.indicatif)];
+      row.col1 = r.indicatif + " " + r.ville + " (" + r.altitude.toString() + " m)";
+      row.col2 = r.temp_moy.toString();
+      row.col3 = station_drias.temp_moy.toString();
+      row.col4 = r.temp_min.toString();
+      row.col5 = station_drias.temp_min.toString();
+      row.col6 = r.temp_max.toString();
+      row.col7 = station_drias.temp_max.toString();
+      isNaN(Number(r.canicule)) ? (row.col8 = "-") : (row.col8 = store.milliers_0.format(Number(r.canicule)));
+      row.col9 = station_drias.canicule.toString();
+      row.col10 = r.pluie.toString();
+      row.col11 = station_drias.pluie.toString();
+      return row;
+    });
+  } else {
+    results_table.value = results.map((r) => {
+      const row: results = Object.create(results);
+      //console.log(convert_DMS_DD(r.latitude)+";",convert_DMS_DD(r.longitude));
+      row.col1 = r.indicatif + " " + r.ville + " (" + r.altitude.toString() + " m)";
+      row.col2 = r.temp_moy.toString();
+      row.col3 = r.temp_min.toString();
+      row.col4 = r.temp_max.toString();
+      isNaN(Number(r.canicule)) ? (row.col5 = "-") : (row.col5 = store.milliers_0.format(Number(r.canicule)));
+      isNaN(Number(r.pluie)) ? (row.col6 = "-") : (row.col6 = store.milliers_0.format(Number(r.pluie)));
+      isNaN(Number(r.ensoleillement)) ? (row.col7 = "-") : (row.col7 = store.milliers_0.format(Number(r.ensoleillement)));
+      isNaN(Number(r.vent)) ? (row.col8 = "-") : (row.col8 = store.milliers_0.format(Number(r.vent)));
+      row.col9 = r.distance_cnpe.toString();
+      isNaN(Number(r.prix_maisons)) ? (row.col10 = "-") : (row.col10 = store.euros_0.format(Number(r.prix_maisons)));
+      return row;
+    });
+  }
+
+  nb_occurences.value = results.length; //.toString()+" résultats"; -> Déclenche l'affichage du tableau de résultats dès que la valeur change
 }
 
 function onSearch(criteres: any) {
@@ -247,7 +284,13 @@ function ResetFiltres(): void {
   <div class="FlexWrapper-panel">
     <Panel header="Sélection des stations météo">
       <template #icons>
-        <button name="effacer les valeurs" class="fas fa-eraser CTA" :style="{ 'font-family': 'fa-solid' }" @click="ResetFiltres()" v-tooltip.right="'Réinitialiser les filtres'"></button>
+        <button
+          name="effacer les valeurs"
+          class="fas fa-eraser CTA"
+          :style="{ 'font-family': 'fa-solid' }"
+          @click="ResetFiltres()"
+          v-tooltip.right="'Réinitialiser les filtres'"
+        ></button>
       </template>
       <Form @submit="onSearch" :validation-schema="schema_selection" @invalid-submit="onInvalidSearch('.search-btn')">
         <div class="my_grid">

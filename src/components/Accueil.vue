@@ -21,14 +21,22 @@ val_ref_78.push(isNaN(Number(station.pluie)) ? "-" : store.milliers_0.format(sta
 val_ref_78.push(isNaN(Number(station.vent)) ? "-" : store.milliers_0.format(station.vent) + " j/an");
 val_ref_78.push(station.distance_cnpe + " kms");
 val_ref_78.push(isNaN(Number(station.prix_maisons)) ? "-" : store.euros_0.format(station.prix_maisons) + "/m2");
+
+// Constitution des valeurs de référence DRIAS
+const station_drias = store.drias[store.drias.findIndex((x: { indicatif: string }) => x.indicatif == "78621001")];
+let val_ref_78_drias: string[] = [];
+val_ref_78_drias.push(station_drias.indicatif);
+val_ref_78_drias.push(station_drias.temp_moy + "°");
+val_ref_78_drias.push(station_drias.temp_min + "°");
+val_ref_78_drias.push(station_drias.temp_max + "°");
+val_ref_78_drias.push(station_drias.canicule + " j/an");
+val_ref_78_drias.push(station_drias.pluie + " mm/mois");
 </script>
 
 <template>
-
-<Masthead />
+  <Masthead />
   <div v-bind:class="{ FlexWrapperMobile: store.sm, FlexWrapper: !store.sm }">
-
-    <StationRef v-bind="{ valeur_ref: val_ref_78 }" />
+    <StationRef v-bind="{ valeur_ref: val_ref_78, valeur_ref_drias: val_ref_78_drias }" />
     <Selection />
   </div>
   <Footer />

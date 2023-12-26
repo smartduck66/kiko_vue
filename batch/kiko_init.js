@@ -4,14 +4,15 @@
 // Bibliothéque JavaScript utilisée en mode "batch" :
 // 18/12/2021 : passage en Typescript
 // 03/09/2022 : passage en FP, remplacement des require par des import
-// 23/12/2023 : réécriture de la création du fichier de valeurs immobilières (async/await)
+// 23/12/2023 : réécriture de la création du fichier de valeurs immobilières (async/await) - Les fiches climatiques sont désormais chargées dans le répertoire \public
 //
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans CET ORDRE :
 //      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
 //        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car les stations météo évoluent (dernièe MAJ : 23/12/2023)
 //      - node kiko_init.js immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
-//      - node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France
+//      - node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France et de drias_H1.json (prévisions 2021-2050/RPC 4.5)
+//        ATTENTION : le répertoire \public\drias contient les fichiers de prévision créés manuellement en partant du site https://www.drias-climat.fr/
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
 // **********************************************************************************************************************
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -289,7 +290,7 @@ switch (myArgs[0]) {
         break;
     }
     case "clim": {
-        console.log("Création du fichier fc.json regroupant les fiches climatiques");
+        console.log("Création du fichier fc.json regroupant les fiches climatiques, ainsi que les prévisions DRIAS H1");
         var data_MF_1 = /** @class */ (function () {
             function data_MF() {
                 this.indicatif = "";
@@ -342,6 +343,47 @@ switch (myArgs[0]) {
             return item;
         });
         fs.writeFileSync("../src/data/fc.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
+        // Même opération si le fichier indicatif.drias correspondant existe ******************************************************
+        // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches_drias, création du JSON sur disque
+        var data_drias_H1_1 = /** @class */ (function () {
+            function data_drias_H1() {
+                this.indicatif = "";
+                this.temp_moy = 0;
+                this.temp_min = 0;
+                this.temp_max = 0;
+                this.canicule = 0;
+                this.pluie = 0;
+            }
+            return data_drias_H1;
+        }());
+        var fiches_drias = ref.map(function (refcli) {
+            var drias_filename = "../public/drias/" + refcli.ref + ".H1";
+            var item = new data_drias_H1_1(); // note the "new" keyword here
+            try {
+                fs.accessSync(drias_filename, fs.constants.F_OK);
+                // Le fichier existe, donc on peut le lire
+                var fields = fs.readFileSync(drias_filename, "utf8").split(";");
+                //const item = new data_drias_H1(); // note the "new" keyword here
+                item.indicatif = refcli.ref;
+                item.temp_moy = Number(fields[0]);
+                item.temp_min = Number(fields[1]);
+                item.temp_max = Number(fields[2]);
+                item.canicule = Number(fields[3]);
+                item.pluie = Number(fields[4]);
+                return item;
+            }
+            catch (error) {
+                // Si le fichier n'existe pas, on initialise l'objet à 0
+                item.indicatif = refcli.ref;
+                item.temp_moy = 0;
+                item.temp_min = 0;
+                item.temp_max = 0;
+                item.canicule = 0;
+                item.pluie = 0;
+                return item;
+            }
+        });
+        fs.writeFileSync("../src/data/drias_H1.json", JSON.stringify(fiches_drias, null, 2)); // Création du json final sur disque
         break;
     }
     case "immo": {
