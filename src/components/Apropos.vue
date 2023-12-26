@@ -34,6 +34,7 @@ const store = useStore();
     </ul>
     <br />
     Si la case 'Horizon 2050' est cochée, les prévisions climatiques issues de la DRIAS s'affichent (RPC 4.5* - Horizon H1 2021-2050)<br />
+    Les données sont comparables, exceptée pour la colonne 'canicule' qui est comparée au nombre de nuits tropicales (Temp > 20°C)<br />
     <i>* Scénario avec stabilisation des émissions avant la fin du XXIe siècle à un niveau faible</i>
 
     <br /><br />

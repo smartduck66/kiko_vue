@@ -15,7 +15,7 @@ const fiche_climatique = ref("");
 
 const onRowSelect = (event: any) => {
   if (store.xxxl) {
-    fetch("/ficheclim/" + event.data.site.substr(0, 8) + ".data")
+    fetch("/ficheclim/" + event.data.col1.substr(0, 8) + ".data")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Erreur de chargement du fichier: ${response.statusText}`);
@@ -93,7 +93,7 @@ const onRowSelect = (event: any) => {
             <Column field="col6" sortable header="T° max"></Column>
             <Column field="col7" sortable header="T° max" style="color: red"></Column>
             <Column field="col8" sortable header="Cani."></Column>
-            <Column field="col9" sortable header="Cani." style="color: red"></Column>
+            <Column field="col9" sortable header="Trop." style="color: red"></Column>
             <Column field="col10" sortable header="Pluie"></Column>
             <Column field="col11" sortable header="Pluie" style="color: red"></Column>
           </DataTable>

@@ -170,7 +170,12 @@ function onFastSearchDpt(criteres: any) {
     results = store.fc.filter((x: { departement: string }) => x.departement == p1);
   }
 
-  affichage_fiches(results);
+  // Tri ascendant sur les fiches (par le nombre de jours de canicule)
+  affichage_fiches(
+    results.sort(function (a: { canicule: number }, b: { canicule: number }) {
+      return a.canicule - b.canicule;
+    })
+  );
 }
 
 async function onFastSearchCommune_serverless(criteres: any) {

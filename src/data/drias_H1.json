@@ -113,11 +113,11 @@
   },
   {
     "indicatif": "05046001",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 10.11,
+    "temp_min": 5.15,
+    "temp_max": 15.08,
+    "canicule": 1,
+    "pluie": 861.64
   },
   {
     "indicatif": "05061009",
@@ -169,11 +169,11 @@
   },
   {
     "indicatif": "06088001",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 16.9,
+    "temp_min": 13.6,
+    "temp_max": 20.2,
+    "canicule": 73,
+    "pluie": 705.37
   },
   {
     "indicatif": "06088007",
@@ -329,11 +329,11 @@
   },
   {
     "indicatif": "12254001",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 12.01,
+    "temp_min": 8.2,
+    "temp_max": 15.82,
+    "canicule": 9,
+    "pluie": 966.84
   },
   {
     "indicatif": "12300004",
@@ -345,11 +345,11 @@
   },
   {
     "indicatif": "13001009",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 14.67,
+    "temp_min": 9.51,
+    "temp_max": 19.83,
+    "canicule": 19,
+    "pluie": 650.36
   },
   {
     "indicatif": "13004003",
@@ -369,11 +369,11 @@
   },
   {
     "indicatif": "13054001",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 15.76,
+    "temp_min": 11.71,
+    "temp_max": 19.81,
+    "canicule": 51,
+    "pluie": 548.14
   },
   {
     "indicatif": "13103001",
@@ -388,23 +388,23 @@
     "temp_moy": 11.98,
     "temp_min": 9.06,
     "temp_max": 14.91,
-    "canicule": 5,
+    "canicule": 1,
     "pluie": 730.25
   },
   {
     "indicatif": "14137001",
-    "temp_moy": 12.03,
-    "temp_min": 8.74,
-    "temp_max": 15.31,
-    "canicule": 11,
-    "pluie": 690.98
+    "temp_moy": 12.09,
+    "temp_min": 8.79,
+    "temp_max": 15.4,
+    "canicule": 1,
+    "pluie": 685.33
   },
   {
     "indicatif": "14216001",
     "temp_moy": 11.75,
     "temp_min": 8.47,
     "temp_max": 15.04,
-    "canicule": 14,
+    "canicule": 1,
     "pluie": 706.26
   },
   {
@@ -412,7 +412,7 @@
     "temp_moy": 11.35,
     "temp_min": 8.31,
     "temp_max": 14.4,
-    "canicule": 13,
+    "canicule": 1,
     "pluie": 861.29
   },
   {
@@ -481,11 +481,11 @@
   },
   {
     "indicatif": "16225001",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 12.62,
+    "temp_min": 8.71,
+    "temp_max": 16.53,
+    "canicule": 6,
+    "pluie": 947.41
   },
   {
     "indicatif": "16279001",
@@ -841,11 +841,11 @@
   },
   {
     "indicatif": "24037005",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 13.91,
+    "temp_min": 9.36,
+    "temp_max": 18.46,
+    "canicule": 10,
+    "pluie": 796.28
   },
   {
     "indicatif": "24550003",
@@ -1225,11 +1225,11 @@
   },
   {
     "indicatif": "33281001",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 14.4,
+    "temp_min": 10.21,
+    "temp_max": 18.58,
+    "canicule": 13,
+    "pluie": 880.56
   },
   {
     "indicatif": "33314005",
@@ -1265,11 +1265,11 @@
   },
   {
     "indicatif": "34154001",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 16.29,
+    "temp_min": 12.17,
+    "temp_max": 20.4,
+    "canicule": 54,
+    "pluie": 643.64
   },
   {
     "indicatif": "34209002",
@@ -1417,11 +1417,11 @@
   },
   {
     "indicatif": "39526003",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 12.3,
+    "temp_min": 8.66,
+    "temp_max": 15.93,
+    "canicule": 10,
+    "pluie": 1050.93
   },
   {
     "indicatif": "40046001",
@@ -1641,11 +1641,11 @@
   },
   {
     "indicatif": "47091001",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 14,
+    "temp_min": 9.56,
+    "temp_max": 18.45,
+    "canicule": 11,
+    "pluie": 777.38
   },
   {
     "indicatif": "48004001",
@@ -1972,7 +1972,7 @@
     "temp_moy": 11.73,
     "temp_min": 8.14,
     "temp_max": 15.31,
-    "canicule": 17,
+    "canicule": 3,
     "pluie": 787.5
   },
   {
@@ -1980,7 +1980,7 @@
     "temp_moy": 11.31,
     "temp_min": 7.75,
     "temp_max": 14.87,
-    "canicule": 15,
+    "canicule": 1,
     "pluie": 716.48
   },
   {
@@ -1988,7 +1988,7 @@
     "temp_moy": 10.87,
     "temp_min": 7.46,
     "temp_max": 14.29,
-    "canicule": 18,
+    "canicule": 1,
     "pluie": 777.32
   },
   {
@@ -1996,7 +1996,7 @@
     "temp_moy": 11.15,
     "temp_min": 7.58,
     "temp_max": 14.71,
-    "canicule": 15,
+    "canicule": 1,
     "pluie": 724.97
   },
   {
@@ -2364,7 +2364,7 @@
     "temp_moy": 12.45,
     "temp_min": 8.7,
     "temp_max": 16.2,
-    "canicule": 20,
+    "canicule": 6,
     "pluie": 710.72
   },
   {
@@ -2372,7 +2372,7 @@
     "temp_moy": 12.67,
     "temp_min": 8.9,
     "temp_max": 16.44,
-    "canicule": 20,
+    "canicule": 7,
     "pluie": 686.44
   },
   {
@@ -2380,7 +2380,7 @@
     "temp_moy": 12.58,
     "temp_min": 8.83,
     "temp_max": 16.33,
-    "canicule": 19,
+    "canicule": 6,
     "pluie": 708.1
   },
   {
@@ -2388,16 +2388,16 @@
     "temp_moy": 11.87,
     "temp_min": 8.31,
     "temp_max": 15.43,
-    "canicule": 19,
+    "canicule": 5,
     "pluie": 756.28
   },
   {
     "indicatif": "73054001",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
+    "temp_moy": 8.03,
+    "temp_min": 3.89,
+    "temp_max": 12.17,
     "canicule": 0,
-    "pluie": 0
+    "pluie": 1046.33
   },
   {
     "indicatif": "73171002",
@@ -2532,32 +2532,32 @@
     "temp_moy": 11.55,
     "temp_min": 7.99,
     "temp_max": 15.1,
-    "canicule": 18,
+    "canicule": 4,
     "pluie": 658.74
   },
   {
     "indicatif": "79174002",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 13.14,
+    "temp_min": 9.2,
+    "temp_max": 17.09,
+    "canicule": 7,
+    "pluie": 871.29
   },
   {
     "indicatif": "79191005",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 13.44,
+    "temp_min": 9.47,
+    "temp_max": 17.42,
+    "canicule": 8,
+    "pluie": 817.26
   },
   {
     "indicatif": "79326004",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 12.63,
+    "temp_min": 8.54,
+    "temp_max": 16.73,
+    "canicule": 6,
+    "pluie": 635.41
   },
   {
     "indicatif": "80001001",
@@ -2649,11 +2649,11 @@
   },
   {
     "indicatif": "82121002",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 14.23,
+    "temp_min": 9.99,
+    "temp_max": 18.47,
+    "canicule": 17,
+    "pluie": 764.81
   },
   {
     "indicatif": "83031001",
@@ -2812,7 +2812,7 @@
     "temp_moy": 12.8,
     "temp_min": 8.76,
     "temp_max": 16.83,
-    "canicule": 21,
+    "canicule": 6,
     "pluie": 763
   },
   {
@@ -2820,7 +2820,7 @@
     "temp_moy": 12.82,
     "temp_min": 8.99,
     "temp_max": 16.66,
-    "canicule": 21,
+    "canicule": 7,
     "pluie": 827.8
   },
   {
@@ -2828,7 +2828,7 @@
     "temp_moy": 12.67,
     "temp_min": 8.67,
     "temp_max": 16.68,
-    "canicule": 22,
+    "canicule": 6,
     "pluie": 778.7
   },
   {
@@ -2836,7 +2836,7 @@
     "temp_moy": 12.85,
     "temp_min": 8.89,
     "temp_max": 16.82,
-    "canicule": 21,
+    "canicule": 7,
     "pluie": 642.78
   },
   {
@@ -2844,7 +2844,7 @@
     "temp_moy": 12.87,
     "temp_min": 8.92,
     "temp_max": 16.82,
-    "canicule": 24,
+    "canicule": 7,
     "pluie": 760.05
   },
   {
