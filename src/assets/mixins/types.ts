@@ -5,6 +5,7 @@ export interface fiche_climatique {
   altitude: number;
   latitude: string;
   longitude: string;
+  date_maj: string;
   temp_moy: number;
   temp_min: number;
   temp_max: number;

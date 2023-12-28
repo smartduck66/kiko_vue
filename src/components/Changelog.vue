@@ -24,7 +24,7 @@ import { RouterLink } from "vue-router";
     <br />
     <h4>Avril 2023</h4>
     <ul>
-      <li>Implémentation de l'API Google Maps pour afficher les stations météo affichées dans les résultats</li>
+      <li>Implémentation de l'API Google Maps pour afficher les stations météo affichées dans les résultats (spike)</li>
       <li>Réécriture de Results.vue autour du composant DataTable de PrimeVue</li>
     </ul>
     <br />

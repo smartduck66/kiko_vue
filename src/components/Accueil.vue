@@ -31,10 +31,11 @@ val_ref_78_drias.push(station_drias.temp_min + "°");
 val_ref_78_drias.push(station_drias.temp_max + "°");
 val_ref_78_drias.push(station_drias.canicule + " j/an");
 val_ref_78_drias.push(station_drias.pluie + " mm/mois");
+
 </script>
 
 <template>
-  <Masthead />
+  <Masthead v-bind="{ date_maj: station.date_maj }"/>
   <div v-bind:class="{ FlexWrapperMobile: store.sm, FlexWrapper: !store.sm }">
     <StationRef v-bind="{ valeur_ref: val_ref_78, valeur_ref_drias: val_ref_78_drias }" />
     <Selection />

@@ -268,6 +268,7 @@ switch (myArgs[0]) {
       altitude: number;
       latitude: string;
       longitude: string;
+      date_maj: string;
       temp_moy: number;
       temp_min: number;
       temp_max: number;
@@ -285,6 +286,7 @@ switch (myArgs[0]) {
         this.altitude = 0;
         this.latitude = "";
         this.longitude = "";
+        this.date_maj="";
         this.temp_moy = 0;
         this.temp_min = 0;
         this.temp_max = 0;
@@ -316,6 +318,9 @@ switch (myArgs[0]) {
 
       s = extract_alone_value(item.indicatif, /lon : .+;/, text, "longitude");
       item.longitude = s.substring(s.indexOf(":") + 2, s.indexOf(";"));
+
+      s = extract_alone_value(item.indicatif, /\d{2}\/\d{2}\/\d{4}/, text, "Edité le :");
+      item.date_maj= s;
 
       item.temp_moy = Number(extract_value_in_a_list(item.indicatif, /Température moyenne/, text, "Température moyenne (Moyenne en °C)"));
 
