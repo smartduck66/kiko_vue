@@ -10,7 +10,7 @@ import { RouterLink } from "vue-router";
     <br />
     <h4>Décembre 2023</h4>
     <ul>
-      <li>Intégration des prévisions climatiques issues de la DRIAS</li>
+      <li>Intégration des prévisions climatiques issues de la DRIAS et des mesures de nappes aquifères</li>
       <li>Affichage de la fiche climatique complète en sélectionnant une station spécifique des résultats d'une recherche</li>
       <li>Saisie multiple de départements</li>
       <li>Mise à jour des librairies utilisées par le projet et des données climatiques</li>

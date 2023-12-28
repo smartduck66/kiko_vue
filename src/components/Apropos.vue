@@ -18,6 +18,7 @@ const store = useStore();
       <li>Le premier bloc expose la station météo de référence (Trappes par défaut, modifiable pour la session)</li>
       <li>Le second permet de borner 4 critères principaux</li>
       <li>Le troisième autorise des recherches immédiates (saisie de plusieurs départements : les séparer par un ;)</li>
+      <i>Seules les nappes aquifères toujours mesurées au 1er janvier de l'année n-1 sont affichées</i>
     </ul>
     <br />
     La recherche renvoie une liste de stations météo 'complètes' avec les données suivantes, sur une période comprise entre 1991 et 2020 : <br /><br />
@@ -44,6 +45,7 @@ const store = useStore();
       <li>Nombre de stations météo référencées : {{ store.fc.length }}</li>
       <li><a target="_blank" href="https://donneespubliques.meteofrance.fr" aria-label="Météo France">Statistiques en provenance de Météo France (MF)</a></li>
       <li><a target="_blank" href="https://www.drias-climat.fr/" aria-label="La DRIAS">Prévisions climatiques en provenance de la DRIAS</a></li>
+      <li><a target="_blank" href="https://hubeau.eaufrance.fr/page/api-piezometrie#/" aria-label="Hub Eau">API Hub'Eau utilisée pour les mesures des nappes aquifères</a></li>
       <li>
         <a target="_blank" href="https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres" aria-label="Valeurs foncières"
           >Valeurs foncières complètes de l'année 2022</a

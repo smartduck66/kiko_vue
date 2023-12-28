@@ -10,10 +10,23 @@ const props = defineProps(["occurences", "results_rows"]);
 const nbOccurences = props.occurences.toString() + " résultats";
 const max_width = window.innerWidth < 1920 ? window.innerWidth - 15 : 1100; // On détermine la taille maximum du tableau des résultats
 const selectedStation = ref();
+const selectedForage = ref();
 const open = ref(false); //gestion de la fenêtre modale de la fiche climatique complète
-const fiche_climatique = ref("");
+const modal_content = ref("");
 
-const onRowSelect = (event: any) => {
+class mesures_nappe {
+  date_mesure: string;
+  niveau_nappe_eau: string;
+  profondeur_nappe_eau: string;
+
+  constructor() {
+    this.date_mesure = "";
+    this.niveau_nappe_eau = "";
+    this.profondeur_nappe_eau = "";
+  }
+}
+
+const onRowSelect_FC = (event: any) => {
   if (store.xxxl) {
     fetch("/ficheclim/" + event.data.col1.substr(0, 8) + ".data")
       .then((response) => {
@@ -24,7 +37,7 @@ const onRowSelect = (event: any) => {
       })
       .then((content) => {
         // Afficher le contenu du fichier brut en modale (ATTENTION : que sur grand écran)
-        fiche_climatique.value = content;
+        modal_content.value = content;
         open.value = true; // Affichage de la modale
       })
       .catch((error) => {
@@ -34,6 +47,53 @@ const onRowSelect = (event: any) => {
     alert("La visualisation d'une fiche climatique ne peut se faire que sur un écran full HD");
   }
   selectedStation.value = null;
+};
+
+const onRowSelect_Forage = async (event: any) => {
+  if (store.xxxl) {
+    modal_content.value = "Graphique à afficher des niveaux de la nappe d'eau souterraine sélectionnée - Code piézomètre : " + event.data.col1 + "\n\n";
+
+    const API_URL = "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?&sort=desc&code_bss=" + event.data.col1; // On prend les 5.000 dernières mesures au maximum
+    const response = await fetch(API_URL);
+
+    if (!response.ok) {
+      alert("Une erreur technique est survenue !");
+    } else {
+      const mesures = (await response.json()).data;
+      const results: mesures_nappe[] = mesures.map((item: any) => {
+        const c = new mesures_nappe(); // note the "new" keyword here
+        c.date_mesure = item.date_mesure;
+        c.niveau_nappe_eau = item.niveau_nappe_eau;
+        c.profondeur_nappe_eau = item.profondeur_nappe;
+
+        return c;
+      });
+      const size_sample = results.length;
+      modal_content.value +=
+        "Première mesure effectuée : " +
+        results[size_sample - 1].date_mesure +
+        " - Niveau : " +
+        results[size_sample - 1].niveau_nappe_eau +
+        " m" +
+        " - Profondeur : " +
+        results[size_sample - 1].profondeur_nappe_eau +
+        " m\n";
+        modal_content.value +=
+        "Dernière mesure effectuée : " +
+        results[0].date_mesure +
+        " - Niveau : " +
+        results[0].niveau_nappe_eau +
+        " m" +
+        " - Profondeur : " +
+        results[0].profondeur_nappe_eau +
+        " m\n";
+    }
+
+    open.value = true; // Affichage de la modale
+  } else {
+    alert("La visualisation du graphique d'évolution d'une nappe ne peut se faire que sur un écran full HD");
+  }
+  selectedForage.value = null;
 };
 </script>
 
@@ -45,9 +105,9 @@ const onRowSelect = (event: any) => {
         {{ nbOccurences }}
       </template>
       <template #content>
-        <div v-if="!store.drias_checked">
+        <div v-if="store.forages_search">
           <DataTable
-            v-model:selection="selectedStation"
+            v-model:selection="selectedForage"
             :value="props.results_rows"
             tableStyle="min-width: 65rem"
             scrollable
@@ -57,46 +117,72 @@ const onRowSelect = (event: any) => {
             selectionMode="single"
             :metaKeySelection="false"
             dataKey="id"
-            @rowSelect="onRowSelect"
+            @rowSelect="onRowSelect_Forage"
           >
-            <Column field="col1" sortable header="Station météo"></Column>
-            <Column field="col2" sortable header="T° moy"></Column>
-            <Column field="col3" sortable header="T° min"></Column>
-            <Column field="col4" sortable header="T° max"></Column>
-            <Column field="col5" sortable header="Cani."></Column>
-            <Column field="col6" sortable header="Pluie"></Column>
-            <Column field="col7" sortable header="Soleil"></Column>
-            <Column field="col8" sortable header="Vent"></Column>
-            <Column field="col9" sortable header="CNPE"></Column>
-            <Column field="col10" sortable header="Prix"></Column>
+            <Column field="col1" sortable header="Piézomètre"></Column>
+            <Column field="col2" sortable header="Altitude"></Column>
+            <Column field="col3" sortable header="Nb mesures"></Column>
+            <Column field="col4" sortable header="Insee"></Column>
+            <Column field="col5" sortable header="Commune"></Column>
+            <Column field="col6" sortable header="1ère mesure"></Column>
+            <Column field="col7" sortable header="Dernière mesure"></Column>
           </DataTable>
         </div>
+
         <div v-else>
-          <DataTable
-            v-model:selection="selectedStation"
-            :value="props.results_rows"
-            tableStyle="min-width: 65rem"
-            scrollable
-            paginator
-            :rows="20"
-            :rowsPerPageOptions="[10, 20, 50]"
-            selectionMode="single"
-            :metaKeySelection="false"
-            dataKey="id"
-            @rowSelect="onRowSelect"
-          >
-            <Column field="col1" sortable header="Station météo"></Column>
-            <Column field="col2" sortable header="T° moy"></Column>
-            <Column field="col3" sortable header="T° moy" style="color: red"></Column>
-            <Column field="col4" sortable header="T° min"></Column>
-            <Column field="col5" sortable header="T° min" style="color: red"></Column>
-            <Column field="col6" sortable header="T° max"></Column>
-            <Column field="col7" sortable header="T° max" style="color: red"></Column>
-            <Column field="col8" sortable header="Cani."></Column>
-            <Column field="col9" sortable header="Trop." style="color: red"></Column>
-            <Column field="col10" sortable header="Pluie"></Column>
-            <Column field="col11" sortable header="Pluie" style="color: red"></Column>
-          </DataTable>
+          <div v-if="!store.drias_checked">
+            <DataTable
+              v-model:selection="selectedStation"
+              :value="props.results_rows"
+              tableStyle="min-width: 65rem"
+              scrollable
+              paginator
+              :rows="20"
+              :rowsPerPageOptions="[10, 20, 50]"
+              selectionMode="single"
+              :metaKeySelection="false"
+              dataKey="id"
+              @rowSelect="onRowSelect_FC"
+            >
+              <Column field="col1" sortable header="Station météo"></Column>
+              <Column field="col2" sortable header="T° moy"></Column>
+              <Column field="col3" sortable header="T° min"></Column>
+              <Column field="col4" sortable header="T° max"></Column>
+              <Column field="col5" sortable header="Cani."></Column>
+              <Column field="col6" sortable header="Pluie"></Column>
+              <Column field="col7" sortable header="Soleil"></Column>
+              <Column field="col8" sortable header="Vent"></Column>
+              <Column field="col9" sortable header="CNPE"></Column>
+              <Column field="col10" sortable header="Prix"></Column>
+            </DataTable>
+          </div>
+          <div v-else>
+            <DataTable
+              v-model:selection="selectedStation"
+              :value="props.results_rows"
+              tableStyle="min-width: 65rem"
+              scrollable
+              paginator
+              :rows="20"
+              :rowsPerPageOptions="[10, 20, 50]"
+              selectionMode="single"
+              :metaKeySelection="false"
+              dataKey="id"
+              @rowSelect="onRowSelect_FC"
+            >
+              <Column field="col1" sortable header="Station météo"></Column>
+              <Column field="col2" sortable header="T° moy"></Column>
+              <Column field="col3" sortable header="T° moy" style="color: red"></Column>
+              <Column field="col4" sortable header="T° min"></Column>
+              <Column field="col5" sortable header="T° min" style="color: red"></Column>
+              <Column field="col6" sortable header="T° max"></Column>
+              <Column field="col7" sortable header="T° max" style="color: red"></Column>
+              <Column field="col8" sortable header="Cani."></Column>
+              <Column field="col9" sortable header="Trop." style="color: red"></Column>
+              <Column field="col10" sortable header="Pluie"></Column>
+              <Column field="col11" sortable header="Pluie" style="color: red"></Column>
+            </DataTable>
+          </div>
         </div>
       </template>
     </Card>
@@ -115,7 +201,7 @@ const onRowSelect = (event: any) => {
       </div>
       <div class="FlexWrapper_modal">
         <textarea id="story" name="story" rows="50" cols="100"
-          >{{ fiche_climatique }}
+          >{{ modal_content }}
 </textarea
         >
       </div>

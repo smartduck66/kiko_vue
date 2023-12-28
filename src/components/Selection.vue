@@ -6,7 +6,7 @@ import { ref, Ref } from "vue";
 import Panel from "primevue/panel";
 import { Form, Field } from "vee-validate";
 import * as Yup from "yup";
-import { fiche_climatique, results } from "../assets/mixins/types";
+import { fiche_climatique, results, niveau_nappe } from "../assets/mixins/types";
 import { site_dangereux_le_plus_proche, convert_DMS_DD } from "../assets/mixins/distances";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
@@ -31,7 +31,34 @@ const vd_max_pluie = ref(1000);
 const vd_min_vent = ref(0);
 const vd_max_vent = ref(50);
 const vd_dpt = ref(78);
+const vd_dpt2 = ref(78);
 const vd_commune = ref(78190);
+
+class data_nappes {
+  code_bss: string;
+  altitude: string;
+  nb_mesures_piezo: string;
+  code_commune_insee: string;
+  nom_commune: string;
+  date_debut_mesure: string;
+  date_fin_mesure: string;
+  latitude: string;
+  longitude: string;
+  code_departement: string;
+
+  constructor() {
+    this.code_bss = "";
+    this.altitude = "";
+    this.nb_mesures_piezo = "";
+    this.code_commune_insee = "";
+    this.nom_commune = "";
+    this.date_debut_mesure = "";
+    this.date_fin_mesure = "";
+    this.latitude = "";
+    this.longitude = "";
+    this.code_departement = "";
+  }
+}
 
 // Schéma de validation
 // https://vee-validate.logaretm.com/v4/guide/validation#validation-schemas-with-yup
@@ -57,6 +84,25 @@ const schema_fast_Dpt = Yup.object().shape({
 const schema_fast_Commune = Yup.object().shape({
   commune: Yup.number().max(99999).positive().integer(),
 });
+
+function formatDate(inputDate: string) {
+  // Créer une instance de la classe Date
+  var dateObject = new Date(inputDate);
+  console.log(dateObject.getDay());
+  // Extraire jour, mois et année
+  var day = dateObject.getDate();
+  var month = dateObject.getMonth() + 1; // Notez que les mois commencent à 0, donc ajoutez 1
+  var year = dateObject.getFullYear();
+
+  // Formater les composants de la date avec des zéros devant si nécessaire
+  var formattedDay = day < 10 ? "0" + day : day;
+  var formattedMonth = month < 10 ? "0" + month : month;
+
+  // Construire la chaîne de date au format 'jj/mm/aaaa'
+  var formattedDate = formattedDay + "/" + formattedMonth + "/" + year;
+
+  return formattedDate;
+}
 
 function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void {
   // Fonction de construction de l'affichage des fiches par colonne
@@ -100,6 +146,28 @@ function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void 
   }
 
   store.nb_occurences = results.length; //.toString()+" résultats"; -> Déclenche l'affichage du tableau de résultats dès que la valeur change
+  store.forages_search = false;
+}
+
+function affichage_forages<Type extends niveau_nappe[]>(results: Type): void {
+  // Fonction de construction de l'affichage des forages par colonne
+
+  // Reset de l'array des résultats
+  results_table.value.splice(0);
+  results_table.value = results.map((r) => {
+    const row: results = Object.create(results);
+    row.col1 = r.code_bss;
+    row.col2 = r.altitude + " m";
+    row.col3 = r.nb_mesures_piezo;
+    row.col4 = r.code_commune_insee;
+    row.col5 = r.nom_commune;
+    row.col6 = r.date_debut_mesure;
+    row.col7 = r.date_fin_mesure;
+    return row;
+  });
+
+  store.nb_occurences = results.length; //.toString()+" résultats"; -> Déclenche l'affichage du tableau de résultats dès que la valeur change
+  store.forages_search = true;
 }
 
 function onSearch(criteres: any) {
@@ -151,7 +219,7 @@ function onFastSearchDpt(criteres: any) {
 
   if (Object(criteres).dpt.toString().includes(";")) {
     // Dé-référencement de l'objet pour récupérer les différentes valeurs des départements saisis
-    let p1 = Object(criteres).dpt.split(";");
+    let p1 = Object(criteres).dpt1.split(";");
 
     // Sélection des fiches climatiques, en recherchant les blocs de fiches climatiques de chaque département
     [...p1.values()].map((value) => {
@@ -176,6 +244,44 @@ function onFastSearchDpt(criteres: any) {
       return a.canicule - b.canicule;
     })
   );
+}
+
+async function onFastSearchNappes(criteres: any) {
+  // Appui sur le 1er bouton 'GO' : affichage des points de forage actifs au 1er janvier de l'année n-1 du département saisi
+
+  let results: niveau_nappe[] = [];
+
+  // Dé-référencement de l'objet pour récupérer le département saisi
+  let cp = Object(criteres).dpt2;
+
+  // On sélectionne seulement les forages actifs au 1er janvier de l'année précédente
+  const last_year = new Date().getFullYear() - 1; // Month	[mm]	(1 - 12)     Day		[dd]	(1 - 31)      Year		[yyyy]
+  const API_URL = "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?code_departement=" + cp + "&date_recherche=" + last_year + "-01-01";
+  const response = await fetch(API_URL);
+
+  if (!response.ok) {
+    alert("Le département saisi est inconnu ou une erreur technique est survenue ! Veuillez saisir un autre département valide.");
+  } else {
+    const forages = (await response.json()).data;
+
+    const results: niveau_nappe[] = forages.map((item: any) => {
+      const c = new data_nappes(); // note the "new" keyword here
+      c.code_bss = item.code_bss;
+      c.altitude = item.altitude_station;
+      c.nb_mesures_piezo = item.nb_mesures_piezo;
+      c.code_commune_insee = item.code_commune_insee;
+      c.nom_commune = item.nom_commune;
+      c.date_debut_mesure = item.date_debut_mesure.substr(8, 2) + "/" + item.date_debut_mesure.substr(5, 2) + "/" + item.date_debut_mesure.substr(0, 4);
+      c.date_fin_mesure = item.date_fin_mesure.substr(8, 2) + "/" + item.date_fin_mesure.substr(5, 2) + "/" + item.date_fin_mesure.substr(0, 4);
+      c.latitude = item.geometry.coordinates[1];
+      c.longitude = item.geometry.coordinates[0];
+      c.code_departement = item.code_departement;
+      return c;
+    });
+
+    // Affichage des forages
+    affichage_forages(results);
+  }
 }
 
 async function onFastSearchCommune_serverless(criteres: any) {
@@ -321,6 +427,19 @@ function ResetFiltres(): void {
           </div>
           <div class="c-fast-item-3">
             <button class="go-btn1" type="submit">GO</button>
+          </div>
+        </div>
+      </Form>
+      <Form @submit="onFastSearchNappes" :validation-schema="schema_fast_Dpt" @invalid-submit="onInvalidSearch('.go-btn2')">
+        <div class="my_fast_grid">
+          <div class="c-fast-item-1">
+            <span>Nappes département :</span>
+          </div>
+          <div class="c-fast-item-2">
+            <Field name="dpt2" class="saisie-valeur" type="text" v-model="vd_dpt2" maxlength="20" aria-label="Code département" />
+          </div>
+          <div class="c-fast-item-3">
+            <button class="go-btn2" type="submit">GO</button>
           </div>
         </div>
       </Form>

@@ -13,6 +13,7 @@ import seveso from "../../data/seveso.json";
 import cnpe from "../../data/centrales.json";
 
 const drias_checked = ref(false); // case à cocher permettant l'affichages des données climatiques issues de la DRIAS
+const forages_search = ref(false); // Par défaut, la recherche s'effectue sur les fiches climatiques
 const nb_occurences = ref(0);     // Nombre de fiches climatiques retournées lors d'une recherche
 
 export const useStore = defineStore("storeId", {
@@ -52,7 +53,7 @@ export const useStore = defineStore("storeId", {
       xxl: breakpoints.between("xl", "2xl"),
       xxxl: breakpoints["2xl"],
 
-      fc, drias, seveso, cnpe, drias_checked, nb_occurences
+      fc, drias, seveso, cnpe, drias_checked, nb_occurences, forages_search
     };
   },
 });

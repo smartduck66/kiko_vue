@@ -41,3 +41,16 @@ export interface drias {
 
 }
 
+export interface niveau_nappe {
+  code_bss: string;
+  altitude: string;
+  nb_mesures_piezo: string;
+  code_commune_insee: string;
+  nom_commune: string;
+  date_debut_mesure: string;
+  date_fin_mesure: string;
+  code_departement: string;
+  latitude: string;
+  longitude: string;
+}
+
