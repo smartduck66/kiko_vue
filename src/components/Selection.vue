@@ -34,6 +34,7 @@ const vd_dpt = ref(78);
 const vd_dpt2 = ref(78);
 const vd_commune = ref(78190);
 
+// Définition de l'objet 'nappes'
 class data_nappes {
   code_bss: string;
   altitude: string;
@@ -84,25 +85,6 @@ const schema_fast_Dpt = Yup.object().shape({
 const schema_fast_Commune = Yup.object().shape({
   commune: Yup.number().max(99999).positive().integer(),
 });
-
-function formatDate(inputDate: string) {
-  // Créer une instance de la classe Date
-  var dateObject = new Date(inputDate);
-  console.log(dateObject.getDay());
-  // Extraire jour, mois et année
-  var day = dateObject.getDate();
-  var month = dateObject.getMonth() + 1; // Notez que les mois commencent à 0, donc ajoutez 1
-  var year = dateObject.getFullYear();
-
-  // Formater les composants de la date avec des zéros devant si nécessaire
-  var formattedDay = day < 10 ? "0" + day : day;
-  var formattedMonth = month < 10 ? "0" + month : month;
-
-  // Construire la chaîne de date au format 'jj/mm/aaaa'
-  var formattedDate = formattedDay + "/" + formattedMonth + "/" + year;
-
-  return formattedDate;
-}
 
 function affichage_fiches<Type extends fiche_climatique[]>(results: Type): void {
   // Fonction de construction de l'affichage des fiches par colonne
@@ -157,8 +139,8 @@ function affichage_forages<Type extends niveau_nappe[]>(results: Type): void {
   results_table.value = results.map((r) => {
     const row: results = Object.create(results);
     row.col1 = r.code_bss;
-    row.col2 = r.altitude + " m";
-    row.col3 = r.nb_mesures_piezo;
+    row.col2 = store.milliers_0.format(r.altitude) + " m";
+    row.col3 = store.milliers_0.format(r.nb_mesures_piezo);
     row.col4 = r.code_commune_insee;
     row.col5 = r.nom_commune;
     row.col6 = r.date_debut_mesure;
@@ -219,7 +201,7 @@ function onFastSearchDpt(criteres: any) {
 
   if (Object(criteres).dpt.toString().includes(";")) {
     // Dé-référencement de l'objet pour récupérer les différentes valeurs des départements saisis
-    let p1 = Object(criteres).dpt1.split(";");
+    let p1 = Object(criteres).dpt.split(";");
 
     // Sélection des fiches climatiques, en recherchant les blocs de fiches climatiques de chaque département
     [...p1.values()].map((value) => {
@@ -279,7 +261,6 @@ async function onFastSearchNappes(criteres: any) {
       return c;
     });
 
-    // Affichage des forages
     affichage_forages(results);
   }
 }

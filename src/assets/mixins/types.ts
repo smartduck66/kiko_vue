@@ -54,3 +54,12 @@ export interface niveau_nappe {
   longitude: string;
 }
 
+
+
+export interface mesures_nappe {
+  date_mesure: string;
+  niveau_nappe_eau: string;
+  profondeur_nappe_eau: string;
+}
+
+

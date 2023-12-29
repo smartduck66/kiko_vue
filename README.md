@@ -44,6 +44,8 @@ Installations de modules NPM complémentaires :
 - Sharp : npm install sharp (package utilisé dans le script webp.cjs pour transformer en masse les images png/jpg en webp)
 - google-map : npm install vue3-google-map (package simplifiant l'utilisation de l'API Google Maps - Restricted APIkey in GoogleMaps Console)
 - Type Google Maps : npm i -D @types/google.maps (obligatoire pour le build) - Réf : https://developers.google.com/maps/documentation/javascript/using-typescript
+- eCharts : graphiques
+- vue-echarts : interface Apache echarts
 
 ---
 

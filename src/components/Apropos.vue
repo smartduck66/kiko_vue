@@ -21,7 +21,9 @@ const store = useStore();
       <i>Seules les nappes aquifères toujours mesurées au 1er janvier de l'année n-1 sont affichées</i>
     </ul>
     <br />
-    La recherche renvoie une liste de stations météo 'complètes' avec les données suivantes, sur une période comprise entre 1991 et 2020 : <br /><br />
+    La recherche renvoie une liste de stations météo avec les données suivantes, sur une période comprise entre 1991 et 2020 : <br />
+    (cliquer sur l'une des lignes affichera la fiche climatique complète récupérée auprès de Météo France)
+    <br /><br />
     <ul>
       <li>Température moyenne (moyenne en °C)</li>
       <li>Température minimale (moyenne en °C)</li>
@@ -37,7 +39,19 @@ const store = useStore();
     Si la case 'Horizon 2050' est cochée, les prévisions climatiques issues de la DRIAS s'affichent (RPC 4.5* - Horizon H1 2021-2050)<br />
     Les données sont comparables, exceptée pour la colonne 'canicule' qui est comparée au nombre de nuits tropicales (temp > 20°C)<br />
     <i>* Scénario avec stabilisation des émissions avant la fin du XXIe siècle à un niveau faible</i>
-
+    <br /><br />
+    Dans le cas d'une recherche des nappes aquifères d'un département, les informations suivantes sont affichées : <br />
+    (cliquer sur l'une des lignes affichera un graphique d'évolution de la profondeur de la nappe sélectionnée)
+    <br /><br />
+    <ul>
+      <li>Code du piézomètre installé</li>
+      <li>Altitude de la station de forage (en m)</li>
+      <li>Nombre de mesures effectuées</li>
+      <li>Code INSEE de la commune d'installation de la station</li>
+      <li>Commune d'installation de la station</li>
+      <li>Date de la 1ère mesure effectuée</li>
+      <li>Date de la dernière mesure effectuée</li>
+    </ul>
     <br /><br />
     <h4>Source des données utilisées :</h4>
     <br />

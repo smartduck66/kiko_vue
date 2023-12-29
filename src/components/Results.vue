@@ -2,13 +2,18 @@
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 import Card from "primevue/card";
-import { ref } from "vue";
+import { ref, Ref } from "vue";
 import { useStore } from "../assets/mixins/store.js";
+import AreaChart from "./AreaChart.vue";
+//import { mesures_nappe } from "../assets/mixins/types";
 const store = useStore();
 
 const props = defineProps(["occurences", "results_rows"]);
 const nbOccurences = props.occurences.toString() + " résultats";
 const max_width = window.innerWidth < 1920 ? window.innerWidth - 15 : 1100; // On détermine la taille maximum du tableau des résultats
+
+// Définition des colonnes des résultats en valeurs réactives
+let results_mesures_nappe: Ref<mesures_nappe[]> = ref([]);
 const selectedStation = ref();
 const selectedForage = ref();
 const open = ref(false); //gestion de la fenêtre modale de la fiche climatique complète
@@ -16,11 +21,13 @@ const modal_content = ref("");
 
 class mesures_nappe {
   date_mesure: string;
+  timestamp: number;
   niveau_nappe_eau: string;
   profondeur_nappe_eau: string;
 
   constructor() {
     this.date_mesure = "";
+    this.timestamp = 0;
     this.niveau_nappe_eau = "";
     this.profondeur_nappe_eau = "";
   }
@@ -51,7 +58,15 @@ const onRowSelect_FC = (event: any) => {
 
 const onRowSelect_Forage = async (event: any) => {
   if (store.xxxl) {
-    modal_content.value = "Graphique à afficher des niveaux de la nappe d'eau souterraine sélectionnée - Code piézomètre : " + event.data.col1 + "\n\n";
+    modal_content.value =  "Evolution de la profondeur (en m) de la nappe d'eau souterraine\n";
+    modal_content.value += "---------------------------------------------------------------\n\n";
+    modal_content.value += "Code piézomètre            : " + event.data.col1 + "\n";
+    modal_content.value += "Altitude de la station     : " + event.data.col2 + "\n";
+    modal_content.value += "Nombre de mesures          : " + event.data.col3 + "\n";
+    modal_content.value += "Commune "+"("+event.data.col4 + ")            : " + event.data.col5 + "\n";
+    modal_content.value += "Première mesure effectuée  : " + event.data.col6 + "\n";
+    modal_content.value += "Dernière mesure effectuée  : " + event.data.col7 + "\n";
+
 
     const API_URL = "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?&sort=desc&code_bss=" + event.data.col1; // On prend les 5.000 dernières mesures au maximum
     const response = await fetch(API_URL);
@@ -60,33 +75,16 @@ const onRowSelect_Forage = async (event: any) => {
       alert("Une erreur technique est survenue !");
     } else {
       const mesures = (await response.json()).data;
-      const results: mesures_nappe[] = mesures.map((item: any) => {
+      results_mesures_nappe = mesures.map((item: any) => {
         const c = new mesures_nappe(); // note the "new" keyword here
         c.date_mesure = item.date_mesure;
+        c.timestamp = Date.parse(c.date_mesure);
         c.niveau_nappe_eau = item.niveau_nappe_eau;
         c.profondeur_nappe_eau = item.profondeur_nappe;
 
         return c;
       });
-      const size_sample = results.length;
-      modal_content.value +=
-        "Première mesure effectuée : " +
-        results[size_sample - 1].date_mesure +
-        " - Niveau : " +
-        results[size_sample - 1].niveau_nappe_eau +
-        " m" +
-        " - Profondeur : " +
-        results[size_sample - 1].profondeur_nappe_eau +
-        " m\n";
-        modal_content.value +=
-        "Dernière mesure effectuée : " +
-        results[0].date_mesure +
-        " - Niveau : " +
-        results[0].niveau_nappe_eau +
-        " m" +
-        " - Profondeur : " +
-        results[0].profondeur_nappe_eau +
-        " m\n";
+      
     }
 
     open.value = true; // Affichage de la modale
@@ -202,8 +200,8 @@ const onRowSelect_Forage = async (event: any) => {
       <div class="FlexWrapper_modal">
         <textarea id="story" name="story" rows="50" cols="100"
           >{{ modal_content }}
-</textarea
-        >
+        </textarea>
+        <AreaChart v-if="store.forages_search" v-bind="{ values: results_mesures_nappe, width: 1300, height: 500, color: '#0a94a8' }" />
       </div>
     </div>
   </Teleport>
@@ -238,7 +236,7 @@ const onRowSelect_Forage = async (event: any) => {
   height: 800px;
   flex-grow: 0;
   border-radius: 10px;
-  background-color: #d0a3b3;
+  background-color:#fbcfdc;
 }
 
 img.Close {

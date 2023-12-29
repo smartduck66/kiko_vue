@@ -13,18 +13,6 @@ const open = ref(false); //gestion de la fenêtre modale
 const refresh = ref(0); //refresh des valeurs de référence affichées après le choix d'une nouvelle station
 const selectedStationRef = ref();
 
-/*
-// Constitution des valeurs de référence DRIAS
-let val_ref_drias: Ref<drias[]> = ref([]);
-const station_drias = store.drias[store.drias.findIndex((x: { indicatif: string }) => x.indicatif == props.valeur_ref[0].substr(0, 8))];
-val_ref_drias[0] = station_drias.indicatif;
-val_ref_drias[1] = station_drias.temp_moy + "°";
-val_ref_drias[2] = station_drias.temp_min + "°";
-val_ref_drias[3] = station_drias.temp_max + "°";
-val_ref_drias[4] = station_drias.canicule + " j/an";
-val_ref_drias[5] = station_drias.pluie + " mm/mois";
-console.log(val_ref_drias[0]);
-*/
 // Constitution de la liste "département/ville de la station météo"
 // Cette liste va servir à la 'dropdown' de choix d'une nouvelle station de référence
 class station_meteo {

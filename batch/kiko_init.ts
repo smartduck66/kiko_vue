@@ -4,6 +4,7 @@
 // 18/12/2021 : passage en Typescript
 // 03/09/2022 : passage en FP, remplacement des require par des import
 // 23/12/2023 : réécriture de la création du fichier de valeurs immobilières (async/await) - Les fiches climatiques sont désormais chargées dans le répertoire \public
+// 28/12/2023 : intégration des données issues de la DRIAS - Pour le moment, la récupération des fichiers dans \public\drias se fait manuellement
 //
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans CET ORDRE :
@@ -382,7 +383,6 @@ switch (myArgs[0]) {
         fs.accessSync(drias_filename, fs.constants.F_OK);
         // Le fichier existe, donc on peut le lire
         var fields = fs.readFileSync(drias_filename, "utf8").split(";");
-        //const item = new data_drias_H1(); // note the "new" keyword here
         item.indicatif = refcli.ref;
         item.temp_moy = Number(fields[0]);
         item.temp_min = Number(fields[1]);
