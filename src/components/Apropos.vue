@@ -18,7 +18,6 @@ const store = useStore();
       <li>Le premier bloc expose la station météo de référence (Trappes par défaut, modifiable pour la session)</li>
       <li>Le second permet de borner 4 critères principaux</li>
       <li>Le troisième autorise des recherches immédiates (saisie de plusieurs départements : les séparer par un ;)</li>
-      <i>Seules les nappes aquifères toujours mesurées au 1er janvier de l'année n-1 sont affichées</i>
     </ul>
     <br />
     La recherche renvoie une liste de stations météo avec les données suivantes, sur une période comprise entre 1991 et 2020 : <br />
@@ -46,11 +45,11 @@ const store = useStore();
     <ul>
       <li>Code du piézomètre installé</li>
       <li>Altitude de la station de forage (en m)</li>
-      <li>Nombre de mesures effectuées</li>
+      <li>Nombre de mesures effectuées (seules les 5.000 dernières sont toutefois conservées pour le graphique)</li>
       <li>Code INSEE de la commune d'installation de la station</li>
       <li>Commune d'installation de la station</li>
       <li>Date de la 1ère mesure effectuée</li>
-      <li>Date de la dernière mesure effectuée</li>
+      <li>Date de la dernière mesure effectuée (seules les nappes aquifères toujours mesurées au 1er janvier de l'année n-1 sont affichées)</li>
     </ul>
     <br /><br />
     <h4>Source des données utilisées :</h4>

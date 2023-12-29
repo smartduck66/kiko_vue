@@ -25,7 +25,7 @@ export default defineComponent({
     });
 
     const date_mesure: string = props.values.map((v: any) => {
-      const row: string = v.date_mesure.substr(5,2)+"-"+v.date_mesure.substr(0,4);
+      const row: string = v.date_mesure.substr(5, 2) + "-" + v.date_mesure.substr(0, 4);
       return row;
     });
 
@@ -38,7 +38,7 @@ export default defineComponent({
       grid: {
         left: 30,
         bottom: 20,
-        right: 30,
+        right: 45,
       },
       xAxis: {
         type: "category",
@@ -53,7 +53,7 @@ export default defineComponent({
       },
       textStyle: {
         fontFamily: "gotham-Book",
-        color: '#000',
+        color: "#000",
       },
       series: [
         {
