@@ -231,8 +231,6 @@ function onFastSearchDpt(criteres: any) {
 async function onFastSearchNappes(criteres: any) {
   // Appui sur le 1er bouton 'GO' : affichage des points de forage actifs au 1er janvier de l'année n-1 du département saisi
 
-  let results: niveau_nappe[] = [];
-
   // Dé-référencement de l'objet pour récupérer le département saisi
   let cp = Object(criteres).dpt2;
 
