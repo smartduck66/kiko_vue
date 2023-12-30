@@ -23,14 +23,14 @@ export default defineComponent({
     props.values.sort(function (a: any, b: any) {
       return a.timestamp - b.timestamp; // On trie les mesures chronologiquement (la plus ancienne sera à gauche du graphique)
     });
-
+    const altitude_station: number = Number(props.values[0].altitude_station.slice(0, -1)); // On retire l'unité "m"
     const date_mesure: string = props.values.map((v: any) => {
       const row: string = v.date_mesure.substr(5, 2) + "-" + v.date_mesure.substr(0, 4);
       return row;
     });
 
-    const profondeur_nappe: number = props.values.map((v: any) => {
-      const row: number = Number(v.profondeur_nappe_eau);
+    const niveau_nappe_eau: number = props.values.map((v: any) => {
+      const row: number = Number(v.niveau_nappe_eau);
       return row;
     });
 
@@ -48,8 +48,8 @@ export default defineComponent({
       yAxis: {
         type: "value",
         position: "right",
-        min: "0",
-        max: "dataMax",
+        min:  0, // ATTENTION : cote NGF négative possible. Ex : 10405X0124/F17. Surtout pour des stations installées à faible altitude.
+        max: altitude_station < 0 ? "dataMax" : altitude_station, // GUARD : altitude négative possible. Ex : 09632X0178/F.
       },
       textStyle: {
         fontFamily: "gotham-Book",
@@ -57,7 +57,7 @@ export default defineComponent({
       },
       series: [
         {
-          data: profondeur_nappe,
+          data: niveau_nappe_eau,
           symbol: "none",
           type: "line",
           lineStyle: {

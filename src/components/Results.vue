@@ -18,18 +18,21 @@ const selectedStation = ref();
 const selectedForage = ref();
 const open = ref(false); //gestion de la fenêtre modale de la fiche climatique complète
 const modal_content = ref("");
+const nombre_mesures_disponibles_piezometre = ref(0);
 
 class mesures_nappe {
   date_mesure: string;
   timestamp: number;
   niveau_nappe_eau: string;
   profondeur_nappe_eau: string;
+  altitude_station: string;
 
   constructor() {
     this.date_mesure = "";
     this.timestamp = 0;
     this.niveau_nappe_eau = "";
     this.profondeur_nappe_eau = "";
+    this.altitude_station = "";
   }
 }
 
@@ -58,16 +61,18 @@ const onRowSelect_FC = (event: any) => {
 
 const onRowSelect_Forage = async (event: any) => {
   if (store.xxxl) {
-    modal_content.value =  "Evolution de la profondeur (en m) de la nappe d'eau souterraine\n";
-    modal_content.value += "---------------------------------------------------------------\n\n";
+    modal_content.value = "Evolution du niveau de la nappe d'eau souterraine (cote piézométrique, m NGF | 0 = niveau de la mer à Marseille) \n";
+    modal_content.value += "Les mesures sont positives lorsque le niveau de la nappe est inférieur à celui du repère de mesure (cas les plus fréquents).\n"
+    modal_content.value += "Elles sont négatives dans le cas inverse (puits artésiens = exsurgences où l'eau jaillit spontanément). \n";
+    modal_content.value += "----------------------------------------------------------------------------------------------------------------------------\n";
     modal_content.value += "Code piézomètre            : " + event.data.col1 + "\n";
     modal_content.value += "Altitude de la station     : " + event.data.col2 + "\n";
     modal_content.value += "Nombre de mesures          : " + event.data.col3 + "\n";
-    modal_content.value += "Commune "+"("+event.data.col4 + ")            : " + event.data.col5 + "\n";
+    modal_content.value += "Commune " + "(" + event.data.col4 + ")            : " + event.data.col5 + "\n";
     modal_content.value += "Première mesure effectuée  : " + event.data.col6 + "\n";
     modal_content.value += "Dernière mesure effectuée  : " + event.data.col7 + "\n";
 
-
+    // Explication détaillée des cotes piézométriques : https://ades.eaufrance.fr/Spip?p=/glossaire-c
     const API_URL = "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?&sort=desc&code_bss=" + event.data.col1; // On prend les 5.000 dernières mesures au maximum
     const response = await fetch(API_URL);
 
@@ -75,19 +80,23 @@ const onRowSelect_Forage = async (event: any) => {
       alert("Une erreur technique est survenue !");
     } else {
       const mesures = (await response.json()).data;
+      nombre_mesures_disponibles_piezometre.value = mesures.length; // GUARD (ex : le piézométre 10215X0186/PUITSY ne renvoie pas de valeurs alors qu'il remonte comme exploitable)
       results_mesures_nappe = mesures.map((item: any) => {
         const c = new mesures_nappe(); // note the "new" keyword here
         c.date_mesure = item.date_mesure;
         c.timestamp = Date.parse(c.date_mesure);
         c.niveau_nappe_eau = item.niveau_nappe_eau;
         c.profondeur_nappe_eau = item.profondeur_nappe;
-
+        c.altitude_station = event.data.col2;
         return c;
       });
-      
     }
 
-    open.value = true; // Affichage de la modale
+    if (nombre_mesures_disponibles_piezometre.value) {
+      open.value = true; // Affichage de la modale
+    } else {
+      alert("Aucune valeur exploitable relative à ce piézomètre !");
+    }
   } else {
     alert("La visualisation du graphique d'évolution d'une nappe ne peut se faire que sur un écran full HD");
   }
@@ -236,7 +245,7 @@ const onRowSelect_Forage = async (event: any) => {
   height: 800px;
   flex-grow: 0;
   border-radius: 10px;
-  background-color:#fbcfdc;
+  background-color: #fbcfdc;
 }
 
 img.Close {
