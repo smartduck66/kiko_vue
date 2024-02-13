@@ -3,7 +3,7 @@
 <template>
   <div class="copyright">
     <div>Site généré avec Vue.js - Hébergé @Netlify</div>
-    <a target="_blank" href="http://www.andretonic.fr/posts/kiko_data_climat_france_dom_tom.html" aria-label="la genèse de Kikō">Retrouvez la genèse de Kikō sur mon blog personnel</a>
+    <a target="_blank" href="http://www.andretonic.fr/posts/kiko_data_climat_france_dom_tom.html" aria-label="la genèse de Kikō">La genèse de Kikō sur mon blog personnel</a>
     <div>© André Tonic 2023 - Présent</div>
   </div>
 </template>
@@ -17,6 +17,7 @@ a {
 }
 .copyright {
   font-size: 14px;
+  width:360px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-stretch: normal;
@@ -27,5 +28,7 @@ a {
   color: black;
   margin-top: 40px;
   margin-bottom: 40px;
+  margin-left:auto;
+  margin-right:auto;
 }
 </style>

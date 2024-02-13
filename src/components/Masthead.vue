@@ -37,10 +37,10 @@ function RAZ_occurences() {
       <span class="titre">Kikō</span>
       <div class="my_grid">
         <div class="c-item-1">
-          <span class="sous-titre">Données climatiques France & DOM-TOM (1991-2020), mises à jour le {{ $props.date_maj }}</span>
+          <span class="sous-titre">Données climatiques France & DOM-TOM (1991-2020), mises à jour le {{ props.date_maj }}</span>
         </div>
         <div class="FlexWrapper_choix">
-          <Dropdown class="menu" v-model="selectedOption" :options="optionsMenu" optionLabel="name" placeholder="v2.01q" @update:modelValue="menu" />
+          <Dropdown class="menu" v-model="selectedOption" :options="optionsMenu" optionLabel="name" placeholder="v2.01r" @update:modelValue="menu" />
           <Checkbox class="menu2" v-model="store.drias_checked" inputId="drias" :binary="true" @update:modelValue="RAZ_occurences" />
           <label for="drias" class="label"> Horizon 2050 </label>
         </div>
