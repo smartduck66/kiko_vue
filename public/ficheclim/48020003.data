@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 BASSURELS (48)      Indicatif : 48020003, alt : 1042m, lat : 44°11'47"N, lon : 3°37'50"E;
-Edité le : 06/12/2023 dans l'état de la base;
+Edité le : 06/01/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1986 au 03-12-2023);
+(Records établis sur la période du 01-01-1986 au 04-01-2024);
             ;      18.7;      20.6;      22.7;      24.6;      28.4;      35.7;      32.9;      36.1;      30.5;      25.4;      21.2;      19.6;      36.1;
 Date        ;   01-2022;   27-2019;   22-1990;   09-2011;   30-2001;   28-2019;   16-2022;   13-2003;   18-1987;   10-2023;   20-1994;   13-1994;      2003;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1986 au 03-12-2023);
+(Records établis sur la période du 01-01-1986 au 04-01-2024);
             ;     -19.5;     -16.3;       -15;        -7;      -3.2;       0.1;         4;         2;      -0.6;      -5.6;     -10.5;     -15.1;     -19.5;
 Date        ;   12-1987;   11-1986;   01-2005;   12-1986;   08-1997;   06-1989;   17-2000;   30-1986;   17-1994;   25-2003;   22-1988;   14-2001;      1987;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.6;       1.4;       0.1;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-03-1985 au 03-12-2023);
+(Records établis sur la période du 01-03-1985 au 04-01-2024);
             ;     124.6;      97.5;     104.2;       112;       172;     196.2;      56.9;        60;     255.7;     218.2;     236.4;     118.9;     255.7;
 Date        ;   28-2006;   02-2009;   06-1991;   29-2004;   17-1999;   11-2020;   30-1991;   25-2002;   19-2020;   19-2006;   03-2011;   22-2010;      2020;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 30-09-2005 au 03-12-2023);
+(Records établis sur la période du 30-09-2005 au 04-01-2024);
             ;      39.4;      38.4;        46;      38.6;      36.2;      32.1;      29.1;        30;      30.9;      37.7;      41.7;      42.7;        46;
 Date        ;   04-2018;   10-2020;   06-2017;   29-2018;   28-2007;   12-2020;   15-2018;   29-2006;   24-2012;   28-2012;   03-2019;   21-2019;      2017;
 

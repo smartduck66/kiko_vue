@@ -2,16 +2,16 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 CILAOS (974)      Indicatif : 97424410, alt : 1197m, lat : 21°08'03"S, lon : 55°28'18"E;
-Edité le : 06/12/2023 dans l'état de la base;
+Edité le : 06/01/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1969 au 03-12-2023);
-            ;      31.2;      30.5;      30.1;      28.5;      26.8;      26.6;      24.1;      25.6;      25.9;      28.9;      29.8;      30.1;      31.2;
-Date        ;   26-2019;   10-2017;   10-1969;   01-2007;   02-2014;   06-2015;   29-2019;   25-2014;   30-2023;   26-2011;   13-2016;   21-2019;      2019;
+(Records établis sur la période du 01-01-1969 au 04-01-2024);
+            ;        32;      30.5;      30.1;      28.5;      26.8;      26.6;      24.1;      25.6;      25.9;      28.9;      29.8;      30.1;      31.2;
+Date        ;   04-2024;   10-2017;   10-1969;   01-2007;   02-2014;   06-2015;   29-2019;   25-2014;   30-2023;   26-2011;   13-2016;   21-2019;      2019;
 
 
 Température maximale (Moyenne en °C);
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1969 au 03-12-2023);
+(Records établis sur la période du 01-01-1969 au 04-01-2024);
             ;       7.9;       7.8;       7.2;       5.4;       2.9;       1.2;       0.5;       0.1;       1.7;         3;       3.5;       6.5;       0.1;
 Date        ;   02-1983;   04-1980;   18-1973;   28-2012;   25-1990;   14-2003;   30-1974;   06-1982;   08-2013;   12-2006;   04-1994;   13-1988;      1982;
 
@@ -42,7 +42,7 @@ Tn <=   0°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1952 au 03-12-2023);
+(Records établis sur la période du 01-01-1952 au 04-01-2024);
             ;      1100;      1160;       960;    1041.4;     363.7;       135;       130;       101;      72.3;     284.5;     121.2;       200;      1160;
 Date        ;   22-2002;   28-1964;   01-1955;   08-1958;   04-1965;   27-1982;   14-1952;   22-1979;   02-1952;   14-1962;   07-2009;   19-2007;      1964;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 10-06-1989 au 03-12-2023);
+(Records établis sur la période du 10-06-1989 au 04-01-2024);
             ;        50;      39.5;        33;      22.8;        24;      23.9;        23;        24;      23.6;        19;        23;        25;        50;
 Date        ;   22-2002;   03-2022;   07-2006;   24-2018;   17-1992;   04-2022;   20-2022;   29-2001;   12-2021;   15-1995;   07-2004;   29-2009;      2002;
 

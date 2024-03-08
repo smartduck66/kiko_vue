@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 LUNEGARDE (46)      Indicatif : 46181001, alt : 383m, lat : 44°40'42"N, lon : 1°41'22"E;
-Edité le : 06/12/2023 dans l'état de la base;
+Edité le : 06/01/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-08-2001 au 03-12-2023);
+(Records établis sur la période du 01-08-2001 au 04-01-2024);
             ;      18.6;        23;      25.5;      29.4;        33;      40.4;      39.3;        40;        36;      33.4;      23.5;      19.3;      40.4;
 Date        ;   01-2022;   27-2019;   29-2023;   29-2005;   21-2022;   27-2019;   24-2019;   24-2023;   12-2022;   01-2023;   08-2015;   31-2021;      2019;
 
@@ -30,7 +30,7 @@ Statistiques établies sur la période 2001-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-08-2001 au 03-12-2023);
+(Records établis sur la période du 01-08-2001 au 04-01-2024);
             ;     -11.3;       -13;      -9.4;      -3.8;         0;       3.8;       8.1;       7.2;       2.9;      -4.6;      -7.5;     -10.9;       -13;
 Date        ;   13-2003;   09-2012;   01-2005;   07-2008;   05-2019;   01-2006;   15-2016;   21-2014;   25-2002;   25-2003;   17-2007;   15-2001;      2012;
 
@@ -47,7 +47,7 @@ Tn <= -10°C ;       0.1;       0.5;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-08-2001 au 03-12-2023);
+(Records établis sur la période du 01-08-2001 au 04-01-2024);
             ;      28.3;      37.6;      37.8;      59.3;      57.8;      87.8;        55;      36.4;      69.9;      42.2;      36.2;      32.4;      87.8;
 Date        ;   29-2015;   03-2003;   12-2004;   26-2015;   30-2011;   18-2023;   19-2017;   04-2004;   14-2021;   04-2013;   02-2008;   27-2021;      2023;
 
@@ -86,7 +86,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 14-08-2001 au 03-12-2023);
+(Records établis sur la période du 14-08-2001 au 04-01-2024);
             ;      33.8;        30;      27.8;      24.4;      29.6;      25.8;      27.6;        22;      32.1;      26.3;      26.9;        27;      33.8;
 Date        ;   11-2016;   26-2003;   06-2017;   08-2018;   20-2009;   14-2007;   28-2005;   01-2009;   05-2022;   19-2012;   02-2015;   13-2019;      2016;
 

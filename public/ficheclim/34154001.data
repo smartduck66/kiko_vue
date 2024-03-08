@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 MONTPELLIER-AEROPORT (34)      Indicatif : 34154001, alt : 1m, lat : 43°34'34"N, lon : 3°57'52"E;
-Edité le : 06/12/2023 dans l'état de la base;
+Edité le : 06/01/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1946 au 03-12-2023);
+(Records établis sur la période du 01-01-1946 au 04-01-2024);
             ;      21.2;      23.6;      27.4;      30.4;      35.1;      43.5;      37.6;      37.7;      36.3;      31.8;      27.1;        22;      43.5;
 Date        ;   28-2002;   22-2019;   18-1997;   08-2011;   28-2006;   28-2019;   19-2023;   04-2017;   25-1983;   02-1997;   03-1970;   12-1961;      2019;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1946 au 03-12-2023);
+(Records établis sur la période du 01-01-1946 au 04-01-2024);
             ;       -15;     -17.8;      -9.6;      -1.7;       0.6;       5.4;       8.4;       8.2;       3.8;      -0.7;        -5;     -12.4;     -17.8;
 Date        ;   28-1947;   05-1963;   07-1971;   06-1970;   04-1967;   10-1956;   07-1962;   09-1955;   29-1972;   23-1974;   28-1985;   27-1962;      1963;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1946 au 03-12-2023);
+(Records établis sur la période du 01-01-1946 au 04-01-2024);
             ;       115;      78.3;     120.2;      68.4;     120.1;     150.2;        57;     168.6;     299.5;     148.1;     144.2;     112.2;     299.5;
 Date        ;   19-1979;   28-2018;   14-1971;   15-1980;   20-1968;   18-1968;   30-1982;   23-2015;   29-2014;   26-1979;   16-2003;   03-2003;      2014;
 
@@ -76,7 +76,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 03-12-2023);
+(Records établis sur la période du 01-01-1981 au 04-01-2024);
             ;        30;        36;      33.4;        28;        27;      25.9;        29;        31;        37;        33;        35;        36;        37;
 Date        ;   28-2006;   08-1984;   06-2017;   18-2008;   07-2007;   12-2020;   05-1999;   06-1999;   27-1992;   10-1987;   08-1982;   16-1997;      1992;
 

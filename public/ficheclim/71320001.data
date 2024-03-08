@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 MT-ST-VINCENT (71)      Indicatif : 71320001, alt : 601m, lat : 46°37'39"N, lon : 4°28'37"E;
-Edité le : 06/12/2023 dans l'état de la base;
+Edité le : 06/01/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-03-1943 au 03-12-2023);
+(Records établis sur la période du 01-03-1943 au 04-01-2024);
             ;      16.4;      21.3;      22.3;      26.2;        30;      34.7;      37.2;      37.6;      31.8;      27.3;      21.3;      17.2;      37.6;
 Date        ;   01-2022;   28-1960;   28-1989;   22-1968;   18-1945;   22-2003;   31-2020;   12-2003;   07-2023;   01-1985;   07-1955;   10-1978;      2003;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-03-1943 au 03-12-2023);
+(Records établis sur la période du 01-03-1943 au 04-01-2024);
             ;     -18.1;     -21.1;     -13.2;      -5.9;      -2.3;         2;       5.2;       4.7;       1.7;      -4.2;      -9.6;     -16.2;     -21.1;
 Date        ;   09-1985;   10-1956;   06-1971;   12-1986;   06-1957;   02-1962;   10-1948;   30-1986;   26-1972;   29-1997;   22-1998;   25-1962;      1956;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.5;       0.6;       0.0;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-03-1943 au 03-12-2023);
+(Records établis sur la période du 01-03-1943 au 04-01-2024);
             ;      33.2;      30.2;      40.6;      53.8;      60.8;      64.2;      61.5;      61.7;        96;        62;      80.6;      63.9;        96;
 Date        ;   17-2004;   16-1990;   16-1960;   25-1989;   23-1979;   09-1953;   21-2010;   09-1975;   18-1974;   19-2023;   12-1996;   01-2003;      1974;
 
@@ -78,7 +78,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 03-12-2023);
+(Records établis sur la période du 01-01-1981 au 04-01-2024);
             ;        39;        49;      42.2;        39;        36;      36.3;      37.2;      37.8;        30;      36.3;        44;        47;        49;
 Date        ;   04-1998;   27-1990;   31-2023;   15-1992;   22-1994;   19-2021;   24-2021;   02-2023;   21-1990;   03-2006;   08-1982;   04-1988;      1990;
 

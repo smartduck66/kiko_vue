@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 GONNEVILLE (50)      Indicatif : 50209001, alt : 134m, lat : 49°39'09"N, lon : 1°27'48"O;
-Edité le : 06/12/2023 dans l'état de la base;
+Edité le : 06/01/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-05-1959 au 03-12-2023);
+(Records établis sur la période du 01-05-1959 au 04-01-2024);
             ;      14.9;      18.9;      23.7;      23.9;      28.6;      31.7;      33.7;      33.4;      29.4;        27;      20.8;      15.9;      33.7;
 Date        ;   09-1998;   27-2019;   30-2021;   21-1984;   27-2005;   29-2019;   19-2006;   07-2020;   09-2023;   01-2011;   01-2015;   19-2015;      2006;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-05-1959 au 03-12-2023);
+(Records établis sur la période du 01-05-1959 au 04-01-2024);
             ;     -12.3;      -9.9;      -4.6;      -3.1;       0.1;       2.9;         6;       6.3;       3.5;      -0.6;        -4;      -8.8;     -12.3;
 Date        ;   17-1985;   08-1991;   20-1985;   08-2008;   03-1979;   02-1962;   07-1962;   18-1970;   21-1986;   30-1997;   22-1998;   24-1963;      1985;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-04-1956 au 03-12-2023);
+(Records établis sur la période du 01-04-1956 au 04-01-2024);
             ;      39.6;        38;        45;        37;      38.4;      53.2;      54.6;      55.2;      49.8;      77.8;      46.7;      59.2;      77.8;
 Date        ;   11-2001;   27-1967;   11-2013;   10-1998;   16-1994;   11-1993;   06-1969;   03-1963;   09-2002;   27-1966;   18-1970;   13-1957;      1966;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 03-12-2023);
+(Records établis sur la période du 01-01-1981 au 04-01-2024);
             ;        37;      34.4;      31.8;      30.4;        29;      25.1;      24.7;        26;        32;        43;      37.5;      34.3;        43;
 Date        ;   04-1998;   10-2020;   27-2016;   12-2023;   16-1983;   06-2017;   06-2021;   18-1999;   24-2007;   16-1987;   02-2023;   27-2020;      1987;
 

@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 CHATEAUDUN (28)      Indicatif : 28198001, alt : 126m, lat : 48°03'40"N, lon : 1°22'34"E;
-Edité le : 06/12/2023 dans l'état de la base;
+Edité le : 06/01/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-12-1952 au 03-12-2023);
+(Records établis sur la période du 01-12-1952 au 04-01-2024);
             ;      15.7;        21;      25.4;        28;      32.1;      37.8;      41.7;      39.3;      35.2;      29.9;      21.7;      17.1;      41.7;
 Date        ;   15-1975;   27-2019;   25-1955;   21-2018;   25-1953;   18-2022;   25-2019;   06-2003;   09-2023;   01-1985;   07-2015;   16-1989;      2019;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-12-1952 au 03-12-2023);
+(Records établis sur la période du 01-12-1952 au 04-01-2024);
             ;     -18.8;     -17.2;     -11.8;      -6.3;      -2.3;       1.2;       4.2;       3.6;       0.7;      -4.6;     -13.4;     -16.3;     -18.8;
 Date        ;   17-1985;   06-2012;   01-2005;   06-2021;   05-1979;   04-1975;   17-1980;   19-1968;   28-1990;   29-1971;   30-2010;   29-1964;      1985;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.3;       0.4;       0.0;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-02-1952 au 03-12-2023);
+(Records établis sur la période du 01-02-1952 au 04-01-2024);
             ;      38.5;      41.2;      30.6;      41.4;      50.6;      50.5;      57.8;      39.2;      38.2;      43.5;      44.1;      23.8;      57.8;
 Date        ;   11-1955;   25-1997;   27-1977;   24-2014;   13-2005;   16-2013;   06-2001;   30-1958;   16-1969;   25-1981;   01-1968;   15-2011;      2001;
 
@@ -77,7 +77,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 03-12-2023);
+(Records établis sur la période du 01-01-1981 au 04-01-2024);
             ;        35;        38;        33;        27;        29;        25;        33;        34;        24;        28;        31;        40;        40;
 Date        ;   26-1995;   12-1996;   24-1986;   01-1994;   13-2007;   01-1997;   04-2006;   09-1994;   07-1995;   30-2000;   23-1984;   26-1999;      1999;
 

@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 BASTIA (20)      Indicatif : 20148001, alt : 10m, lat : 42°32'26"N, lon : 9°29'06"E;
-Edité le : 06/12/2023 dans l'état de la base;
+Edité le : 06/01/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1947 au 03-12-2023);
+(Records établis sur la période du 01-01-1947 au 04-01-2024);
             ;      25.1;      25.6;      27.1;      25.4;      32.6;      35.7;      36.7;      38.3;      34.3;      29.7;        28;        24;      38.3;
 Date        ;   13-2004;   11-2020;   22-2001;   21-2018;   27-2022;   26-2019;   25-2023;   20-1999;   05-1998;   07-2011;   16-1963;   17-1955;      1999;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1947 au 03-12-2023);
+(Records établis sur la période du 01-01-1947 au 04-01-2024);
             ;      -4.6;        -5;      -3.8;       0.5;       3.1;       8.2;      10.2;      11.8;       7.6;       2.8;      -0.5;      -3.3;        -5;
 Date        ;   25-1954;   16-1956;   05-1949;   10-1958;   01-1970;   03-1949;   08-1954;   28-1954;   25-1984;   21-1970;   27-1955;   29-2005;      1956;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-05-1947 au 03-12-2023);
+(Records établis sur la période du 01-05-1947 au 04-01-2024);
             ;        75;     120.3;        76;      97.3;      86.4;     130.8;      80.2;      85.4;     153.2;     207.6;     232.4;        99;     232.4;
 Date        ;   23-1955;   15-1953;   01-1986;   24-1982;   12-2008;   11-1994;   15-2019;   23-1959;   22-1956;   23-2008;   01-1993;   02-2017;      1993;
 
@@ -76,7 +76,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 03-12-2023);
+(Records établis sur la période du 01-01-1981 au 04-01-2024);
             ;        39;        46;      37.4;        31;        28;        34;      27.1;        35;      29.2;        42;      37.8;      47.2;      47.2;
 Date        ;   04-1981;   08-1984;   06-2017;   02-1994;   20-1984;   13-1982;   18-2009;   17-1995;   25-2020;   30-1990;   21-2015;   22-2019;      2019;
 
