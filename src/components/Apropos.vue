@@ -16,7 +16,7 @@ const store = useStore();
     <br /><br />
     <ul>
       <li>Le premier bloc expose la station météo de référence (Trappes par défaut, modifiable pour la session)</li>
-      <li>Le second permet de borner 4 critères principaux</li>
+      <li>Le second permet de borner 5 critères principaux</li>
       <li>Le troisième autorise des recherches immédiates (saisie de plusieurs départements : les séparer par un ;)</li>
     </ul>
     <br />
