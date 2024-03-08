@@ -9,12 +9,10 @@
 ## Les fonctionnalités
 
 L'application propose 4 fonctionnalités principales :
-- **Recherche de stations** : ? 
-- **Fiches d'un département** : ??
-- **Nappes phréatiques d'un département** : ??
-- **Risques d'une commune** : ??
-
-Un clic sur une ligne du tableau affiché permet de visualiser la fiche climatique complète fournie par Météo France.
+- **Recherche de stations** : une fois les critères de saisis, la recherche renvoit une liste de stations météo pourvues de 9 indicateurs. Un clic sur une ligne du tableau affiché permet de visualiser la fiche climatique complète fournie par Météo France.
+- **Fiches d'un département** : même fonctionnalité que ci-dessus mais limitée à un seul département
+- **Nappes phréatiques d'un département** : cette fois-ci, la liste des piézomètres d'un département est renvoyée avec 6 indicateurs. Un clic sur une ligne du tableau affiché permet de visualiser l'évolution du niveau de la nappe souterraine.
+- **Risques d'une commune** : la centrale nucléaire ainsi que le site classé Seveso les plus proches de la commune choisie sont renvoyés
 
 En sus, la case à cocher "horizon 2050" permet d'afficher les prévisions météo pour 5 indicateurs : Température moyenne, minimum et maximum, les jours de canicule et la pluviométrie.
 
@@ -22,17 +20,16 @@ A noter que la station météo de référence peut être modifiée grâce à l'i
 
 ## Description des répertoires principaux de l'application
 
-- batch : contient ???<br>
-    - *perf.mjs* (aucun paramètre à passer) : ce script calcule les indicateurs lighthouse des pages d'accueil des sites du CAC40 
-    - *spot.mjs* (aucun paramètre à passer) : ce script lit le fichier sitemaps.txt qui doit contenir la ou les sitemaps des sites à auditer. Un fichier xml sans URL (ex : 3ds.xml) indique que la sitemap a été générée avec un crawler externe (du type Screaming Frog SEO spider) et est stockée dans le répertoire /sitemaps
+- batch : contient les 4 batchs décrits plus bas, écrits en TS (le script pipe_par.js les transforme en js)<br>
+- functions : le fichier database.js contient la fonction *serverless* d'appel à la base de données fauna.db, qui stocke les quelques 40 000 communes françaises (utilisée par la fonctionnalité 'Risques d'une commune')<br>
 - public : contient principalement les fichiers json statiques décrivant les valeurs à afficher
-    - */data* : chaque fichier json correspond à une date précise et stocke les indicateurs Lighthouse des sites institutionnels du CAC40
-    - */spot* : les 39 fichiers contiennent les valeurs moyennes des indicateurs Lighthouse, calculées sur 100 pages du site audité
+    - */drias* : les fichiers de prévision présents ont été construits manuellement pour certaines stations météo. En effet, contrairement aux données Météo France, ils ne sont pas aisément accessibles à date.
+    - */ficheclim* : fiches cliamtiques issues des données rendues publiques par Météo France
 - src : contient les sources de l'application
-    - */assets* : images et scripts JS partagés
+    - */assets* : fontes, images et scripts partagés
     - */components* : composants Vue
-    - */router* : gestion du routage entre pages
-    - */views* : écrans principaux
+    - */data* : fichiers json nécessaires à l'application
+    - */data_source* : données initiales récupérées manuellement (communes, liste des stations météo, sites Seveso, dernières valeurs foncières)
 
 ## Modules NPM nécessaires à l'application
 
