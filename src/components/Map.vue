@@ -75,7 +75,7 @@ function callback(response:any, status:any) {
 </script>
 
 <template>
-  <GoogleMap api-key="AIzaSyBs8dFKJpbnpPksN0ihjzG_Udlhtt3F7TY" :style="dimension_map" :center="center" :zoom=zoom_map>
+  <GoogleMap api-key="" :style="dimension_map" :center="center" :zoom=zoom_map>
     <MarkerCluster>
       <Marker v-for="(location, i) in locations" :options="{ position: location }" :key="i" />
     </MarkerCluster>
