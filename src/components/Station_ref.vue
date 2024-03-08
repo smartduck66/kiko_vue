@@ -2,8 +2,6 @@
 // @ts-nocheck
 // Car une erreur TS2698 'Spread types may only be created from object types' s'active sur cette ligne (build only)
 // <div v-if="selectedStationRef" v-bind="newStationRef(selectedStationRef.indicatif)"></div>
-import Panel from "primevue/panel";
-import Listbox from "primevue/listbox";
 import { ref, Ref } from "vue";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();

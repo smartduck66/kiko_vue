@@ -3,7 +3,6 @@
 import Results from "./Results.vue";
 //import Map from "./Map.vue";
 import { ref, Ref } from "vue";
-import Panel from "primevue/panel";
 import { Form, Field } from "vee-validate";
 import * as Yup from "yup";
 import { fiche_climatique, results, niveau_nappe } from "../assets/mixins/types";

@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import Dropdown from "primevue/dropdown";
-import Checkbox from "primevue/checkbox";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 const router = useRouter();
@@ -40,7 +38,7 @@ function RAZ_occurences() {
           <span class="sous-titre">Données climatiques France & DOM-TOM (1991-2020), mises à jour le {{ props.date_maj }}</span>
         </div>
         <div class="FlexWrapper_choix">
-          <Dropdown class="menu" v-model="selectedOption" :options="optionsMenu" optionLabel="name" placeholder="v2.01r" @update:modelValue="menu" />
+          <Dropdown class="menu" v-model="selectedOption" :options="optionsMenu" optionLabel="name" placeholder="v2.1a" @update:modelValue="menu" />
           <Checkbox class="menu2" v-model="store.drias_checked" inputId="drias" :binary="true" @update:modelValue="RAZ_occurences" />
           <label for="drias" class="label"> Horizon 2050 </label>
         </div>

@@ -2,7 +2,7 @@
 
 <template>
   <div class="copyright">
-    <div>Site généré avec Vue.js - Hébergé @Netlify</div>
+    <div>Site généré avec Vue.js - Hébergé @Netlify - <a target="_blank" href="https://github.com/smartduck66/kiko_vue">Source</a></div>
     <a target="_blank" href="http://www.andretonic.fr/posts/kiko_data_climat_france_dom_tom.html" aria-label="la genèse de Kikō">La genèse de Kikō sur mon blog personnel</a>
     <div>© André Tonic 2023 - Présent</div>
   </div>

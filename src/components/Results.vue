@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import DataTable from "primevue/datatable";
-import Column from "primevue/column";
-import Card from "primevue/card";
 import { ref, Ref } from "vue";
 import { useStore } from "../assets/mixins/store.js";
 import AreaChart from "./AreaChart.vue";
@@ -116,7 +113,7 @@ const onRowSelect_Forage = async (event: any) => {
           <DataTable
             v-model:selection="selectedForage"
             :value="props.results_rows"
-            tableStyle="min-width: 65rem"
+            :tableStyle="{ 'min-width': '65rem'}"
             scrollable
             paginator
             :rows="20"
@@ -141,7 +138,7 @@ const onRowSelect_Forage = async (event: any) => {
             <DataTable
               v-model:selection="selectedStation"
               :value="props.results_rows"
-              tableStyle="min-width: 65rem"
+              :tableStyle="{ 'min-width': '65rem'}"
               scrollable
               paginator
               :rows="20"
@@ -167,7 +164,7 @@ const onRowSelect_Forage = async (event: any) => {
             <DataTable
               v-model:selection="selectedStation"
               :value="props.results_rows"
-              tableStyle="min-width: 65rem"
+              :tableStyle="{ 'min-width': '65rem'}"
               scrollable
               paginator
               :rows="20"
