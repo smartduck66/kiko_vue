@@ -8,6 +8,11 @@ import { RouterLink } from "vue-router";
     <h1>Changelog de Kikō</h1>
     <br />
     <br />
+    <h4>Mars 2024</h4>
+    <ul>
+      <li>Passage de l'application en Open Source, licence MIT</li>
+    </ul>
+    <br />
     <h4>Décembre 2023</h4>
     <ul>
       <li>Intégration des prévisions climatiques issues de la DRIAS et des mesures de nappes aquifères (+ graphique d'évolution)</li>

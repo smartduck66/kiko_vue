@@ -1,5 +1,5 @@
 <script setup lang="ts">
-/* Décembre 2023 : mis de côté car peu d'utilité ergonomique
+/* Décembre 2023 : mis de côté car peu d'utilité ergonomique 
 import { GoogleMap, Marker, MarkerCluster} from "vue3-google-map";
 import { results } from "../assets/mixins/types";
 import { useStore } from "../assets/mixins/store.js";

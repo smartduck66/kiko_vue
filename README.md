@@ -45,8 +45,7 @@ A noter que la station météo de référence peut être modifiée grâce à l'i
 - Sharp : ```npm install sharp``` (package utilisé dans le script webp.cjs pour transformer en masse les images png/jpg en webp)
 - google-map : ```npm install vue3-google-map``` (package simplifiant l'utilisation de l'API Google Maps - Restricted APIkey in GoogleMaps Console)
 - Type Google Maps : ```npm i -D @types/google.maps``` (obligatoire pour le build) - Réf : https://developers.google.com/maps/documentation/javascript/using-typescript
-- eCharts : graphiques :  à remplacer par Charts
-- vue-echarts : interface Apache echarts : à remplacer par Charts
+- eCharts/vue-echarts : ```npm i echarts vue-echarts``` (graphiques & interface Vue Apache echarts)
 
 ## Traitements annuels nécessaires, à lancer du répertoire /batch. Une fois/an, lancer dans cet ordre :
 
