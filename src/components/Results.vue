@@ -51,7 +51,9 @@ const onRowSelect_FC = (event: any) => {
         console.error("Erreur:", error.message);
       });
   } else {
-    alert("La visualisation d'une fiche climatique ne peut se faire que sur un écran full HD");
+    alert(
+      "La visualisation d'une fiche climatique ne peut se faire que sur un écran full HD. Ici, la largeur disponible n'est que de " + window.innerWidth.toString() + " pixels."
+    );
   }
   selectedStation.value = null;
 };
@@ -59,7 +61,7 @@ const onRowSelect_FC = (event: any) => {
 const onRowSelect_Forage = async (event: any) => {
   if (store.xxxl) {
     modal_content.value = "Evolution du niveau de la nappe d'eau souterraine (cote piézométrique, m NGF | 0 = niveau de la mer à Marseille) \n";
-    modal_content.value += "Les mesures sont positives lorsque le niveau de la nappe est inférieur à celui du repère de mesure (cas les plus fréquents).\n"
+    modal_content.value += "Les mesures sont positives lorsque le niveau de la nappe est inférieur à celui du repère de mesure (cas les plus fréquents).\n";
     modal_content.value += "Elles sont négatives dans le cas inverse (puits artésiens = exsurgences où l'eau jaillit spontanément). \n";
     modal_content.value += "----------------------------------------------------------------------------------------------------------------------------\n";
     modal_content.value += "Code piézomètre            : " + event.data.col1 + "\n";
@@ -113,7 +115,7 @@ const onRowSelect_Forage = async (event: any) => {
           <DataTable
             v-model:selection="selectedForage"
             :value="props.results_rows"
-            :tableStyle="{ 'min-width': '65rem'}"
+            :tableStyle="{ 'min-width': '65rem' }"
             scrollable
             paginator
             :rows="20"
@@ -138,7 +140,7 @@ const onRowSelect_Forage = async (event: any) => {
             <DataTable
               v-model:selection="selectedStation"
               :value="props.results_rows"
-              :tableStyle="{ 'min-width': '65rem'}"
+              :tableStyle="{ 'min-width': '65rem' }"
               scrollable
               paginator
               :rows="20"
@@ -164,7 +166,7 @@ const onRowSelect_Forage = async (event: any) => {
             <DataTable
               v-model:selection="selectedStation"
               :value="props.results_rows"
-              :tableStyle="{ 'min-width': '65rem'}"
+              :tableStyle="{ 'min-width': '65rem' }"
               scrollable
               paginator
               :rows="20"

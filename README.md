@@ -16,7 +16,7 @@ L'application propose 4 fonctionnalités principales :
 
 En sus, la case à cocher "horizon 2050" permet d'afficher les prévisions météo pour 5 indicateurs : Température moyenne, minimum et maximum, les jours de canicule et la pluviométrie.
 
-A noter que la station météo de référence peut être modifiée grâce à l'icône "Crayon" situé en haut du cartouche. Une "gomme" située en haut du cartouche 'Sélection des stations météo' remet à zéro les valeurs prédéfinies des critères de recherche.
+A noter que la station météo de référence peut être modifiée grâce à l'icône "Crayon" située en haut du cartouche. Une "gomme" située en haut du cartouche 'Sélection des stations météo' remet à zéro les valeurs prédéfinies des critères de recherche.
 
 ## Description des répertoires principaux de l'application
 
@@ -24,7 +24,7 @@ A noter que la station météo de référence peut être modifiée grâce à l'i
 - functions : le fichier database.js contient la fonction *serverless* d'appel à la base de données fauna.db, qui stocke les quelques 40 000 communes françaises (utilisée par la fonctionnalité 'Risques d'une commune')<br>
 - public : contient principalement les fichiers json statiques décrivant les valeurs à afficher
     - */drias* : les fichiers de prévision présents ont été construits manuellement pour certaines stations météo. En effet, contrairement aux données Météo France, ils ne sont pas aisément accessibles à date.
-    - */ficheclim* : fiches cliamtiques issues des données rendues publiques par Météo France
+    - */ficheclim* : fiches climatiques issues des données rendues publiques par Météo France
 - src : contient les sources de l'application
     - */assets* : fontes, images et scripts partagés
     - */components* : composants Vue
@@ -34,13 +34,13 @@ A noter que la station météo de référence peut être modifiée grâce à l'i
 ## Modules NPM nécessaires à l'application
 
 - Types Babel : ```npm i -D @babel/types```
-- Faunadb : npm install --save faunadb (DB en mode serverless)
+- Faunadb : ```npm install --save faunadb``` (DB en mode serverless)
 - Vue Router : ```npm i vue-router@4```
 - VueUse : ```npm i @vueuse/core``` (utilitaires)
 - PrimeVue : ```npm i primevue``` (composants graphiques)
 - AutoImport PrimeVue : ```npm i unplugin-vue-components -D``` (pour éviter les déclarations manuelles d'importation des composants)
-- Vee-validate : npm i vee-validate --save (VeeValidate is the most popular Vue.js form library)
-- Yup : npm install -S yup (Yup is a schema builder for runtime value parsing and validation)
+- Vee-validate : ```npm i vee-validate --save``` (VeeValidate is the most popular Vue.js form library)
+- Yup : ```npm install -S yup``` (Yup is a schema builder for runtime value parsing and validation)
 - Pinia : ```npm i pinia``` (gestion des états)
 - Sharp : ```npm install sharp``` (package utilisé dans le script webp.cjs pour transformer en masse les images png/jpg en webp)
 - google-map : ```npm install vue3-google-map``` (package simplifiant l'utilisation de l'API Google Maps - Restricted APIkey in GoogleMaps Console)
