@@ -9,14 +9,14 @@
 ## Les fonctionnalités
 
 L'application propose 4 fonctionnalités principales :
-- **Recherche de stations** : une fois les critères de saisis, la recherche renvoit une liste de stations météo pourvues de 9 indicateurs. Un clic sur une ligne du tableau affiché permet de visualiser la fiche climatique complète fournie par Météo France.
-- **Fiches d'un département** : même fonctionnalité que ci-dessus mais limitée à un seul département
+- **Recherche de stations** : une fois les critères de saisis, la recherche renvoie une liste de stations météo pourvues de 9 indicateurs. Un clic sur une ligne du tableau affiché permet de visualiser la fiche climatique complète fournie par Météo France.
+- **Fiches d'un département** : même fonctionnalité que ci-dessus, mais limitée à un seul département
 - **Nappes phréatiques d'un département** : cette fois-ci, la liste des piézomètres d'un département est renvoyée avec 6 indicateurs. Un clic sur une ligne du tableau affiché permet de visualiser l'évolution du niveau de la nappe souterraine.
 - **Risques d'une commune** : la centrale nucléaire ainsi que le site classé Seveso les plus proches de la commune choisie sont renvoyés
 
 En sus, la case à cocher "horizon 2050" permet d'afficher les prévisions météo pour 5 indicateurs : Température moyenne, minimum et maximum, les jours de canicule et la pluviométrie.
 
-A noter que la station météo de référence peut être modifiée grâce à l'icône "Crayon" situé en haut du cartouche.
+A noter que la station météo de référence peut être modifiée grâce à l'icône "Crayon" situé en haut du cartouche. Une "gomme" située en haut du cartouche 'Sélection des stations météo' remet à zéro les valeurs prédéfinies des critères de recherche.
 
 ## Description des répertoires principaux de l'application
 
