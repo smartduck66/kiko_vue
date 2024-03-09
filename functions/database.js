@@ -84,6 +84,13 @@ exports.handler = async (event, context) => {
   const cp = event.queryStringParameters.code_postal;
 
   try {
+    // Kiko n'a besoin que d'une seule table, nommée "communes", composée de 4 champs (index : 'cp') :
+    //{
+    //  cp: "02390",
+    //  ville: "NEUVILLETTE",
+    //  latitude: 49.8554002239,
+    //  longitude: 3.46831298648
+    //}
     const result = flattenDataKeys(await client.query(q.Get(q.Match(q.Index("code_postal"), cp))));
 
     return {
