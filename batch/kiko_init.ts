@@ -382,7 +382,7 @@ switch (myArgs[0]) {
       try {
         fs.accessSync(drias_filename, fs.constants.F_OK);
         // Le fichier existe, donc on peut le lire
-        var fields = fs.readFileSync(drias_filename, "utf8").split(";");
+        let fields = fs.readFileSync(drias_filename, "utf8").split(";");
         item.indicatif = refcli.ref;
         item.temp_moy = Number(fields[0]);
         item.temp_min = Number(fields[1]);

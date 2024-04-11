@@ -31,8 +31,8 @@ function lines_delete() {
   lineReader.on("close", function () {
     // Réécriture du fichier source sur disque
     let output = fs.createWriteStream("./src/assets/mixins/kiko.js");
-    for (let i = 0; i < code_lines.length; i++) {
-      output.write(code_lines[i] + "\n");
+    for (let line of code_lines) {
+      output.write(line + "\n");
     }
     output.end();
   });

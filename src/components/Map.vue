@@ -38,7 +38,7 @@ const locations = props.markers.map((item: results) => {
 
 // Distance en voiture entre deux points géographiques (la création d'un objet ne fonctionne qu'en chargeant un script google -> Doublon avec vue3-google-map)
 
-var service = new google.maps.DistanceMatrixService();
+let service = new google.maps.DistanceMatrixService();
 service.getDistanceMatrix(
   {
     origins: [{lat: 55.93, lng: -3.118}, 'Greenwich, England'],
@@ -54,17 +54,17 @@ function callback(response:any, status:any) {
   // See Parsing the Results for
   // the basics of a callback function.
   if (status == 'OK') {
-    var origins = response.originAddresses;
-    var destinations = response.destinationAddresses;
+    let origins = response.originAddresses;
+    let destinations = response.destinationAddresses;
 
-    for (var i = 0; i < origins.length; i++) {
-      var results = response.rows[i].elements;
-      for (var j = 0; j < results.length; j++) {
-        var element = results[j];
-        var distance = element.distance.text;
-        var duration = element.duration.text;
-        var from = origins[i];
-        var to = destinations[j];
+    for (let i = 0; i < origins.length; i++) {
+      let results = response.rows[i].elements;
+      for (let j = 0; j < results.length; j++) {
+        let element = results[j];
+        let distance = element.distance.text;
+        let duration = element.duration.text;
+        let from = origins[i];
+        let to = destinations[j];
       }
     }
   }
