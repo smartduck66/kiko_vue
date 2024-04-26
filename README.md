@@ -20,7 +20,7 @@ A noter que la station météo de référence peut être modifiée grâce à l'i
 
 ## Description des répertoires principaux de l'application
 
-- batch : contient les 4 batchs décrits plus bas, écrits en TS (le script pipe_par.js les transforme en js)<br>
+- batch : contient les 4 batchs décrits plus bas, écrits en TS<br>
 - functions : le fichier database.js contient la fonction *serverless* d'appel à la base de données fauna.db, qui stocke les quelques 40 000 communes françaises (utilisée par la fonctionnalité 'Risques d'une commune')<br>
 - public : contient principalement les fichiers json statiques décrivant les valeurs à afficher
     - */drias* : les fichiers de prévision présents ont été construits manuellement pour certaines stations météo. En effet, contrairement aux données Météo France, ils ne sont pas aisément accessibles à date.
@@ -49,8 +49,8 @@ A noter que la station météo de référence peut être modifiée grâce à l'i
 
 ## Traitements annuels nécessaires, à lancer du répertoire /batch. Une fois/an, lancer dans cet ordre :
 
-- ```node csv_to_json```       : mise à jour du fichier ListeFichesClimatiques.json, basé sur Liste_stations_météo_complètes.txt construit à la main (des stations peuvent 'bouger')
-- ```node kiko_init.js mf```   : chargement des données climatiques de Météo France (MF)
-- ```node kiko_init.js immo``` : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
-- ```node kiko_init.js clim``` : création du fichier des fiches climatiques (fc.json) à partir des données de Météo France
+- ```node csv_to_json```    : mise à jour du fichier ListeFichesClimatiques.json, basé sur Liste_stations_météo_complètes.txt construit à la main (des stations peuvent 'bouger')
+- ```node kiko_init mf```   : chargement des données climatiques de Météo France (MF)
+- ```node kiko_init immo``` : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
+- ```node kiko_init clim``` : création du fichier des fiches climatiques (fc.json) à partir des données de Météo France
 
