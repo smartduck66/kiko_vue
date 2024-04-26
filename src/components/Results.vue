@@ -66,12 +66,12 @@ const onRowSelect_Forage = async (event: any) => {
     s += "Les mesures sont positives lorsque le niveau de la nappe est inférieur à celui du repère de mesure (cas les plus fréquents).\n";
     s += "Elles sont négatives dans le cas inverse (puits artésiens = exsurgences où l'eau jaillit spontanément). \n";
     s += "----------------------------------------------------------------------------------------------------------------------------\n";
-    let l1: string = "Code piézomètre        : " + event.data.col1;
-    l1 = l1.padEnd(55, " ") + "Commune " + "(" + event.data.col4 + ")           : " + event.data.col5 + "\n";
-    let l2: string = "Altitude de la station : " + event.data.col2;
-    l2 = l2.padEnd(55, " ") + "Première mesure effectuée : " + event.data.col6 + "\n";
-    let l3: string = "Nombre de mesures      : " + event.data.col3;
-    l3 = l3.padEnd(55, " ") + "Dernière mesure effectuée : " + event.data.col7 + "\n";
+    let l1: string = "Code piézomètre           : " + event.data.col1;
+    l1 = l1.padEnd(55, " ") + "Commune " + "(" + event.data.col4 + ")        : " + event.data.col5 + "\n";
+    let l2: string = "Première mesure effectuée : " + event.data.col6
+    l2 = l2.padEnd(55, " ") + "Altitude de la station : " + event.data.col2 + "\n";
+    let l3: string = "Dernière mesure effectuée : " + event.data.col7;
+    l3 = l3.padEnd(55, " ") + "Nombre de mesures      : " + event.data.col3 + "\n";
     s += l1 + l2 + l3;
     modal_content.value = s;
 
