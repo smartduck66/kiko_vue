@@ -62,16 +62,18 @@ const onRowSelect_FC = (event: any) => {
 
 const onRowSelect_Forage = async (event: any) => {
   if (store.xxxl) {
-    modal_content.value = "Evolution du niveau de la nappe d'eau souterraine (cote piézométrique, m NGF | 0 = niveau de la mer à Marseille) \n";
-    modal_content.value += "Les mesures sont positives lorsque le niveau de la nappe est inférieur à celui du repère de mesure (cas les plus fréquents).\n";
-    modal_content.value += "Elles sont négatives dans le cas inverse (puits artésiens = exsurgences où l'eau jaillit spontanément). \n";
-    modal_content.value += "----------------------------------------------------------------------------------------------------------------------------\n";
-    modal_content.value += "Code piézomètre            : " + event.data.col1 + "\n";
-    modal_content.value += "Altitude de la station     : " + event.data.col2 + "\n";
-    modal_content.value += "Nombre de mesures          : " + event.data.col3 + "\n";
-    modal_content.value += "Commune " + "(" + event.data.col4 + ")            : " + event.data.col5 + "\n";
-    modal_content.value += "Première mesure effectuée  : " + event.data.col6 + "\n";
-    modal_content.value += "Dernière mesure effectuée  : " + event.data.col7 + "\n";
+    let s: string = "Evolution du niveau de la nappe d'eau souterraine (cote piézométrique, m NGF | 0 = niveau de la mer à Marseille) \n";
+    s += "Les mesures sont positives lorsque le niveau de la nappe est inférieur à celui du repère de mesure (cas les plus fréquents).\n";
+    s += "Elles sont négatives dans le cas inverse (puits artésiens = exsurgences où l'eau jaillit spontanément). \n";
+    s += "----------------------------------------------------------------------------------------------------------------------------\n";
+    let l1: string = "Code piézomètre        : " + event.data.col1;
+    l1 = l1.padEnd(55, " ") + "Commune " + "(" + event.data.col4 + ")           : " + event.data.col5 + "\n";
+    let l2: string = "Altitude de la station : " + event.data.col2;
+    l2 = l2.padEnd(55, " ") + "Première mesure effectuée : " + event.data.col6 + "\n";
+    let l3: string = "Nombre de mesures      : " + event.data.col3;
+    l3 = l3.padEnd(55, " ") + "Dernière mesure effectuée : " + event.data.col7 + "\n";
+    s += l1 + l2 + l3;
+    modal_content.value = s;
 
     // Explication détaillée des cotes piézométriques : https://ades.eaufrance.fr/Spip?p=/glossaire-c
     const API_URL = "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?&sort=desc&code_bss=" + event.data.col1; // On prend les 5.000 dernières mesures au maximum
