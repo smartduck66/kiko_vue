@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 LE GOL LES HAUTS - CIRAD (974)      Indicatif : 97414431, alt : 365m, lat : 21°14'44"S, lon : 55°25'40"E;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1997 au 04-01-2024);
+(Records établis sur la période du 01-01-1997 au 30-12-2023);
             ;      33.6;      34.6;      34.4;        32;      31.3;      29.4;      29.2;      27.7;      29.9;      31.7;      32.1;      33.2;      34.6;
 Date        ;   17-2023;   11-2016;   05-2004;   22-2023;   17-2023;   06-2015;   02-2011;   25-2023;   27-2023;   30-2023;   30-1997;   24-2021;      2016;
 
@@ -30,7 +30,7 @@ Statistiques établies sur la période 1997-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1997 au 04-01-2024);
+(Records établis sur la période du 01-01-1997 au 30-12-2023);
             ;        17;      17.6;      16.4;      14.9;      12.8;      11.3;      10.7;      10.4;      11.3;      11.8;      13.6;      16.1;      10.4;
 Date        ;   27-2022;   16-2023;   15-2015;   28-2012;   30-2004;   08-2020;   03-1998;   10-2020;   10-2000;   11-2006;   01-2007;   02-1999;      2020;
 
@@ -46,7 +46,7 @@ Tn <=   0°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-02-1997 au 04-01-2024);
+(Records établis sur la période du 01-02-1997 au 31-12-2023);
             ;     513.5;     263.5;       185;     142.5;       117;      94.5;     125.5;        88;      71.5;      77.5;     160.5;     176.5;     513.5;
 Date        ;   22-2002;   27-2007;   05-2006;   24-2018;   15-2015;   06-2015;   13-2023;   12-2010;   15-2003;   22-2018;   07-2009;   03-2013;      2002;
 

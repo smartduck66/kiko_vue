@@ -52,7 +52,9 @@ const onRowSelect_FC = (event: any) => {
       });
   } else {
     alert(
-      "La visualisation d'une fiche climatique ne peut se faire que sur un écran full HD. Ici, la largeur disponible n'est que de " + window.innerWidth.toString() + " pixels."
+      "La visualisation d'une fiche climatique ne peut se faire que sur un écran full HD. Ici, la largeur disponible n'est que de " +
+        window.innerWidth.toString() +
+        " pixels."
     );
   }
   selectedStation.value = null;
@@ -206,9 +208,7 @@ const onRowSelect_Forage = async (event: any) => {
         <img src="../assets/img/close.png" class="Close" />
       </div>
       <div class="FlexWrapper_modal">
-        <textarea id="story" name="story" rows="50" cols="100"
-          >{{ modal_content }}
-        </textarea>
+        <Textarea v-model="modal_content" autoResize rows="50" cols="30" />
         <AreaChart v-if="store.forages_search" v-bind="{ values: results_mesures_nappe, width: 1300, height: 500, color: '#0a94a8' }" />
       </div>
     </div>
@@ -241,7 +241,7 @@ const onRowSelect_Forage = async (event: any) => {
   left: 25%;
   margin-left: -150px;
   width: 1355px;
-  height: 800px;
+  height: 820px;
   flex-grow: 0;
   border-radius: 10px;
   background-color: #fbcfdc;

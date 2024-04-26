@@ -1,17 +1,18 @@
-"use strict";
 /* eslint-disable @typescript-eslint/no-var-requires */
 //
 // Bibliothéque JavaScript utilisée en mode "batch" :
 // 18/12/2021 : passage en Typescript
 // 03/09/2022 : passage en FP, remplacement des require par des import
 // 23/12/2023 : réécriture de la création du fichier de valeurs immobilières (async/await) - Les fiches climatiques sont désormais chargées dans le répertoire \public
+// 28/12/2023 : intégration des données issues de la DRIAS - Pour le moment, la récupération des fichiers dans \public\drias se fait manuellement
+// 26/04/2024 : transformation au format ES6 et remplacement du package 'createReadStream' (node 4.0) par fs/promises
 //
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans CET ORDRE :
-//      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
+//      - node kiko_init mf : chargement des données climatiques de Météo France (MF)
 //        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car les stations météo évoluent (dernièe MAJ : 23/12/2023)
-//      - node kiko_init.js immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
-//      - node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France et de drias_H1.json (prévisions 2021-2050/RPC 4.5)
+//      - node kiko_init immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
+//      - node kiko_init clim : création du fichier fc.json à partir des données climatiques de Météo France et de drias_H1.json (prévisions 2021-2050/RPC 4.5)
 //        ATTENTION : le répertoire \public\drias contient les fichiers de prévision créés manuellement en partant du site https://www.drias-climat.fr/
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
 // **********************************************************************************************************************
@@ -24,203 +25,171 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
+var __asyncValues = (this && this.__asyncValues) || function (o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 // On 'importe' des fonctions de distances.js
-var distances_1 = require("../batch/distances");
-// Chargement des prix au m2 et des coordonnées des CNPE
-var prix_m2 = require("../src/data/prix_maisons_m2.json");
-var lat_long_CNPE = require("../src/data/centrales.json");
+import { convert_DMS_DD, site_dangereux_le_plus_proche } from "../batch/distances.js";
 // Constantes communes à l'ensemble des traitements
-var https = require("https");
-var fs = require("fs");
-var ref = require("../src/data/ListeFichesClimatiques.json");
+import * as https from "https";
+import * as fs from "fs";
+import { open } from "fs/promises"; // Pour lecture d'un fichier texte ligne à ligne
+// Chargement des données
+const prix_m2 = JSON.parse(fs.readFileSync("../src/data/prix_maisons_m2.json", "utf8"));
+const lat_long_CNPE = JSON.parse(fs.readFileSync("../src/data/centrales.json", "utf8"));
+const ref = JSON.parse(fs.readFileSync("../src/data/ListeFichesClimatiques.json", "utf8"));
 // Fonction de création du fichier de valeurs foncières
-var filename = "../src/data_source/valeursfoncieres.txt";
+const filename = "../src/data_source/valeursfoncieres.txt";
 function CreationFichierValeursFoncieres(url) {
-    return __awaiter(this, void 0, void 0, function () {
-        // Fonction récursive pour lire les morceaux du fichier
-        function read() {
-            return __awaiter(this, void 0, void 0, function () {
-                var _a, done, value;
-                return __generator(this, function (_b) {
-                    switch (_b.label) {
-                        case 0: return [4 /*yield*/, reader.read()];
-                        case 1:
-                            _a = _b.sent(), done = _a.done, value = _a.value;
-                            if (done) {
-                                // Fin de la lecture du fichier
-                                console.log("Chargement en local du fichier des valeurs foncières terminé");
-                                return [2 /*return*/];
-                            }
-                            // Utiliser la partie 'value', qui contient le morceau de données
-                            // On crée le fichier sur disque si tout est OK (591 Mo pour 2022, 4,7 millions de lignes) *************************************************
-                            // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
-                            // Code service CH
-                            // Reference document
-                            // 1 Articles CGI
-                            // 2 Articles CGI
-                            // 3 Articles CGI
-                            // 4 Articles CGI
-                            // 5 Articles CGI
-                            // No disposition
-                            // Date mutation
-                            // Nature mutation
-                            // Valeur fonciere
-                            // No voie
-                            // B
-                            // T
-                            // Q
-                            // Type de voie
-                            // Code voie
-                            // Voie
-                            // Code postal
-                            // Commune
-                            // Code departement
-                            // Code commune
-                            // Prefixe de section
-                            // Section
-                            // No plan
-                            // No Volume
-                            // 1er lot
-                            // Surface Carrez du 1er lot
-                            // 2eme lot
-                            // Surface Carrez du 2eme lot
-                            // 3eme lot
-                            // Surface Carrez du 3eme lot
-                            // 4eme lot
-                            // Surface Carrez du 4eme lot
-                            // 5eme lot
-                            // Surface Carrez du 5eme lot
-                            // Nombre de lots
-                            // Code type local
-                            // Type local
-                            // Identifiant local
-                            // Surface reelle bati
-                            // Nombre pieces principales
-                            // Nature culture
-                            // Nature culture speciale
-                            // Surface terrain
-                            fs.appendFileSync(filename, value); // Création incrémentale du fichier brut, mode texte, sur disque
-                            // Appeler récursivement la fonction pour lire le morceau suivant
-                            return [4 /*yield*/, read()];
-                        case 2:
-                            // Appeler récursivement la fonction pour lire le morceau suivant
-                            _b.sent();
-                            return [2 /*return*/];
-                    }
-                });
-            });
-        }
-        var response, reader, prix_maisons, fiches1, cumul_prix, cumul_surface, nb_vente, num_line, current_district, lineReader;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    fs.unlink(filename, function (err) {
-                        if (err) {
-                            console.error("Erreur lors de la suppression du fichier de valeurs foncières : ", err);
-                        }
-                        else {
-                            console.log("Le précédent fichier de valeurs foncières a été supprimé avec succès.");
-                        }
-                    });
-                    return [4 /*yield*/, fetch(url)];
-                case 1:
-                    response = _a.sent();
-                    if (!response.ok) {
-                        throw new Error("Erreur de chargement du fichier");
-                    }
-                    reader = response.body.getReader();
-                    // Démarrer la lecture
-                    return [4 /*yield*/, read()];
-                case 2:
-                    // Démarrer la lecture
-                    _a.sent();
-                    prix_maisons = /** @class */ (function () {
-                        function prix_maisons() {
-                            this.dpt = "";
-                            this.prix = 0;
-                            this.nb_ventes = 0;
-                        }
-                        return prix_maisons;
-                    }());
-                    fiches1 = [];
-                    cumul_prix = 0;
-                    cumul_surface = 0;
-                    nb_vente = 0;
-                    num_line = 0;
-                    current_district = "01";
-                    lineReader = require("readline").createInterface({
-                        // Nouveau package depuis Node 4.0.0 qui facilite la lecture d'un fichier ligne à ligne
-                        input: require("fs").createReadStream(filename),
-                    });
-                    lineReader.on("line", function (line_read) {
-                        if (num_line > 0) {
-                            // on saute la 1ère ligne du fichier
-                            var fields = line_read.split("|");
-                            var item = new prix_maisons(); // note the "new" keyword here
-                            var departement = fields[18];
-                            var prix = !fields[10] ? 0 : Number(fields[10].substring(0, fields[10].indexOf(","))); // Guard si le prix est vide ; suppression des décimales sinon
-                            var type_bien = fields[36];
-                            var surface = !fields[38] ? 0 : Number(fields[38]); // Guard si la surface est vide
-                            if (departement == current_district) {
-                                if (type_bien == "Maison" && prix / surface < 50000) {
-                                    // Guard : on ne retient pas les prix au m2 hors norme (vente de domaine, etc.)
-                                    // ATTENTION : le cas où la parcelle contient plusieurs maisons habitables fausse les calculs (cela peut arriver surtout en province)
-                                    cumul_prix += prix;
-                                    cumul_surface += surface;
-                                    ++nb_vente;
-                                }
-                            }
-                            else {
-                                item.prix = cumul_surface ? Math.trunc(cumul_prix / cumul_surface) : 0; // Guard : pour le département 2B, pas de maison donc pas de surface...
-                                item.nb_ventes = nb_vente;
-                                item.dpt = current_district;
-                                console.log("Traitement du département " + item.dpt + " : prix moyen au m2 = " + item.prix + " euros (" + item.nb_ventes + " ventes)");
-                                fiches1.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
-                                current_district = departement;
-                                cumul_prix = cumul_surface = nb_vente = 0;
-                            }
-                        }
-                        ++num_line;
-                    });
-                    lineReader.on("close", function () {
-                        fs.writeFileSync("../src/data/prix_maisons_m2.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
-                    });
-                    return [2 /*return*/];
+    var _a, e_1, _b, _c;
+    return __awaiter(this, void 0, void 0, function* () {
+        fs.unlink(filename, (err) => {
+            if (err) {
+                console.error("Erreur lors de la suppression du fichier de valeurs foncières : ", err);
+            }
+            else {
+                console.log("Le précédent fichier de valeurs foncières a été supprimé avec succès.");
             }
         });
+        const response = yield fetch(url);
+        if (!response.ok) {
+            throw new Error("Erreur de chargement du fichier : " + url);
+        }
+        // Créer un objet ReadableStream depuis la réponse
+        const reader = response.body.getReader();
+        // Fonction récursive pour lire les morceaux du fichier
+        function read() {
+            return __awaiter(this, void 0, void 0, function* () {
+                const { done, value } = yield reader.read();
+                if (done) {
+                    // Fin de la lecture du fichier
+                    console.log("Chargement en local du fichier des valeurs foncières terminé");
+                    return;
+                }
+                // Utiliser la partie 'value', qui contient le morceau de données
+                // On crée le fichier sur disque si tout est OK (591 Mo pour 2022, 4,7 millions de lignes) *************************************************
+                // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
+                // Code service CH
+                // Reference document
+                // 1 Articles CGI
+                // 2 Articles CGI
+                // 3 Articles CGI
+                // 4 Articles CGI
+                // 5 Articles CGI
+                // No disposition
+                // Date mutation
+                // Nature mutation
+                // Valeur fonciere
+                // No voie
+                // B
+                // T
+                // Q
+                // Type de voie
+                // Code voie
+                // Voie
+                // Code postal
+                // Commune
+                // Code departement
+                // Code commune
+                // Prefixe de section
+                // Section
+                // No plan
+                // No Volume
+                // 1er lot
+                // Surface Carrez du 1er lot
+                // 2eme lot
+                // Surface Carrez du 2eme lot
+                // 3eme lot
+                // Surface Carrez du 3eme lot
+                // 4eme lot
+                // Surface Carrez du 4eme lot
+                // 5eme lot
+                // Surface Carrez du 5eme lot
+                // Nombre de lots
+                // Code type local
+                // Type local
+                // Identifiant local
+                // Surface reelle bati
+                // Nombre pieces principales
+                // Nature culture
+                // Nature culture speciale
+                // Surface terrain
+                fs.appendFileSync(filename, value); // Création incrémentale du fichier brut, mode texte, sur disque
+                // Appeler récursivement la fonction pour lire le morceau suivant
+                yield read();
+            });
+        }
+        // Démarrer la lecture
+        yield read();
+        // Création du fichier prix_maisons_m2.json *****************************************************************************
+        class prix_maisons {
+            constructor() {
+                this.dpt = "";
+                this.prix = 0;
+                this.nb_ventes = 0;
+            }
+        }
+        // Balayage du fichier des valeurs foncières, enrichissement de l'Array fiches, création du JSON sur disque
+        const fiches1 = [];
+        let cumul_prix = 0;
+        let cumul_surface = 0;
+        let nb_vente = 0;
+        let num_line = 0;
+        let current_district = "01";
+        // On lit le fichier texte
+        const lineReader = yield open(filename);
+        try {
+            for (var _d = true, _e = __asyncValues(lineReader.readLines()), _f; _f = yield _e.next(), _a = _f.done, !_a; _d = true) {
+                _c = _f.value;
+                _d = false;
+                const line = _c;
+                if (num_line > 0) {
+                    // on saute la 1ère ligne du fichier
+                    const fields = line.split("|");
+                    const item = new prix_maisons(); // note the "new" keyword here
+                    const departement = fields[18];
+                    const prix = !fields[10] ? 0 : Number(fields[10].substring(0, fields[10].indexOf(","))); // Guard si le prix est vide ; suppression des décimales sinon
+                    const type_bien = fields[36];
+                    const surface = !fields[38] ? 0 : Number(fields[38]); // Guard si la surface est vide
+                    if (departement == current_district) {
+                        if (type_bien == "Maison" && prix / surface < 50000) {
+                            // Guard : on ne retient pas les prix au m2 hors norme (vente de domaine, etc.)
+                            // ATTENTION : le cas où la parcelle contient plusieurs maisons habitables fausse les calculs (cela peut arriver surtout en province)
+                            cumul_prix += prix;
+                            cumul_surface += surface;
+                            ++nb_vente;
+                        }
+                    }
+                    else {
+                        item.prix = cumul_surface ? Math.trunc(cumul_prix / cumul_surface) : 0; // Guard : pour le département 2B, pas de maison donc pas de surface...
+                        item.nb_ventes = nb_vente;
+                        item.dpt = current_district;
+                        console.log("Traitement du département " + item.dpt + " : prix moyen au m2 = " + item.prix + " euros (" + item.nb_ventes + " ventes)");
+                        fiches1.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
+                        current_district = departement;
+                        cumul_prix = cumul_surface = nb_vente = 0;
+                    }
+                }
+                ++num_line;
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (!_d && !_a && (_b = _e.return)) yield _b.call(_e);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        fs.writeFileSync("../src/data/prix_maisons_m2.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
     });
 }
 function extract_alone_value(ref, pattern, data, value_name) {
     // Fonction qui extrait une valeur seule
-    var match = data.match(pattern);
+    const match = data.match(pattern);
     if (match !== null) {
         return match[0];
     }
@@ -229,12 +198,12 @@ function extract_alone_value(ref, pattern, data, value_name) {
 }
 function extract_value_in_a_list(ref, pattern, data, value_name) {
     // Fonction qui extrait une valeur dans une liste
-    var match = data.match(pattern);
+    const match = data.match(pattern);
     if (match !== null) {
         // Guard : on teste la présence d'une mention ("Données non disponibles" ou "Statistiques...") au lieu de valeurs
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        var offset = match.index + value_name.length + 3; // L'offset permet de "sauter" le titre du bloc de données ; +3 correspond aux caractères parasites : CR,LF...
-        var mention = data.substring(offset, offset + 1);
+        let offset = match.index + value_name.length + 3; // L'offset permet de "sauter" le titre du bloc de données ; +3 correspond aux caractères parasites : CR,LF...
+        const mention = data.substring(offset, offset + 1);
         switch (mention) {
             case "D":
                 // Données non disponibles
@@ -244,8 +213,8 @@ function extract_value_in_a_list(ref, pattern, data, value_name) {
             // eslint-disable-next-line no-fallthrough
             default: {
                 // On est positionné au début du jeu de données (janvier à décembre, + une valeur moyenne), séparées par des points-virgules
-                var s1 = data.substring(offset, offset + 156); // 156 correspond au nombre d'octets du jeu de données
-                var s2 = s1.split(";");
+                const s1 = data.substring(offset, offset + 156); // 156 correspond au nombre d'octets du jeu de données
+                const s2 = s1.split(";");
                 return s2[13].trimStart(); // On ne renvoit que la moyenne annuelle
             }
         }
@@ -256,25 +225,25 @@ function extract_value_in_a_list(ref, pattern, data, value_name) {
 // *********************************************************************************************************************************************
 // Main : récupération de l'argument passé en ligne de commande et exécution de la portion de code correspondante
 // *********************************************************************************************************************************************
-var myArgs = process.argv.slice(2);
+const myArgs = process.argv.slice(2);
 console.log("myArgs: ", myArgs);
 switch (myArgs[0]) {
     case "mf": {
         console.log("Chargement des données climatiques brutes en provenance du site de Météo France");
         // Balayage de l'ensemble des fiches MF et création des fichiers .data sur disque (assets/ficheclim)
-        ref.map(function (refcli) {
-            var filename = refcli.ref + ".data";
+        ref.map((refcli) => {
+            const filename = refcli.ref + ".data";
             console.log("Chargement de la fiche climatique de la ville : " + refcli.town);
-            var url = "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_" + filename;
-            var request = https.get(url);
-            request.on("response", function (response) {
-                var httpStatus = response.statusCode;
+            const url = "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_" + filename;
+            const request = https.get(url);
+            request.on("response", (response) => {
+                const httpStatus = response.statusCode;
                 response.setEncoding("utf-8");
-                var body = "";
-                response.on("data", function (chunk) {
+                let body = "";
+                response.on("data", (chunk) => {
                     body += chunk;
                 });
-                response.on("end", function () {
+                response.on("end", () => {
                     if (httpStatus === 200) {
                         fs.writeFileSync("../public/ficheclim/" + filename, body); // Création du fichier brut, mode texte, sur disque
                     }
@@ -282,7 +251,7 @@ switch (myArgs[0]) {
                         new Error("HTTP status ${response.statusCode}");
                     }
                 });
-                request.on("error", function (error) {
+                request.on("error", (error) => {
                     console.log(error);
                 });
             });
@@ -291,8 +260,8 @@ switch (myArgs[0]) {
     }
     case "clim": {
         console.log("Création du fichier fc.json regroupant les fiches climatiques, ainsi que les prévisions DRIAS H1");
-        var data_MF_1 = /** @class */ (function () {
-            function data_MF() {
+        class data_MF {
+            constructor() {
                 this.indicatif = "";
                 this.ville = "";
                 this.departement = "";
@@ -310,15 +279,14 @@ switch (myArgs[0]) {
                 this.distance_cnpe = 0;
                 this.prix_maisons = "";
             }
-            return data_MF;
-        }());
+        }
         // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
-        var fiches = ref.map(function (refcli) {
-            var text = fs.readFileSync("../public/ficheclim/" + refcli.ref + ".data", "utf8");
-            var item = new data_MF_1(); // note the "new" keyword here
+        const fiches = ref.map((refcli) => {
+            const text = fs.readFileSync("../public/ficheclim/" + refcli.ref + ".data", "utf8");
+            const item = new data_MF(); // note the "new" keyword here
             item.indicatif = refcli.ref;
             item.ville = refcli.town;
-            var s = extract_alone_value(item.indicatif, /\(\d{1,3}\)/, text, "département");
+            let s = extract_alone_value(item.indicatif, /\(\d{1,3}\)/, text, "département");
             item.departement = s.substring(s.indexOf("(") + 1, s.indexOf(")"));
             s = extract_alone_value(item.indicatif, /alt : \d+m/, text, "altitude");
             item.altitude = Number(s.substring(s.indexOf(":") + 2, s.indexOf("m")));
@@ -335,10 +303,10 @@ switch (myArgs[0]) {
             item.ensoleillement = extract_value_in_a_list(item.indicatif, /Durée d'insolation/, text, "Durée d'insolation (Moyenne en heures)");
             item.pluie = extract_value_in_a_list(item.indicatif, /Précipitations : Hauteur moyenne mensuelle/, text, "Précipitations : Hauteur moyenne mensuelle (mm)");
             item.vent = extract_value_in_a_list(item.indicatif, /Nombre moyen de jours avec rafales/, text, "Nombre moyen de jours avec rafales");
-            var d = (0, distances_1.site_dangereux_le_plus_proche)(lat_long_CNPE, (0, distances_1.convert_DMS_DD)(item.latitude), (0, distances_1.convert_DMS_DD)(item.longitude));
+            const d = site_dangereux_le_plus_proche(lat_long_CNPE, convert_DMS_DD(item.latitude), convert_DMS_DD(item.longitude));
             item.distance_cnpe = Math.trunc(d.distance);
             try {
-                item.prix_maisons = prix_m2[prix_m2.findIndex(function (x) { return x.dpt == item.departement; })]["prix"].toString();
+                item.prix_maisons = prix_m2[prix_m2.findIndex((x) => x.dpt == item.departement)]["prix"].toString();
             }
             catch (ex) {
                 item.prix_maisons = "-";
@@ -348,8 +316,8 @@ switch (myArgs[0]) {
         fs.writeFileSync("../src/data/fc.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
         // Même opération si le fichier indicatif.drias correspondant existe ******************************************************
         // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches_drias, création du JSON sur disque
-        var data_drias_H1_1 = /** @class */ (function () {
-            function data_drias_H1() {
+        class data_drias_H1 {
+            constructor() {
                 this.indicatif = "";
                 this.temp_moy = 0;
                 this.temp_min = 0;
@@ -357,16 +325,14 @@ switch (myArgs[0]) {
                 this.canicule = 0;
                 this.pluie = 0;
             }
-            return data_drias_H1;
-        }());
-        var fiches_drias = ref.map(function (refcli) {
-            var drias_filename = "../public/drias/" + refcli.ref + ".H1";
-            var item = new data_drias_H1_1(); // note the "new" keyword here
+        }
+        const fiches_drias = ref.map((refcli) => {
+            const drias_filename = "../public/drias/" + refcli.ref + ".H1";
+            const item = new data_drias_H1(); // note the "new" keyword here
             try {
                 fs.accessSync(drias_filename, fs.constants.F_OK);
                 // Le fichier existe, donc on peut le lire
-                var fields = fs.readFileSync(drias_filename, "utf8").split(";");
-                //const item = new data_drias_H1(); // note the "new" keyword here
+                let fields = fs.readFileSync(drias_filename, "utf8").split(";");
                 item.indicatif = refcli.ref;
                 item.temp_moy = Number(fields[0]);
                 item.temp_min = Number(fields[1]);
@@ -394,7 +360,8 @@ switch (myArgs[0]) {
         // Source : https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
         console.log("Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons");
         // Dernières valeurs disponibles complètes : 2022 - Chargées le 23 décembre 2023
-        var url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20231010-093059/valeursfoncieres-2022.txt";
+        // Aller vérifier régulièrement sur https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
+        const url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20240408-125738/valeursfoncieres-2023.txt";
         // Appeler la fonction pour charger le fichier par morceaux, en provenance de data.gouv, puis création de prix_maisons_m2.json
         CreationFichierValeursFoncieres(url);
         break;

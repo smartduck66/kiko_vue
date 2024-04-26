@@ -5,28 +5,30 @@
 // 03/09/2022 : passage en FP, remplacement des require par des import
 // 23/12/2023 : réécriture de la création du fichier de valeurs immobilières (async/await) - Les fiches climatiques sont désormais chargées dans le répertoire \public
 // 28/12/2023 : intégration des données issues de la DRIAS - Pour le moment, la récupération des fichiers dans \public\drias se fait manuellement
+// 26/04/2024 : transformation au format ES6 et remplacement du package 'createReadStream' (node 4.0) par fs/promises
 //
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans CET ORDRE :
-//      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
+//      - node kiko_init mf : chargement des données climatiques de Météo France (MF)
 //        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car les stations météo évoluent (dernièe MAJ : 23/12/2023)
-//      - node kiko_init.js immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
-//      - node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France et de drias_H1.json (prévisions 2021-2050/RPC 4.5)
+//      - node kiko_init immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
+//      - node kiko_init clim : création du fichier fc.json à partir des données climatiques de Météo France et de drias_H1.json (prévisions 2021-2050/RPC 4.5)
 //        ATTENTION : le répertoire \public\drias contient les fichiers de prévision créés manuellement en partant du site https://www.drias-climat.fr/
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
 // **********************************************************************************************************************
 
 // On 'importe' des fonctions de distances.js
-import { convert_DMS_DD, site_dangereux_le_plus_proche } from "../batch/distances";
-
-// Chargement des prix au m2 et des coordonnées des CNPE
-import * as prix_m2 from "../src/data/prix_maisons_m2.json";
-import * as lat_long_CNPE from "../src/data/centrales.json";
+import { convert_DMS_DD, site_dangereux_le_plus_proche } from "../batch/distances.js";
 
 // Constantes communes à l'ensemble des traitements
 import * as https from "https";
 import * as fs from "fs";
-import * as ref from "../src/data/ListeFichesClimatiques.json";
+import { open } from "fs/promises"; // Pour lecture d'un fichier texte ligne à ligne
+
+// Chargement des données
+const prix_m2 = JSON.parse(fs.readFileSync("../src/data/prix_maisons_m2.json", "utf8"));
+const lat_long_CNPE = JSON.parse(fs.readFileSync("../src/data/centrales.json", "utf8"));
+const ref = JSON.parse(fs.readFileSync("../src/data/ListeFichesClimatiques.json", "utf8"));
 
 // Fonction de création du fichier de valeurs foncières
 const filename = "../src/data_source/valeursfoncieres.txt";
@@ -42,7 +44,7 @@ async function CreationFichierValeursFoncieres(url: string) {
   const response = await fetch(url);
 
   if (!response.ok) {
-    throw new Error("Erreur de chargement du fichier");
+    throw new Error("Erreur de chargement du fichier : " + url);
   }
 
   // Créer un objet ReadableStream depuis la réponse
@@ -136,15 +138,13 @@ async function CreationFichierValeursFoncieres(url: string) {
   let num_line = 0;
   let current_district = "01";
 
-  const lineReader = require("readline").createInterface({
-    // Nouveau package depuis Node 4.0.0 qui facilite la lecture d'un fichier ligne à ligne
-    input: require("fs").createReadStream(filename),
-  });
+  // On lit le fichier texte
+  const lineReader = await open(filename);
 
-  lineReader.on("line", function (line_read: string) {
+  for await (const line of lineReader.readLines()) {
     if (num_line > 0) {
       // on saute la 1ère ligne du fichier
-      const fields: string[] = line_read.split("|");
+      const fields: string[] = line.split("|");
       const item = new prix_maisons(); // note the "new" keyword here
 
       const departement: string = fields[18];
@@ -171,11 +171,9 @@ async function CreationFichierValeursFoncieres(url: string) {
       }
     }
     ++num_line;
-  });
+  }
 
-  lineReader.on("close", function () {
-    fs.writeFileSync("../src/data/prix_maisons_m2.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
-  });
+  fs.writeFileSync("../src/data/prix_maisons_m2.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
 }
 
 function extract_alone_value(ref: string, pattern: RegExp, data: string, value_name: string): string {
@@ -227,7 +225,7 @@ switch (myArgs[0]) {
     console.log("Chargement des données climatiques brutes en provenance du site de Météo France");
 
     // Balayage de l'ensemble des fiches MF et création des fichiers .data sur disque (assets/ficheclim)
-    ref.map((refcli) => {
+    ref.map((refcli: any) => {
       const filename = refcli.ref + ".data";
       console.log("Chargement de la fiche climatique de la ville : " + refcli.town);
       const url = "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_" + filename;
@@ -287,7 +285,7 @@ switch (myArgs[0]) {
         this.altitude = 0;
         this.latitude = "";
         this.longitude = "";
-        this.date_maj="";
+        this.date_maj = "";
         this.temp_moy = 0;
         this.temp_min = 0;
         this.temp_max = 0;
@@ -301,7 +299,7 @@ switch (myArgs[0]) {
     }
 
     // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
-    const fiches: data_MF[] = ref.map((refcli) => {
+    const fiches: data_MF[] = ref.map((refcli: any) => {
       const text = fs.readFileSync("../public/ficheclim/" + refcli.ref + ".data", "utf8");
       const item = new data_MF(); // note the "new" keyword here
 
@@ -321,7 +319,7 @@ switch (myArgs[0]) {
       item.longitude = s.substring(s.indexOf(":") + 2, s.indexOf(";"));
 
       s = extract_alone_value(item.indicatif, /\d{2}\/\d{2}\/\d{4}/, text, "Edité le :");
-      item.date_maj= s;
+      item.date_maj = s;
 
       item.temp_moy = Number(extract_value_in_a_list(item.indicatif, /Température moyenne/, text, "Température moyenne (Moyenne en °C)"));
 
@@ -376,7 +374,7 @@ switch (myArgs[0]) {
       }
     }
 
-    const fiches_drias: data_drias_H1[] = ref.map((refcli) => {
+    const fiches_drias: data_drias_H1[] = ref.map((refcli: any) => {
       const drias_filename = "../public/drias/" + refcli.ref + ".H1";
       const item = new data_drias_H1(); // note the "new" keyword here
       try {
@@ -413,7 +411,8 @@ switch (myArgs[0]) {
     console.log("Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons");
 
     // Dernières valeurs disponibles complètes : 2022 - Chargées le 23 décembre 2023
-    const url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20231010-093059/valeursfoncieres-2022.txt";
+    // Aller vérifier régulièrement sur https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
+    const url = "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20240408-125738/valeursfoncieres-2023.txt";
 
     // Appeler la fonction pour charger le fichier par morceaux, en provenance de data.gouv, puis création de prix_maisons_m2.json
     CreationFichierValeursFoncieres(url);

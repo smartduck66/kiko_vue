@@ -2,16 +2,16 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 BOURGANEUF (23)      Indicatif : 23030004, alt : 513m, lat : 45°56'32"N, lon : 1°43'32"E;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-07-1994 au 04-01-2024);
-            ;      17.4;      23.2;      23.9;      27.1;      29.6;      37.6;      37.5;      37.6;      35.2;      29.5;      22.6;      18.9;      37.6;
-Date        ;   01-2022;   27-2019;   29-2021;   30-2005;   26-2005;   26-2019;   23-2019;   18-2012;   04-2023;   08-2023;   08-2015;   17-2015;      2019;
+(Records établis sur la période du 01-07-1994 au 02-04-2024);
+            ;      19.9;      23.2;      23.9;      27.1;      29.6;      37.6;      37.5;      37.6;      35.2;      29.5;      22.6;      18.9;      37.6;
+Date        ;   28-2024;   27-2019;   29-2021;   30-2005;   26-2005;   26-2019;   23-2019;   18-2012;   04-2023;   08-2023;   08-2015;   17-2015;      2019;
 
 
 Température maximale (Moyenne en °C);
@@ -30,7 +30,7 @@ Statistiques établies sur la période 1994-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-07-1994 au 04-01-2024);
+(Records établis sur la période du 01-07-1994 au 02-04-2024);
             ;     -11.9;     -16.2;     -14.3;        -4;        -1;       2.3;         5;       4.7;      -0.5;        -4;      -9.6;     -11.3;     -16.2;
 Date        ;   13-2003;   06-2012;   01-2005;   04-1996;   14-1995;   04-2001;   17-2000;   31-1996;   25-2002;   25-2003;   24-1998;   31-1996;      2012;
 
@@ -47,7 +47,7 @@ Tn <= -10°C ;       0.1;       0.5;       0.0;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-07-1994 au 04-01-2024);
+(Records établis sur la période du 01-07-1994 au 02-04-2024);
             ;      54.6;      40.2;      50.2;      63.6;      59.2;      57.2;      57.3;        46;      47.4;        42;      47.4;      41.6;      63.6;
 Date        ;   18-1998;   15-2006;   01-2007;   20-2008;   04-1997;   05-2009;   04-2018;   09-2004;   03-2008;   10-2000;   06-2000;   27-1999;      2008;
 
@@ -85,7 +85,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 08-07-1994 au 04-01-2024);
+(Records établis sur la période du 08-07-1994 au 02-04-2024);
             ;      28.6;      29.7;      29.3;        30;      25.6;        24;      24.5;        29;        23;      26.4;      29.8;        32;        32;
 Date        ;   15-2008;   28-2010;   10-2023;   07-1997;   09-2021;   22-2004;   27-2005;   10-1997;   12-1994;   03-2006;   28-2014;   27-1999;      1999;
 

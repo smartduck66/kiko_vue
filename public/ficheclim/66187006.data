@@ -2,16 +2,16 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 ST PAUL DE FENOUILLET (66)      Indicatif : 66187006, alt : 300m, lat : 42°49'13"N, lon : 2°29'07"E;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-07-2005 au 04-01-2024);
-            ;      21.1;      26.5;      25.7;      31.6;      33.3;      39.7;      39.5;      40.1;      35.9;      30.6;      26.4;      21.7;      40.1;
-Date        ;   31-2013;   27-2019;   13-2009;   09-2011;   25-2017;   17-2022;   16-2022;   23-2023;   04-2016;   03-2011;   14-2023;   11-2023;      2023;
+(Records établis sur la période du 01-07-2005 au 02-04-2024);
+            ;      25.1;      26.5;      26.7;      31.6;      33.3;      39.7;      39.5;      40.1;      35.9;      30.6;      26.4;      21.7;      40.1;
+Date        ;   25-2024;   27-2019;   29-2024;   09-2011;   25-2017;   17-2022;   16-2022;   23-2023;   04-2016;   03-2011;   14-2023;   11-2023;      2023;
 
 
 Température maximale (Moyenne en °C);
@@ -30,7 +30,7 @@ Statistiques établies sur la période 2005-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-07-2005 au 04-01-2024);
+(Records établis sur la période du 01-07-2005 au 02-04-2024);
             ;      -5.2;      -7.3;      -2.3;      -0.4;       2.6;       7.2;      11.2;      10.9;       6.3;       0.5;      -3.6;      -5.3;      -7.3;
 Date        ;   19-2017;   08-2012;   10-2010;   08-2021;   04-2010;   12-2019;   02-2022;   16-2008;   27-2012;   30-2012;   28-2013;   12-2012;      2012;
 
@@ -47,9 +47,9 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-07-2005 au 04-01-2024);
-            ;     148.2;      45.8;      96.6;      67.4;      80.3;      43.7;      17.3;      29.4;      45.3;     140.8;     219.7;     107.9;     219.7;
-Date        ;   22-2020;   17-2007;   05-2013;   21-2020;   04-2010;   16-2010;   01-2020;   28-2020;   09-2018;   10-2010;   29-2014;   27-2008;      2014;
+(Records établis sur la période du 01-07-2005 au 02-04-2024);
+            ;     148.2;        46;      96.6;      67.4;      80.3;      43.7;      17.3;      29.4;      45.3;     140.8;     219.7;     107.9;     219.7;
+Date        ;   22-2020;   27-2024;   05-2013;   21-2020;   04-2010;   16-2010;   01-2020;   28-2020;   09-2018;   10-2010;   29-2014;   27-2008;      2014;
 
 
 Précipitations : Hauteur moyenne mensuelle (mm);
@@ -86,7 +86,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-07-2005 au 04-01-2024);
+(Records établis sur la période du 01-07-2005 au 02-04-2024);
             ;      49.1;      35.1;      41.7;      33.3;      33.3;      27.9;      28.9;      28.4;      29.7;      31.5;      37.3;      37.4;      49.1;
 Date        ;   24-2009;   12-2010;   10-2023;   02-2022;   28-2019;   01-2013;   04-2018;   20-2005;   03-2012;   25-2010;   05-2013;   09-2018;      2009;
 

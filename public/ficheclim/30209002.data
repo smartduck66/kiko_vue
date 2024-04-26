@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 PUJAUT (30)      Indicatif : 30209002, alt : 44m, lat : 43°59'54"N, lon : 4°45'34"E;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-03-1991 au 04-01-2024);
+(Records établis sur la période du 01-03-1991 au 02-04-2024);
             ;      20.8;      24.2;      26.7;      30.4;      33.9;      41.1;      39.9;      41.6;      35.3;      31.4;      23.7;      19.8;      41.6;
 Date        ;   31-2020;   27-2019;   18-1997;   29-2005;   31-2001;   28-2019;   31-2018;   22-2023;   23-2018;   01-2023;   14-2023;   29-2021;      2023;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-03-1991 au 04-01-2024);
+(Records établis sur la période du 01-03-1991 au 02-04-2024);
             ;     -10.3;      -7.5;      -9.2;      -3.7;       1.7;       5.7;       7.3;       7.6;       3.7;      -2.5;      -7.4;        -9;     -10.3;
 Date        ;   02-2002;   04-2012;   02-2005;   18-1997;   04-2021;   21-1992;   12-1993;   23-2007;   14-1998;   23-1992;   28-2005;   21-2009;      2002;
 
@@ -43,9 +43,9 @@ Tn <= -10°C ;       0.0;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-03-1991 au 04-01-2024);
-            ;      64.8;      54.2;      41.8;      69.2;        53;      66.7;      75.9;     131.7;       250;     101.4;      87.5;     169.8;       250;
-Date        ;   26-2018;   04-1994;   14-1996;   15-2005;   29-2023;   14-2007;   28-2013;   17-2004;   08-2002;   13-2000;   04-2011;   01-2003;      2002;
+(Records établis sur la période du 01-03-1991 au 02-04-2024);
+            ;      64.8;      54.2;      56.8;      69.2;        53;      66.7;      75.9;     131.7;       250;     101.4;      87.5;     169.8;       250;
+Date        ;   26-2018;   04-1994;   09-2024;   15-2005;   29-2023;   14-2007;   28-2013;   17-2004;   08-2002;   13-2000;   04-2011;   01-2003;      2002;
 
 
 Précipitations : Hauteur moyenne mensuelle (mm);
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-07-1988 au 04-01-2024);
+(Records établis sur la période du 01-07-1988 au 02-04-2024);
             ;        36;      37.2;      32.9;        35;      34.3;        30;        34;        38;        33;      32.5;        36;        36;        38;
 Date        ;   19-2000;   08-2015;   05-2015;   17-1991;   05-2019;   01-2011;   30-1991;   28-1989;   22-1992;   24-2018;   14-2004;   09-1992;      1989;
 

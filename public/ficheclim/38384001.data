@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 GRENOBLE-ST GEOIRS (38)      Indicatif : 38384001, alt : 384m, lat : 45°21'50"N, lon : 5°18'47"E;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-08-1941 au 04-01-2024);
+(Records établis sur la période du 01-08-1941 au 02-04-2024);
             ;      17.3;      20.7;      25.3;        28;      31.4;        37;      38.3;      39.5;      33.6;      29.7;      24.8;      19.5;      39.5;
 Date        ;   10-2015;   25-1991;   22-1990;   18-1949;   22-2022;   22-2003;   24-2019;   13-2003;   05-1949;   09-2023;   01-1968;   18-1989;      2003;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-08-1941 au 04-01-2024);
+(Records établis sur la période du 01-08-1941 au 02-04-2024);
             ;     -27.1;     -19.4;     -18.2;      -7.9;      -2.8;       2.1;       4.8;       3.8;      -1.2;      -5.3;     -10.9;     -20.2;     -27.1;
 Date        ;   03-1971;   05-2012;   04-1949;   08-2003;   07-2019;   10-2005;   18-1970;   30-1986;   28-1972;   30-1950;   27-1971;   30-2005;      1971;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.6;       0.5;       0.1;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1946 au 04-01-2024);
+(Records établis sur la période du 01-01-1946 au 02-04-2024);
             ;      49.4;        67;      66.9;      68.3;      70.2;        86;      52.5;        75;     189.2;        82;      74.9;      72.8;     189.2;
 Date        ;   16-2015;   23-1989;   15-1983;   22-1986;   15-1983;   16-1986;   17-2011;   28-2003;   25-1999;   23-2013;   04-2014;   21-1991;      1999;
 
@@ -77,7 +77,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 04-01-2024);
+(Records établis sur la période du 01-01-1981 au 02-04-2024);
             ;        26;        30;        34;        29;        29;        33;      32.4;        31;        24;        28;        33;      31.3;        34;
 Date        ;   30-1983;   12-1996;   04-2017;   03-2003;   28-2008;   16-1986;   01-2019;   17-2003;   11-2008;   10-1987;   08-1982;   20-2019;      2017;
 

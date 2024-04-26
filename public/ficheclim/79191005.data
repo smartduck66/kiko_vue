@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 NIORT (79)      Indicatif : 79191005, alt : 57m, lat : 46°18'56"N, lon : 0°24'00"O;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-07-1958 au 04-01-2024);
+(Records établis sur la période du 01-07-1958 au 02-04-2024);
             ;        17;      24.3;      25.5;      29.8;      32.4;      40.1;        41;      40.1;      36.6;      31.1;      22.9;      19.2;        41;
 Date        ;   31-1966;   27-2019;   20-2005;   30-2005;   26-2017;   18-2022;   18-2022;   09-2003;   04-2023;   01-2023;   08-2015;   16-1989;      2022;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-07-1958 au 04-01-2024);
+(Records établis sur la période du 01-07-1958 au 02-04-2024);
             ;       -16;     -13.3;     -10.7;      -4.8;      -1.6;       3.1;       5.1;       4.4;       2.5;      -3.3;        -7;     -10.5;       -16;
 Date        ;   17-1987;   05-1963;   01-2005;   07-2008;   03-1979;   04-1975;   06-1965;   30-1986;   21-1960;   30-1997;   21-1993;   31-1996;      1987;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;       0.1;       0.0;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-07-1958 au 04-01-2024);
+(Records établis sur la période du 01-07-1958 au 02-04-2024);
             ;      52.4;        38;        30;      55.1;      76.2;      87.2;      49.2;      64.8;        73;      45.8;        56;      51.5;      87.2;
 Date        ;   21-1995;   08-1966;   01-2007;   12-2018;   19-2014;   11-1988;   09-1981;   31-2015;   03-1964;   10-2000;   30-2003;   19-1982;      1988;
 
@@ -77,7 +77,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1986 au 04-01-2024);
+(Records établis sur la période du 01-01-1986 au 02-04-2024);
             ;        31;      35.3;      30.3;        30;        32;      25.6;        26;        36;        29;        28;      37.8;        40;        40;
 Date        ;   02-1998;   28-2010;   06-2017;   01-1994;   13-2002;   16-2021;   20-1992;   08-1999;   13-2022;   15-1987;   04-2023;   27-1999;      1999;
 

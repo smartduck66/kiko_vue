@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 CALVI (20)      Indicatif : 20050001, alt : 57m, lat : 42°31'46"N, lon : 8°47'29"E;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-07-1960 au 04-01-2024);
+(Records établis sur la période du 01-07-1960 au 02-04-2024);
             ;      23.3;      23.6;      28.8;      32.1;        36;        40;      42.1;      40.6;      37.4;      32.9;      29.8;      25.4;      42.1;
 Date        ;   02-1962;   18-2022;   21-1974;   30-2003;   22-2009;   22-2023;   29-1983;   05-2017;   11-2008;   06-1981;   10-1985;   16-1989;      1983;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-07-1960 au 04-01-2024);
+(Records établis sur la période du 01-07-1960 au 02-04-2024);
             ;      -5.6;      -3.9;      -4.6;      -0.4;       3.7;       7.5;      10.6;      12.3;       7.9;       2.6;      -2.3;      -4.2;      -5.6;
 Date        ;   30-1963;   24-1993;   02-2005;   08-2003;   06-1987;   06-1962;   01-1981;   31-2006;   18-1971;   30-1974;   24-1975;   28-1996;      1963;
 
@@ -43,9 +43,9 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-07-1960 au 04-01-2024);
-            ;      58.5;     100.2;      71.1;      80.6;        50;     114.8;      42.4;        74;      81.2;      61.4;      92.4;        79;     114.8;
-Date        ;   31-2012;   13-1976;   08-1970;   03-1975;   12-1995;   15-1978;   06-1976;   28-2002;   25-2006;   03-1978;   04-1999;   30-1995;      1978;
+(Records établis sur la période du 01-07-1960 au 02-04-2024);
+            ;      65.3;     100.2;      71.1;      80.6;        50;     114.8;      42.4;        74;      81.2;      61.4;      92.4;        79;     114.8;
+Date        ;   07-2024;   13-1976;   08-1970;   03-1975;   12-1995;   15-1978;   06-1976;   28-2002;   25-2006;   03-1978;   04-1999;   30-1995;      1978;
 
 
 Précipitations : Hauteur moyenne mensuelle (mm);
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 04-01-2024);
+(Records établis sur la période du 01-01-1981 au 02-04-2024);
             ;      31.5;        34;      39.8;        31;      28.4;        28;        30;      54.7;      30.7;      41.6;        32;        44;      54.7;
 Date        ;   17-2018;   08-1984;   06-2017;   13-1989;   05-2019;   22-1996;   03-1981;   18-2022;   25-2020;   14-2016;   19-1999;   28-1999;      2022;
 

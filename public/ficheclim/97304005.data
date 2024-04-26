@@ -2,16 +2,16 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 KOUROU PLAGE (973)      Indicatif : 97304005, alt : 3m, lat : 5°10'05"N, lon : 52°38'25"O;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-07-1995 au 04-01-2024);
-            ;        32;      32.2;      32.7;      32.2;      33.3;      33.5;      34.7;      35.5;      35.7;      35.8;      33.2;      32.5;      35.8;
-Date        ;   08-2000;   12-1998;   20-2001;   01-1998;   26-1998;   28-2022;   31-2007;   20-2012;   15-2017;   19-2011;   10-2008;   01-2008;      2011;
+(Records établis sur la période du 01-07-1995 au 02-04-2024);
+            ;        32;      32.2;      32.7;      32.5;      33.3;      33.5;      34.7;      35.5;      35.7;      35.8;      33.2;      32.5;      35.8;
+Date        ;   08-2000;   12-1998;   27-2024;   03-2024;   26-1998;   28-2022;   31-2007;   20-2012;   15-2017;   19-2011;   10-2008;   01-2008;      2011;
 
 
 Température maximale (Moyenne en °C);
@@ -30,7 +30,7 @@ Statistiques établies sur la période 1995-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-07-1995 au 04-01-2024);
+(Records établis sur la période du 01-07-1995 au 02-04-2024);
             ;      21.8;      21.3;      21.7;      21.6;      22.5;      21.2;      22.1;      22.3;      22.5;        23;      22.3;      21.6;      21.2;
 Date        ;   09-2018;   24-2022;   08-2012;   08-2011;   14-2015;   29-2005;   19-2006;   05-2004;   29-2005;   09-2018;   30-2022;   30-2007;      2005;
 
@@ -45,7 +45,7 @@ Tn <=  20°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-07-1995 au 04-01-2024);
+(Records établis sur la période du 01-07-1995 au 02-04-2024);
             ;       157;       136;       185;       165;       167;     106.4;      93.5;       137;      49.8;      83.6;     109.6;     121.8;       185;
 Date        ;   09-2000;   28-1999;   02-2015;   13-2000;   22-1997;   27-2013;   04-1996;   22-1995;   08-2016;   29-2011;   01-2020;   29-2007;      2015;
 
@@ -80,7 +80,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-07-1995 au 04-01-2024);
+(Records établis sur la période du 01-07-1995 au 02-04-2024);
             ;        22;        23;        24;      20.2;        24;      25.6;        21;      21.2;        21;        22;        21;        23;      25.6;
 Date        ;   21-2014;   01-2000;   22-2008;   22-2023;   31-2014;   22-2020;   06-2014;   30-2021;   01-2008;   09-2004;   18-2013;   07-1997;      2020;
 

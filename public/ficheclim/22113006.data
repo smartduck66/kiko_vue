@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 LANNION_AERO (22)      Indicatif : 22113006, alt : 85m, lat : 48°45'19"N, lon : 3°28'07"O;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-11-1993 au 04-01-2024);
+(Records établis sur la période du 01-11-1993 au 02-04-2024);
             ;      17.1;      22.4;      24.1;      27.6;      29.3;      32.8;        40;      35.3;      31.5;      29.9;        21;      17.9;        40;
 Date        ;   24-2016;   27-2019;   30-2021;   21-2018;   26-2017;   30-2015;   18-2022;   09-2003;   09-2023;   01-2011;   01-2015;   19-2015;      2022;
 
@@ -30,7 +30,7 @@ Statistiques établies sur la période 1993-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-11-1993 au 04-01-2024);
+(Records établis sur la période du 01-11-1993 au 02-04-2024);
             ;      -6.3;      -7.1;        -4;      -2.2;      -0.6;       3.9;         6;       5.8;       3.3;      -3.1;      -4.8;      -4.5;      -7.1;
 Date        ;   02-1997;   28-2018;   02-2004;   11-2006;   13-2010;   01-2006;   31-2015;   30-2011;   26-2018;   30-1997;   29-2010;   30-2008;      2018;
 
@@ -47,7 +47,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-11-1993 au 04-01-2024);
+(Records établis sur la période du 01-11-1993 au 02-04-2024);
             ;      36.2;      34.4;      24.6;      35.2;      55.2;        36;      55.2;        30;      45.4;      52.5;      35.6;      30.5;      55.2;
 Date        ;   25-2004;   27-2010;   03-2009;   14-2000;   18-1996;   26-1997;   07-2004;   17-2016;   02-1998;   02-2020;   22-2012;   15-2011;      2004;
 
@@ -86,7 +86,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-11-1993 au 04-01-2024);
+(Records établis sur la période du 01-11-1993 au 02-04-2024);
             ;      37.8;        33;      32.9;      29.1;        27;      32.7;      26.2;        25;      24.7;      30.5;      43.8;        38;      43.8;
 Date        ;   12-2016;   11-2007;   02-2016;   12-2023;   20-2006;   07-2019;   05-2021;   02-2023;   14-2015;   20-2021;   02-2023;   26-1999;      2023;
 

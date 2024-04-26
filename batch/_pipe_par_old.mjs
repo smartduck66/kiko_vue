@@ -5,10 +5,13 @@
 // 20/01/2022 : moins de 5 secondes de traitement
 // 31/08/2022 : reprise de ce pipeline de kiko_web -> La compilation de kiko.ts dont les fonctions seront reprises dans les templates Vue est inutile (A SUPPRIMER)
 // 19/03/2023 : regroupement des fichiers de code dédiés aux traitements batch - ATTENTION : distances.ts est également nécessaire au site interactif (/src/assets/mixins)
+// 26/04/2024 : transformation du module vers ES6
 
 var startTime = performance.now();
 
-const fs = require("fs");
+import * as fs from "fs";
+import * as child_process from "child_process";
+import * as util from "util";
 
 function lines_delete() {
   // Suppression de lignes dans le fichier kiko.js généré par tsc
@@ -20,10 +23,7 @@ function lines_delete() {
   });
 
   lineReader.on("line", function (line_read) {
-    if (
-      line_read.trim() != 'var faunadb = require("faunadb");' &&
-      line_read.trim() != 'var distances = require("../mixins/distances.js");'
-    ) {
+    if (line_read.trim() != 'var faunadb = require("faunadb");' && line_read.trim() != 'var distances = require("../mixins/distances.js");') {
       code_lines.push(line_read);
     }
   });
@@ -38,12 +38,10 @@ function lines_delete() {
   });
 }
 
-const child_process = require("child_process");
-const util = require("util");
 const execP = util.promisify(child_process.exec);
 
 const files = ["csv_to_json.ts", "kiko_init.ts", "distances.ts"];
-let promises = files.map((file) => execP("tsc " + file+" --resolveJsonModule"));
+let promises = files.map((file) => execP("tsc " + file + " --resolveJsonModule"));
 
 Promise.all(promises)
   .then((bodies) => {
@@ -55,8 +53,4 @@ Promise.all(promises)
 
 var endTime = performance.now();
 
-console.log(
-  `Le traitement du pipeline a pris ${
-    Math.round(endTime - startTime) / 1000
-  } secondes`
-);
+console.log(`Le traitement du pipeline a pris ${Math.round(endTime - startTime) / 1000} secondes`);

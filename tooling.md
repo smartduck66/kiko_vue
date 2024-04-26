@@ -37,7 +37,9 @@ Alerte : netlify cli a été désinstallé car il induit des problèmes de sécu
 ---
 
 Traitements annuels nécessaires, à lancer du répertoire /batch. Une fois/an, lancer dans cet ordre :
-. node csv_to_json       : mise à jour du fichier ListeFichesClimatiques.json, basé sur Liste_stations_météo_complètes.txt construit à la main (des stations peuvent 'bouger')
-. node kiko_init.js mf   : chargement des données climatiques de Météo France (MF)
-. node kiko_init.js immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
-. node kiko_init.js clim : création du fichier fc.json à partir des données climatiques de Météo France
+. node csv_to_json    : mise à jour du fichier ListeFichesClimatiques.json, basé sur Liste_stations_météo_complètes.txt construit à la main (des stations peuvent 'bouger')
+. node kiko_init mf   : chargement des données climatiques de Météo France (MF)
+. node kiko_init immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
+. node kiko_init clim : création du fichier fc.json à partir des données climatiques de Météo France
+
+A chaque modification d'un fichier batch écrit en Typescript, lancer tsc du répertoire /batch pour regénérer les modules js ; le compilateur s'appuie sur tsconfig.json

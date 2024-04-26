@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 NEVERS-MARZY (58)      Indicatif : 58160001, alt : 175m, lat : 46°59'53"N, lon : 3°06'45"E;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1946 au 04-01-2024);
+(Records établis sur la période du 01-01-1946 au 02-04-2024);
             ;      17.4;      23.5;      26.7;        30;      31.6;        39;      39.4;      39.2;      35.4;      31.5;      23.5;      19.5;      39.4;
 Date        ;   01-2023;   28-1960;   25-1955;   16-1949;   28-2017;   27-2019;   31-2020;   11-2003;   10-2023;   13-2023;   07-2015;   16-1989;      2020;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1946 au 04-01-2024);
+(Records établis sur la période du 01-01-1946 au 02-04-2024);
             ;       -25;     -21.8;     -13.8;      -7.5;      -4.8;       0.2;       3.4;       0.3;      -1.2;      -8.9;     -12.3;     -16.8;       -25;
 Date        ;   09-1985;   15-1956;   01-2005;   09-2003;   07-1957;   05-1991;   08-1954;   31-1986;   20-1962;   30-1955;   23-1993;   20-1946;      1985;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.7;       0.6;       0.0;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1946 au 04-01-2024);
+(Records établis sur la période du 01-01-1946 au 02-04-2024);
             ;      43.1;      41.6;      37.7;      41.2;      44.7;      53.8;      57.7;        77;        71;      54.2;      49.6;      45.6;        77;
 Date        ;   12-1962;   08-1999;   26-1962;   29-2001;   28-1949;   14-2007;   15-1958;   28-1983;   15-2006;   03-1960;   04-1994;   24-1995;      1983;
 
@@ -77,7 +77,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 04-01-2024);
+(Records établis sur la période du 01-01-1981 au 02-04-2024);
             ;        30;        39;        34;        33;      25.2;      30.8;        35;      34.5;      23.1;        33;        32;        32;        39;
 Date        ;   24-1984;   08-1984;   24-1986;   11-1985;   22-2022;   07-2012;   18-1983;   26-2011;   16-2015;   13-1993;   07-1982;   26-1999;      1984;
 

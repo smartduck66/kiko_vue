@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 NICE (06)      Indicatif : 06088001, alt : 2m, lat : 43°38'55"N, lon : 7°12'32"E;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-07-1942 au 04-01-2024);
+(Records établis sur la période du 01-07-1942 au 02-04-2024);
             ;      22.5;      25.8;      26.1;      26.1;      31.4;      36.8;        37;      37.7;      33.9;      29.9;      25.4;        22;      37.7;
 Date        ;   20-2012;   14-1990;   02-2007;   08-2022;   27-2022;   29-1945;   25-2015;   01-2006;   07-1962;   11-1981;   04-2004;   23-1954;      2006;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-07-1942 au 04-01-2024);
+(Records établis sur la période du 01-07-1942 au 02-04-2024);
             ;      -7.2;      -5.8;        -5;       2.9;       3.7;       8.1;      11.7;      11.4;       7.6;       4.2;       0.1;      -2.7;      -7.2;
 Date        ;   09-1985;   10-1986;   06-1971;   10-1970;   02-1945;   06-1969;   10-1969;   14-1948;   27-1972;   30-1950;   22-1998;   03-1973;      1985;
 
@@ -43,9 +43,9 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-07-1942 au 04-01-2024);
-            ;      73.4;      74.9;        85;     117.4;      60.6;      80.6;      90.8;     137.1;     116.6;     191.4;     159.7;       126;     191.4;
-Date        ;   10-1994;   03-1947;   19-1979;   23-1952;   22-1984;   20-1966;   12-1953;   22-1965;   30-1998;   13-1973;   04-2014;   19-1958;      1973;
+(Records établis sur la période du 01-07-1942 au 02-04-2024);
+            ;      73.4;     109.9;        85;     117.4;      60.6;      80.6;      90.8;     137.1;     116.6;     191.4;     159.7;       126;     191.4;
+Date        ;   10-1994;   25-2024;   19-1979;   23-1952;   22-1984;   20-1966;   12-1953;   22-1965;   30-1998;   13-1973;   04-2014;   19-1958;      1973;
 
 
 Précipitations : Hauteur moyenne mensuelle (mm);
@@ -76,7 +76,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 04-01-2024);
+(Records établis sur la période du 01-01-1981 au 02-04-2024);
             ;        30;        27;        28;        26;        26;        27;        26;        32;        27;      25.5;      26.9;        32;        32;
 Date        ;   30-1986;   13-2005;   20-2000;   25-2005;   03-2006;   08-1990;   01-2003;   29-1992;   15-1984;   20-2023;   06-2011;   28-1999;      1999;
 

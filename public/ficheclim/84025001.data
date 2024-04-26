@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 CABRIERES D'AVIGNON (84)      Indicatif : 84025001, alt : 142m, lat : 43°53'01"N, lon : 5°09'53"E;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1985 au 04-01-2024);
+(Records établis sur la période du 01-01-1985 au 02-04-2024);
             ;      20.3;      22.6;      28.2;      29.9;      34.7;      43.2;        39;      40.2;      36.1;      29.7;      23.4;      20.2;      43.2;
 Date        ;   05-2018;   24-2020;   21-1990;   29-2005;   24-2009;   28-2019;   31-2017;   22-2023;   04-2023;   01-2023;   14-2023;   30-2021;      2019;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1985 au 04-01-2024);
+(Records établis sur la période du 01-01-1985 au 02-04-2024);
             ;     -15.2;     -13.7;     -11.5;        -5;       0.2;       3.7;       6.9;         5;       2.9;      -3.8;      -9.1;       -13;     -15.2;
 Date        ;   07-1985;   12-2012;   01-2005;   08-2021;   07-2019;   03-2006;   17-2000;   31-1986;   18-2001;   30-1997;   17-2007;   16-2001;      1985;
 
@@ -43,9 +43,9 @@ Tn <= -10°C ;       0.1;       0.3;       0.1;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1985 au 04-01-2024);
+(Records établis sur la période du 01-01-1985 au 02-04-2024);
             ;       121;      57.5;        57;      68.5;        81;      73.8;        44;       100;        92;     117.3;      75.1;     106.9;       121;
-Date        ;   06-1994;   04-1994;   04-1985;   21-1995;   23-1990;   12-2015;   30-1991;   17-2004;   19-1999;   03-2015;   05-2011;   01-2003;      1994;
+Date        ;   06-1994;   04-1994;   09-2024;   21-1995;   23-1990;   12-2015;   30-1991;   17-2004;   19-1999;   03-2015;   05-2011;   01-2003;      1994;
 
 
 Précipitations : Hauteur moyenne mensuelle (mm);
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-09-1991 au 04-01-2024);
+(Records établis sur la période du 01-09-1991 au 02-04-2024);
             ;      31.6;        34;      30.8;        31;      29.6;        30;        30;      26.5;      27.7;      33.5;      30.8;        30;        34;
 Date        ;   31-2022;   21-2002;   14-2013;   09-2005;   05-2019;   23-1995;   25-1997;   04-2006;   04-2007;   28-2012;   13-2017;   22-2003;      2002;
 

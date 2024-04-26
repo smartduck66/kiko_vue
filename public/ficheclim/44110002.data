@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 NORT-SUR-ERDRE (44)      Indicatif : 44110002, alt : 13m, lat : 47°25'30"N, lon : 1°30'49"O;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-04-1950 au 04-01-2024);
+(Records établis sur la période du 01-04-1950 au 02-04-2024);
             ;        19;      21.3;        24;        28;      32.3;      38.6;      41.7;      40.7;      36.5;      30.5;      21.3;        18;      41.7;
 Date        ;   27-2003;   27-2019;   30-2021;   30-2005;   26-2017;   18-2022;   18-2022;   10-2003;   01-1961;   09-2023;   08-2015;   11-1978;      2022;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-04-1950 au 04-01-2024);
+(Records établis sur la période du 01-04-1950 au 02-04-2024);
             ;     -14.2;       -15;      -9.5;      -4.3;      -1.5;       2.6;         5;       3.4;         1;      -5.4;      -7.7;       -11;       -15;
 Date        ;   16-1985;   15-1956;   01-2005;   04-1996;   03-1967;   01-2006;   11-1972;   28-1998;   20-1977;   30-1997;   21-1993;   27-1962;      1956;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.0;       0.1;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-10-1885 au 04-01-2024);
+(Records établis sur la période du 01-10-1885 au 02-04-2024);
             ;      42.9;      34.5;        45;        29;      45.9;      86.1;      49.5;        60;      58.4;      84.4;      65.7;      42.8;      86.1;
 Date        ;   04-2001;   25-1996;   10-1888;   08-1983;   25-2008;   11-2018;   04-1950;   06-1951;   07-2002;   02-2021;   13-2010;   23-2013;      2018;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 17-04-2004 au 04-01-2024);
+(Records établis sur la période du 17-04-2004 au 02-04-2024);
             ;      29.9;      34.5;      30.9;      27.4;      24.6;        23;        23;      21.9;      24.9;      27.3;      28.3;      31.9;      34.5;
 Date        ;   01-2018;   13-2016;   06-2017;   21-2012;   13-2007;   07-2019;   07-2004;   02-2023;   16-2015;   23-2006;   02-2023;   16-2011;      2016;
 

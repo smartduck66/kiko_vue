@@ -2,16 +2,16 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 LE CASTELLET (83)      Indicatif : 83035001, alt : 417m, lat : 43°15'07"N, lon : 5°47'04"E;
-Edité le : 06/01/2024 dans l'état de la base;
+Edité le : 09/04/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-03-1969 au 04-01-2024);
-            ;      20.4;      21.1;      24.1;      26.9;      31.6;      35.3;        36;      37.1;      32.3;      28.2;      23.5;      21.5;      37.1;
-Date        ;   06-2013;   03-2020;   21-2002;   27-1992;   12-2012;   28-2019;   19-2023;   05-2017;   04-2023;   28-2006;   03-1977;   10-1978;      2017;
+(Records établis sur la période du 01-03-1969 au 02-04-2024);
+            ;      21.2;      21.1;      24.1;      26.9;      31.6;      35.3;        36;      37.1;      32.3;      28.2;      23.5;      21.5;      37.1;
+Date        ;   24-2024;   03-2020;   21-2002;   27-1992;   12-2012;   28-2019;   19-2023;   05-2017;   04-2023;   28-2006;   03-1977;   10-1978;      2017;
 
 
 Température maximale (Moyenne en °C);
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-03-1969 au 04-01-2024);
+(Records établis sur la période du 01-03-1969 au 02-04-2024);
             ;        -9;      -9.5;       -11;        -4;      -0.3;         5;         7;       7.5;         3;      -2.7;        -7;      -8.6;       -11;
 Date        ;   04-1971;   11-2012;   07-1971;   05-1975;   05-1991;   02-1975;   16-1970;   21-1972;   21-1977;   30-1997;   23-1998;   30-2005;      1971;
 
@@ -43,9 +43,9 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-03-1969 au 04-01-2024);
-            ;       112;      75.2;      55.2;      87.8;      77.7;      54.3;      36.8;        60;     123.2;       112;     103.5;       100;     123.2;
-Date        ;   16-1978;   04-1994;   08-1991;   21-1995;   20-2012;   14-2014;   28-1996;   26-2002;   19-1999;   02-1973;   21-2016;   24-2000;      1999;
+(Records établis sur la période du 01-03-1969 au 02-04-2024);
+            ;       112;      75.2;      78.8;      87.8;      77.7;      54.3;      36.8;        60;     123.2;       112;     103.5;       100;     123.2;
+Date        ;   16-1978;   04-1994;   09-2024;   21-1995;   20-2012;   14-2014;   28-1996;   26-2002;   19-1999;   02-1973;   21-2016;   24-2000;      1999;
 
 
 Précipitations : Hauteur moyenne mensuelle (mm);
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1993 au 04-01-2024);
+(Records établis sur la période du 01-01-1993 au 02-04-2024);
             ;      40.9;        37;      36.7;      33.3;        37;        42;        32;        32;      35.8;        40;      39.2;      37.2;        42;
 Date        ;   31-2022;   08-1999;   30-2015;   09-2022;   13-1995;   22-1996;   08-1996;   26-2004;   26-2020;   19-1996;   22-2008;   22-2023;      1996;
 
