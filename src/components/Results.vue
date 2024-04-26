@@ -208,7 +208,7 @@ const onRowSelect_Forage = async (event: any) => {
         <img src="../assets/img/close.png" class="Close" />
       </div>
       <div class="FlexWrapper_modal">
-        <Textarea v-model="modal_content" autoResize rows="50" cols="30" />
+        <Textarea v-model="modal_content" rows="50" cols="30" />
         <AreaChart v-if="store.forages_search" v-bind="{ values: results_mesures_nappe, width: 1300, height: 500, color: '#0a94a8' }" />
       </div>
     </div>
