@@ -6,7 +6,7 @@ import { ref, Ref } from "vue";
 import { Form, Field } from "vee-validate";
 import * as Yup from "yup";
 import { fiche_climatique, results, niveau_nappe } from "../assets/mixins/types";
-import { site_dangereux_le_plus_proche, convert_DMS_DD } from "../assets/mixins/distances";
+import { site_dangereux_le_plus_proche} from "../assets/mixins/distances";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 
@@ -289,41 +289,6 @@ async function onFastSearchCommune_serverless(criteres: any) {
 
     open.value = true; // Affichage de la modale
   }
-}
-
-async function onFastSearchCommune_serverless1(criteres: any) {
-  // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
-  // Appel d'une fonction serveless sécurisée
-  // NE FONCTIONNE PAS AU 3/10/2022 -> Tombe systématiquement en erreur
-  let cp = Object(criteres).commune.toString(); // Dé-référencement de l'objet pour récupérer les valeurs
-
-  const API_URL = "/.netlify/functions/database?code_postal=" + cp;
-
-  await fetch(API_URL)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      const result = data;
-      const ville: string = result.ville;
-      const lat: number = result.latitude;
-      const lon: number = result.longitude;
-
-      const cnpe = site_dangereux_le_plus_proche(store.cnpe, lat, lon); // Fonction 'importée' de distances.js
-      const seveso = site_dangereux_le_plus_proche(store.seveso, lat, lon); // Fonction 'importée' de distances.js
-
-      danger_ville.value = ville + " (" + cp + ")";
-      danger_cnpe.value = cnpe.site + " (" + Math.trunc(cnpe.distance) + "  kms)";
-      danger_seveso.value = seveso.site + " (" + Math.trunc(seveso.distance) + "  kms)";
-
-      open.value = true; // Affichage de la modale
-    })
-    .catch(function (error) {
-      alert(
-        "Le code saisi n'existe pas dans la base de référence des communes ou une erreur technique est survenue ! Veuillez saisir un autre code postal valide."
-      );
-      vd_commune.value = 78190; // Réaffichage du code postal de référence
-    });
 }
 
 function onInvalidSearch(button: string) {

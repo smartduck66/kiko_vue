@@ -10,7 +10,7 @@
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans CET ORDRE :
 //      - node kiko_init mf : chargement des données climatiques de Météo France (MF)
-//        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car les stations météo évoluent (dernièe MAJ : 23/12/2023)
+//        ATTENTION : si plantage, reconstruire manuellement le fichier 'Liste_stations_météo_complètes.txt' car les stations météo évoluent (dernière MAJ : avril 2024)
 //      - node kiko_init immo : création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons
 //      - node kiko_init clim : création du fichier fc.json à partir des données climatiques de Météo France et de drias_H1.json (prévisions 2021-2050/RPC 4.5)
 //        ATTENTION : le répertoire \public\drias contient les fichiers de prévision créés manuellement en partant du site https://www.drias-climat.fr/
@@ -20,7 +20,7 @@
 // On 'importe' des fonctions de distances.js
 import { convert_DMS_DD, site_dangereux_le_plus_proche } from "../batch/distances.js";
 
-// Constantes communes à l'ensemble des traitements
+// Autres imports
 import * as https from "https";
 import * as fs from "fs";
 import { open } from "fs/promises"; // Pour lecture d'un fichier texte ligne à ligne
@@ -34,11 +34,9 @@ const ref = JSON.parse(fs.readFileSync("../src/data/ListeFichesClimatiques.json"
 const filename = "../src/data_source/valeursfoncieres.txt";
 async function CreationFichierValeursFoncieres(url: string) {
   fs.unlink(filename, (err) => {
-    if (err) {
-      console.error("Erreur lors de la suppression du fichier de valeurs foncières : ", err);
-    } else {
-      console.log("Le précédent fichier de valeurs foncières a été supprimé avec succès.");
-    }
+    err
+      ? console.error("Erreur lors de la suppression du fichier de valeurs foncières : ", err)
+      : console.log("Le précédent fichier de valeurs foncières a été supprimé avec succès.");
   });
 
   const response = await fetch(url);
@@ -132,45 +130,46 @@ async function CreationFichierValeursFoncieres(url: string) {
 
   // Balayage du fichier des valeurs foncières, enrichissement de l'Array fiches, création du JSON sur disque
   const fiches1: prix_maisons[] = [];
-  let cumul_prix = 0;
-  let cumul_surface = 0;
-  let nb_vente = 0;
-  let num_line = 0;
-  let current_district = "01";
+  let cumul_prix = 0,
+    cumul_surface = 0,
+    nb_vente = 0,
+    current_district = "01";
 
   // On lit le fichier texte
   const lineReader = await open(filename);
 
+  let isFirstIteration = true;
   for await (const line of lineReader.readLines()) {
-    if (num_line > 0) {
-      // on saute la 1ère ligne du fichier
-      const fields: string[] = line.split("|");
-      const item = new prix_maisons(); // note the "new" keyword here
-
-      const departement: string = fields[18];
-      const prix: number = !fields[10] ? 0 : Number(fields[10].substring(0, fields[10].indexOf(","))); // Guard si le prix est vide ; suppression des décimales sinon
-      const type_bien: string = fields[36];
-      const surface: number = !fields[38] ? 0 : Number(fields[38]); // Guard si la surface est vide
-
-      if (departement == current_district) {
-        if (type_bien == "Maison" && prix / surface < 50000) {
-          // Guard : on ne retient pas les prix au m2 hors norme (vente de domaine, etc.)
-          // ATTENTION : le cas où la parcelle contient plusieurs maisons habitables fausse les calculs (cela peut arriver surtout en province)
-          cumul_prix += prix;
-          cumul_surface += surface;
-          ++nb_vente;
-        }
-      } else {
-        item.prix = cumul_surface ? Math.trunc(cumul_prix / cumul_surface) : 0; // Guard : pour le département 2B, pas de maison donc pas de surface...
-        item.nb_ventes = nb_vente;
-        item.dpt = current_district;
-        console.log("Traitement du département " + item.dpt + " : prix moyen au m2 = " + item.prix + " euros (" + item.nb_ventes + " ventes)");
-        fiches1.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
-        current_district = departement;
-        cumul_prix = cumul_surface = nb_vente = 0;
-      }
+    if (isFirstIteration) {
+      isFirstIteration = false;
+      continue; // Saute la première itération
     }
-    ++num_line;
+
+    const fields: string[] = line.split("|");
+    const item = new prix_maisons(); // note the "new" keyword here
+
+    const departement: string = fields[18];
+    const prix: number = !fields[10] ? 0 : Number(fields[10].substring(0, fields[10].indexOf(","))); // Guard si le prix est vide ; suppression des décimales sinon
+    const type_bien: string = fields[36];
+    const surface: number = !fields[38] ? 0 : Number(fields[38]); // Guard si la surface est vide
+
+    if (departement == current_district) {
+      if (type_bien == "Maison" && prix / surface < 50000) {
+        // Guard : on ne retient pas les prix au m2 hors norme (vente de domaine, etc.)
+        // ATTENTION : le cas où la parcelle contient plusieurs maisons habitables fausse les calculs (cela peut arriver surtout en province)
+        cumul_prix += prix;
+        cumul_surface += surface;
+        ++nb_vente;
+      }
+    } else {
+      item.dpt = current_district;
+      item.prix = cumul_surface ? Math.trunc(cumul_prix / cumul_surface) : 0; // Guard : pour le département 2B, pas de maison donc pas de surface...
+      item.nb_ventes = nb_vente;
+      console.log("Traitement département " + item.dpt + " : prix moyen au m2 = " + item.prix + " € (" + item.nb_ventes + " ventes)");
+      fiches1.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
+      current_district = departement;
+      cumul_prix = cumul_surface = nb_vente = 0;
+    }
   }
 
   fs.writeFileSync("../src/data/prix_maisons_m2.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
@@ -179,7 +178,7 @@ async function CreationFichierValeursFoncieres(url: string) {
 function extract_alone_value(ref: string, pattern: RegExp, data: string, value_name: string): string {
   // Fonction qui extrait une valeur seule
   const match = data.match(pattern);
-  if (match !== null) {
+  if (match) {
     return match[0];
   } else throw new Error("La fiche " + ref + " semble ne pas avoir de données : " + value_name);
 }
@@ -188,7 +187,7 @@ function extract_value_in_a_list(ref: string, pattern: RegExp, data: string, val
   // Fonction qui extrait une valeur dans une liste
   const match = data.match(pattern);
 
-  if (match !== null) {
+  if (match) {
     // Guard : on teste la présence d'une mention ("Données non disponibles" ou "Statistiques...") au lieu de valeurs
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     let offset: number = match.index! + value_name.length + 3; // L'offset permet de "sauter" le titre du bloc de données ; +3 correspond aux caractères parasites : CR,LF...
