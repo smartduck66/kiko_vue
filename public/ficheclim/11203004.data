@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 LEZIGNAN-CORBIERES (11)      Indicatif : 11203004, alt : 60m, lat : 43°10'22"N, lon : 2°43'43"E;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-08-1990 au 02-04-2024);
+(Records établis sur la période du 01-08-1990 au 02-07-2024);
             ;      22.7;      26.3;      27.9;      31.3;        36;      41.5;      40.8;      42.9;      36.5;      31.9;      26.1;      22.7;      42.9;
 Date        ;   25-2024;   27-2019;   21-2002;   09-2011;   29-2001;   21-2003;   16-2022;   23-2023;   03-2016;   03-2011;   06-2015;   23-2022;      2023;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-08-1990 au 02-04-2024);
+(Records établis sur la période du 01-08-1990 au 02-07-2024);
             ;      -6.2;      -8.5;      -7.4;      -2.5;       1.4;         7;       9.1;       8.8;       4.1;      -0.7;      -7.6;      -8.8;      -8.8;
 Date        ;   05-1993;   08-2012;   02-2005;   08-2021;   07-2019;   04-2001;   17-2000;   30-1998;   29-1993;   19-2009;   22-1998;   29-2007;      2007;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-08-1990 au 02-04-2024);
+(Records établis sur la période du 01-08-1990 au 02-07-2024);
             ;       130;      78.6;      73.6;      87.6;      57.4;      71.8;      52.8;        58;       120;     139.2;       450;     104.2;       450;
 Date        ;   29-2006;   20-2004;   12-2022;   27-1993;   03-1999;   01-1997;   01-1992;   10-1997;   26-1992;   14-1996;   12-1999;   03-2003;      1999;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-08-1990 au 02-04-2024);
+(Records établis sur la période du 01-08-1990 au 02-07-2024);
             ;      45.4;        36;      35.6;        36;        35;      28.2;      28.1;        33;      30.3;        32;      31.1;        41;      45.4;
 Date        ;   24-2009;   19-2001;   10-2023;   07-1994;   15-1998;   13-2016;   23-2013;   10-1996;   09-2021;   24-1992;   14-2004;   28-1999;      2009;
 

@@ -2849,11 +2849,11 @@
   },
   {
     "indicatif": "87064005",
-    "temp_moy": 0,
-    "temp_min": 0,
-    "temp_max": 0,
-    "canicule": 0,
-    "pluie": 0
+    "temp_moy": 11.44,
+    "temp_min": 8.1,
+    "temp_max": 14.77,
+    "canicule": 6,
+    "pluie": 1252.97
   },
   {
     "indicatif": "87085006",

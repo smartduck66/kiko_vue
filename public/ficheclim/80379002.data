@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 AMIENS-GLISY (80)      Indicatif : 80379002, alt : 60m, lat : 49°52'19"N, lon : 2°22'56"E;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1988 au 02-04-2024);
+(Records établis sur la période du 01-01-1988 au 02-07-2024);
             ;      15.8;      19.4;      24.1;      26.7;      31.5;        36;      41.7;      38.1;      34.2;        28;      20.7;      17.1;      41.7;
 Date        ;   09-2015;   24-1990;   31-2021;   19-2018;   27-2005;   27-2011;   25-2019;   10-2003;   15-2020;   10-2023;   07-2015;   07-2000;      2019;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1988 au 02-04-2024);
+(Records établis sur la période du 01-01-1988 au 02-07-2024);
             ;     -14.6;     -12.7;       -10;      -3.9;      -1.2;       0.1;       4.5;       5.2;       1.1;      -5.4;      -9.5;     -13.5;     -14.6;
 Date        ;   10-2009;   07-1991;   04-2005;   08-2003;   07-1997;   05-1991;   04-1990;   08-1990;   27-1990;   30-1997;   24-1998;   29-1996;      2009;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.4;       0.2;       0.0;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1987 au 02-04-2024);
+(Records établis sur la période du 01-01-1987 au 02-07-2024);
             ;        24;      28.2;      30.1;      25.2;      53.4;      55.8;        56;      65.7;        49;      33.4;      37.4;      42.4;      65.7;
 Date        ;   01-2003;   24-1997;   10-2018;   26-2003;   30-2016;   20-1992;   06-2001;   07-2008;   03-2011;   02-2021;   10-2002;   02-2000;      2008;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1988 au 02-04-2024);
+(Records établis sur la période du 01-01-1988 au 02-07-2024);
             ;        33;        33;      27.9;        27;        26;        24;      28.2;      22.5;        23;        30;      31.8;        37;        37;
 Date        ;   25-1990;   28-1990;   10-2019;   04-1994;   02-2003;   04-1994;   04-2023;   13-2008;   13-1998;   27-2002;   02-2023;   17-2004;      2004;
 

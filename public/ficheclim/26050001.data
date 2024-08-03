@@ -2,16 +2,16 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 BESIGNAN (26)      Indicatif : 26050001, alt : 556m, lat : 44°19'13"N, lon : 5°19'01"E;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-06-1990 au 02-04-2024);
+(Records établis sur la période du 01-06-1990 au 02-07-2024);
             ;      19.4;      21.3;      24.5;        27;      32.6;      39.8;      36.6;      38.2;      32.2;      29.7;      22.4;      18.7;      39.8;
-Date        ;   10-2015;   27-2019;   24-1994;   24-2007;   23-2009;   28-2019;   17-2005;   22-2023;   04-2016;   08-2023;   07-2015;   30-2021;      2019;
+Date        ;   10-2015;   27-2019;   24-1994;   14-2024;   23-2009;   28-2019;   17-2005;   22-2023;   04-2016;   08-2023;   07-2015;   30-2021;      2019;
 
 
 Température maximale (Moyenne en °C);
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-06-1990 au 02-04-2024);
+(Records établis sur la période du 01-06-1990 au 02-07-2024);
             ;     -10.5;     -12.8;      -9.7;      -2.4;       0.6;         5;       8.2;       8.2;       2.6;      -2.9;      -7.7;     -12.1;     -12.8;
 Date        ;   13-2003;   05-2012;   02-2005;   08-2021;   05-1991;   21-1992;   11-2007;   27-2011;   29-1993;   31-1997;   23-1998;   30-1996;      2012;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.0;       0.3;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-06-1990 au 02-04-2024);
+(Records établis sur la période du 01-06-1990 au 02-07-2024);
             ;        90;        55;      62.5;        81;        48;      59.5;      59.5;      64.5;     109.5;      80.5;      76.5;      61.5;     109.5;
 Date        ;   06-1994;   01-2019;   08-1991;   21-1995;   04-1999;   14-2007;   28-2013;   29-1992;   11-2005;   31-2003;   05-1994;   18-1997;      2005;
 

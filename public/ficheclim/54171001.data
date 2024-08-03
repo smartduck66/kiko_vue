@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 DONCOURT-LES-CONFLANS (54)      Indicatif : 54171001, alt : 235m, lat : 49°09'12"N, lon : 5°55'45"E;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-04-2005 au 02-04-2024);
+(Records établis sur la période du 01-04-2005 au 02-07-2024);
             ;      14.7;      21.5;        26;      28.8;      33.3;      36.7;      40.9;      39.1;      36.2;      27.9;      21.6;      16.1;      40.9;
 Date        ;   01-2022;   27-2019;   31-2021;   21-2018;   29-2017;   19-2022;   25-2019;   04-2022;   16-2020;   13-2023;   02-2020;   31-2022;      2019;
 
@@ -30,7 +30,7 @@ Statistiques établies sur la période 2005-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-04-2005 au 02-04-2024);
+(Records établis sur la période du 01-04-2005 au 02-07-2024);
             ;     -14.7;       -16;     -10.7;      -6.9;      -3.4;       1.1;       2.3;       3.1;      -1.3;      -6.1;      -9.3;     -16.5;     -16.5;
 Date        ;   07-2009;   12-2012;   15-2013;   14-2019;   05-2019;   12-2005;   31-2015;   10-2016;   20-2012;   29-2012;   30-2020;   26-2010;      2010;
 
@@ -47,7 +47,7 @@ Tn <= -10°C ;       0.9;       0.7;       0.1;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-04-2005 au 02-04-2024);
+(Records établis sur la période du 01-04-2005 au 02-07-2024);
             ;        20;      24.8;      35.4;        42;      48.6;      35.1;      80.2;      41.7;      44.5;      35.2;      25.2;      23.8;      80.2;
 Date        ;   25-2018;   11-2007;   08-2023;   08-2022;   30-2016;   01-2016;   14-2021;   10-2014;   11-2005;   22-2013;   03-2014;   02-2007;      2021;
 
@@ -86,9 +86,9 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 23-04-2005 au 02-04-2024);
-            ;      29.6;      31.7;      27.6;      24.1;      28.4;      26.2;      28.4;      23.4;      25.4;      28.5;      22.9;      29.2;      31.7;
-Date        ;   12-2017;   28-2010;   10-2019;   30-2012;   29-2008;   25-2022;   14-2010;   24-2015;   24-2012;   21-2021;   11-2010;   14-2017;      2010;
+(Records établis sur la période du 23-04-2005 au 02-07-2024);
+            ;      29.6;      31.7;      27.6;      29.7;      28.4;      26.2;      28.4;      23.4;      25.4;      28.5;      22.9;      29.2;      31.7;
+Date        ;   12-2017;   28-2010;   10-2019;   15-2024;   29-2008;   25-2022;   14-2010;   24-2015;   24-2012;   21-2021;   11-2010;   14-2017;      2010;
 
 
 Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);

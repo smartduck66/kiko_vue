@@ -2,16 +2,16 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 ILE ROUSSE (20)      Indicatif : 20093002, alt : 142m, lat : 42°37'59"N, lon : 8°55'21"E;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-08-1988 au 02-04-2024);
-            ;      20.8;      22.2;      27.9;      29.3;      32.2;      36.5;      39.6;      36.9;      35.2;      31.3;      25.9;      25.2;      39.6;
-Date        ;   08-2016;   03-2020;   31-2016;   27-2012;   26-2008;   18-2006;   05-1993;   14-2003;   02-1998;   22-2019;   14-2023;   17-1989;      1993;
+(Records établis sur la période du 01-08-1988 au 02-07-2024);
+            ;      20.8;      22.2;      27.9;      29.3;      32.2;      36.7;      39.6;      36.9;      35.2;      31.3;      25.9;      25.2;      39.6;
+Date        ;   08-2016;   03-2020;   31-2016;   27-2012;   26-2008;   29-2024;   05-1993;   14-2003;   02-1998;   22-2019;   14-2023;   17-1989;      1993;
 
 
 Température maximale (Moyenne en °C);
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-08-1988 au 02-04-2024);
+(Records établis sur la période du 01-08-1988 au 02-07-2024);
             ;        -1;      -0.9;      -1.1;       2.5;       5.6;       9.1;        13;      14.8;      10.8;       4.7;       1.1;      -1.3;      -1.3;
 Date        ;   03-1993;   27-2018;   02-2005;   02-2022;   15-2019;   02-2006;   12-2000;   29-2023;   27-2007;   29-1997;   22-1998;   28-1996;      1996;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-08-1988 au 02-04-2024);
+(Records établis sur la période du 01-08-1988 au 02-07-2024);
             ;      65.8;      37.9;      37.3;      59.8;      45.7;     101.6;      34.2;      70.2;      48.8;      54.5;      69.6;      47.3;     101.6;
 Date        ;   30-2011;   23-2018;   01-1989;   27-2009;   01-1991;   06-2000;   07-2006;   10-2015;   01-1989;   19-1989;   04-1999;   30-1995;      2000;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 07-08-1988 au 02-04-2024);
+(Records établis sur la période du 07-08-1988 au 02-07-2024);
             ;      49.8;        59;      51.6;        48;        43;        45;        41;      57.2;      42.8;      52.1;        45;        49;        59;
 Date        ;   03-2018;   27-1990;   11-2023;   13-1989;   27-1996;   05-1994;   08-1996;   18-2022;   21-2019;   29-2018;   01-2003;   09-2018;      1990;
 

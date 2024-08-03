@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 ANGOULEME - BRIE - CHAMPNIERS (16)      Indicatif : 16078001, alt : 124m, lat : 45°43'40"N, lon : 0°13'14"E;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-04-2009 au 02-04-2024);
+(Records établis sur la période du 01-04-2009 au 02-07-2024);
             ;      18.2;      24.1;      26.1;      29.2;        32;      38.8;      39.8;      39.6;      37.3;      32.2;      24.2;      18.1;      39.8;
 Date        ;   01-2023;   27-2019;   31-2021;   15-2015;   22-2022;   18-2022;   23-2019;   07-2020;   04-2023;   01-2023;   08-2015;   08-2010;      2019;
 
@@ -30,7 +30,7 @@ Statistiques établies sur la période 2009-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-04-2009 au 02-04-2024);
+(Records établis sur la période du 01-04-2009 au 02-07-2024);
             ;      -7.8;     -12.8;      -4.9;      -3.2;       0.6;       5.4;       8.7;       8.4;       3.9;        -2;      -4.6;     -10.7;     -12.8;
 Date        ;   20-2017;   09-2012;   11-2010;   04-2022;   05-2019;   07-2020;   02-2012;   30-2009;   26-2010;   16-2009;   21-2018;   19-2009;      2012;
 
@@ -47,9 +47,9 @@ Tn <= -10°C ;         .;       0.4;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-04-2009 au 02-04-2024);
-            ;      28.2;      23.6;      30.6;      62.1;      26.9;      43.3;      31.9;      29.6;      35.8;      57.7;      36.2;      44.3;      62.1;
-Date        ;   06-2016;   25-2024;   29-2024;   28-2012;   21-2014;   20-2022;   04-2018;   03-2014;   11-2015;   19-2012;   04-2023;   10-2017;      2012;
+(Records établis sur la période du 01-04-2009 au 02-07-2024);
+            ;      28.2;      23.6;      30.6;      62.1;        27;      43.3;      31.9;      29.6;      35.8;      57.7;      36.2;      44.3;      62.1;
+Date        ;   06-2016;   25-2024;   29-2024;   28-2012;   03-2024;   20-2022;   04-2018;   03-2014;   11-2015;   19-2012;   04-2023;   10-2017;      2012;
 
 
 Précipitations : Hauteur moyenne mensuelle (mm);
@@ -86,7 +86,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 04-04-2009 au 02-04-2024);
+(Records établis sur la période du 04-04-2009 au 02-07-2024);
             ;      26.8;      30.2;      34.4;      26.2;      31.2;      31.3;      22.8;        24;      24.5;      24.2;      29.5;      29.2;      34.4;
 Date        ;   04-2014;   04-2017;   06-2017;   08-2022;   26-2018;   20-2022;   18-2017;   12-2020;   13-2016;   20-2021;   04-2023;   22-2019;      2017;
 

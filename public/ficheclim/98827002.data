@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 NEPOUI (988)      Indicatif : 98827002, alt : 82m, lat : 21°19'05"S, lon : 165°00'07"E;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1970 au 02-04-2024);
+(Records établis sur la période du 01-01-1970 au 02-07-2024);
             ;      36.1;      36.9;      36.5;      34.4;      32.4;      31.5;      31.8;      30.4;      31.7;      33.7;      34.7;        36;      36.9;
 Date        ;   23-1998;   09-2020;   04-1997;   03-2016;   03-2014;   08-1998;   29-1998;   09-1992;   26-2020;   27-1998;   29-2018;   14-2014;      2020;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1970 au 02-04-2024);
+(Records établis sur la période du 01-01-1970 au 02-07-2024);
             ;      17.4;      17.9;        15;        15;      13.7;      12.2;      11.6;      11.7;        12;      12.5;      13.3;      16.5;      11.6;
 Date        ;   31-1972;   03-1997;   08-1988;   21-1972;   28-2008;   25-2006;   18-1979;   28-1979;   25-1974;   05-1992;   05-1996;   06-1986;      1979;
 
@@ -43,7 +43,7 @@ Tn <=  10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1970 au 02-04-2024);
+(Records établis sur la période du 01-01-1970 au 02-07-2024);
             ;     300.5;     125.2;     228.8;       132;       100;     126.2;      97.2;      75.8;      93.5;      79.6;      58.6;     132.2;     300.5;
 Date        ;   12-1988;   15-1999;   27-1996;   17-1975;   20-1986;   28-2007;   07-1973;   13-2010;   14-1985;   19-2010;   26-2013;   23-1981;      1988;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-04-1990 au 02-04-2024);
+(Records établis sur la période du 01-04-1990 au 02-07-2024);
             ;        37;        32;        52;      29.1;        27;        25;        26;        26;        22;        23;        23;      31.5;        52;
 Date        ;   08-1997;   20-1999;   14-2003;   10-2017;   31-1997;   20-1997;   28-2001;   14-1997;   16-2003;   12-2010;   21-1991;   14-2021;      2003;
 

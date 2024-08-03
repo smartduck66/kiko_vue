@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 BORDEAUX-MERIGNAC (33)      Indicatif : 33281001, alt : 47m, lat : 44°49'50"N, lon : 0°41'28"O;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-11-1920 au 02-04-2024);
+(Records établis sur la période du 01-11-1920 au 02-07-2024);
             ;      20.8;      26.2;      27.7;      31.1;      35.4;      40.5;      41.2;      40.7;      37.5;      33.2;      26.7;      22.5;      41.2;
 Date        ;   01-2022;   21-1926;   25-1981;   30-2005;   29-1922;   18-2022;   23-2019;   04-2003;   12-2022;   02-2023;   08-2015;   16-1989;      2019;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-11-1920 au 02-04-2024);
+(Records établis sur la période du 01-11-1920 au 02-07-2024);
             ;     -16.4;     -14.8;      -9.9;      -5.3;      -1.8;       2.5;       5.2;       4.7;      -1.8;      -5.3;      -7.3;     -13.4;     -16.4;
 Date        ;   16-1985;   15-1956;   06-1971;   07-1929;   01-1938;   03-1938;   11-1938;   31-1938;   24-1928;   08-1936;   20-1985;   21-1938;      1985;
 
@@ -43,9 +43,9 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-11-1920 au 02-04-2024);
-            ;      52.2;      81.7;        41;        49;        71;      56.8;        51;      87.6;        79;        62;      49.2;      59.6;      87.6;
-Date        ;   06-1982;   12-1990;   26-1924;   22-1923;   10-2020;   01-1994;   15-2003;   08-1992;   20-1999;   15-1991;   14-1991;   28-1995;      1992;
+(Records établis sur la période du 01-11-1920 au 02-07-2024);
+            ;      52.2;      81.7;        41;        49;        71;      58.6;        51;      87.6;        79;        62;      49.2;      59.6;      87.6;
+Date        ;   06-1982;   12-1990;   26-1924;   22-1923;   10-2020;   18-2024;   15-2003;   08-1992;   20-1999;   15-1991;   14-1991;   28-1995;      1992;
 
 
 Précipitations : Hauteur moyenne mensuelle (mm);
@@ -76,7 +76,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-04-2024);
+(Records établis sur la période du 01-01-1981 au 02-07-2024);
             ;      44.5;      33.4;        32;        29;        31;        32;        44;        31;        35;        33;        34;        40;      44.5;
 Date        ;   24-2009;   04-2017;   24-1986;   01-1994;   13-2002;   07-1987;   15-2003;   16-1989;   14-1986;   04-1984;   04-2023;   27-1999;      2009;
 

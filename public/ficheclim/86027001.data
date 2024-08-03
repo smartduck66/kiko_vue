@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 POITIERS-BIARD (86)      Indicatif : 86027001, alt : 125m, lat : 46°35'37"N, lon : 0°18'51"E;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-05-1921 au 02-04-2024);
+(Records établis sur la période du 01-05-1921 au 02-07-2024);
             ;      17.7;      23.4;      25.1;      29.3;      33.6;        39;      40.8;      39.6;        37;      32.2;      22.9;        19;      40.8;
 Date        ;   15-1975;   27-2019;   25-1955;   30-2005;   24-1922;   18-2022;   27-1947;   06-2003;   04-2023;   02-2023;   08-2015;   07-2000;      1947;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-05-1921 au 02-04-2024);
+(Records établis sur la période du 01-05-1921 au 02-07-2024);
             ;     -17.9;     -17.3;     -13.1;      -5.6;      -2.7;       0.8;       1.5;       0.8;       0.8;      -6.5;       -10;     -16.5;     -17.9;
 Date        ;   16-1985;   14-1929;   01-2005;   04-1996;   01-1945;   05-1935;   09-1935;   15-1935;   25-2002;   30-1997;   24-1998;   31-1985;      1985;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.2;       0.4;       0.0;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-05-1921 au 02-04-2024);
+(Records établis sur la période du 01-05-1921 au 02-07-2024);
             ;      37.6;        29;      37.3;      41.3;      92.3;      70.6;        60;      70.2;      48.9;      57.6;      51.3;      54.3;      92.3;
 Date        ;   02-1961;   21-1955;   15-1930;   28-2012;   02-2011;   08-1949;   14-1935;   31-2015;   09-1973;   28-1960;   08-1925;   28-1947;      2011;
 
@@ -77,7 +77,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-04-2024);
+(Records établis sur la période du 01-01-1981 au 02-07-2024);
             ;        32;      34.4;      30.6;      28.6;      29.1;      28.2;      36.2;        30;        28;        30;      35.8;        39;        39;
 Date        ;   25-1988;   10-2009;   06-2017;   08-2022;   26-2018;   15-2023;   27-2013;   08-1992;   07-1995;   24-2006;   04-2023;   27-1999;      1999;
 

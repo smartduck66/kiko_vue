@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 NICE-RIMIEZ (06)      Indicatif : 06088007, alt : 238m, lat : 43°44'19"N, lon : 7°16'45"E;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-03-2009 au 02-04-2024);
+(Records établis sur la période du 01-03-2009 au 02-07-2024);
             ;      21.1;      23.1;      22.2;      26.4;        31;      34.3;      35.4;      35.7;      31.9;      26.5;      23.8;      21.9;      35.7;
 Date        ;   11-2015;   10-2020;   02-2015;   28-2012;   27-2022;   30-2019;   27-2015;   23-2023;   04-2009;   02-2016;   14-2023;   11-2023;      2023;
 
@@ -30,7 +30,7 @@ Statistiques établies sur la période 2009-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-03-2009 au 02-04-2024);
+(Records établis sur la période du 01-03-2009 au 02-07-2024);
             ;      -1.6;      -3.3;      -0.9;       1.8;       6.3;      10.1;      14.4;      13.9;      10.5;       3.9;         0;        -3;      -3.3;
 Date        ;   17-2017;   12-2010;   01-2018;   02-2022;   05-2019;   01-2013;   26-2011;   15-2010;   29-2020;   29-2012;   27-2010;   19-2009;      2010;
 
@@ -47,7 +47,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1950 au 02-04-2024);
+(Records établis sur la période du 01-01-1950 au 02-07-2024);
             ;     137.1;        90;      74.8;       117;        79;        73;      71.7;     112.5;        97;     178.5;     171.3;       143;     178.5;
 Date        ;   16-2014;   19-1972;   19-1979;   24-1952;   17-2005;   13-1957;   02-1956;   25-2002;   30-1998;   13-1973;   04-2014;   02-2005;      1973;
 
@@ -84,7 +84,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 26-03-2009 au 02-04-2024);
+(Records établis sur la période du 26-03-2009 au 02-07-2024);
             ;      25.4;      24.6;      26.2;      26.4;      22.4;      22.7;      21.6;      23.9;      31.1;      27.9;      27.8;      27.3;      31.1;
 Date        ;   10-2023;   04-2020;   07-2017;   11-2010;   11-2014;   28-2017;   16-2018;   25-2012;   13-2015;   31-2012;   18-2013;   22-2019;      2015;
 

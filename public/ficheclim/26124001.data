@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 ETOILE (26)      Indicatif : 26124001, alt : 145m, lat : 44°49'08"N, lon : 4°53'22"E;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1987 au 02-04-2024);
+(Records établis sur la période du 01-01-1987 au 02-07-2024);
             ;      19.5;      21.8;        26;      30.2;      33.6;      38.9;      39.3;      40.8;      33.9;      28.8;      23.2;      20.6;      40.8;
 Date        ;   10-2015;   23-1990;   25-1994;   24-2007;   24-2009;   29-2019;   24-2019;   13-2003;   03-2005;   09-2023;   11-1995;   18-1989;      2003;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1987 au 02-04-2024);
+(Records établis sur la période du 01-01-1987 au 02-07-2024);
             ;     -13.2;     -10.1;     -10.4;      -4.4;       2.3;         6;       8.4;       7.4;       2.9;      -2.7;      -5.9;      -8.4;     -13.2;
 Date        ;   11-2010;   05-2012;   02-2005;   08-2021;   07-2019;   10-1987;   18-2000;   30-1993;   30-1995;   26-2003;   23-1998;   30-2005;      2010;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.0;       0.0;       0.0;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1987 au 02-04-2024);
+(Records établis sur la période du 01-01-1987 au 02-07-2024);
             ;      89.5;        65;      51.5;      75.5;        78;      63.5;     128.5;     159.5;       115;       138;      94.5;       115;     159.5;
 Date        ;   06-1994;   23-1989;   08-1991;   15-2005;   27-1998;   05-2009;   15-2002;   28-2003;   09-1993;   20-2001;   17-2006;   01-2003;      2003;
 
@@ -78,9 +78,9 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 29-12-2020 au 02-04-2024);
-            ;      23.5;        24;      24.7;      22.8;      24.5;      18.5;        19;      17.5;        19;      24.2;      22.8;      19.5;      24.7;
-Date        ;   07-2024;   26-2023;   09-2024;   12-2021;   16-2023;   19-2022;   08-2022;   28-2023;   17-2022;   20-2023;   24-2023;   20-2023;      2024;
+(Records établis sur la période du 29-12-2020 au 02-07-2024);
+            ;      23.5;        24;      24.7;        23;      24.5;        19;        19;      17.5;        19;      24.2;      22.8;      19.5;      24.7;
+Date        ;   07-2024;   26-2023;   09-2024;   10-2024;   16-2023;   11-2024;   08-2022;   28-2023;   17-2022;   20-2023;   24-2023;   20-2023;      2024;
 
 
 Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);

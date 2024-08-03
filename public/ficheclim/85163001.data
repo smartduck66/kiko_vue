@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 NOIRMOUTIER EN (85)      Indicatif : 85163001, alt : 3m, lat : 47°00'16"N, lon : 2°15'25"O;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1959 au 02-04-2024);
+(Records établis sur la période du 01-01-1959 au 02-07-2024);
             ;      15.5;      19.9;      22.9;      27.5;      31.3;        36;      38.7;        37;        33;      27.5;      20.9;      16.1;      38.7;
 Date        ;   24-2016;   22-2019;   19-2005;   23-1984;   06-1995;   26-1976;   18-2022;   04-2003;   18-1987;   09-2023;   01-2015;   04-2006;      2022;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1959 au 02-04-2024);
+(Records établis sur la période du 01-01-1959 au 02-07-2024);
             ;       -10;      -7.7;        -6;      -0.3;       0.5;       3.6;      10.8;       9.4;       6.4;       1.7;        -4;        -8;       -10;
 Date        ;   16-1985;   07-1991;   01-2005;   04-2022;   07-1979;   22-1969;   05-1965;   31-2017;   02-1966;   29-2003;   21-1993;   30-1996;      1985;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-10-1872 au 02-04-2024);
+(Records établis sur la période du 01-10-1872 au 02-07-2024);
             ;        81;        46;        52;      35.9;        45;        91;        64;        78;      59.4;      96.3;        66;        40;      96.3;
 Date        ;   12-1943;   21-1893;   06-1885;   30-2015;   24-2008;   02-1887;   18-1887;   15-1880;   10-1993;   26-1946;   06-1886;   08-1885;      1946;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1991 au 02-04-2024);
+(Records établis sur la période du 01-01-1991 au 02-07-2024);
             ;      32.2;        34;      31.4;        35;        31;      25.9;        28;        28;        37;      33.9;        33;      36.2;        37;
 Date        ;   16-2023;   03-2002;   06-2017;   03-1998;   21-1994;   07-2019;   25-1995;   30-1992;   13-1993;   01-2020;   06-2000;   08-2006;      1993;
 

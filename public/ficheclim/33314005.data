@@ -2,16 +2,16 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 PAUILLAC (33)      Indicatif : 33314005, alt : 26m, lat : 45°12'51"N, lon : 0°46'58"O;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1962 au 02-04-2024);
-            ;      19.5;      24.7;      26.5;      31.1;      34.7;      40.5;        41;      40.5;        39;      31.9;      24.8;        23;        41;
-Date        ;   13-1993;   27-2019;   30-1965;   30-2005;   30-2001;   30-1968;   31-1975;   04-2003;   02-1962;   01-2023;   08-2015;   16-1989;      1975;
+(Records établis sur la période du 01-01-1962 au 02-07-2024);
+            ;      19.5;      24.7;      26.5;      31.1;      34.7;      40.5;      40.5;      40.5;        39;      31.9;      24.8;        23;      40.5;
+Date        ;   13-1993;   27-2019;   30-1965;   30-2005;   30-2001;   30-1968;   18-2022;   04-2003;   02-1962;   01-2023;   08-2015;   16-1989;      2022;
 
 
 Température maximale (Moyenne en °C);
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1962 au 02-04-2024);
+(Records établis sur la période du 01-01-1962 au 02-07-2024);
             ;       -16;       -12;        -9;        -3;       1.6;         5;       7.5;         7;         2;      -1.5;      -5.5;      -9.5;       -16;
 Date        ;   16-1985;   04-1963;   07-1971;   03-1970;   03-2021;   02-1975;   18-1980;   31-1977;   21-1977;   25-2003;   23-1988;   25-1962;      1985;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1962 au 02-04-2024);
+(Records établis sur la période du 01-01-1962 au 02-07-2024);
             ;        47;        48;      34.7;        50;      79.6;        60;        55;        70;        60;        79;        45;      44.4;      79.6;
 Date        ;   02-1966;   05-1974;   01-2024;   09-1967;   10-2020;   19-1966;   23-1971;   26-1972;   26-1965;   15-1991;   12-1987;   10-2017;      2020;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-09-2004 au 02-04-2024);
+(Records établis sur la période du 01-09-2004 au 02-07-2024);
             ;      32.9;      35.5;      28.7;      31.5;      27.3;      27.7;      45.8;      27.1;      23.5;      25.7;      31.4;      32.1;      45.8;
 Date        ;   24-2009;   04-2017;   06-2017;   08-2022;   09-2019;   27-2005;   26-2013;   28-2018;   17-2023;   23-2006;   04-2023;   21-2019;      2013;
 

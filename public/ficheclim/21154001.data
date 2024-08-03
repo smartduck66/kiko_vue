@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 CHATILLON/SEINE (21)      Indicatif : 21154001, alt : 262m, lat : 47°50'57"N, lon : 4°34'52"E;
-Edité le : 09/04/2024 dans l'état de la base;
+Edité le : 06/07/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1946 au 02-04-2024);
+(Records établis sur la période du 01-01-1946 au 02-07-2024);
             ;      18.2;      22.7;      25.6;        29;        33;      39.5;      42.1;      41.5;      35.7;      31.2;        23;      19.6;      42.1;
 Date        ;   12-1974;   28-1960;   31-2021;   22-1968;   28-2017;   28-2011;   25-2019;   19-2012;   14-2020;   02-2023;   07-2015;   04-1953;      2019;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1946 au 02-04-2024);
+(Records établis sur la période du 01-01-1946 au 02-07-2024);
             ;     -22.4;       -22;     -18.5;      -7.1;        -4;      -0.4;       0.4;       1.2;        -2;      -8.3;     -12.5;     -20.6;     -22.4;
 Date        ;   09-1985;   14-1956;   01-2005;   09-2003;   01-1960;   04-2001;   01-1962;   26-1966;   17-1971;   30-1955;   24-1998;   20-2009;      1985;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       1.1;       0.8;       0.1;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1946 au 02-04-2024);
+(Records établis sur la période du 01-01-1946 au 02-07-2024);
             ;      33.2;      33.9;        48;        35;      81.2;        60;      73.2;      53.1;      52.2;      46.4;      39.8;      48.6;      81.2;
 Date        ;   23-1986;   03-1980;   08-1999;   26-1998;   08-1988;   11-1988;   02-2008;   18-1954;   12-2000;   06-1970;   02-2002;   02-1975;      1988;
 
@@ -78,7 +78,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-04-2024);
+(Records établis sur la période du 01-01-1981 au 02-07-2024);
             ;        33;      33.1;        30;        29;      24.2;        32;        38;        44;        24;        28;        29;        41;        44;
 Date        ;   02-2003;   10-2009;   25-1988;   01-1994;   09-2021;   05-1985;   27-2013;   17-2006;   11-1993;   20-1986;   23-1984;   26-1999;      2006;
 
