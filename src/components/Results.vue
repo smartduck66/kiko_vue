@@ -68,7 +68,7 @@ const onRowSelect_Forage = async (event: any) => {
     s += "----------------------------------------------------------------------------------------------------------------------------\n";
     let l1: string = "Code piézomètre           : " + event.data.col1;
     l1 = l1.padEnd(55, " ") + "Commune " + "(" + event.data.col4 + ")        : " + event.data.col5 + "\n";
-    let l2: string = "Première mesure effectuée : " + event.data.col6
+    let l2: string = "Première mesure effectuée : " + event.data.col6;
     l2 = l2.padEnd(55, " ") + "Altitude de la station : " + event.data.col2 + "\n";
     let l3: string = "Dernière mesure effectuée : " + event.data.col7;
     l3 = l3.padEnd(55, " ") + "Nombre de mesures      : " + event.data.col3 + "\n";
@@ -112,7 +112,7 @@ const onRowSelect_Forage = async (event: any) => {
     <!-- Le template de résultats ne s'affiche que s'il y a au moins UN résultat  -->
     <Card :style="{ 'max-width': max_width + 'px' }">
       <template #title>
-        {{ nbOccurences }}
+        <div class="text-global-bold">{{ nbOccurences }}</div>
       </template>
       <template #content>
         <div v-if="store.forages_search">
@@ -128,6 +128,7 @@ const onRowSelect_Forage = async (event: any) => {
             :metaKeySelection="false"
             dataKey="id"
             @rowSelect="onRowSelect_Forage"
+            class="text-global"
           >
             <Column field="col1" sortable header="Piézomètre"></Column>
             <Column field="col2" sortable header="Altitude"></Column>
@@ -153,8 +154,9 @@ const onRowSelect_Forage = async (event: any) => {
               :metaKeySelection="false"
               dataKey="id"
               @rowSelect="onRowSelect_FC"
+              class="text-global"
             >
-              <Column field="col1" sortable header="Station météo"></Column>
+              <Column field="col1" sortable header="Station météo" :style="{ width: '30%' }"></Column>
               <Column field="col2" sortable header="T° moy"></Column>
               <Column field="col3" sortable header="T° min"></Column>
               <Column field="col4" sortable header="T° max"></Column>
@@ -179,8 +181,9 @@ const onRowSelect_Forage = async (event: any) => {
               :metaKeySelection="false"
               dataKey="id"
               @rowSelect="onRowSelect_FC"
+              class="text-global"
             >
-              <Column field="col1" sortable header="Station météo"></Column>
+              <Column field="col1" sortable header="Station météo" :style="{ width: '30%' }"></Column>
               <Column field="col2" sortable header="T° moy"></Column>
               <Column field="col3" sortable header="T° moy" style="color: red"></Column>
               <Column field="col4" sortable header="T° min"></Column>
@@ -210,7 +213,7 @@ const onRowSelect_Forage = async (event: any) => {
         <img src="../assets/img/close.png" class="Close" />
       </div>
       <div class="FlexWrapper_modal">
-        <Textarea v-model="modal_content" autoResize rows="50" cols="30" />
+        <Textarea v-model="modal_content" rows="50" cols="30" class="raw-text"/>
         <AreaChart v-if="store.forages_search" v-bind="{ values: results_mesures_nappe, width: 1300, height: 500, color: '#0a94a8' }" />
       </div>
     </div>
@@ -265,7 +268,11 @@ img.Close {
   margin: 0px 0px 0px 32px;
   flex-direction: column;
   justify-content: flex-start;
-  color: #eee;
+
+}
+
+.raw-text {
+  color: black;
   font-family: Courier;
   font-size: 13px;
   font-weight: normal;
@@ -273,7 +280,7 @@ img.Close {
   font-style: normal;
   line-height: 1.17;
   letter-spacing: normal;
-  text-align: center;
+  text-align: left;
 }
 
 textarea {

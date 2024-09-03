@@ -6,7 +6,7 @@ import { ref, Ref } from "vue";
 import { Form, Field } from "vee-validate";
 import * as Yup from "yup";
 import { fiche_climatique, results, niveau_nappe } from "../assets/mixins/types";
-import { site_dangereux_le_plus_proche} from "../assets/mixins/distances";
+import { site_dangereux_le_plus_proche } from "../assets/mixins/distances";
 import { useStore } from "../assets/mixins/store.js";
 const store = useStore();
 
@@ -316,7 +316,7 @@ function ResetFiltres(): void {
 
 <template>
   <div class="FlexWrapper-panel">
-    <Panel header="Sélection des stations météo">
+    <Panel header="Sélection des stations météo" class="text-global">
       <template #icons>
         <button
           name="effacer les valeurs"
@@ -359,7 +359,7 @@ function ResetFiltres(): void {
       </Form>
     </Panel>
 
-    <Panel header="Recherche rapide">
+    <Panel header="Recherche rapide" class="text-global">
       <Form @submit="onFastSearchDpt" :validation-schema="schema_fast_Dpt" @invalid-submit="onInvalidSearch('.go-btn1')">
         <div class="my_fast_grid">
           <div class="c-fast-item-1">
@@ -455,7 +455,6 @@ code {
   display: grid;
   grid-template-columns: 175px 75px 75px;
   grid-template-rows: 250px;
-  padding: 1em;
 }
 
 [class^="c-item"] {
@@ -481,7 +480,7 @@ code {
   display: grid;
   grid-template-columns: 185px 80px 60px;
   grid-template-rows: 20px;
-  padding: 1em;
+  margin-bottom: 20px;
 }
 
 [class^="c-fast-item"] {
@@ -491,6 +490,7 @@ code {
 .c-fast-item-1 {
   grid-column: 1;
   justify-content: left;
+  padding-top: 5px;
 }
 .c-fast-item-2 {
   grid-column: 2;
@@ -547,7 +547,6 @@ code {
   width: 130px;
   border-radius: 7px;
   margin-bottom: 10px;
-  margin-right: 15px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
 }

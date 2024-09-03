@@ -8,6 +8,11 @@ import { RouterLink } from "vue-router";
     <h1>Changelog de Kikō</h1>
     <br />
     <br />
+    <h4>Septembre 2024</h4>
+    <ul>
+      <li>Implémentation des composants graphiques PrimeVue v4</li>
+    </ul>
+    <br />
     <h4>Avril 2024</h4>
     <ul>
       <li>Optimisation des batchs, mise à jour des données climatiques</li>

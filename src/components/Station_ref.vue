@@ -66,7 +66,7 @@ function newStationRef(new_indicatif_station_ref: string) {
 </script>
 
 <template>
-  <Panel v-bind="{ header: valeur_ref[0] }">
+  <Panel v-bind="{ header: valeur_ref[0] }" class="text-global">
     <template #icons>
       <button
         name="modifier la station de référence"
@@ -231,7 +231,7 @@ code {
 .my_grid {
   display: grid;
   grid-template-columns: 160px 160px;
-  padding: 1em;
+
 }
 
 [class^="c-item"] {

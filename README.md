@@ -37,7 +37,7 @@ A noter que la station météo de référence peut être modifiée grâce à l'i
 - Faunadb : ```npm install --save faunadb``` (DB en mode serverless)
 - Vue Router : ```npm i vue-router@4```
 - VueUse : ```npm i @vueuse/core``` (utilitaires)
-- PrimeVue : ```npm i primevue``` (composants graphiques)
+- PrimeVue : ```npm i primevue @primevue/themes``` (composants graphiques)
 - AutoImport PrimeVue : ```npm i unplugin-vue-components -D``` (pour éviter les déclarations manuelles d'importation des composants)
 - Vee-validate : ```npm i vee-validate --save``` (VeeValidate is the most popular Vue.js form library)
 - Yup : ```npm install -S yup``` (Yup is a schema builder for runtime value parsing and validation)
