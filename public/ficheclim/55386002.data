@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 NONSARD (55)      Indicatif : 55386002, alt : 230m, lat : 48°56'03"N, lon : 5°45'49"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-08-2002 au 02-07-2024);
+(Records établis sur la période du 01-08-2002 au 02-09-2024);
             ;        15;      20.3;      25.6;      28.3;      32.8;      36.1;      40.1;        39;      34.1;      28.2;      22.4;      16.5;      40.1;
 Date        ;   08-2014;   25-2021;   31-2021;   21-2018;   28-2017;   26-2019;   25-2019;   12-2003;   15-2020;   13-2023;   02-2020;   17-2019;      2019;
 
@@ -30,7 +30,7 @@ Statistiques établies sur la période 2002-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-08-2002 au 02-07-2024);
+(Records établis sur la période du 01-08-2002 au 02-09-2024);
             ;     -15.2;     -15.9;       -17;      -7.7;      -1.2;       1.4;       4.5;       3.5;      -0.5;      -5.9;      -7.7;     -16.1;       -17;
 Date        ;   07-2009;   05-2012;   01-2005;   08-2003;   16-2003;   02-2006;   31-2015;   26-2018;   20-2012;   29-2012;   30-2020;   26-2010;      2005;
 
@@ -47,9 +47,9 @@ Tn <= -10°C ;       1.2;       1.0;       0.1;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-08-2002 au 02-07-2024);
-            ;      35.2;      32.1;      32.1;      47.2;      37.9;      62.5;      64.9;      54.6;        59;      35.2;      27.6;      28.4;      64.9;
-Date        ;   02-2024;   02-2020;   08-2023;   08-2022;   30-2008;   19-2013;   29-2005;   10-2014;   13-2017;   03-2006;   20-2015;   02-2007;      2005;
+(Records établis sur la période du 01-08-2002 au 02-09-2024);
+            ;      35.2;      32.1;      32.1;      47.2;      37.9;      62.5;      64.9;      67.9;        59;      35.2;      27.6;      28.4;      67.9;
+Date        ;   02-2024;   02-2020;   08-2023;   08-2022;   30-2008;   19-2013;   29-2005;   13-2024;   13-2017;   03-2006;   20-2015;   02-2007;      2024;
 
 
 Précipitations : Hauteur moyenne mensuelle (mm);
@@ -86,7 +86,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 09-08-2002 au 02-07-2024);
+(Records établis sur la période du 09-08-2002 au 02-09-2024);
             ;      35.9;      31.4;      30.3;      23.8;      28.4;      26.3;      29.7;        28;      24.9;      29.8;      26.8;      32.3;      35.9;
 Date        ;   03-2018;   22-2024;   01-2008;   03-2018;   20-2006;   27-2017;   02-2008;   18-2004;   29-2019;   20-2021;   08-2007;   17-2004;      2018;
 

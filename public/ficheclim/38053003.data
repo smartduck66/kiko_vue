@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 BOURGOIN (38)      Indicatif : 38053003, alt : 358m, lat : 45°36'28"N, lon : 5°18'33"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-08-2003 au 02-07-2024);
+(Records établis sur la période du 01-08-2003 au 02-09-2024);
             ;        20;      21.1;      24.7;      29.1;      32.6;      36.5;        39;        40;      33.8;      29.8;      22.6;      18.1;        40;
 Date        ;   10-2015;   22-2021;   30-2021;   14-2024;   24-2009;   28-2005;   24-2019;   13-2003;   04-2023;   09-2023;   07-2015;   05-2006;      2003;
 
@@ -30,7 +30,7 @@ Statistiques établies sur la période 2003-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-08-2003 au 02-07-2024);
+(Records établis sur la période du 01-08-2003 au 02-09-2024);
             ;     -10.3;     -14.2;     -10.6;      -1.8;       1.5;       4.5;         9;       8.3;       3.9;        -3;        -6;     -13.3;     -14.2;
 Date        ;   30-2005;   05-2012;   01-2005;   08-2021;   06-2019;   03-2006;   22-2008;   31-2006;   27-2010;   25-2003;   24-2005;   30-2005;      2012;
 
@@ -47,7 +47,7 @@ Tn <= -10°C ;       0.1;       0.6;       0.1;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-08-2003 au 02-07-2024);
+(Records établis sur la période du 01-08-2003 au 02-09-2024);
             ;      56.8;        34;      32.6;      42.2;      70.1;        45;        60;        83;      65.9;      86.7;      76.6;      53.1;      86.7;
 Date        ;   16-2015;   06-2009;   13-2004;   15-2005;   10-2021;   24-2022;   22-2015;   31-2011;   26-2012;   23-2020;   04-2014;   02-2003;      2020;
 
@@ -86,7 +86,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 02-08-2003 au 02-07-2024);
+(Records établis sur la période du 02-08-2003 au 02-09-2024);
             ;      29.7;      27.3;        28;      28.7;      26.1;        27;      32.9;        37;        24;      27.3;        27;      33.6;        37;
 Date        ;   16-2023;   07-2016;   30-2024;   25-2019;   02-2005;   29-2024;   10-2017;   28-2003;   16-2015;   25-2010;   29-2009;   20-2019;      2003;
 

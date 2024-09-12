@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 ILE DU LEVANT (83)      Indicatif : 83069003, alt : 118m, lat : 43°01'56"N, lon : 6°28'09"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-05-1968 au 02-07-2024);
+(Records établis sur la période du 01-05-1968 au 02-09-2024);
             ;      20.7;      22.3;      23.3;      25.1;      30.5;      35.8;      35.6;      38.3;      31.2;        27;      23.1;        20;      38.3;
 Date        ;   19-2007;   23-1990;   02-2008;   16-2007;   27-2022;   27-2019;   20-2023;   07-2003;   01-2019;   03-2003;   05-2004;   19-1987;      2003;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-05-1968 au 02-07-2024);
+(Records établis sur la période du 01-05-1968 au 02-09-2024);
             ;      -6.2;      -8.2;       0.8;       2.9;         7;        10;      13.3;      12.7;       9.9;       4.6;       1.1;        -1;      -8.2;
 Date        ;   08-1985;   10-1986;   02-2005;   21-1980;   06-1991;   02-1975;   17-2000;   30-1986;   27-2020;   28-2012;   22-1988;   20-2009;      1986;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-05-1968 au 02-07-2024);
+(Records établis sur la période du 01-05-1968 au 02-09-2024);
             ;     106.4;      75.4;      59.9;        55;      77.6;      67.4;      43.1;     235.8;       106;     123.8;       112;      86.2;     235.8;
 Date        ;   10-1999;   09-1978;   12-2011;   15-1976;   03-2007;   15-2010;   18-1976;   27-1980;   10-2019;   19-1994;   12-2005;   31-1976;      1980;
 
@@ -78,9 +78,9 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-07-2024);
-            ;        42;        41;        40;        37;        40;        36;        37;        35;      38.1;        42;      41.3;        42;        42;
-Date        ;   20-1998;   21-2004;   09-2010;   02-2003;   13-1995;   22-1996;   18-1981;   11-1997;   06-2005;   18-2003;   08-2011;   26-2008;      2008;
+(Records établis sur la période du 01-01-1981 au 02-09-2024);
+            ;        42;        41;        40;        37;        40;        36;        37;      38.9;      38.1;        42;      41.3;        42;        42;
+Date        ;   20-1998;   21-2004;   09-2010;   02-2003;   13-1995;   22-1996;   18-1981;   15-2024;   06-2005;   18-2003;   08-2011;   26-2008;      2008;
 
 
 Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);

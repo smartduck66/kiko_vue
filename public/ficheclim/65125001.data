@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 CAMPISTROUS (65)      Indicatif : 65125001, alt : 593m, lat : 43°07'37"N, lon : 0°21'59"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1989 au 02-07-2024);
+(Records établis sur la période du 01-01-1989 au 02-09-2024);
             ;      23.5;      24.1;        27;      29.4;      31.1;      35.8;      37.5;      38.2;      34.9;      31.5;      25.3;      23.6;      38.2;
 Date        ;   25-2024;   24-1990;   29-2023;   06-2024;   17-2006;   18-2022;   20-1989;   24-2023;   12-2022;   02-2023;   01-1999;   16-1989;      2023;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1989 au 02-07-2024);
+(Records établis sur la période du 01-01-1989 au 02-09-2024);
             ;     -11.9;     -12.9;     -10.6;      -4.4;      -1.1;       1.7;       5.6;       5.5;       1.9;      -3.8;      -8.2;     -11.2;     -12.9;
 Date        ;   28-2005;   08-2012;   01-2005;   03-2022;   05-2019;   01-2006;   11-1993;   29-1998;   28-2007;   16-2009;   17-2007;   16-2001;      2012;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.0;       0.2;       0.0;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1989 au 02-07-2024);
+(Records établis sur la période du 01-01-1989 au 02-09-2024);
             ;      66.8;        68;        44;      54.6;        62;        73;        83;      55.2;      80.4;      53.6;      76.2;      60.6;        83;
 Date        ;   24-2014;   12-1990;   03-1995;   03-2002;   30-2011;   10-2000;   31-1994;   10-2014;   08-1989;   22-2019;   25-2015;   02-1995;      1994;
 
@@ -77,7 +77,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-04-1990 au 02-07-2024);
+(Records établis sur la période du 01-04-1990 au 02-09-2024);
             ;      32.1;      33.5;      32.9;      26.8;      23.5;      21.8;        34;      22.1;        22;      26.1;      32.6;        37;        37;
 Date        ;   24-2009;   04-2017;   02-2020;   14-2023;   22-2016;   09-2006;   12-2003;   29-2022;   11-1991;   21-2020;   03-2023;   27-1999;      1999;
 

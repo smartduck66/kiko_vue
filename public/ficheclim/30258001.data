@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 NIMES-GARONS (30)      Indicatif : 30258001, alt : 94m, lat : 43°46'22"N, lon : 4°24'46"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1964 au 02-07-2024);
+(Records établis sur la période du 01-01-1964 au 02-09-2024);
             ;      21.3;      23.8;      26.9;      29.6;      35.1;      44.1;      40.1;      40.4;      35.3;      31.3;      26.3;      20.9;      44.1;
 Date        ;   26-2024;   28-2019;   21-1990;   08-2011;   31-2001;   28-2019;   15-2022;   20-2023;   01-2016;   04-2011;   03-1970;   23-2022;      2019;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1964 au 02-07-2024);
+(Records établis sur la période du 01-01-1964 au 02-09-2024);
             ;     -10.9;      -8.4;        -7;      -0.7;       3.3;       6.6;      10.8;      10.3;       6.1;       1.9;      -3.8;      -7.3;     -10.9;
 Date        ;   15-1985;   10-1986;   07-1971;   08-2021;   05-1977;   04-1984;   08-1978;   30-1986;   29-1974;   17-2015;   27-2010;   29-1996;      1985;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1964 au 02-07-2024);
+(Records établis sur la période du 01-01-1964 au 02-09-2024);
             ;      74.1;      99.3;      93.4;      54.4;      93.4;      57.3;        46;        71;     211.8;     178.8;     105.7;      95.8;     211.8;
 Date        ;   08-2018;   11-1987;   09-2024;   09-2003;   03-1977;   05-1973;   28-2013;   23-2015;   22-2003;   26-1977;   05-1984;   01-2003;      2003;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-07-2024);
+(Records établis sur la période du 01-01-1981 au 02-09-2024);
             ;        33;      33.7;      33.2;        32;        29;        28;        26;        28;        33;        32;        34;      29.6;        34;
 Date        ;   19-2000;   08-2015;   05-2015;   10-2005;   06-1987;   04-2002;   23-1999;   24-1987;   22-1992;   10-1987;   13-2004;   09-2014;      2004;
 

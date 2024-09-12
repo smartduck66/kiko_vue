@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 COMIAC (46)      Indicatif : 46071001, alt : 562m, lat : 44°57'55"N, lon : 2°00'00"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-09-2004 au 02-07-2024);
+(Records établis sur la période du 01-09-2004 au 02-09-2024);
             ;      20.6;      21.8;      24.2;      27.2;      31.4;      37.4;      37.9;      37.2;      33.9;      29.5;      22.5;      18.1;      37.9;
 Date        ;   01-2022;   26-2019;   19-2005;   30-2005;   21-2022;   27-2019;   23-2019;   07-2020;   12-2022;   01-2023;   07-2015;   19-2015;      2019;
 
@@ -30,7 +30,7 @@ Statistiques établies sur la période 2004-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-09-2004 au 02-07-2024);
+(Records établis sur la période du 01-09-2004 au 02-09-2024);
             ;      -9.8;     -13.5;     -11.3;      -3.9;      -0.6;       3.9;         7;       6.9;       2.5;      -2.6;      -6.2;     -10.5;     -13.5;
 Date        ;   18-2013;   09-2012;   01-2005;   07-2008;   05-2019;   01-2006;   22-2007;   30-2006;   16-2008;   16-2015;   17-2007;   19-2009;      2012;
 
@@ -47,7 +47,7 @@ Tn <= -10°C ;         .;       0.6;       0.1;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-09-2004 au 02-07-2024);
+(Records établis sur la période du 01-09-2004 au 02-09-2024);
             ;      78.7;      44.6;      66.6;      59.4;      64.6;      72.3;      79.9;      46.1;      92.7;      88.3;      47.3;      61.2;      92.7;
 Date        ;   20-2018;   01-2021;   10-2023;   07-2022;   07-2018;   14-2007;   19-2017;   31-2015;   22-2006;   04-2010;   20-2015;   02-2018;      2006;
 
@@ -86,7 +86,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 25-09-2004 au 02-07-2024);
+(Records établis sur la période du 25-09-2004 au 02-09-2024);
             ;      26.3;      31.8;      26.5;      29.9;      27.4;      23.4;      23.8;      21.6;      26.6;      29.5;        26;      29.5;      31.8;
 Date        ;   27-2017;   13-2017;   03-2017;   28-2012;   21-2014;   26-2021;   21-2009;   29-2006;   05-2022;   20-2020;   20-2007;   16-2019;      2017;
 

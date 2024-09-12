@@ -61,7 +61,7 @@ const store = useStore();
       <li><a target="_blank" href="https://hubeau.eaufrance.fr/page/api-piezometrie#/" aria-label="Hub Eau">API Hub'Eau utilisée pour les mesures des nappes aquifères</a></li>
       <li>
         <a target="_blank" href="https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres" aria-label="Valeurs foncières"
-          >Valeurs foncières complètes de l'année 2022</a
+          >Valeurs foncières complètes de l'année 2023</a
         >
       </li>
     </ul>

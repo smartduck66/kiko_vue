@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 DIJON-LONGVIC (21)      Indicatif : 21473001, alt : 219m, lat : 47°16'04"N, lon : 5°05'17"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-05-1921 au 02-07-2024);
+(Records établis sur la période du 01-05-1921 au 02-09-2024);
             ;      16.8;      21.1;      24.9;        29;      34.4;      37.3;      39.5;      39.3;      34.2;      28.3;      21.6;      17.5;      39.5;
 Date        ;   01-2023;   27-2019;   31-2021;   17-1949;   24-1922;   27-2019;   24-2019;   12-2003;   01-1926;   12-1921;   07-1955;   16-1989;      2019;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-05-1921 au 02-07-2024);
+(Records établis sur la période du 01-05-1921 au 02-09-2024);
             ;     -21.3;       -22;     -15.3;      -5.3;      -3.3;       0.8;       2.8;       4.3;      -1.6;      -4.9;     -10.6;     -20.8;       -22;
 Date        ;   09-1985;   15-1929;   11-1931;   01-1931;   01-1938;   02-1936;   18-1922;   24-1922;   24-1928;   25-2003;   27-1985;   30-1939;      1929;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.4;       0.5;       0.1;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-05-1921 au 02-07-2024);
+(Records établis sur la période du 01-05-1921 au 02-09-2024);
             ;      42.2;        33;      50.8;      50.9;      51.4;     110.1;      62.4;      62.6;     104.6;      76.4;      92.8;      39.1;     110.1;
 Date        ;   11-1932;   14-1925;   08-1991;   05-1968;   23-1945;   09-1953;   16-1947;   07-1948;   30-1965;   19-2023;   12-1996;   10-1932;      1953;
 
@@ -76,7 +76,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-07-2024);
+(Records établis sur la période du 01-01-1981 au 02-09-2024);
             ;        29;      30.1;      29.7;      27.2;        25;      29.5;        31;      35.8;      26.8;        28;        29;        35;      35.8;
 Date        ;   02-2003;   10-2009;   31-2023;   29-2012;   09-2000;   21-2022;   06-2001;   13-2015;   16-2015;   15-1987;   08-1982;   26-1999;      2015;
 

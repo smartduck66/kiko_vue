@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 PLAINE DES CAFRES (974)      Indicatif : 97422440, alt : 1560m, lat : 21°12'33"S, lon : 55°34'22"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1965 au 02-07-2024);
+(Records établis sur la période du 01-01-1965 au 02-09-2024);
             ;        28;      26.7;      26.2;      25.8;      24.3;      22.5;      21.9;      23.5;      24.8;      29.6;      28.2;      27.2;      29.6;
 Date        ;   07-2024;   13-2018;   14-2004;   04-2017;   13-1998;   01-2009;   21-2019;   11-2018;   29-2013;   26-2011;   16-2015;   13-2023;      2011;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1965 au 02-07-2024);
+(Records établis sur la période du 01-01-1965 au 02-09-2024);
             ;       5.1;         5;       4.2;       2.2;       0.8;      -0.9;      -1.4;      -1.7;      -1.6;      -0.3;      -0.4;         2;      -1.7;
 Date        ;   27-2022;   17-1990;   16-1992;   22-1980;   25-2014;   07-1993;   31-1986;   18-1988;   08-2013;   04-1996;   19-1997;   13-1988;      1988;
 
@@ -42,7 +42,7 @@ Tn <=   0°C ;         .;         .;         .;         .;         .;       0.1;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1948 au 02-07-2024);
+(Records établis sur la période du 01-01-1948 au 02-09-2024);
             ;      1100;      1017;     971.2;       746;     329.1;     128.5;      82.8;     145.4;      61.8;       120;     107.4;     278.9;      1100;
 Date        ;   22-2002;   12-1987;   19-1952;   08-1958;   04-1965;   02-1963;   21-1958;   02-1997;   28-1988;   14-1962;   10-1962;   31-2015;      2002;
 
@@ -79,7 +79,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-07-2024);
+(Records établis sur la période du 01-01-1981 au 02-09-2024);
             ;        61;      45.2;        37;        26;        24;      29.1;      21.1;        23;      22.2;        21;      22.8;      30.2;        61;
 Date        ;   22-2002;   27-2007;   12-2002;   06-1989;   14-2014;   13-2024;   20-2022;   03-1997;   14-2011;   19-1987;   13-2016;   21-2007;      2002;
 

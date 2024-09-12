@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 MONTEMBOEUF (16)      Indicatif : 16225001, alt : 247m, lat : 45°47'13"N, lon : 0°32'34"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-12-1990 au 02-07-2024);
+(Records établis sur la période du 01-12-1990 au 02-09-2024);
             ;      17.6;      23.8;      26.1;        30;      32.5;      37.8;      38.2;      39.2;        35;      31.5;      23.4;      17.7;      39.2;
 Date        ;   01-2022;   27-2019;   20-2005;   30-2005;   30-2001;   18-2022;   18-2022;   05-2003;   12-2022;   01-2023;   08-2015;   07-2000;      2003;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-12-1990 au 02-07-2024);
+(Records établis sur la période du 01-12-1990 au 02-09-2024);
             ;       -10;     -12.9;     -10.1;      -2.5;       0.6;       5.8;       7.4;       7.4;       3.3;      -2.8;        -7;      -9.9;     -12.9;
 Date        ;   08-2009;   09-2012;   01-2005;   03-2022;   05-2019;   01-2011;   12-2000;   28-1998;   25-2002;   30-1997;   22-1998;   30-1996;      2012;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.0;       0.3;       0.0;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-12-1990 au 02-07-2024);
+(Records établis sur la période du 01-12-1990 au 02-09-2024);
             ;      50.4;      38.6;        47;        38;      49.8;      45.6;      54.4;        58;      62.6;      54.9;      52.8;      55.4;      62.6;
 Date        ;   18-1998;   11-1994;   01-2007;   23-1993;   20-2014;   09-2000;   13-1999;   21-1996;   15-2006;   19-2012;   06-1997;   10-2017;      2006;
 
@@ -77,7 +77,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-12-1990 au 02-07-2024);
+(Records établis sur la période du 01-12-1990 au 02-09-2024);
             ;        29;      32.1;      32.5;        31;      29.6;        39;      32.4;        27;      30.2;      28.2;      26.3;        39;        39;
 Date        ;   13-2004;   04-2017;   06-2017;   18-2004;   11-2009;   24-2003;   26-2013;   08-1992;   13-2016;   03-2006;   05-2023;   27-1999;      2003;
 

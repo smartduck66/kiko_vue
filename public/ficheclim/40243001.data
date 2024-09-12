@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 RION-DES-LANDES (40)      Indicatif : 40243001, alt : 77m, lat : 43°54'58"N, lon : 0°57'02"O;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-2007 au 02-07-2024);
+(Records établis sur la période du 01-01-2007 au 02-09-2024);
             ;      22.9;      26.2;      29.1;        32;      35.5;      41.4;      40.8;      41.4;      39.9;      35.5;      28.2;      21.1;      41.4;
 Date        ;   01-2022;   27-2019;   29-2023;   17-2013;   26-2017;   18-2022;   18-2022;   23-2023;   12-2022;   02-2023;   08-2015;   24-2022;      2023;
 
@@ -30,7 +30,7 @@ Statistiques établies sur la période 2007-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-2007 au 02-07-2024);
+(Records établis sur la période du 01-01-2007 au 02-09-2024);
             ;       -10;     -13.1;      -9.1;      -5.1;        -1;       2.1;       5.1;       5.4;       1.1;      -4.4;     -11.8;     -10.7;     -13.1;
 Date        ;   27-2007;   12-2012;   08-2010;   04-2022;   07-2010;   01-2011;   16-2012;   30-2010;   19-2010;   21-2007;   17-2007;   16-2010;      2012;
 
@@ -47,7 +47,7 @@ Tn <= -10°C ;         .;       0.3;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-2007 au 02-07-2024);
+(Records établis sur la période du 01-01-2007 au 02-09-2024);
             ;      60.6;      47.7;      35.2;      45.6;        70;      78.1;      53.3;        26;      38.2;      54.2;      67.4;      55.1;      78.1;
 Date        ;   22-2009;   12-2016;   29-2024;   18-2012;   10-2020;   08-2013;   08-2019;   13-2015;   21-2023;   25-2020;   30-2008;   28-2020;      2013;
 
@@ -86,9 +86,9 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 29-01-2007 au 02-07-2024);
-            ;        37;      28.2;      24.3;      21.1;      20.9;      21.6;      24.8;        19;      24.1;      22.6;      25.9;      26.9;        37;
-Date        ;   24-2009;   05-2017;   10-2024;   27-2024;   05-2015;   28-2017;   31-2015;   24-2015;   07-2010;   20-2023;   03-2019;   13-2019;      2009;
+(Records établis sur la période du 29-01-2007 au 02-09-2024);
+            ;        37;      28.2;      24.3;      21.1;      20.9;      21.6;      24.8;      26.9;      24.1;      22.6;      25.9;      26.9;        37;
+Date        ;   24-2009;   05-2017;   10-2024;   27-2024;   05-2015;   28-2017;   31-2015;   31-2024;   07-2010;   20-2023;   03-2019;   13-2019;      2009;
 
 
 Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);

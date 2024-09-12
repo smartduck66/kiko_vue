@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 MONTELIMAR (26)      Indicatif : 26198001, alt : 73m, lat : 44°34'52"N, lon : 4°43'58"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-08-1920 au 02-07-2024);
+(Records établis sur la période du 01-08-1920 au 02-09-2024);
             ;      19.3;      22.4;      26.4;      30.6;        34;      40.3;        40;      41.1;      36.2;      30.6;      26.4;      19.9;      41.1;
 Date        ;   10-2015;   23-1990;   25-1994;   23-1924;   21-2022;   27-2019;   23-1929;   13-2003;   09-1966;   09-2023;   02-1924;   04-1961;      2003;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-08-1920 au 02-07-2024);
+(Records établis sur la période du 01-08-1920 au 02-09-2024);
             ;     -14.4;       -17;      -7.4;      -3.1;      -1.8;       3.5;       7.5;       5.6;       0.5;      -1.6;       -10;     -17.2;     -17.2;
 Date        ;   05-1971;   23-1948;   02-2005;   06-1970;   02-1938;   03-1926;   06-1954;   21-1924;   25-1928;   30-1932;   12-1921;   22-1938;      1938;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;         .;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-08-1920 au 02-07-2024);
+(Records établis sur la période du 01-08-1920 au 02-09-2024);
             ;      99.6;      67.5;      91.3;       104;     107.9;     103.8;      99.8;     207.8;     218.4;     179.8;     127.8;     132.2;     218.4;
 Date        ;   06-1994;   17-1972;   30-1948;   15-2005;   06-1930;   17-1992;   30-1991;   18-1927;   25-1999;   11-1988;   17-2006;   01-2003;      1999;
 
@@ -77,7 +77,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-07-2024);
+(Records établis sur la période du 01-01-1981 au 02-09-2024);
             ;        31;      31.5;        34;        35;        26;        27;        38;        26;        34;      32.1;        31;        31;        38;
 Date        ;   13-1981;   03-2013;   17-1981;   10-2005;   07-1987;   18-1999;   05-1993;   17-2003;   22-1992;   25-2010;   14-2004;   14-1988;      1993;
 

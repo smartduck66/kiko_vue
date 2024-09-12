@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 TRAPPES (78)      Indicatif : 78621001, alt : 167m, lat : 48°46'27"N, lon : 2°00'35"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-04-1923 au 02-07-2024);
+(Records établis sur la période du 01-04-1923 au 02-09-2024);
             ;        16;      20.3;      24.7;        28;      30.9;        36;      40.6;      39.1;      34.6;        29;        21;      16.8;      40.6;
 Date        ;   05-1999;   27-2019;   31-2021;   18-1949;   27-2005;   18-2022;   25-2019;   06-2003;   09-2023;   01-1985;   03-1927;   07-2000;      2019;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-04-1923 au 02-07-2024);
+(Records établis sur la période du 01-04-1923 au 02-09-2024);
             ;     -15.8;     -15.6;     -10.5;      -4.1;      -1.2;       0.1;         2;         4;      -0.5;      -5.2;      -8.9;     -14.3;     -15.8;
 Date        ;   17-1985;   13-1929;   07-1971;   12-1986;   07-1957;   01-1936;   09-1929;   31-1928;   20-1952;   28-1931;   24-1998;   22-1946;      1985;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.2;       0.2;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-01-1904 au 02-07-2024);
+(Records établis sur la période du 01-01-1904 au 02-09-2024);
             ;      37.4;      36.2;        43;        40;        66;      78.9;      91.2;      62.8;      46.8;        61;      30.8;      36.3;      91.2;
 Date        ;   21-1995;   28-1946;   07-1989;   13-1930;   30-2016;   17-1970;   06-2001;   24-1987;   11-1930;   18-1920;   06-1918;   07-1904;      2001;
 
@@ -76,7 +76,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-07-2024);
+(Records établis sur la période du 01-01-1981 au 02-09-2024);
             ;        28;        33;      26.4;        24;        27;        27;        24;      24.9;        24;        28;        32;        37;        37;
 Date        ;   03-1984;   03-1990;   12-2019;   21-1986;   13-2007;   27-1991;   28-2005;   02-2023;   07-1995;   16-1987;   23-1984;   26-1999;      1999;
 

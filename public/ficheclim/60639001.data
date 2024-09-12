@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 BEAUVAIS-TILLE (60)      Indicatif : 60639001, alt : 89m, lat : 49°26'47"N, lon : 2°07'37"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-11-1944 au 02-07-2024);
+(Records établis sur la période du 01-11-1944 au 02-09-2024);
             ;      15.6;      20.4;      24.8;      28.4;      31.2;      36.9;      41.6;        39;      34.8;      28.2;      20.2;        17;      41.6;
 Date        ;   27-2003;   24-1990;   31-2021;   18-1949;   25-1953;   27-2011;   25-2019;   06-2003;   15-2020;   01-2011;   01-2014;   07-2000;      2019;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-11-1944 au 02-07-2024);
+(Records établis sur la période du 01-11-1944 au 02-09-2024);
             ;     -19.7;     -16.8;     -12.1;      -6.9;      -2.4;       1.2;       3.6;       3.9;      -0.5;        -5;     -10.9;     -15.7;     -19.7;
 Date        ;   28-1954;   14-1956;   13-2013;   06-2021;   03-2021;   05-1991;   08-1954;   28-1974;   20-1952;   28-2003;   25-1956;   21-1946;      1954;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.4;       0.2;       0.1;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-11-1944 au 02-07-2024);
+(Records établis sur la période du 01-11-1944 au 02-09-2024);
             ;      27.8;      27.2;        30;      24.6;      40.5;      43.2;      64.7;      46.8;      58.1;      45.6;      36.9;      33.4;      64.7;
 Date        ;   11-1993;   14-1990;   07-1989;   08-2022;   30-2016;   24-1960;   02-1953;   24-1987;   22-1949;   13-1979;   01-1968;   02-2000;      1953;
 
@@ -77,7 +77,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-07-2024);
+(Records établis sur la période du 01-01-1981 au 02-09-2024);
             ;        32;        35;      30.6;        29;        29;        25;      26.5;        25;      25.9;        33;        34;        38;        38;
 Date        ;   25-1990;   28-1990;   02-2016;   04-1994;   21-2002;   13-2006;   02-2010;   06-1999;   24-2012;   16-1987;   27-1983;   26-1999;      1999;
 

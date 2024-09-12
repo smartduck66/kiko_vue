@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 AGEN-LA GARENNE (47)      Indicatif : 47091001, alt : 58m, lat : 44°10'19"N, lon : 0°35'40"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-01-1941 au 02-07-2024);
+(Records établis sur la période du 01-01-1941 au 02-09-2024);
             ;      20.1;      25.2;      26.5;      30.2;        34;      39.3;      40.6;      42.5;      36.7;      32.9;      25.4;      21.6;      42.5;
 Date        ;   02-2003;   27-2019;   13-2023;   30-2005;   29-1943;   18-2022;   12-1949;   24-2023;   03-2005;   01-2023;   07-2015;   03-1953;      2023;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-01-1941 au 02-07-2024);
+(Records établis sur la période du 01-01-1941 au 02-09-2024);
             ;     -17.4;     -21.9;     -10.5;      -3.9;      -1.6;       2.5;       5.9;       4.7;         1;        -5;      -8.8;     -12.1;     -21.9;
 Date        ;   16-1985;   15-1956;   01-2005;   08-1956;   01-1960;   04-1953;   08-1954;   26-1966;   23-1962;   30-1949;   27-1942;   26-1962;      1956;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;         .;       0.2;       0.0;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-10-1940 au 02-07-2024);
+(Records établis sur la période du 01-10-1940 au 02-09-2024);
             ;      40.8;      73.6;      40.8;        38;      64.6;      59.2;      52.6;      47.6;     129.8;      51.8;      56.4;        39;     129.8;
 Date        ;   09-2004;   12-1990;   16-1988;   26-1998;   31-1997;   04-1966;   01-1995;   21-1975;   08-2021;   01-1994;   23-1949;   13-1981;      2021;
 
@@ -76,7 +76,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-07-2024);
+(Records établis sur la période du 01-01-1981 au 02-09-2024);
             ;        34;        27;      25.1;        25;      26.3;        27;        29;        35;        27;        26;        28;        33;        35;
 Date        ;   24-2009;   07-1996;   06-2017;   14-2003;   28-2007;   07-1987;   01-1995;   06-1999;   13-2016;   20-2001;   07-1982;   27-1999;      1999;
 

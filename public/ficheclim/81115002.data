@@ -2,16 +2,16 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 LABASTIDE-ROUAIROUX (81)      Indicatif : 81115002, alt : 448m, lat : 43°28'41"N, lon : 2°39'28"E;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-10-2003 au 02-07-2024);
-            ;        21;      21.8;      24.5;      28.9;      30.4;      38.1;      37.5;        41;      32.9;      31.4;        24;      21.3;        41;
-Date        ;   01-2022;   26-2019;   22-2024;   14-2024;   22-2022;   17-2022;   16-2022;   23-2023;   03-2016;   10-2023;   13-2023;   31-2021;      2023;
+(Records établis sur la période du 01-10-2003 au 02-09-2024);
+            ;        21;      21.8;      24.5;      28.9;      30.4;      38.1;      38.3;        41;      32.9;      31.4;        24;      21.3;        41;
+Date        ;   01-2022;   26-2019;   22-2024;   14-2024;   22-2022;   17-2022;   30-2024;   23-2023;   03-2016;   10-2023;   13-2023;   31-2021;      2023;
 
 
 Température maximale (Moyenne en °C);
@@ -30,7 +30,7 @@ Statistiques établies sur la période 2003-2020;
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-10-2003 au 02-07-2024);
+(Records établis sur la période du 01-10-2003 au 02-09-2024);
             ;      -8.2;     -11.8;      -9.5;      -4.1;       0.1;         5;       7.6;         6;       3.2;      -2.8;        -6;      -8.1;     -11.8;
 Date        ;   19-2017;   08-2012;   02-2005;   08-2021;   04-2010;   05-2013;   02-2022;   31-2010;   18-2022;   19-2009;   28-2013;   26-2010;      2012;
 
@@ -47,7 +47,7 @@ Tn <= -10°C ;         .;       0.3;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-10-2003 au 02-07-2024);
+(Records établis sur la période du 01-10-2003 au 02-09-2024);
             ;       182;     131.2;     150.9;      60.4;      99.4;      70.5;      34.4;      68.5;      56.7;     158.5;     106.4;      99.8;       182;
 Date        ;   27-2017;   13-2017;   15-2011;   08-2018;   10-2020;   12-2015;   13-2021;   13-2015;   05-2005;   10-2010;   13-2005;   03-2003;      2017;
 
@@ -86,7 +86,7 @@ Données non disponibles;
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-10-2003 au 02-07-2024);
+(Records établis sur la période du 01-10-2003 au 02-09-2024);
             ;      37.8;      29.6;      28.5;      26.4;      24.8;        23;      23.3;        34;        25;      29.8;      31.6;      33.9;      37.8;
 Date        ;   24-2009;   13-2017;   12-2011;   11-2018;   10-2008;   28-2017;   15-2018;   17-2004;   22-2004;   15-2018;   23-2016;   02-2004;      2009;
 

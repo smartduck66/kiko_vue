@@ -2,14 +2,14 @@ FICHE CLIMATOLOGIQUE;
 ;
 Statistiques  1991-2020  et  records;
 CAEN-CARPIQUET (14)      Indicatif : 14137001, alt : 67m, lat : 49°10'47"N, lon : 0°27'22"O;
-Edité le : 06/07/2024 dans l'état de la base;
+Edité le : 06/09/2024 dans l'état de la base;
 
 
             ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
 
 
 La température la plus élevée (°C);
-(Records établis sur la période du 01-10-1945 au 02-07-2024);
+(Records établis sur la période du 01-10-1945 au 02-09-2024);
             ;      16.8;      20.8;      24.9;      26.6;      30.4;      35.2;      40.1;      38.9;      33.5;      29.6;      21.6;      17.3;      40.1;
 Date        ;   01-2022;   28-1960;   30-2021;   21-2018;   25-1953;   29-2019;   18-2022;   05-2003;   02-1961;   02-2023;   01-2015;   31-2022;      2022;
 
@@ -27,7 +27,7 @@ Température minimale (Moyenne en °C);
 
 
 La température la plus basse (°C);
-(Records établis sur la période du 01-10-1945 au 02-07-2024);
+(Records établis sur la période du 01-10-1945 au 02-09-2024);
             ;     -19.6;     -16.5;      -7.4;      -5.7;      -0.8;         1;       4.7;         4;       1.8;      -3.7;      -6.8;       -11;     -19.6;
 Date        ;   08-1985;   03-1956;   03-1965;   11-1978;   14-2010;   02-1962;   07-1962;   28-1974;   22-1948;   30-1997;   26-1989;   26-1948;      1985;
 
@@ -43,7 +43,7 @@ Tn <= -10°C ;       0.1;       0.1;         .;         .;         .;         .;
 
 
 Précipitations : Hauteur quotidienne maximale (mm);
-(Records établis sur la période du 01-10-1944 au 02-07-2024);
+(Records établis sur la période du 01-10-1944 au 02-09-2024);
             ;        31;      38.7;      28.7;      40.9;      36.1;        93;      86.2;      50.3;      42.8;      82.1;      57.5;      40.6;        93;
 Date        ;   28-1958;   25-1950;   27-1986;   29-2018;   01-2024;   25-2006;   29-1978;   20-1975;   20-1973;   21-1955;   27-1961;   30-1978;      2006;
 
@@ -76,7 +76,7 @@ Evapotranspiration Potentielle (ETP Penman moyenne en mm);
 
 
 Rafale maximale de vent (m/s);
-(Records établis sur la période du 01-01-1981 au 02-07-2024);
+(Records établis sur la période du 01-01-1981 au 02-09-2024);
             ;      36.3;        36;      31.1;        30;        31;        29;        28;        26;        31;        39;        40;        42;        42;
 Date        ;   12-2017;   26-1990;   10-2008;   05-1983;   28-2000;   02-1981;   01-1990;   18-1999;   15-1983;   16-1987;   26-1983;   26-1999;      1999;
 
